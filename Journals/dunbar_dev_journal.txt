@@ -1,0 +1,11 @@
+[[======================================================]]
+The Dunbar Dev Journal
+[[======================================================]]
+
+11/23/14
+1:30 - Set up the github project with the project files that I have been working on.
+		- Basic controls and physics are in
+		- Next will work on creating a more official character controller, and potentially
+			rexamine the need for physics
+
+			
