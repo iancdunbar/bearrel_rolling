@@ -6,6 +6,16 @@ The Dunbar Dev Journal
 1:30 - Set up the github project with the project files that I have been working on.
 		- Basic controls and physics are in
 		- Next will work on creating a more official character controller, and potentially
-			rexamine the need for physics
+			re-examine the need for physics.
 
 			
+12/7/14
+1:48 - Song Of Solomon - Animals as Leaders
+
+	 - Just returned from the morning meeting with Jared, Michael, and Rob where we discussed getting
+	 the game back in line with our original vision and making it a project we all want to work on. I
+	 think we accomplished that mission with the changes we came up with.
+	 - I am now going to write up a design document to solidify these changes and provide us with a
+	 reference to use in the future for both production and discussion. This is something we needed
+	 to do sooner.
+
