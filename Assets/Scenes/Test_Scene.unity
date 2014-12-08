@@ -550,7 +550,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 607851099}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 269.519989, y: 600.890015, z: 1500}
+  m_LocalPosition: {x: 269.549988, y: 600.890015, z: 1500}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9262064}
@@ -581,8 +581,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2.38000011
-  m_Center: {x: 0, y: -.370000005, z: 0}
+  m_Radius: 3.07999992
+  m_Center: {x: 0, y: .829999983, z: 0}
 --- !u!1 &969348955
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,6 +595,8 @@ GameObject:
   - 92: {fileID: 969348958}
   - 124: {fileID: 969348957}
   - 81: {fileID: 969348956}
+  - 114: {fileID: 969348962}
+  - 114: {fileID: 969348961}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -663,10 +665,39 @@ Transform:
   m_GameObject: {fileID: 969348955}
   m_LocalRotation: {x: .172894225, y: .718772948, z: -.10252326, w: .665553927}
   m_LocalPosition: {x: 265.507446, y: 605.640137, z: 1496.14148}
-  m_LocalScale: {x: 1.02012324, y: 2.15976453, z: 3.84930706}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!114 &969348961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 969348955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a4debc9ad1110f6d00074c88d76c639, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 607851100}
+  damping: 6
+  smooth: 1
+--- !u!114 &969348962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 969348955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce609f044d7df8d408062a14b9b6d31f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  followTarget: {fileID: 607851100}
+  targetOffset: {x: -20, y: 40, z: 0}
+  maxSpeed: 70
+  updateOnFixed: 0
 --- !u!1 &1036549392
 GameObject:
   m_ObjectHideFlags: 0

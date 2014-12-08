@@ -3,14 +3,14 @@ The Dunbar Dev Journal
 [[======================================================]]
 
 11/23/14
-1:30 - Set up the github project with the project files that I have been working on.
+1:30pm - Set up the github project with the project files that I have been working on.
 		- Basic controls and physics are in
 		- Next will work on creating a more official character controller, and potentially
 			re-examine the need for physics.
 
 			
 12/7/14
-1:48 - Song Of Solomon - Animals as Leaders
+1:48pm - Song Of Solomon - Animals as Leaders
 
 	 - Just returned from the morning meeting with Jared, Michael, and Rob where we discussed getting
 	 the game back in line with our original vision and making it a project we all want to work on. I
@@ -19,3 +19,26 @@ The Dunbar Dev Journal
 	 reference to use in the future for both production and discussion. This is something we needed
 	 to do sooner.
 
+3:06pm - Isolated Incidents - Animals as Leaders
+	
+	- Done with the initial pass on the GDD, but there is much left to do to fully flesh out the document.
+	But for now I must go work on the truck while I still have good light.
+	
+9:33pm - Air Chrysalis - Animals as Leaders
+
+	- Post dinner and post nap and its time to do some more work on the design doc. 
+	
+10:15pm - Survival - Sleeping In Gethsemane
+
+	- The first pass of the GDD is done, while it could still use more work I will wait to get some feedback
+	on it before doing so.
+	- Now it is time to do a little bit of exploration with the controls of the bear. I will start by writing an
+	Input dispatch class that will abstract the controls away from the other bear scripts. This should be a 
+	simple class for now that will look for keyboard input and send one of five messages.
+	
+11:52pm - Animate-Inanimate - John Petrucci
+
+	- Well I only managed to write a single simple follow script for the camera and merely begin the 
+	InputDispatch (which in hindsignt is a tad unnessicary at this point). I ended up getting engrossed
+	in tracking down posts made by a rather foul gamergater. Anyway, its off to bed and hopefully tomorrow
+	I will be able to implement basic Impulse controls.
