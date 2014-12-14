@@ -18,6 +18,171 @@ ModelImporter:
     100024: Root
     100026: Rt_arm
     100028: Rt_leg
+    100030: pasted__polySurface10
+    100032: pasted__polySurface9
+    100034: polySurface1
+    100036: polySurface2
+    100038: polySurface3
+    100040: SnowBear_Ctrl_ChestEndEffector
+    100042: SnowBear_Ctrl_ChestOriginEffector
+    100044: SnowBear_Ctrl_Head
+    100046: SnowBear_Ctrl_HeadEffector
+    100048: SnowBear_Ctrl_Hips
+    100050: SnowBear_Ctrl_HipsEffector
+    100052: SnowBear_Ctrl_LeftAnkleEffector
+    100054: SnowBear_Ctrl_LeftArm
+    100056: SnowBear_Ctrl_LeftElbowEffector
+    100058: SnowBear_Ctrl_LeftFoot
+    100060: SnowBear_Ctrl_LeftFootEffector
+    100062: SnowBear_Ctrl_LeftForeArm
+    100064: SnowBear_Ctrl_LeftHand
+    100066: SnowBear_Ctrl_LeftHandIndex1
+    100068: SnowBear_Ctrl_LeftHandIndex2
+    100070: SnowBear_Ctrl_LeftHandIndex3
+    100072: SnowBear_Ctrl_LeftHandIndex4
+    100074: SnowBear_Ctrl_LeftHandIndexEffector
+    100076: SnowBear_Ctrl_LeftHandMiddle1
+    100078: SnowBear_Ctrl_LeftHandMiddle2
+    100080: SnowBear_Ctrl_LeftHandMiddle3
+    100082: SnowBear_Ctrl_LeftHandMiddle4
+    100084: SnowBear_Ctrl_LeftHandMiddleEffector
+    100086: SnowBear_Ctrl_LeftHandPinky1
+    100088: SnowBear_Ctrl_LeftHandPinky2
+    100090: SnowBear_Ctrl_LeftHandPinky3
+    100092: SnowBear_Ctrl_LeftHandPinky4
+    100094: SnowBear_Ctrl_LeftHandPinkyEffector
+    100096: SnowBear_Ctrl_LeftHandRing1
+    100098: SnowBear_Ctrl_LeftHandRing2
+    100100: SnowBear_Ctrl_LeftHandRing3
+    100102: SnowBear_Ctrl_LeftHandRing4
+    100104: SnowBear_Ctrl_LeftHandRingEffector
+    100106: SnowBear_Ctrl_LeftHandThumb1
+    100108: SnowBear_Ctrl_LeftHandThumb2
+    100110: SnowBear_Ctrl_LeftHandThumb3
+    100112: SnowBear_Ctrl_LeftHandThumb4
+    100114: SnowBear_Ctrl_LeftHandThumbEffector
+    100116: SnowBear_Ctrl_LeftHipEffector
+    100118: SnowBear_Ctrl_LeftKneeEffector
+    100120: SnowBear_Ctrl_LeftLeg
+    100122: SnowBear_Ctrl_LeftShoulder
+    100124: SnowBear_Ctrl_LeftShoulderEffector
+    100126: SnowBear_Ctrl_LeftToeBase
+    100128: SnowBear_Ctrl_LeftUpLeg
+    100130: SnowBear_Ctrl_LeftWristEffector
+    100132: SnowBear_Ctrl_Neck
+    100134: SnowBear_Ctrl_Reference
+    100136: SnowBear_Ctrl_RightAnkleEffector
+    100138: SnowBear_Ctrl_RightArm
+    100140: SnowBear_Ctrl_RightElbowEffector
+    100142: SnowBear_Ctrl_RightFoot
+    100144: SnowBear_Ctrl_RightFootEffector
+    100146: SnowBear_Ctrl_RightForeArm
+    100148: SnowBear_Ctrl_RightHand
+    100150: SnowBear_Ctrl_RightHandIndex1
+    100152: SnowBear_Ctrl_RightHandIndex2
+    100154: SnowBear_Ctrl_RightHandIndex3
+    100156: SnowBear_Ctrl_RightHandIndex4
+    100158: SnowBear_Ctrl_RightHandIndexEffector
+    100160: SnowBear_Ctrl_RightHandMiddle1
+    100162: SnowBear_Ctrl_RightHandMiddle2
+    100164: SnowBear_Ctrl_RightHandMiddle3
+    100166: SnowBear_Ctrl_RightHandMiddle4
+    100168: SnowBear_Ctrl_RightHandMiddleEffector
+    100170: SnowBear_Ctrl_RightHandPinky1
+    100172: SnowBear_Ctrl_RightHandPinky2
+    100174: SnowBear_Ctrl_RightHandPinky3
+    100176: SnowBear_Ctrl_RightHandPinky4
+    100178: SnowBear_Ctrl_RightHandPinkyEffector
+    100180: SnowBear_Ctrl_RightHandRing1
+    100182: SnowBear_Ctrl_RightHandRing2
+    100184: SnowBear_Ctrl_RightHandRing3
+    100186: SnowBear_Ctrl_RightHandRing4
+    100188: SnowBear_Ctrl_RightHandRingEffector
+    100190: SnowBear_Ctrl_RightHandThumb1
+    100192: SnowBear_Ctrl_RightHandThumb2
+    100194: SnowBear_Ctrl_RightHandThumb3
+    100196: SnowBear_Ctrl_RightHandThumb4
+    100198: SnowBear_Ctrl_RightHandThumbEffector
+    100200: SnowBear_Ctrl_RightHipEffector
+    100202: SnowBear_Ctrl_RightKneeEffector
+    100204: SnowBear_Ctrl_RightLeg
+    100206: SnowBear_Ctrl_RightShoulder
+    100208: SnowBear_Ctrl_RightShoulderEffector
+    100210: SnowBear_Ctrl_RightToeBase
+    100212: SnowBear_Ctrl_RightUpLeg
+    100214: SnowBear_Ctrl_RightWristEffector
+    100216: SnowBear_Ctrl_Spine
+    100218: SnowBear_Ctrl_Spine1
+    100220: SnowBear_Ctrl_Spine2
+    100222: SnowBear_Head
+    100224: SnowBear_Hips
+    100226: SnowBear_LeftArm
+    100228: SnowBear_LeftFoot
+    100230: SnowBear_LeftForeArm
+    100232: SnowBear_LeftHand
+    100234: SnowBear_LeftHandIndex1
+    100236: SnowBear_LeftHandIndex2
+    100238: SnowBear_LeftHandIndex3
+    100240: SnowBear_LeftHandIndex4
+    100242: SnowBear_LeftHandMiddle1
+    100244: SnowBear_LeftHandMiddle2
+    100246: SnowBear_LeftHandMiddle3
+    100248: SnowBear_LeftHandMiddle4
+    100250: SnowBear_LeftHandPinky1
+    100252: SnowBear_LeftHandPinky2
+    100254: SnowBear_LeftHandPinky3
+    100256: SnowBear_LeftHandPinky4
+    100258: SnowBear_LeftHandRing1
+    100260: SnowBear_LeftHandRing2
+    100262: SnowBear_LeftHandRing3
+    100264: SnowBear_LeftHandRing4
+    100266: SnowBear_LeftHandThumb1
+    100268: SnowBear_LeftHandThumb2
+    100270: SnowBear_LeftHandThumb3
+    100272: SnowBear_LeftHandThumb4
+    100274: SnowBear_LeftLeg
+    100276: SnowBear_LeftShoulder
+    100278: SnowBear_LeftToeBase
+    100280: SnowBear_LeftUpLeg
+    100282: SnowBear_Neck
+    100284: SnowBear_Reference
+    100286: SnowBear_RightArm
+    100288: SnowBear_RightFoot
+    100290: SnowBear_RightForeArm
+    100292: SnowBear_RightHand
+    100294: SnowBear_RightHandIndex1
+    100296: SnowBear_RightHandIndex2
+    100298: SnowBear_RightHandIndex3
+    100300: SnowBear_RightHandIndex4
+    100302: SnowBear_RightHandMiddle1
+    100304: SnowBear_RightHandMiddle2
+    100306: SnowBear_RightHandMiddle3
+    100308: SnowBear_RightHandMiddle4
+    100310: SnowBear_RightHandPinky1
+    100312: SnowBear_RightHandPinky2
+    100314: SnowBear_RightHandPinky3
+    100316: SnowBear_RightHandPinky4
+    100318: SnowBear_RightHandRing1
+    100320: SnowBear_RightHandRing2
+    100322: SnowBear_RightHandRing3
+    100324: SnowBear_RightHandRing4
+    100326: SnowBear_RightHandThumb1
+    100328: SnowBear_RightHandThumb2
+    100330: SnowBear_RightHandThumb3
+    100332: SnowBear_RightHandThumb4
+    100334: SnowBear_RightLeg
+    100336: SnowBear_RightShoulder
+    100338: SnowBear_RightToeBase
+    100340: SnowBear_RightUpLeg
+    100342: SnowBear_Spine
+    100344: SnowBear_Spine1
+    100346: SnowBear_Spine2
+    100348: transform1
+    100350: transform2
+    100352: transform3
+    100354: transform4
+    100356: transform5
+    100358: transform6
     400000: //RootNode
     400002: Delta_Trans
     400004: group
@@ -33,13 +198,180 @@ ModelImporter:
     400024: Root
     400026: Rt_arm
     400028: Rt_leg
+    400030: pasted__polySurface10
+    400032: pasted__polySurface9
+    400034: polySurface1
+    400036: polySurface2
+    400038: polySurface3
+    400040: SnowBear_Ctrl_ChestEndEffector
+    400042: SnowBear_Ctrl_ChestOriginEffector
+    400044: SnowBear_Ctrl_Head
+    400046: SnowBear_Ctrl_HeadEffector
+    400048: SnowBear_Ctrl_Hips
+    400050: SnowBear_Ctrl_HipsEffector
+    400052: SnowBear_Ctrl_LeftAnkleEffector
+    400054: SnowBear_Ctrl_LeftArm
+    400056: SnowBear_Ctrl_LeftElbowEffector
+    400058: SnowBear_Ctrl_LeftFoot
+    400060: SnowBear_Ctrl_LeftFootEffector
+    400062: SnowBear_Ctrl_LeftForeArm
+    400064: SnowBear_Ctrl_LeftHand
+    400066: SnowBear_Ctrl_LeftHandIndex1
+    400068: SnowBear_Ctrl_LeftHandIndex2
+    400070: SnowBear_Ctrl_LeftHandIndex3
+    400072: SnowBear_Ctrl_LeftHandIndex4
+    400074: SnowBear_Ctrl_LeftHandIndexEffector
+    400076: SnowBear_Ctrl_LeftHandMiddle1
+    400078: SnowBear_Ctrl_LeftHandMiddle2
+    400080: SnowBear_Ctrl_LeftHandMiddle3
+    400082: SnowBear_Ctrl_LeftHandMiddle4
+    400084: SnowBear_Ctrl_LeftHandMiddleEffector
+    400086: SnowBear_Ctrl_LeftHandPinky1
+    400088: SnowBear_Ctrl_LeftHandPinky2
+    400090: SnowBear_Ctrl_LeftHandPinky3
+    400092: SnowBear_Ctrl_LeftHandPinky4
+    400094: SnowBear_Ctrl_LeftHandPinkyEffector
+    400096: SnowBear_Ctrl_LeftHandRing1
+    400098: SnowBear_Ctrl_LeftHandRing2
+    400100: SnowBear_Ctrl_LeftHandRing3
+    400102: SnowBear_Ctrl_LeftHandRing4
+    400104: SnowBear_Ctrl_LeftHandRingEffector
+    400106: SnowBear_Ctrl_LeftHandThumb1
+    400108: SnowBear_Ctrl_LeftHandThumb2
+    400110: SnowBear_Ctrl_LeftHandThumb3
+    400112: SnowBear_Ctrl_LeftHandThumb4
+    400114: SnowBear_Ctrl_LeftHandThumbEffector
+    400116: SnowBear_Ctrl_LeftHipEffector
+    400118: SnowBear_Ctrl_LeftKneeEffector
+    400120: SnowBear_Ctrl_LeftLeg
+    400122: SnowBear_Ctrl_LeftShoulder
+    400124: SnowBear_Ctrl_LeftShoulderEffector
+    400126: SnowBear_Ctrl_LeftToeBase
+    400128: SnowBear_Ctrl_LeftUpLeg
+    400130: SnowBear_Ctrl_LeftWristEffector
+    400132: SnowBear_Ctrl_Neck
+    400134: SnowBear_Ctrl_Reference
+    400136: SnowBear_Ctrl_RightAnkleEffector
+    400138: SnowBear_Ctrl_RightArm
+    400140: SnowBear_Ctrl_RightElbowEffector
+    400142: SnowBear_Ctrl_RightFoot
+    400144: SnowBear_Ctrl_RightFootEffector
+    400146: SnowBear_Ctrl_RightForeArm
+    400148: SnowBear_Ctrl_RightHand
+    400150: SnowBear_Ctrl_RightHandIndex1
+    400152: SnowBear_Ctrl_RightHandIndex2
+    400154: SnowBear_Ctrl_RightHandIndex3
+    400156: SnowBear_Ctrl_RightHandIndex4
+    400158: SnowBear_Ctrl_RightHandIndexEffector
+    400160: SnowBear_Ctrl_RightHandMiddle1
+    400162: SnowBear_Ctrl_RightHandMiddle2
+    400164: SnowBear_Ctrl_RightHandMiddle3
+    400166: SnowBear_Ctrl_RightHandMiddle4
+    400168: SnowBear_Ctrl_RightHandMiddleEffector
+    400170: SnowBear_Ctrl_RightHandPinky1
+    400172: SnowBear_Ctrl_RightHandPinky2
+    400174: SnowBear_Ctrl_RightHandPinky3
+    400176: SnowBear_Ctrl_RightHandPinky4
+    400178: SnowBear_Ctrl_RightHandPinkyEffector
+    400180: SnowBear_Ctrl_RightHandRing1
+    400182: SnowBear_Ctrl_RightHandRing2
+    400184: SnowBear_Ctrl_RightHandRing3
+    400186: SnowBear_Ctrl_RightHandRing4
+    400188: SnowBear_Ctrl_RightHandRingEffector
+    400190: SnowBear_Ctrl_RightHandThumb1
+    400192: SnowBear_Ctrl_RightHandThumb2
+    400194: SnowBear_Ctrl_RightHandThumb3
+    400196: SnowBear_Ctrl_RightHandThumb4
+    400198: SnowBear_Ctrl_RightHandThumbEffector
+    400200: SnowBear_Ctrl_RightHipEffector
+    400202: SnowBear_Ctrl_RightKneeEffector
+    400204: SnowBear_Ctrl_RightLeg
+    400206: SnowBear_Ctrl_RightShoulder
+    400208: SnowBear_Ctrl_RightShoulderEffector
+    400210: SnowBear_Ctrl_RightToeBase
+    400212: SnowBear_Ctrl_RightUpLeg
+    400214: SnowBear_Ctrl_RightWristEffector
+    400216: SnowBear_Ctrl_Spine
+    400218: SnowBear_Ctrl_Spine1
+    400220: SnowBear_Ctrl_Spine2
+    400222: SnowBear_Head
+    400224: SnowBear_Hips
+    400226: SnowBear_LeftArm
+    400228: SnowBear_LeftFoot
+    400230: SnowBear_LeftForeArm
+    400232: SnowBear_LeftHand
+    400234: SnowBear_LeftHandIndex1
+    400236: SnowBear_LeftHandIndex2
+    400238: SnowBear_LeftHandIndex3
+    400240: SnowBear_LeftHandIndex4
+    400242: SnowBear_LeftHandMiddle1
+    400244: SnowBear_LeftHandMiddle2
+    400246: SnowBear_LeftHandMiddle3
+    400248: SnowBear_LeftHandMiddle4
+    400250: SnowBear_LeftHandPinky1
+    400252: SnowBear_LeftHandPinky2
+    400254: SnowBear_LeftHandPinky3
+    400256: SnowBear_LeftHandPinky4
+    400258: SnowBear_LeftHandRing1
+    400260: SnowBear_LeftHandRing2
+    400262: SnowBear_LeftHandRing3
+    400264: SnowBear_LeftHandRing4
+    400266: SnowBear_LeftHandThumb1
+    400268: SnowBear_LeftHandThumb2
+    400270: SnowBear_LeftHandThumb3
+    400272: SnowBear_LeftHandThumb4
+    400274: SnowBear_LeftLeg
+    400276: SnowBear_LeftShoulder
+    400278: SnowBear_LeftToeBase
+    400280: SnowBear_LeftUpLeg
+    400282: SnowBear_Neck
+    400284: SnowBear_Reference
+    400286: SnowBear_RightArm
+    400288: SnowBear_RightFoot
+    400290: SnowBear_RightForeArm
+    400292: SnowBear_RightHand
+    400294: SnowBear_RightHandIndex1
+    400296: SnowBear_RightHandIndex2
+    400298: SnowBear_RightHandIndex3
+    400300: SnowBear_RightHandIndex4
+    400302: SnowBear_RightHandMiddle1
+    400304: SnowBear_RightHandMiddle2
+    400306: SnowBear_RightHandMiddle3
+    400308: SnowBear_RightHandMiddle4
+    400310: SnowBear_RightHandPinky1
+    400312: SnowBear_RightHandPinky2
+    400314: SnowBear_RightHandPinky3
+    400316: SnowBear_RightHandPinky4
+    400318: SnowBear_RightHandRing1
+    400320: SnowBear_RightHandRing2
+    400322: SnowBear_RightHandRing3
+    400324: SnowBear_RightHandRing4
+    400326: SnowBear_RightHandThumb1
+    400328: SnowBear_RightHandThumb2
+    400330: SnowBear_RightHandThumb3
+    400332: SnowBear_RightHandThumb4
+    400334: SnowBear_RightLeg
+    400336: SnowBear_RightShoulder
+    400338: SnowBear_RightToeBase
+    400340: SnowBear_RightUpLeg
+    400342: SnowBear_Spine
+    400344: SnowBear_Spine1
+    400346: SnowBear_Spine2
+    400348: transform1
+    400350: transform2
+    400352: transform3
+    400354: transform4
+    400356: transform5
+    400358: transform6
     4300000: pasted__polySurface8
     4300002: pasted__polySurface7
     4300004: pasted__polySurface6
+    4300006: polySurface3
     9500000: //RootNode
     13700000: pasted__polySurface6
     13700002: pasted__polySurface7
     13700004: pasted__polySurface8
+    13700006: polySurface3
   materials:
     importMaterials: 1
     materialName: 0
@@ -80,8 +412,816 @@ ModelImporter:
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    human: []
-    skeleton: []
+    human:
+    - boneName: SnowBear_Hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_LeftUpLeg
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_RightUpLeg
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_LeftLeg
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_RightLeg
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_LeftFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_RightFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_Spine2
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_LeftShoulder
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_RightShoulder
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_LeftArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_RightArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_LeftForeArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_RightForeArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_LeftHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_RightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_LeftToeBase
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_RightToeBase
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_LeftHandThumb1
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_LeftHandThumb2
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_LeftHandThumb3
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_LeftHandIndex1
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_LeftHandIndex2
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_LeftHandIndex3
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_LeftHandMiddle1
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_LeftHandMiddle2
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_LeftHandMiddle3
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_LeftHandRing1
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_LeftHandRing2
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_LeftHandRing3
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_LeftHandPinky1
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_LeftHandPinky2
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_LeftHandPinky3
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_RightHandThumb1
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_RightHandThumb2
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_RightHandThumb3
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_RightHandIndex1
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_RightHandIndex2
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_RightHandIndex3
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_RightHandMiddle1
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_RightHandMiddle2
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_RightHandMiddle3
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_RightHandRing1
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_RightHandRing2
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_RightHandRing3
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_RightHandPinky1
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_RightHandPinky2
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SnowBear_RightHandPinky3
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Bear_Ragdoll(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: group
+      position: {x: -3.55271347e-16, y: 1.09462607, z: -.0375300646}
+      rotation: {x: 0, y: -0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__polySurface5
+      position: {x: 3.55271347e-16, y: -1.09462607, z: .0375300646}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1.3801223, y: 1.3801223, z: 1.3801223}
+      transformModified: 1
+    - name: group1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: .5, y: -.5, z: -.5, w: .5}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__polySurface6
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: transform6
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__polySurface8
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: transform1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__polySurface9
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: -1}
+      transformModified: 1
+    - name: transform4
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__polySurface10
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: -1}
+      transformModified: 1
+    - name: transform2
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: polySurface1
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: transform3
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: polySurface2
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: transform5
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: polySurface3
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: SnowBear_Reference
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: SnowBear_Hips
+      position: {x: 1.02955754e-20, y: .024238959, z: .00356784277}
+      rotation: {x: -.00296916044, y: -.0308300331, z: .0958178192, w: .994916916}
+      scale: {x: 1, y: 1.00000012, z: 1.00000024}
+      transformModified: 1
+    - name: SnowBear_LeftUpLeg
+      position: {x: -.016354559, y: -.00157374865, z: 3.06197533e-11}
+      rotation: {x: .79035598, y: .195723742, z: -.042985931, w: .578948975}
+      scale: {x: 1.00000012, y: 1, z: .999999881}
+      transformModified: 1
+    - name: SnowBear_LeftLeg
+      position: {x: -.00347301061, y: .00206722529, z: .00653772475}
+      rotation: {x: -.783136487, y: -.118260123, z: .405513078, w: .456367254}
+      scale: {x: 1.00000024, y: .99999994, z: .999999881}
+      transformModified: 1
+    - name: SnowBear_LeftFoot
+      position: {x: -.00453493372, y: -.00384763884, z: -.000197819652}
+      rotation: {x: -.256679118, y: .733498216, z: -.140296116, w: .613525271}
+      scale: {x: .999999881, y: 1.00000012, z: .99999994}
+      transformModified: 1
+    - name: SnowBear_LeftToeBase
+      position: {x: -.00553644868, y: -.0116982805, z: -.000641587074}
+      rotation: {x: .142215788, y: -.404764324, z: -.353908032, w: .831077397}
+      scale: {x: 1.00000012, y: 1.00000024, z: 1.00000012}
+      transformModified: 1
+    - name: SnowBear_RightUpLeg
+      position: {x: .0144550316, y: -.007563686, z: -.0019470487}
+      rotation: {x: .0191320479, y: .198656052, z: -.61741066, w: .760903358}
+      scale: {x: .999999881, y: 1.00000024, z: 1.00000012}
+      transformModified: 1
+    - name: SnowBear_RightLeg
+      position: {x: .00653772382, y: -.00328226085, z: .00235838653}
+      rotation: {x: -.0251757056, y: -.261410654, z: .812447786, w: -.520537496}
+      scale: {x: 1, y: 1.00000012, z: .999999881}
+      transformModified: 1
+    - name: SnowBear_RightFoot
+      position: {x: -.000694976829, y: .00557876518, z: .00195025362}
+      rotation: {x: .0111791482, y: .116077691, z: -.360762268, w: .925338686}
+      scale: {x: .99999994, y: .99999994, z: 1.00000048}
+      transformModified: 1
+    - name: SnowBear_RightToeBase
+      position: {x: -.00201335549, y: -.00312183495, z: .0124142664}
+      rotation: {x: -.0111790588, y: -.116077706, z: .360762239, w: .925338686}
+      scale: {x: .999999523, y: .999999702, z: 1}
+      transformModified: 1
+    - name: SnowBear_Spine
+      position: {x: .00139815011, y: .00719146663, z: -1.27675645e-16}
+      rotation: {x: .0191320349, y: .198656097, z: -.61741066, w: .760903358}
+      scale: {x: 1.00000024, y: 1.00000036, z: 1}
+      transformModified: 1
+    - name: SnowBear_Spine1
+      position: {x: -.010179963, y: .00475628348, z: -.00248800172}
+      rotation: {x: -.025175754, y: -.261410654, z: .812447786, w: -.520537496}
+      scale: {x: 1.00000012, y: .99999994, z: .99999994}
+      transformModified: 1
+    - name: SnowBear_Spine2
+      position: {x: .00146888138, y: -.00928151514, z: -.00664379168}
+      rotation: {x: -.0501651615, y: .105273269, z: -.785605192, w: .607639313}
+      scale: {x: 1.00000012, y: 1.00000012, z: 1.00000024}
+      transformModified: 1
+    - name: SnowBear_LeftShoulder
+      position: {x: .00478383806, y: .00963540934, z: -.00227097399}
+      rotation: {x: .273730367, y: -.0357255116, z: .79848671, w: .534990072}
+      scale: {x: .999999702, y: .999999881, z: 1.00000024}
+      transformModified: 1
+    - name: SnowBear_LeftArm
+      position: {x: .014191092, y: -.0001348855, z: -.00305449683}
+      rotation: {x: .143550664, y: .152862146, z: -.909997344, w: .357674867}
+      scale: {x: 1.00000012, y: .999999762, z: 1.00000012}
+      transformModified: 1
+    - name: SnowBear_LeftForeArm
+      position: {x: -.00574550079, y: .0062677688, z: -.00328102312}
+      rotation: {x: -.0774711967, y: -.156287804, z: .646400273, w: .742791474}
+      scale: {x: 1.00000024, y: 1.00000024, z: 1.00000048}
+      transformModified: 1
+    - name: SnowBear_LeftHand
+      position: {x: .00577030517, y: .00896923617, z: -.00183305552}
+      rotation: {x: .0340610072, y: .00915492512, z: -.171505392, w: .984551668}
+      scale: {x: .999999762, y: .999999881, z: 1.00000012}
+      transformModified: 1
+    - name: SnowBear_LeftHandThumb1
+      position: {x: .000686495216, y: .00465828506, z: .00292527839}
+      rotation: {x: .0969562382, y: .237979293, z: -.937112927, w: .236187935}
+      scale: {x: 1.0000006, y: 1.00000024, z: 1.00000036}
+      transformModified: 1
+    - name: SnowBear_LeftHandThumb2
+      position: {x: -.00167092588, y: -.00171604333, z: .000149051339}
+      rotation: {x: -.112561703, y: .0190255921, z: -.537710011, w: .835365653}
+      scale: {x: 1.00000036, y: 1.00000012, z: 1.00000048}
+      transformModified: 1
+    - name: SnowBear_LeftHandThumb3
+      position: {x: .000729539664, y: -.0021095972, z: -.00051250431}
+      rotation: {x: -2.14204192e-08, y: -4.36739356e-09, z: .514712155, w: .857363105}
+      scale: {x: 1.00000024, y: .999999881, z: .99999994}
+      transformModified: 1
+    - name: SnowBear_LeftHandThumb4
+      position: {x: -.00159275497, y: -.00171518722, z: -.000537430926}
+      rotation: {x: -2.12103242e-08, y: 2.76449974e-08, z: 4.26795805e-06, w: 1}
+      scale: {x: .99999994, y: .99999994, z: .99999994}
+      transformModified: 1
+    - name: SnowBear_LeftHandIndex1
+      position: {x: .00237773336, y: .00810668431, z: .00124668435}
+      rotation: {x: -1.95577741e-08, y: -4.6013156e-08, z: -.936245799, w: .351345748}
+      scale: {x: 1.0000006, y: 1.00000024, z: 1.00000036}
+      transformModified: 1
+    - name: SnowBear_LeftHandIndex2
+      position: {x: -.00305244653, y: -.00215413887, z: -.000722185825}
+      rotation: {x: -3.18762613e-06, y: -4.25800681e-06, z: -.59978193, w: .800163567}
+      scale: {x: 1.00000036, y: 1.00000024, z: 1.00000048}
+      transformModified: 1
+    - name: SnowBear_LeftHandIndex3
+      position: {x: .000760855968, y: -.00221982319, z: -.000453615416}
+      rotation: {x: -6.02484142e-05, y: .000109380111, z: .514712095, w: .857363105}
+      scale: {x: 1.00000024, y: .999999881, z: 1}
+      transformModified: 1
+    - name: SnowBear_LeftHandIndex4
+      position: {x: -.00118157652, y: -.00126554305, z: -.000334986253}
+      rotation: {x: 1.06267166e-07, y: -.00146736938, z: 4.18422451e-06, w: .999998987}
+      scale: {x: .99999994, y: .99999994, z: .99999994}
+      transformModified: 1
+    - name: SnowBear_LeftHandMiddle1
+      position: {x: .00238908594, y: .00764045957, z: -.000667620858}
+      rotation: {x: -1.95577741e-08, y: -4.6013156e-08, z: -.936245799, w: .351345748}
+      scale: {x: 1.0000006, y: 1.00000024, z: 1.00000036}
+      transformModified: 1
+    - name: SnowBear_LeftHandMiddle2
+      position: {x: -.00348091009, y: -.0024707655, z: -.000979815493}
+      rotation: {x: 9.02218744e-10, y: -3.7252903e-09, z: -.599781871, w: .800163567}
+      scale: {x: 1.00000036, y: 1.00000012, z: 1.00000048}
+      transformModified: 1
+    - name: SnowBear_LeftHandMiddle3
+      position: {x: .000793239102, y: -.00229386869, z: -.000557121646}
+      rotation: {x: -2.14204192e-08, y: -4.36739356e-09, z: .514712155, w: .857363105}
+      scale: {x: 1.00000024, y: .999999881, z: .99999994}
+      transformModified: 1
+    - name: SnowBear_LeftHandMiddle4
+      position: {x: -.00119791832, y: -.00128998829, z: -.00040408253}
+      rotation: {x: -2.12103242e-08, y: 2.76449974e-08, z: 4.26795805e-06, w: 1}
+      scale: {x: .99999994, y: .99999994, z: .99999994}
+      transformModified: 1
+    - name: SnowBear_LeftHandRing1
+      position: {x: .00206097425, y: .00736335991, z: -.00251217117}
+      rotation: {x: -1.95577741e-08, y: -4.6013156e-08, z: -.936245799, w: .351345748}
+      scale: {x: 1.0000006, y: 1.00000024, z: 1.00000036}
+      transformModified: 1
+    - name: SnowBear_LeftHandRing2
+      position: {x: -.00324788364, y: -.00230538263, z: -.000914484554}
+      rotation: {x: 1.1350495e-09, y: -4.19095203e-09, z: -.599781275, w: .800164044}
+      scale: {x: 1.00000036, y: 1.00000012, z: 1.00000048}
+      transformModified: 1
+    - name: SnowBear_LeftHandRing3
+      position: {x: .000661079655, y: -.00191166054, z: -.000464425742}
+      rotation: {x: -2.44472176e-08, y: 4.35984475e-08, z: .514712036, w: .857363105}
+      scale: {x: 1.00000024, y: 1, z: .99999994}
+      transformModified: 1
+    - name: SnowBear_LeftHandRing4
+      position: {x: -.00114874728, y: -.00123705168, z: -.000387608685}
+      rotation: {x: -2.04354347e-08, y: -7.23666673e-08, z: 4.16194371e-06, w: 1}
+      scale: {x: 1.00000012, y: .99999994, z: .99999994}
+      transformModified: 1
+    - name: SnowBear_LeftHandPinky1
+      position: {x: .0012618769, y: .00720512727, z: -.00394815532}
+      rotation: {x: -1.95577741e-08, y: -4.6013156e-08, z: -.936245799, w: .351345748}
+      scale: {x: 1.0000006, y: 1.00000024, z: 1.00000036}
+      transformModified: 1
+    - name: SnowBear_LeftHandPinky2
+      position: {x: -.00217882078, y: -.0015465098, z: -.000613473414}
+      rotation: {x: 1.22236088e-09, y: -3.95812094e-09, z: -.599781215, w: .800164044}
+      scale: {x: 1.00000048, y: 1.00000012, z: 1.00000048}
+      transformModified: 1
+    - name: SnowBear_LeftHandPinky3
+      position: {x: .000566383766, y: -.00163790432, z: -.000397918629}
+      rotation: {x: 3.49245965e-09, y: 7.35690264e-09, z: .514712095, w: .857363105}
+      scale: {x: 1.00000024, y: .999999881, z: .99999994}
+      transformModified: 1
+    - name: SnowBear_LeftHandPinky4
+      position: {x: -.000995421782, y: -.00107191456, z: -.000335869787}
+      rotation: {x: -6.89787996e-08, y: 9.08585118e-09, z: 4.23895062e-06, w: 1}
+      scale: {x: 1, y: 1, z: .99999994}
+      transformModified: 1
+    - name: SnowBear_RightShoulder
+      position: {x: .00916265976, y: -.00163172511, z: -.00585377635}
+      rotation: {x: .273730189, y: -.0357266665, z: .798489034, w: .534986734}
+      scale: {x: .999999464, y: .999999464, z: 1.00000024}
+      transformModified: 1
+    - name: SnowBear_RightArm
+      position: {x: -.014191105, y: .00013476552, z: .00305443932}
+      rotation: {x: .00034727162, y: .354414225, z: -.461529732, w: .813253224}
+      scale: {x: 1.00000048, y: 1.00000024, z: 1.00000012}
+      transformModified: 1
+    - name: SnowBear_RightForeArm
+      position: {x: -.00435293093, y: -.00698888628, z: -.00390746491}
+      rotation: {x: -.107280694, y: -.136166334, z: .690845132, w: .701913595}
+      scale: {x: 1, y: 1.00000012, z: 1.00000012}
+      transformModified: 1
+    - name: SnowBear_RightHand
+      position: {x: -.00837212522, y: .00653265463, z: -.00208222494}
+      rotation: {x: .0379781798, y: -.00193974189, z: -.168376759, w: .984988928}
+      scale: {x: 1.00000012, y: 1, z: .99999994}
+      transformModified: 1
+    - name: SnowBear_RightHandThumb1
+      position: {x: -.00433967775, y: .00182704488, z: .00292527839}
+      rotation: {x: -.16450417, y: .197416365, z: -.861071885, w: .438771576}
+      scale: {x: 1.00000083, y: 1.00000072, z: 1.00000036}
+      transformModified: 1
+    - name: SnowBear_RightHandThumb2
+      position: {x: .000847653951, y: -.0022401521, z: .000149051339}
+      rotation: {x: -.0574286617, y: -.0986603722, z: -.651048481, w: .75040257}
+      scale: {x: .999999702, y: .999999583, z: .99999994}
+      transformModified: 1
+    - name: SnowBear_RightHandThumb3
+      position: {x: .00215772283, y: .00057172071, z: -.000512504543}
+      rotation: {x: -1.28056827e-08, y: -1.99088346e-09, z: .514737606, w: .857347786}
+      scale: {x: 1.00000012, y: .999999821, z: .99999994}
+      transformModified: 1
+    - name: SnowBear_RightHandThumb4
+      position: {x: .00159276964, y: -.00171517371, z: -.000537430926}
+      rotation: {x: 3.19851061e-08, y: -2.22908039e-08, z: 6.38519779e-08, w: 1}
+      scale: {x: .99999994, y: 1.00000012, z: 1.00000012}
+      transformModified: 1
+    - name: SnowBear_RightHandIndex1
+      position: {x: -.00816533342, y: .00216778065, z: .00124668435}
+      rotation: {x: -4.28408278e-08, y: 5.64614133e-08, z: -.936193407, w: .351485401}
+      scale: {x: 1.00000083, y: 1.00000072, z: 1.00000036}
+      transformModified: 1
+    - name: SnowBear_RightHandIndex2
+      position: {x: .00193972478, y: -.00319299428, z: -.000722185825}
+      rotation: {x: -3.17551849e-06, y: -4.20981041e-06, z: -.599853396, w: .800109982}
+      scale: {x: .999999821, y: .999999702, z: 1}
+      transformModified: 1
+    - name: SnowBear_RightHandIndex3
+      position: {x: .00226666569, y: .000607233611, z: -.000453631656}
+      rotation: {x: -6.01599313e-05, y: .000109381144, z: .514737487, w: .857347846}
+      scale: {x: .99999994, y: .999999821, z: 1}
+      transformModified: 1
+    - name: SnowBear_RightHandIndex4
+      position: {x: .00118175102, y: -.00126553292, z: -.00033440828}
+      rotation: {x: -3.60196317e-08, y: -.00146740826, z: 1.08193499e-08, w: .999998927}
+      scale: {x: 1, y: 1.00000012, z: .99999994}
+      transformModified: 1
+    - name: SnowBear_RightHandMiddle1
+      position: {x: -.00777248805, y: .00191645091, z: -.000667620858}
+      rotation: {x: -4.28408278e-08, y: 5.64614133e-08, z: -.936193407, w: .351485401}
+      scale: {x: 1.00000083, y: 1.00000072, z: 1.00000036}
+      transformModified: 1
+    - name: SnowBear_RightHandMiddle2
+      position: {x: .00220631179, y: -.00365425879, z: -.000979815493}
+      rotation: {x: -3.17470358e-06, y: -4.20911192e-06, z: -.599853456, w: .800109923}
+      scale: {x: .999999821, y: .999999642, z: 1}
+      transformModified: 1
+    - name: SnowBear_RightHandMiddle3
+      position: {x: .00234617782, y: .000621680927, z: -.000557146908}
+      rotation: {x: -6.01655338e-05, y: .000109385379, z: .514737606, w: .857347846}
+      scale: {x: 1.00000012, y: .999999821, z: 1}
+      transformModified: 1
+    - name: SnowBear_RightHandMiddle4
+      position: {x: .0011980281, y: -.00128997804, z: -.000403789541}
+      rotation: {x: 1.60134732e-08, y: -.00146739639, z: -1.00862962e-08, w: .999998987}
+      scale: {x: .999999881, y: 1.00000012, z: .99999994}
+      transformModified: 1
+    - name: SnowBear_RightHandRing1
+      position: {x: -.00736546004, y: .00205345452, z: -.00251217117}
+      rotation: {x: -4.28408278e-08, y: 5.64614133e-08, z: -.936193407, w: .351485401}
+      scale: {x: 1.00000083, y: 1.00000072, z: 1.00000036}
+      transformModified: 1
+    - name: SnowBear_RightHandRing2
+      position: {x: .0020586038, y: -.00340964645, z: -.000914484554}
+      rotation: {x: -3.17551849e-06, y: -4.20981041e-06, z: -.599853396, w: .800109982}
+      scale: {x: .999999821, y: .999999702, z: 1}
+      transformModified: 1
+    - name: SnowBear_RightHandRing3
+      position: {x: .00195526029, y: .000518086075, z: -.000464446755}
+      rotation: {x: -6.01599313e-05, y: .000109381144, z: .514737487, w: .857347846}
+      scale: {x: .99999994, y: .999999821, z: 1}
+      transformModified: 1
+    - name: SnowBear_RightHandRing4
+      position: {x: .00114885264, y: -.0012370419, z: -.000387327746}
+      rotation: {x: -3.60196317e-08, y: -.00146740826, z: 1.08193499e-08, w: .999998927}
+      scale: {x: 1, y: 1.00000012, z: .99999994}
+      transformModified: 1
+    - name: SnowBear_RightHandPinky1
+      position: {x: -.00681600394, y: .00265486236, z: -.00394815532}
+      rotation: {x: -4.28408278e-08, y: 5.64614133e-08, z: -.936193407, w: .351485401}
+      scale: {x: 1.00000083, y: 1.00000072, z: 1.00000036}
+      transformModified: 1
+    - name: SnowBear_RightHandPinky2
+      position: {x: .0013810168, y: -.002287301, z: -.000613473414}
+      rotation: {x: -3.17540207e-06, y: -4.20957758e-06, z: -.599854052, w: .800109506}
+      scale: {x: .999999762, y: .999999702, z: 1}
+      transformModified: 1
+    - name: SnowBear_RightHandPinky3
+      position: {x: .00167524524, y: .000443916826, z: -.000397936616}
+      rotation: {x: -6.0156679e-05, y: .000109413515, z: .514737546, w: .857347786}
+      scale: {x: 1.00000012, y: 1, z: 1}
+      transformModified: 1
+    - name: SnowBear_RightHandPinky4
+      position: {x: .000995513052, y: -.00107190607, z: -.000335626304}
+      rotation: {x: -9.47147871e-09, y: -.0014674085, z: -2.02071551e-08, w: .999998927}
+      scale: {x: .999999881, y: 1, z: .99999994}
+      transformModified: 1
+    - name: SnowBear_Neck
+      position: {x: .00890889112, y: .00511267828, z: -.00519001391}
+      rotation: {x: .218819141, y: .168293893, z: .186324343, w: .942909718}
+      scale: {x: .99999994, y: .99999994, z: 1.00000024}
+      transformModified: 1
+    - name: SnowBear_Head
+      position: {x: .0240988303, y: -.00145093619, z: -.0056768558}
+      rotation: {x: -.101947971, y: -.20460771, z: -.971957684, w: -.055141598}
+      scale: {x: .999999821, y: 1, z: .99999994}
+      transformModified: 1
     armTwist: .5
     foreArmTwist: .5
     upperLegTwist: .5
@@ -91,6 +1231,6 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: Root
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 3
   additionalBone: 0
   userData: 
