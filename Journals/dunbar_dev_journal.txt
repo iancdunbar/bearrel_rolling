@@ -39,6 +39,16 @@ The Dunbar Dev Journal
 11:52pm - Animate-Inanimate - John Petrucci
 
 	- Well I only managed to write a single simple follow script for the camera and merely begin the 
-	InputDispatch (which in hindsignt is a tad unnessicary at this point). I ended up getting engrossed
+	InputDispatch (which in hindsight is a tad unnecessary at this point). I ended up getting engrossed
 	in tracking down posts made by a rather foul gamergater. Anyway, its off to bed and hopefully tomorrow
 	I will be able to implement basic Impulse controls.
+	
+12:30am - Game Development - The Romero ( Whatever song is playing in Dangerous Dave )
+
+	- Seeing the John was streaming DD development has motivated me to do more work on the bear! At this
+	point rudimentary impulse controls are in. Control is very sketchy and jumpy however, not surprising because
+	I put in almost no time to implement it.
+	- It is worth evaluating if we need to use unity's collisions and physics for the impulses. The precise 
+	constraints on the motion need to be established and then we can decide from there if we need the physics.
+	Though since we will be using them for the ragdoll do we need to be using them for the movement as well? 
+	Needs to be thought through and figured out.
