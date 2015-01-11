@@ -96,12 +96,15 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
   m_PrefabInternal: {fileID: 1518394757}
   m_GameObject: {fileID: 9262063}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.26000977, y: -.890014648, z: 0}
+  m_LocalRotation: {x: -.5, y: .5, z: .5, w: .5}
+  m_LocalPosition: {x: -.810000002, y: 7.9000001, z: 0}
   m_LocalScale: {x: 76.1565857, y: 76.1565781, z: 76.1565781}
   m_Children:
-  - {fileID: 1525011691}
   - {fileID: 360454713}
+  - {fileID: 985468212}
+  - {fileID: 240250346}
+  - {fileID: 1085869347}
+  - {fileID: 1654243998}
   m_Father: {fileID: 607851100}
   m_RootOrder: 0
 --- !u!95 &9262065
@@ -226,33 +229,200 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
---- !u!1 &56311073
+--- !u!1 &26184202
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100028, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabParentObject: {fileID: 100240, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
   m_PrefabInternal: {fileID: 1518394757}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 56311074}
+  - 4: {fileID: 26184203}
   m_Layer: 0
-  m_Name: Rt_leg
+  m_Name: SnowBear_LeftHandIndex4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &56311074
+--- !u!4 &26184203
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400028, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabParentObject: {fileID: 400240, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
   m_PrefabInternal: {fileID: 1518394757}
-  m_GameObject: {fileID: 56311073}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: .0125037273, y: 0, z: -.0199999996}
+  m_GameObject: {fileID: 26184202}
+  m_LocalRotation: {x: 6.25379837e-09, y: -.00146737474, z: 4.26189126e-06, w: .999998927}
+  m_LocalPosition: {x: -.00590788294, y: -.0063277157, z: -.00167493138}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1036549393}
-  m_RootOrder: 2
+  m_Father: {fileID: 712036845}
+  m_RootOrder: 0
+--- !u!1 &32873692
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100304, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 32873693}
+  m_Layer: 0
+  m_Name: SnowBear_RightHandMiddle2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &32873693
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400304, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 32873692}
+  m_LocalRotation: {x: -3.18926982e-06, y: -4.25398366e-06, z: -.599853396, w: .800109923}
+  m_LocalPosition: {x: .0110315597, y: -.0182712954, z: -.00489907758}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1427577059}
+  m_Father: {fileID: 1199646730}
+  m_RootOrder: 0
+--- !u!1 &41860935
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100328, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 41860936}
+  m_Layer: 0
+  m_Name: SnowBear_RightHandThumb2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &41860936
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400328, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 41860935}
+  m_LocalRotation: {x: 0, y: 0, z: -.599853396, w: .800109923}
+  m_LocalPosition: {x: .00423826976, y: -.0112007605, z: .000745256722}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1041775558}
+  m_Father: {fileID: 851132512}
+  m_RootOrder: 0
+--- !u!1 &73559090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100270, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 73559091}
+  m_Layer: 0
+  m_Name: SnowBear_LeftHandThumb3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &73559091
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400270, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 73559090}
+  m_LocalRotation: {x: 0, y: 0, z: .514711976, w: .857363164}
+  m_LocalPosition: {x: .00364769856, y: -.0105479872, z: -.00256252172}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 612348494}
+  m_Father: {fileID: 2098337898}
+  m_RootOrder: 0
+--- !u!1 &103305672
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100294, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 103305673}
+  m_Layer: 0
+  m_Name: SnowBear_RightHandIndex1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &103305673
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400294, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 103305672}
+  m_LocalRotation: {x: -0, y: 0, z: .936193407, w: -.351485401}
+  m_LocalPosition: {x: -.0408266708, y: .0108389035, z: .00623342209}
+  m_LocalScale: {x: 1.00000036, y: 1.00000036, z: 1.00000036}
+  m_Children:
+  - {fileID: 914780817}
+  m_Father: {fileID: 972077199}
+  m_RootOrder: 0
+--- !u!1 &129239915
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100322, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 129239916}
+  m_Layer: 0
+  m_Name: SnowBear_RightHandRing3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &129239916
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400322, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 129239915}
+  m_LocalRotation: {x: -6.02080654e-05, y: .000109399269, z: .514737546, w: .857347786}
+  m_LocalPosition: {x: .00977630168, y: .00259043043, z: -.00232223398}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 961213216}
+  m_Father: {fileID: 676340692}
+  m_RootOrder: 0
+--- !u!1 &129605816
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100256, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 129605817}
+  m_Layer: 0
+  m_Name: SnowBear_LeftHandPinky4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &129605817
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400256, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 129605816}
+  m_LocalRotation: {x: 0, y: 0, z: 4.26189308e-06, w: 1}
+  m_LocalPosition: {x: -.00497710891, y: -.00535957282, z: -.00167934899}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 869547024}
+  m_RootOrder: 0
 --- !u!1 &138495421
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,7 +431,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 138495422}
-  - 137: {fileID: 138495423}
   m_Layer: 0
   m_Name: pasted__polySurface6
   m_TagString: Untagged
@@ -278,42 +447,369 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1182280473}
   m_Father: {fileID: 409346057}
   m_RootOrder: 0
---- !u!137 &138495423
-SkinnedMeshRenderer:
+--- !u!1 &143770307
+GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13700000, guid: 4b548f8e8163f46af87d84b453a6e954,
-    type: 3}
+  m_PrefabParentObject: {fileID: 100346, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
   m_PrefabInternal: {fileID: 1518394757}
-  m_GameObject: {fileID: 138495421}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 2100000, guid: 78dcce82cd1e2e74d8bf1b3e4685606d, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 143770308}
+  m_Layer: 0
+  m_Name: SnowBear_Spine2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &143770308
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400346, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 143770307}
+  m_LocalRotation: {x: -.0501651354, y: .105273262, z: -.785605192, w: .607639253}
+  m_LocalPosition: {x: .00734440703, y: -.0464075767, z: -.0332189612}
+  m_LocalScale: {x: 1.00000012, y: 1, z: 1.00000012}
+  m_Children:
+  - {fileID: 1415922871}
+  - {fileID: 152038531}
+  - {fileID: 1987498160}
+  m_Father: {fileID: 1817529426}
+  m_RootOrder: 0
+--- !u!1 &152038530
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100282, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 152038531}
+  m_Layer: 0
+  m_Name: SnowBear_Neck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &152038531
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400282, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 152038530}
+  m_LocalRotation: {x: .218819037, y: .168293893, z: .186324298, w: .942909718}
+  m_LocalPosition: {x: .0445444584, y: .0255633928, z: -.0259500723}
+  m_LocalScale: {x: 1.00000012, y: 1.00000012, z: 1.00000024}
+  m_Children:
+  - {fileID: 1154659781}
+  m_Father: {fileID: 143770308}
+  m_RootOrder: 1
+--- !u!1 &165103119
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100348, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 165103120}
+  m_Layer: 0
+  m_Name: transform1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &165103120
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400348, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 165103119}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 411358520}
+  m_RootOrder: 0
+--- !u!1 &214483603
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100286, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 214483604}
+  - 136: {fileID: 214483607}
+  - 54: {fileID: 214483606}
+  - 144: {fileID: 214483605}
+  m_Layer: 0
+  m_Name: SnowBear_RightArm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &214483604
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400286, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 214483603}
+  m_LocalRotation: {x: .0765875429, y: .26999259, z: -.729978859, w: .623192787}
+  m_LocalPosition: {x: -.0709555298, y: .000673827657, z: .0152721973}
+  m_LocalScale: {x: 1.00000012, y: 1.00000012, z: 1.00000012}
+  m_Children:
+  - {fileID: 1549341595}
+  m_Father: {fileID: 1987498160}
+  m_RootOrder: 0
+--- !u!144 &214483605
+CharacterJoint:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 214483603}
+  m_ConnectedBody: {fileID: 245026015}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -.104875229, y: .159479827, z: -.00668322248}
+  m_SwingAxis: {x: 0, y: 0, z: 1}
+  m_LowTwistLimit:
+    limit: -70
+    bounciness: 0
+    spring: 0
+    damper: 0
+  m_HighTwistLimit:
+    limit: 10
+    bounciness: 0
+    spring: 0
+    damper: 0
+  m_Swing1Limit:
+    limit: 50
+    bounciness: 0
+    spring: 0
+    damper: 0
+  m_Swing2Limit:
+    limit: 0
+    bounciness: 0
+    spring: 0
+    damper: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+--- !u!54 &214483606
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 214483603}
   serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_Mesh: {fileID: 4300004, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
-  m_Bones:
-  - {fileID: 451544955}
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 451544955}
-  m_AABB:
-    m_Center: {x: .00751264393, y: -.000193765387, z: .0112370001}
-    m_Extent: {x: .0122527368, y: .00993712433, z: .011254956}
-  m_DirtyAABB: 0
+  m_Mass: 1.25
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!136 &214483607
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 214483603}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .00873611309
+  m_Height: .0349444523
+  m_Direction: 1
+  m_Center: {x: 0, y: -.0174722262, z: 0}
+--- !u!1 &219657776
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100224, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 219657777}
+  - 65: {fileID: 219657779}
+  - 54: {fileID: 219657778}
+  m_Layer: 0
+  m_Name: SnowBear_Hips
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &219657777
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400224, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 219657776}
+  m_LocalRotation: {x: -.00296915835, y: -.0308300313, z: .0958178043, w: .994916916}
+  m_LocalPosition: {x: 5.14778794e-20, y: .113804631, z: .0178392138}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1752016382}
+  - {fileID: 1216989637}
+  - {fileID: 245026014}
+  m_Father: {fileID: 1654243998}
+  m_RootOrder: 0
+--- !u!54 &219657778
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 219657776}
+  serializedVersion: 2
+  m_Mass: 3.125
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &219657779
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 219657776}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .221315384, y: .0737758726, z: .125393227}
+  m_Center: {x: .0288851857, y: -.000930175185, z: -.00164491683}
+--- !u!1 &240250345
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100036, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 240250346}
+  m_Layer: 0
+  m_Name: polySurface2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &240250346
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400036, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 240250345}
+  m_LocalRotation: {x: 0, y: -0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 501152763}
+  m_Father: {fileID: 9262064}
+  m_RootOrder: 2
+--- !u!1 &245026013
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100342, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 245026014}
+  - 65: {fileID: 245026017}
+  - 54: {fileID: 245026015}
+  - 144: {fileID: 245026016}
+  m_Layer: 0
+  m_Name: SnowBear_Spine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &245026014
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400342, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 245026013}
+  m_LocalRotation: {x: .0191320386, y: .198656067, z: -.61741066, w: .760903299}
+  m_LocalPosition: {x: .00699075079, y: .0359573327, z: -6.38378239e-16}
+  m_LocalScale: {x: 1.00000012, y: 1.00000012, z: 1.00000012}
+  m_Children:
+  - {fileID: 1817529426}
+  m_Father: {fileID: 219657777}
+  m_RootOrder: 2
+--- !u!54 &245026015
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 245026013}
+  serializedVersion: 2
+  m_Mass: 3.125
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!144 &245026016
+CharacterJoint:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 245026013}
+  m_ConnectedBody: {fileID: 219657778}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 0, y: 1, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: .00699083414, y: .0359577574, z: 2.41679281e-08}
+  m_SwingAxis: {x: 0, y: 0, z: 1}
+  m_LowTwistLimit:
+    limit: -20
+    bounciness: 0
+    spring: 0
+    damper: 0
+  m_HighTwistLimit:
+    limit: 20
+    bounciness: 0
+    spring: 0
+    damper: 0
+  m_Swing1Limit:
+    limit: 10
+    bounciness: 0
+    spring: 0
+    damper: 0
+  m_Swing2Limit:
+    limit: 0
+    bounciness: 0
+    spring: 0
+    damper: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+--- !u!65 &245026017
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 245026013}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .17840606, y: .253935963, z: .130347997}
+  m_Center: {x: -.0892034173, y: .0325118527, z: -.0165358186}
 --- !u!1 &255071499
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,6 +850,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!1 &261665671
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100310, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 261665672}
+  m_Layer: 0
+  m_Name: SnowBear_RightHandPinky1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &261665672
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400310, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 261665671}
+  m_LocalRotation: {x: -0, y: 0, z: .936193407, w: -.351485401}
+  m_LocalPosition: {x: -.0340800211, y: .013274312, z: -.019740779}
+  m_LocalScale: {x: 1.00000036, y: 1.00000036, z: 1.00000036}
+  m_Children:
+  - {fileID: 398253173}
+  m_Father: {fileID: 972077199}
+  m_RootOrder: 2
 --- !u!1 &360454712
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,12 +900,40 @@ Transform:
   m_PrefabInternal: {fileID: 1518394757}
   m_GameObject: {fileID: 360454712}
   m_LocalRotation: {x: 0, y: -0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.55271347e-16, y: 1.09462607, z: -.0375300646}
+  m_LocalPosition: {x: -1.77635684e-15, y: 5.4731307, z: -.187650338}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1765579063}
   m_Father: {fileID: 9262064}
-  m_RootOrder: 1
+  m_RootOrder: 0
+--- !u!1 &398253172
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100312, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 398253173}
+  m_Layer: 0
+  m_Name: SnowBear_RightHandPinky2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &398253173
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400312, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 398253172}
+  m_LocalRotation: {x: -3.18926982e-06, y: -4.25398366e-06, z: -.599853396, w: .800109923}
+  m_LocalPosition: {x: .00690508401, y: -.0114365062, z: -.00306736724}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1938646047}
+  m_Father: {fileID: 261665672}
+  m_RootOrder: 0
 --- !u!1 &408546306
 GameObject:
   m_ObjectHideFlags: 0
@@ -466,13 +1018,14 @@ Transform:
   m_PrefabParentObject: {fileID: 400006, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
   m_PrefabInternal: {fileID: 1518394757}
   m_GameObject: {fileID: 409346056}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: .5, y: -.5, z: -.5, w: .5}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 138495422}
-  - {fileID: 1209015628}
   - {fileID: 411358520}
+  - {fileID: 970579716}
+  - {fileID: 2040725476}
   m_Father: {fileID: 1765579063}
   m_RootOrder: 0
 --- !u!1 &411358519
@@ -483,7 +1036,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 411358520}
-  - 137: {fileID: 411358521}
   m_Layer: 0
   m_Name: pasted__polySurface8
   m_TagString: Untagged
@@ -500,72 +1052,245 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 165103120}
   m_Father: {fileID: 409346057}
-  m_RootOrder: 2
---- !u!137 &411358521
-SkinnedMeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13700004, guid: 4b548f8e8163f46af87d84b453a6e954,
-    type: 3}
-  m_PrefabInternal: {fileID: 1518394757}
-  m_GameObject: {fileID: 411358519}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 2100000, guid: 78dcce82cd1e2e74d8bf1b3e4685606d, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_Mesh: {fileID: 4300000, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
-  m_Bones:
-  - {fileID: 1228939941}
-  - {fileID: 1930580419}
-  - {fileID: 56311074}
-  - {fileID: 1036549393}
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 1036549393}
-  m_AABB:
-    m_Center: {x: -.0255484357, y: .00884406082, z: -.00073525589}
-    m_Extent: {x: .0558634028, y: .0236252788, z: .0319367982}
-  m_DirtyAABB: 0
---- !u!1 &451544954
+  m_RootOrder: 1
+--- !u!1 &430200526
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100012, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabParentObject: {fileID: 100278, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
   m_PrefabInternal: {fileID: 1518394757}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 451544955}
+  - 4: {fileID: 430200527}
   m_Layer: 0
-  m_Name: Lf_arm
+  m_Name: SnowBear_LeftToeBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &451544955
+--- !u!4 &430200527
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400012, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabParentObject: {fileID: 400278, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
   m_PrefabInternal: {fileID: 1518394757}
-  m_GameObject: {fileID: 451544954}
-  m_LocalRotation: {x: 1.49251176e-17, y: -.81839782, z: -1.49251176e-17, w: .574652135}
-  m_LocalPosition: {x: -.0212632939, y: 0, z: 4.440892e-18}
+  m_GameObject: {fileID: 430200526}
+  m_LocalRotation: {x: .142215788, y: -.404764354, z: -.353908032, w: .831077397}
+  m_LocalPosition: {x: -.0276822448, y: -.0584914051, z: -.00320793549}
+  m_LocalScale: {x: 1.00000012, y: 1.00000012, z: 1.00000012}
+  m_Children: []
+  m_Father: {fileID: 1920138612}
+  m_RootOrder: 0
+--- !u!1 &471297529
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100354, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 471297530}
+  m_Layer: 0
+  m_Name: transform4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &471297530
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400354, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 471297529}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1228939941}
-  m_RootOrder: 1
+  m_Father: {fileID: 970579716}
+  m_RootOrder: 0
+--- !u!1 &490651755
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100232, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 490651756}
+  m_Layer: 0
+  m_Name: SnowBear_LeftHand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &490651756
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400232, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 490651755}
+  m_LocalRotation: {x: .0309208501, y: .00179101399, z: -.169947013, w: .984966338}
+  m_LocalPosition: {x: .0288515277, y: .0448461808, z: -.00916527864}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 952831564}
+  - {fileID: 1783093682}
+  - {fileID: 596923032}
+  - {fileID: 1181540875}
+  - {fileID: 631344140}
+  m_Father: {fileID: 1653491032}
+  m_RootOrder: 0
+--- !u!1 &501152762
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100356, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 501152763}
+  m_Layer: 0
+  m_Name: transform5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &501152763
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400356, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 501152762}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 240250346}
+  m_RootOrder: 0
+--- !u!1 &518528479
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100226, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 518528480}
+  - 136: {fileID: 518528483}
+  - 54: {fileID: 518528481}
+  - 144: {fileID: 518528482}
+  m_Layer: 0
+  m_Name: SnowBear_LeftArm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &518528480
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400226, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 518528479}
+  m_LocalRotation: {x: .0765920877, y: .269991487, z: -.729960084, w: .623214662}
+  m_LocalPosition: {x: .0709554628, y: -.000674427487, z: -.0152724851}
+  m_LocalScale: {x: 1.00000024, y: 1.00000012, z: 1.00000024}
+  m_Children:
+  - {fileID: 1653491032}
+  m_Father: {fileID: 1415922871}
+  m_RootOrder: 0
+--- !u!54 &518528481
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 518528479}
+  serializedVersion: 2
+  m_Mass: 1.25
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!144 &518528482
+CharacterJoint:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 518528479}
+  m_ConnectedBody: {fileID: 245026015}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -.178406447, y: -.0271249525, z: -.0625513569}
+  m_SwingAxis: {x: 0, y: 0, z: 1}
+  m_LowTwistLimit:
+    limit: -70
+    bounciness: 0
+    spring: 0
+    damper: 0
+  m_HighTwistLimit:
+    limit: 10
+    bounciness: 0
+    spring: 0
+    damper: 0
+  m_Swing1Limit:
+    limit: 50
+    bounciness: 0
+    spring: 0
+    damper: 0
+  m_Swing2Limit:
+    limit: 0
+    bounciness: 0
+    spring: 0
+    damper: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+--- !u!136 &518528483
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 518528479}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .00783472974
+  m_Height: .031338919
+  m_Direction: 1
+  m_Center: {x: 0, y: .0156694595, z: 0}
+--- !u!1 &596923031
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100250, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 596923032}
+  m_Layer: 0
+  m_Name: SnowBear_LeftHandPinky1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &596923032
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400250, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 596923031}
+  m_LocalRotation: {x: -0, y: 0, z: .936245799, w: -.351345718}
+  m_LocalPosition: {x: .00630938495, y: .0360256396, z: -.019740779}
+  m_LocalScale: {x: 1.00000036, y: 1.00000036, z: 1.00000036}
+  m_Children:
+  - {fileID: 1447633132}
+  m_Father: {fileID: 490651756}
+  m_RootOrder: 2
 --- !u!1 &607851099
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,6 +1303,7 @@ GameObject:
   - 54: {fileID: 607851101}
   - 114: {fileID: 607851103}
   - 114: {fileID: 607851104}
+  - 33: {fileID: 607851105}
   m_Layer: 0
   m_Name: Bear
   m_TagString: Untagged
@@ -591,8 +1317,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 607851099}
-  m_LocalRotation: {x: 0, y: 0, z: -.707106829, w: .707106829}
-  m_LocalPosition: {x: 229.850006, y: 602.469971, z: 1500}
+  m_LocalRotation: {x: 0, y: 0, z: .707106829, w: -.707106829}
+  m_LocalPosition: {x: 262.700012, y: 601.960022, z: 1500}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9262064}
@@ -624,7 +1350,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 3.07999992
-  m_Center: {x: 0, y: .589999974, z: 0}
+  m_Center: {x: -17.8500004, y: 11.8999996, z: -.310000002}
 --- !u!114 &607851103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -648,6 +1374,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eba81efbc69834b43a9492f1bf1476d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!33 &607851105
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 607851099}
+  m_Mesh: {fileID: 0}
+--- !u!1 &612348493
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100272, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 612348494}
+  m_Layer: 0
+  m_Name: SnowBear_LeftHandThumb4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &612348494
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400272, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 612348493}
+  m_LocalRotation: {x: 0, y: 0, z: 4.26189308e-06, w: 1}
+  m_LocalPosition: {x: -.00796377566, y: -.00857593678, z: -.0026871548}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 73559091}
+  m_RootOrder: 0
 --- !u!1 &619010430
 GameObject:
   m_ObjectHideFlags: 0
@@ -688,6 +1448,212 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
+--- !u!1 &623884742
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100274, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 623884743}
+  - 136: {fileID: 623884746}
+  - 54: {fileID: 623884745}
+  - 144: {fileID: 623884744}
+  m_Layer: 0
+  m_Name: SnowBear_LeftLeg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &623884743
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400274, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 623884742}
+  m_LocalRotation: {x: .783136487, y: .118260011, z: -.405513108, w: -.456367105}
+  m_LocalPosition: {x: -.0173650533, y: .0103361271, z: .0326886252}
+  m_LocalScale: {x: 1.00000024, y: 1.00000036, z: 1.00000024}
+  m_Children:
+  - {fileID: 1920138612}
+  m_Father: {fileID: 1752016382}
+  m_RootOrder: 0
+--- !u!144 &623884744
+CharacterJoint:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 623884742}
+  m_ConnectedBody: {fileID: 1752016384}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -.017364841, y: .0103363879, z: .0326885544}
+  m_SwingAxis: {x: 0, y: 0, z: 1}
+  m_LowTwistLimit:
+    limit: -80
+    bounciness: 0
+    spring: 0
+    damper: 0
+  m_HighTwistLimit:
+    limit: 0
+    bounciness: 0
+    spring: 0
+    damper: 0
+  m_Swing1Limit:
+    limit: 0
+    bounciness: 0
+    spring: 0
+    damper: 0
+  m_Swing2Limit:
+    limit: 0
+    bounciness: 0
+    spring: 0
+    damper: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+--- !u!54 &623884745
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 623884742}
+  serializedVersion: 2
+  m_Mass: 1.875
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!136 &623884746
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 623884742}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .0132201463
+  m_Height: .0528805852
+  m_Direction: 1
+  m_Center: {x: 0, y: -.0264402926, z: 0}
+--- !u!1 &631344139
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100266, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 631344140}
+  m_Layer: 0
+  m_Name: SnowBear_LeftHandThumb1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &631344140
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400266, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 631344139}
+  m_LocalRotation: {x: -0, y: 0, z: .936245799, w: -.351345718}
+  m_LocalPosition: {x: .00343247619, y: .0232914276, z: .0146263931}
+  m_LocalScale: {x: 1.00000036, y: 1.00000036, z: 1.00000036}
+  m_Children:
+  - {fileID: 2098337898}
+  m_Father: {fileID: 490651756}
+  m_RootOrder: 4
+--- !u!1 &676340691
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100320, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 676340692}
+  m_Layer: 0
+  m_Name: SnowBear_RightHandRing2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &676340692
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400320, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 676340691}
+  m_LocalRotation: {x: -3.18926982e-06, y: -4.25398366e-06, z: -.599853396, w: .800109923}
+  m_LocalPosition: {x: .010293019, y: -.0170482323, z: -.00457242271}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 129239916}
+  m_Father: {fileID: 1671894501}
+  m_RootOrder: 0
+--- !u!1 &712036844
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100238, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 712036845}
+  m_Layer: 0
+  m_Name: SnowBear_LeftHandIndex3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &712036845
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400238, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 712036844}
+  m_LocalRotation: {x: -6.0203125e-05, y: .00010939769, z: .514711976, w: .857363164}
+  m_LocalPosition: {x: .00380427996, y: -.0110991159, z: -.00226807711}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 26184203}
+  m_Father: {fileID: 1370030910}
+  m_RootOrder: 0
+--- !u!1 &746715247
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100298, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 746715248}
+  m_Layer: 0
+  m_Name: SnowBear_RightHandIndex3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &746715248
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400298, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 746715247}
+  m_LocalRotation: {x: -6.02080654e-05, y: .000109399269, z: .514737546, w: .857347786}
+  m_LocalPosition: {x: .0113333287, y: .00303616817, z: -.00226815837}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1216553674}
+  m_Father: {fileID: 914780817}
+  m_RootOrder: 0
 --- !u!1 &846868734
 GameObject:
   m_ObjectHideFlags: 0
@@ -728,6 +1694,172 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!1 &851132511
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100326, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 851132512}
+  m_Layer: 0
+  m_Name: SnowBear_RightHandThumb1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &851132512
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400326, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 851132511}
+  m_LocalRotation: {x: -0, y: 0, z: .936193407, w: -.351485401}
+  m_LocalPosition: {x: -.0216983911, y: .00913522486, z: .0146263931}
+  m_LocalScale: {x: 1.00000036, y: 1.00000036, z: 1.00000036}
+  m_Children:
+  - {fileID: 41860936}
+  m_Father: {fileID: 972077199}
+  m_RootOrder: 4
+--- !u!1 &869547023
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100254, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 869547024}
+  m_Layer: 0
+  m_Name: SnowBear_LeftHandPinky3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &869547024
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400254, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 869547023}
+  m_LocalRotation: {x: 0, y: 0, z: .514711976, w: .857363164}
+  m_LocalPosition: {x: .00283191889, y: -.00818952173, z: -.00198959326}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 129605817}
+  m_Father: {fileID: 1447633132}
+  m_RootOrder: 0
+--- !u!1 &914780816
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100296, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 914780817}
+  m_Layer: 0
+  m_Name: SnowBear_RightHandIndex2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &914780817
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400296, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 914780816}
+  m_LocalRotation: {x: -3.18926982e-06, y: -4.25398366e-06, z: -.599853396, w: .800109923}
+  m_LocalPosition: {x: .00969862472, y: -.0159649719, z: -.00361092924}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 746715248}
+  m_Father: {fileID: 103305673}
+  m_RootOrder: 0
+--- !u!1 &952831563
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100234, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 952831564}
+  m_Layer: 0
+  m_Name: SnowBear_LeftHandIndex1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &952831564
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400234, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 952831563}
+  m_LocalRotation: {x: -0, y: 0, z: .936245799, w: -.351345718}
+  m_LocalPosition: {x: .011888667, y: .0405334197, z: .00623342209}
+  m_LocalScale: {x: 1.00000036, y: 1.00000036, z: 1.00000036}
+  m_Children:
+  - {fileID: 1370030910}
+  m_Father: {fileID: 490651756}
+  m_RootOrder: 0
+--- !u!1 &961213215
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100324, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 961213216}
+  m_Layer: 0
+  m_Name: SnowBear_RightHandRing4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &961213216
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400324, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 961213215}
+  m_LocalRotation: {x: 0, y: -.00146742212, z: -0, w: .999998927}
+  m_LocalPosition: {x: .00574426306, y: -.00618520984, z: -.00193663873}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 129239916}
+  m_RootOrder: 0
+--- !u!1 &968903572
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100350, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 968903573}
+  m_Layer: 0
+  m_Name: transform2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &968903573
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400350, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 968903572}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2040725476}
+  m_RootOrder: 0
 --- !u!1 &969348955
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,7 +1921,7 @@ Camera:
     height: 1
   near clip plane: .300000012
   far clip plane: 1000
-  field of view: 60.0015602
+  field of view: 60
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -809,8 +1941,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 969348955}
-  m_LocalRotation: {x: .180326939, y: .664972961, z: -.0888011009, w: .719310462}
-  m_LocalPosition: {x: 237, y: 612.599976, z: 1460.80005}
+  m_LocalRotation: {x: .26423046, y: .685124099, z: -.206967637, w: .646491885}
+  m_LocalPosition: {x: 242.865936, y: 655.376587, z: 1502.58105}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1142935332}
@@ -821,7 +1953,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 969348955}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a4debc9ad1110f6d00074c88d76c639, type: 3}
   m_Name: 
@@ -841,7 +1973,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followTarget: {fileID: 607851100}
-  targetOffset: {x: -40, y: 20, z: 0}
+  targetOffset: {x: -108.5, y: 104.379997, z: 0}
   maxSpeed: 100
   updateOnFixed: 1
 --- !u!114 &969348963
@@ -855,6 +1987,94 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbade868b7684e640b94515e08bd8081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &970579715
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100032, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 970579716}
+  m_Layer: 0
+  m_Name: pasted__polySurface9
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &970579716
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400032, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 970579715}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: -1}
+  m_Children:
+  - {fileID: 471297530}
+  m_Father: {fileID: 409346057}
+  m_RootOrder: 2
+--- !u!1 &972077198
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100292, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 972077199}
+  m_Layer: 0
+  m_Name: SnowBear_RightHand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &972077199
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400292, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 972077198}
+  m_LocalRotation: {x: .0309207514, y: .00179272715, z: -.170093939, w: .984941006}
+  m_LocalPosition: {x: -.0418606289, y: .0326632746, z: -.0104111247}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 103305673}
+  - {fileID: 1199646730}
+  - {fileID: 261665672}
+  - {fileID: 1671894501}
+  - {fileID: 851132512}
+  m_Father: {fileID: 1549341595}
+  m_RootOrder: 0
+--- !u!1 &985468211
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100034, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 985468212}
+  m_Layer: 0
+  m_Name: polySurface1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &985468212
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400034, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 985468211}
+  m_LocalRotation: {x: 0, y: -0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1075573567}
+  m_Father: {fileID: 9262064}
+  m_RootOrder: 1
 --- !u!1 &1034878433
 GameObject:
   m_ObjectHideFlags: 0
@@ -895,35 +2115,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
---- !u!1 &1036549392
+--- !u!1 &1041775557
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100024, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabParentObject: {fileID: 100330, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
   m_PrefabInternal: {fileID: 1518394757}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 1036549393}
+  - 4: {fileID: 1041775558}
   m_Layer: 0
-  m_Name: Root
+  m_Name: SnowBear_RightHandThumb3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1036549393
+--- !u!4 &1041775558
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400024, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabParentObject: {fileID: 400330, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
   m_PrefabInternal: {fileID: 1518394757}
-  m_GameObject: {fileID: 1036549392}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -.0299999993, y: 0, z: 0}
+  m_GameObject: {fileID: 1041775557}
+  m_LocalRotation: {x: 0, y: 0, z: .514737606, w: .857347846}
+  m_LocalPosition: {x: .0107886149, y: .00285860384, z: -.00256252289}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1228939941}
-  - {fileID: 1930580419}
-  - {fileID: 56311074}
-  m_Father: {fileID: 1525011691}
+  - {fileID: 1159944685}
+  m_Father: {fileID: 41860936}
   m_RootOrder: 0
 --- !u!1 &1061770796
 GameObject:
@@ -991,33 +2209,155 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
---- !u!1 &1081311865
+--- !u!1 &1075573566
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100010, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabParentObject: {fileID: 100352, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
   m_PrefabInternal: {fileID: 1518394757}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 1081311866}
+  - 4: {fileID: 1075573567}
   m_Layer: 0
-  m_Name: Head2
+  m_Name: transform3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1081311866
+--- !u!4 &1075573567
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400010, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabParentObject: {fileID: 400352, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
   m_PrefabInternal: {fileID: 1518394757}
-  m_GameObject: {fileID: 1081311865}
-  m_LocalRotation: {x: 0, y: -.172354221, z: -0, w: .985035062}
-  m_LocalPosition: {x: .00773496367, y: 0, z: -.0214266442}
+  m_GameObject: {fileID: 1075573566}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1228939941}
+  m_Father: {fileID: 985468212}
   m_RootOrder: 0
+--- !u!1 &1085869346
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100038, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1085869347}
+  - 137: {fileID: 1085869348}
+  m_Layer: 0
+  m_Name: polySurface3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1085869347
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400038, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 1085869346}
+  m_LocalRotation: {x: 0, y: -0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 9262064}
+  m_RootOrder: 3
+--- !u!137 &1085869348
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13700006, guid: 4b548f8e8163f46af87d84b453a6e954,
+    type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 1085869346}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: 78dcce82cd1e2e74d8bf1b3e4685606d, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_Mesh: {fileID: 4300006, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_Bones:
+  - {fileID: 219657777}
+  - {fileID: 1752016382}
+  - {fileID: 623884743}
+  - {fileID: 1920138612}
+  - {fileID: 430200527}
+  - {fileID: 1216989637}
+  - {fileID: 1407896311}
+  - {fileID: 1589665904}
+  - {fileID: 2030507022}
+  - {fileID: 245026014}
+  - {fileID: 1817529426}
+  - {fileID: 143770308}
+  - {fileID: 1415922871}
+  - {fileID: 518528480}
+  - {fileID: 1653491032}
+  - {fileID: 490651756}
+  - {fileID: 631344140}
+  - {fileID: 2098337898}
+  - {fileID: 73559091}
+  - {fileID: 612348494}
+  - {fileID: 952831564}
+  - {fileID: 1370030910}
+  - {fileID: 712036845}
+  - {fileID: 26184203}
+  - {fileID: 1783093682}
+  - {fileID: 1499586363}
+  - {fileID: 1805165717}
+  - {fileID: 1783449845}
+  - {fileID: 1181540875}
+  - {fileID: 2064757802}
+  - {fileID: 2005299718}
+  - {fileID: 1924325637}
+  - {fileID: 596923032}
+  - {fileID: 1447633132}
+  - {fileID: 869547024}
+  - {fileID: 129605817}
+  - {fileID: 1987498160}
+  - {fileID: 214483604}
+  - {fileID: 1549341595}
+  - {fileID: 972077199}
+  - {fileID: 851132512}
+  - {fileID: 41860936}
+  - {fileID: 1041775558}
+  - {fileID: 1159944685}
+  - {fileID: 103305673}
+  - {fileID: 914780817}
+  - {fileID: 746715248}
+  - {fileID: 1216553674}
+  - {fileID: 1199646730}
+  - {fileID: 32873693}
+  - {fileID: 1427577059}
+  - {fileID: 1657337740}
+  - {fileID: 1671894501}
+  - {fileID: 676340692}
+  - {fileID: 129239916}
+  - {fileID: 961213216}
+  - {fileID: 261665672}
+  - {fileID: 398253173}
+  - {fileID: 1938646047}
+  - {fileID: 1767826786}
+  - {fileID: 152038531}
+  - {fileID: 1154659781}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 219657777}
+  m_AABB:
+    m_Center: {x: .0314331949, y: .11319904, z: .0262105018}
+    m_Extent: {x: .243598223, y: .288098693, z: .159911081}
+  m_DirtyAABB: 0
 --- !u!1 &1142935331
 GameObject:
   m_ObjectHideFlags: 0
@@ -1059,124 +2399,563 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54a8fc8d4d0f8484ab1224126c74c17a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1209015627
+--- !u!1 &1154659780
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100020, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabParentObject: {fileID: 100222, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
   m_PrefabInternal: {fileID: 1518394757}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 1209015628}
-  - 137: {fileID: 1209015629}
+  - 4: {fileID: 1154659781}
+  - 135: {fileID: 1154659784}
+  - 54: {fileID: 1154659783}
+  - 144: {fileID: 1154659782}
   m_Layer: 0
-  m_Name: pasted__polySurface7
+  m_Name: SnowBear_Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1209015628
+--- !u!4 &1154659781
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400020, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabParentObject: {fileID: 400222, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
   m_PrefabInternal: {fileID: 1518394757}
-  m_GameObject: {fileID: 1209015627}
+  m_GameObject: {fileID: 1154659780}
+  m_LocalRotation: {x: .101947941, y: .20460768, z: .971957684, w: .0551414639}
+  m_LocalPosition: {x: .12049415, y: -.00725468108, z: -.0283842813}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 152038531}
+  m_RootOrder: 0
+--- !u!144 &1154659782
+CharacterJoint:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1154659780}
+  m_ConnectedBody: {fileID: 245026015}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 0, y: 1, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -.262389839, y: .122593775, z: -.0641285852}
+  m_SwingAxis: {x: 0, y: 0, z: 1}
+  m_LowTwistLimit:
+    limit: -40
+    bounciness: 0
+    spring: 0
+    damper: 0
+  m_HighTwistLimit:
+    limit: 25
+    bounciness: 0
+    spring: 0
+    damper: 0
+  m_Swing1Limit:
+    limit: 25
+    bounciness: 0
+    spring: 0
+    damper: 0
+  m_Swing2Limit:
+    limit: 0
+    bounciness: 0
+    spring: 0
+    damper: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+--- !u!54 &1154659783
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1154659780}
+  serializedVersion: 2
+  m_Mass: 1.25
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!135 &1154659784
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1154659780}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 3.96405029
+  m_Center: {x: -3.96405029, y: 0, z: 0}
+--- !u!1 &1159944684
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100332, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1159944685}
+  m_Layer: 0
+  m_Name: SnowBear_RightHandThumb4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1159944685
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400332, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 1159944684}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: .0079638483, y: -.00857586879, z: -.0026871548}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1041775558}
+  m_RootOrder: 0
+--- !u!1 &1181540874
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100258, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1181540875}
+  m_Layer: 0
+  m_Name: SnowBear_LeftHandRing1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1181540875
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400258, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 1181540874}
+  m_LocalRotation: {x: -0, y: 0, z: .936245799, w: -.351345718}
+  m_LocalPosition: {x: .0103048719, y: .0368168019, z: -.0125608565}
+  m_LocalScale: {x: 1.00000036, y: 1.00000036, z: 1.00000036}
+  m_Children:
+  - {fileID: 2064757802}
+  m_Father: {fileID: 490651756}
+  m_RootOrder: 3
+--- !u!1 &1182280472
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100358, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1182280473}
+  m_Layer: 0
+  m_Name: transform6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1182280473
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400358, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 1182280472}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 409346057}
-  m_RootOrder: 1
---- !u!137 &1209015629
-SkinnedMeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13700002, guid: 4b548f8e8163f46af87d84b453a6e954,
-    type: 3}
-  m_PrefabInternal: {fileID: 1518394757}
-  m_GameObject: {fileID: 1209015627}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 2100000, guid: 78dcce82cd1e2e74d8bf1b3e4685606d, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_Mesh: {fileID: 4300002, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
-  m_Bones:
-  - {fileID: 1425131092}
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 1425131092}
-  m_AABB:
-    m_Center: {x: .00827369653, y: -.000524582341, z: -.0105438549}
-    m_Extent: {x: .0130137894, y: .0102679413, z: .0123133454}
-  m_DirtyAABB: 0
---- !u!1 &1228939940
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100008, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
-  m_PrefabInternal: {fileID: 1518394757}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1228939941}
-  m_Layer: 0
-  m_Name: Head
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1228939941
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400008, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
-  m_PrefabInternal: {fileID: 1518394757}
-  m_GameObject: {fileID: 1228939940}
-  m_LocalRotation: {x: -8.52997052e-17, y: .81839782, z: 8.52997052e-17, w: .574652135}
-  m_LocalPosition: {x: -.0372199491, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1081311866}
-  - {fileID: 451544955}
-  - {fileID: 1425131092}
-  m_Father: {fileID: 1036549393}
+  m_Father: {fileID: 138495422}
   m_RootOrder: 0
---- !u!1 &1425131091
+--- !u!1 &1199646729
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100026, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabParentObject: {fileID: 100302, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
   m_PrefabInternal: {fileID: 1518394757}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 1425131092}
+  - 4: {fileID: 1199646730}
   m_Layer: 0
-  m_Name: Rt_arm
+  m_Name: SnowBear_RightHandMiddle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1425131092
+--- !u!4 &1199646730
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400026, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabParentObject: {fileID: 400302, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
   m_PrefabInternal: {fileID: 1518394757}
-  m_GameObject: {fileID: 1425131091}
-  m_LocalRotation: {x: 1.49251176e-17, y: -.81839782, z: -1.49251176e-17, w: .574652135}
-  m_LocalPosition: {x: .0180076994, y: 0, z: .0141767282}
+  m_GameObject: {fileID: 1199646729}
+  m_LocalRotation: {x: -0, y: 0, z: .936193407, w: -.351485401}
+  m_LocalPosition: {x: -.0388624407, y: .00958225504, z: -.00333810458}
+  m_LocalScale: {x: 1.00000036, y: 1.00000036, z: 1.00000036}
+  m_Children:
+  - {fileID: 32873693}
+  m_Father: {fileID: 972077199}
+  m_RootOrder: 1
+--- !u!1 &1216553673
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100300, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1216553674}
+  m_Layer: 0
+  m_Name: SnowBear_RightHandIndex4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1216553674
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400300, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 1216553673}
+  m_LocalRotation: {x: 0, y: -.00146742212, z: -0, w: .999998927}
+  m_LocalPosition: {x: .00590875512, y: -.00632766495, z: -.00167204149}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1228939941}
-  m_RootOrder: 2
+  m_Father: {fileID: 746715248}
+  m_RootOrder: 0
+--- !u!1 &1216989636
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100340, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1216989637}
+  - 136: {fileID: 1216989640}
+  - 54: {fileID: 1216989639}
+  - 144: {fileID: 1216989638}
+  m_Layer: 0
+  m_Name: SnowBear_RightUpLeg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1216989637
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400340, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 1216989636}
+  m_LocalRotation: {x: .0191320386, y: .198656067, z: -.61741066, w: .760903299}
+  m_LocalPosition: {x: .0722751617, y: -.0378184319, z: -.00973524433}
+  m_LocalScale: {x: 1.00000012, y: 1.00000012, z: 1.00000012}
+  m_Children:
+  - {fileID: 1407896311}
+  m_Father: {fileID: 219657777}
+  m_RootOrder: 1
+--- !u!144 &1216989638
+CharacterJoint:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1216989636}
+  m_ConnectedBody: {fileID: 219657778}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 0, y: 1, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: .0722749531, y: -.0378181115, z: -.00973540545}
+  m_SwingAxis: {x: 0, y: 0, z: 1}
+  m_LowTwistLimit:
+    limit: -20
+    bounciness: 0
+    spring: 0
+    damper: 0
+  m_HighTwistLimit:
+    limit: 70
+    bounciness: 0
+    spring: 0
+    damper: 0
+  m_Swing1Limit:
+    limit: 30
+    bounciness: 0
+    spring: 0
+    damper: 0
+  m_Swing2Limit:
+    limit: 0
+    bounciness: 0
+    spring: 0
+    damper: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+--- !u!54 &1216989639
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1216989636}
+  serializedVersion: 2
+  m_Mass: 1.875
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!136 &1216989640
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1216989636}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .00980651192
+  m_Height: .0326883718
+  m_Direction: 0
+  m_Center: {x: .0163441859, y: 0, z: 0}
+--- !u!1 &1370030909
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100236, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1370030910}
+  m_Layer: 0
+  m_Name: SnowBear_LeftHandIndex2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1370030910
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400236, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 1370030909}
+  m_LocalRotation: {x: -3.18878597e-06, y: -4.25413145e-06, z: -.599781752, w: .800163627}
+  m_LocalPosition: {x: -.0152622331, y: -.0107706944, z: -.00361092924}
+  m_LocalScale: {x: 1.00000036, y: 1.00000036, z: 1.00000048}
+  m_Children:
+  - {fileID: 712036845}
+  m_Father: {fileID: 952831564}
+  m_RootOrder: 0
+--- !u!1 &1407896310
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100334, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1407896311}
+  - 136: {fileID: 1407896314}
+  - 54: {fileID: 1407896313}
+  - 144: {fileID: 1407896312}
+  m_Layer: 0
+  m_Name: SnowBear_RightLeg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1407896311
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400334, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 1407896310}
+  m_LocalRotation: {x: .0251758136, y: .261410654, z: -.812447786, w: .520537496}
+  m_LocalPosition: {x: .0326883718, y: -.0164115224, z: .0117920423}
+  m_LocalScale: {x: .99999994, y: 1, z: .999999881}
+  m_Children:
+  - {fileID: 1589665904}
+  m_Father: {fileID: 1216989637}
+  m_RootOrder: 0
+--- !u!144 &1407896312
+CharacterJoint:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1407896310}
+  m_ConnectedBody: {fileID: 1216989639}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: -1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: .0326883718, y: -.0164115224, z: .0117920423}
+  m_SwingAxis: {x: 0, y: 0, z: 1}
+  m_LowTwistLimit:
+    limit: -80
+    bounciness: 0
+    spring: 0
+    damper: 0
+  m_HighTwistLimit:
+    limit: 0
+    bounciness: 0
+    spring: 0
+    damper: 0
+  m_Swing1Limit:
+    limit: 0
+    bounciness: 0
+    spring: 0
+    damper: 0
+  m_Swing2Limit:
+    limit: 0
+    bounciness: 0
+    spring: 0
+    damper: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+--- !u!54 &1407896313
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1407896310}
+  serializedVersion: 2
+  m_Mass: 1.875
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!136 &1407896314
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1407896310}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .00697345287
+  m_Height: .0278938115
+  m_Direction: 1
+  m_Center: {x: 0, y: .0139469057, z: 0}
+--- !u!1 &1415922870
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100276, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1415922871}
+  m_Layer: 0
+  m_Name: SnowBear_LeftShoulder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1415922871
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400276, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 1415922870}
+  m_LocalRotation: {x: .273730308, y: -.0357255042, z: .79848671, w: .534990072}
+  m_LocalPosition: {x: .0239191931, y: .0481770486, z: -.0113548702}
+  m_LocalScale: {x: .99999994, y: 1, z: 1.00000012}
+  m_Children:
+  - {fileID: 518528480}
+  m_Father: {fileID: 143770308}
+  m_RootOrder: 0
+--- !u!1 &1427577058
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100306, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1427577059}
+  m_Layer: 0
+  m_Name: SnowBear_RightHandMiddle3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1427577059
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400306, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 1427577058}
+  m_LocalRotation: {x: -6.02080654e-05, y: .000109399269, z: .514737546, w: .857347786}
+  m_LocalPosition: {x: .0117308898, y: .00310840481, z: -.0027857346}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1657337740}
+  m_Father: {fileID: 32873693}
+  m_RootOrder: 0
+--- !u!1 &1447633131
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100252, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1447633132}
+  m_Layer: 0
+  m_Name: SnowBear_LeftHandPinky2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1447633132
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400252, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 1447633131}
+  m_LocalRotation: {x: 0, y: 0, z: -.599781752, w: .800163627}
+  m_LocalPosition: {x: -.0108941039, y: -.00773254922, z: -.00306736724}
+  m_LocalScale: {x: 1.00000036, y: 1.00000036, z: 1.00000048}
+  m_Children:
+  - {fileID: 869547024}
+  m_Father: {fileID: 596923032}
+  m_RootOrder: 0
+--- !u!1 &1499586362
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100244, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1499586363}
+  m_Layer: 0
+  m_Name: SnowBear_LeftHandMiddle2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1499586363
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400244, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 1499586362}
+  m_LocalRotation: {x: 0, y: 0, z: -.599781752, w: .800163627}
+  m_LocalPosition: {x: -.0174045507, y: -.0123538282, z: -.00489907758}
+  m_LocalScale: {x: 1.00000036, y: 1.00000036, z: 1.00000048}
+  m_Children:
+  - {fileID: 1805165717}
+  m_Father: {fileID: 1783093682}
+  m_RootOrder: 0
 --- !u!1001 &1518394757
 Prefab:
   m_ObjectHideFlags: 0
@@ -1186,11 +2965,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.26000977
+      value: -.810000002
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -.890014648
+      value: 7.9000001
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1198,19 +2977,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
       propertyPath: m_RootOrder
@@ -1232,39 +3011,432 @@ Prefab:
       propertyPath: m_Name
       value: Bear_Ragdoll_Model
       objectReference: {fileID: 0}
+    - target: {fileID: 400334, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: .0251758136
+      objectReference: {fileID: 0}
+    - target: {fileID: 400334, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: .261410654
+      objectReference: {fileID: 0}
+    - target: {fileID: 400334, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: .0326883718
+      objectReference: {fileID: 0}
+    - target: {fileID: 400334, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -.0164115224
+      objectReference: {fileID: 0}
+    - target: {fileID: 400334, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: .0117920423
+      objectReference: {fileID: 0}
+    - target: {fileID: 400334, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+      propertyPath: m_LocalScale.x
+      value: .99999994
+      objectReference: {fileID: 0}
+    - target: {fileID: 400334, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+      propertyPath: m_LocalScale.z
+      value: .999999881
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
   m_RootGameObject: {fileID: 9262063}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!1 &1525011690
+--- !u!1 &1549341594
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100002, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabParentObject: {fileID: 100290, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
   m_PrefabInternal: {fileID: 1518394757}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 1525011691}
+  - 4: {fileID: 1549341595}
+  - 136: {fileID: 1549341598}
+  - 54: {fileID: 1549341597}
+  - 144: {fileID: 1549341596}
   m_Layer: 0
-  m_Name: Delta_Trans
+  m_Name: SnowBear_RightForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1525011691
+--- !u!4 &1549341595
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400002, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabParentObject: {fileID: 400290, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
   m_PrefabInternal: {fileID: 1518394757}
-  m_GameObject: {fileID: 1525011690}
+  m_GameObject: {fileID: 1549341594}
+  m_LocalRotation: {x: -.0883023143, y: -.140881747, z: .6700297, w: .723474503}
+  m_LocalPosition: {x: -.0217646565, y: -.0349444337, z: -.0195373259}
+  m_LocalScale: {x: 1, y: 1, z: .99999994}
+  m_Children:
+  - {fileID: 972077199}
+  m_Father: {fileID: 214483604}
+  m_RootOrder: 0
+--- !u!144 &1549341596
+CharacterJoint:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1549341594}
+  m_ConnectedBody: {fileID: 214483606}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 0, y: 0, z: 1}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -.021764487, y: -.0349444523, z: -.019537257}
+  m_SwingAxis: {x: 0, y: -1, z: 0}
+  m_LowTwistLimit:
+    limit: -90
+    bounciness: 0
+    spring: 0
+    damper: 0
+  m_HighTwistLimit:
+    limit: 0
+    bounciness: 0
+    spring: 0
+    damper: 0
+  m_Swing1Limit:
+    limit: 0
+    bounciness: 0
+    spring: 0
+    damper: 0
+  m_Swing2Limit:
+    limit: 0
+    bounciness: 0
+    spring: 0
+    damper: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+--- !u!54 &1549341597
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1549341594}
+  serializedVersion: 2
+  m_Mass: 1.25
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!136 &1549341598
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1549341594}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .0217602197
+  m_Height: .108801097
+  m_Direction: 0
+  m_Center: {x: -.0544005483, y: 0, z: 0}
+--- !u!1 &1589665903
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100288, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1589665904}
+  m_Layer: 0
+  m_Name: SnowBear_RightFoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1589665904
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400288, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 1589665903}
+  m_LocalRotation: {x: .0111791333, y: .116077676, z: -.360762149, w: .925338686}
+  m_LocalPosition: {x: -.0034748842, y: .0278938264, z: .00975126866}
+  m_LocalScale: {x: 1.00000012, y: 1.00000012, z: 1.00000048}
+  m_Children:
+  - {fileID: 2030507022}
+  m_Father: {fileID: 1407896311}
+  m_RootOrder: 0
+--- !u!1 &1653491031
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100230, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1653491032}
+  - 136: {fileID: 1653491035}
+  - 54: {fileID: 1653491034}
+  - 144: {fileID: 1653491033}
+  m_Layer: 0
+  m_Name: SnowBear_LeftForeArm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1653491032
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400230, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 1653491031}
+  m_LocalRotation: {x: -.088296257, y: -.140884683, z: .66996485, w: .723534644}
+  m_LocalPosition: {x: -.0287275054, y: .0313388444, z: -.0164051168}
+  m_LocalScale: {x: 1, y: 1, z: 1.00000048}
+  m_Children:
+  - {fileID: 490651756}
+  m_Father: {fileID: 518528480}
+  m_RootOrder: 0
+--- !u!144 &1653491033
+CharacterJoint:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1653491031}
+  m_ConnectedBody: {fileID: 518528481}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 0, y: 0, z: 1}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -.0287273824, y: .031338919, z: -.0164050609}
+  m_SwingAxis: {x: 0, y: -1, z: 0}
+  m_LowTwistLimit:
+    limit: -90
+    bounciness: 0
+    spring: 0
+    damper: 0
+  m_HighTwistLimit:
+    limit: 0
+    bounciness: 0
+    spring: 0
+    damper: 0
+  m_Swing1Limit:
+    limit: 0
+    bounciness: 0
+    spring: 0
+    damper: 0
+  m_Swing2Limit:
+    limit: 0
+    bounciness: 0
+    spring: 0
+    damper: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+--- !u!54 &1653491034
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1653491031}
+  serializedVersion: 2
+  m_Mass: 1.25
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!136 &1653491035
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1653491031}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .0225864388
+  m_Height: .11293219
+  m_Direction: 1
+  m_Center: {x: 0, y: .0564660951, z: 0}
+--- !u!1 &1654243997
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100284, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1654243998}
+  m_Layer: 0
+  m_Name: SnowBear_Reference
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1654243998
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400284, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 1654243997}
   m_LocalRotation: {x: 0, y: -0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1036549393}
+  - {fileID: 219657777}
   m_Father: {fileID: 9262064}
+  m_RootOrder: 4
+--- !u!1 &1657337739
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100308, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1657337740}
+  m_Layer: 0
+  m_Name: SnowBear_RightHandMiddle4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1657337740
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400308, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 1657337739}
+  m_LocalRotation: {x: 0, y: -.00146742212, z: -0, w: .999998927}
+  m_LocalPosition: {x: .00599014061, y: -.00644989032, z: -.00201894785}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1427577059}
   m_RootOrder: 0
+--- !u!1 &1671894500
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100318, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1671894501}
+  m_Layer: 0
+  m_Name: SnowBear_RightHandRing1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1671894501
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400318, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 1671894500}
+  m_LocalRotation: {x: -0, y: 0, z: .936193407, w: -.351485401}
+  m_LocalPosition: {x: -.0368273035, y: .0102672735, z: -.0125608565}
+  m_LocalScale: {x: 1.00000036, y: 1.00000036, z: 1.00000036}
+  m_Children:
+  - {fileID: 676340692}
+  m_Father: {fileID: 972077199}
+  m_RootOrder: 3
+--- !u!1 &1752016381
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100280, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1752016382}
+  - 136: {fileID: 1752016385}
+  - 54: {fileID: 1752016384}
+  - 144: {fileID: 1752016383}
+  m_Layer: 0
+  m_Name: SnowBear_LeftUpLeg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1752016382
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400280, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 1752016381}
+  m_LocalRotation: {x: .79035598, y: .195723727, z: -.0429859012, w: .578948915}
+  m_LocalPosition: {x: -.0817727968, y: -.0078687435, z: 1.5309877e-10}
+  m_LocalScale: {x: 1.00000012, y: 1, z: 1}
+  m_Children:
+  - {fileID: 623884743}
+  m_Father: {fileID: 219657777}
+  m_RootOrder: 0
+--- !u!144 &1752016383
+CharacterJoint:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1752016381}
+  m_ConnectedBody: {fileID: 219657778}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -.0817725062, y: -.00786852371, z: -1.94360155e-07}
+  m_SwingAxis: {x: 0, y: 1, z: 0}
+  m_LowTwistLimit:
+    limit: -20
+    bounciness: 0
+    spring: 0
+    damper: 0
+  m_HighTwistLimit:
+    limit: 70
+    bounciness: 0
+    spring: 0
+    damper: 0
+  m_Swing1Limit:
+    limit: 30
+    bounciness: 0
+    spring: 0
+    damper: 0
+  m_Swing2Limit:
+    limit: 0
+    bounciness: 0
+    spring: 0
+    damper: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+--- !u!54 &1752016384
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1752016381}
+  serializedVersion: 2
+  m_Mass: 1.875
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!136 &1752016385
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1752016381}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .00980656687
+  m_Height: .0326885544
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: .0163442772}
 --- !u!1 &1765579062
 GameObject:
   m_ObjectHideFlags: 0
@@ -1287,36 +3459,397 @@ Transform:
   m_PrefabInternal: {fileID: 1518394757}
   m_GameObject: {fileID: 1765579062}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.55271347e-16, y: -1.09462607, z: .0375300646}
+  m_LocalPosition: {x: 1.77635684e-15, y: -5.4731307, z: .187650338}
   m_LocalScale: {x: 1.3801223, y: 1.3801223, z: 1.3801223}
   m_Children:
   - {fileID: 409346057}
   m_Father: {fileID: 360454713}
   m_RootOrder: 0
---- !u!1 &1930580418
+--- !u!1 &1767826785
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100014, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabParentObject: {fileID: 100316, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
   m_PrefabInternal: {fileID: 1518394757}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 1930580419}
+  - 4: {fileID: 1767826786}
   m_Layer: 0
-  m_Name: Lf_leg
+  m_Name: SnowBear_RightHandPinky4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1930580419
+--- !u!4 &1767826786
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400014, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabParentObject: {fileID: 400316, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
   m_PrefabInternal: {fileID: 1518394757}
-  m_GameObject: {fileID: 1930580418}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: .0125037273, y: 0, z: .0162789337}
+  m_GameObject: {fileID: 1767826785}
+  m_LocalRotation: {x: 0, y: -.00146742212, z: -0, w: .999998927}
+  m_LocalPosition: {x: .00497756526, y: -.00535953045, z: -.00167813152}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1036549393}
+  m_Father: {fileID: 1938646047}
+  m_RootOrder: 0
+--- !u!1 &1783093681
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100242, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1783093682}
+  m_Layer: 0
+  m_Name: SnowBear_LeftHandMiddle1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1783093682
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400242, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 1783093681}
+  m_LocalRotation: {x: -0, y: 0, z: .936245799, w: -.351345718}
+  m_LocalPosition: {x: .0119454293, y: .0382022969, z: -.00333810458}
+  m_LocalScale: {x: 1.00000036, y: 1.00000036, z: 1.00000036}
+  m_Children:
+  - {fileID: 1499586363}
+  m_Father: {fileID: 490651756}
   m_RootOrder: 1
+--- !u!1 &1783449844
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100248, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1783449845}
+  m_Layer: 0
+  m_Name: SnowBear_LeftHandMiddle4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1783449845
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400248, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 1783449844}
+  m_LocalRotation: {x: 0, y: 0, z: 4.26189308e-06, w: 1}
+  m_LocalPosition: {x: -.00598959206, y: -.00644994155, z: -.00202041282}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1805165717}
+  m_RootOrder: 0
+--- !u!1 &1805165716
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100246, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1805165717}
+  m_Layer: 0
+  m_Name: SnowBear_LeftHandMiddle3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1805165717
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400246, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 1805165716}
+  m_LocalRotation: {x: 0, y: 0, z: .514711976, w: .857363164}
+  m_LocalPosition: {x: .00396619551, y: -.0114693437, z: -.00278560841}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1783449845}
+  m_Father: {fileID: 1499586363}
+  m_RootOrder: 0
+--- !u!1 &1817529425
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100344, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1817529426}
+  m_Layer: 0
+  m_Name: SnowBear_Spine1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1817529426
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400344, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 1817529425}
+  m_LocalRotation: {x: .0251757614, y: .261410594, z: -.812447786, w: .520537496}
+  m_LocalPosition: {x: -.0508998148, y: .0237814169, z: -.01244001}
+  m_LocalScale: {x: 1, y: 1, z: .99999994}
+  m_Children:
+  - {fileID: 143770308}
+  m_Father: {fileID: 245026014}
+  m_RootOrder: 0
+--- !u!1 &1920138611
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100228, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1920138612}
+  m_Layer: 0
+  m_Name: SnowBear_LeftFoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1920138612
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400228, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 1920138611}
+  m_LocalRotation: {x: -.256678998, y: .733498275, z: -.140296131, w: .613525212}
+  m_LocalPosition: {x: -.0226746704, y: -.0192381945, z: -.000989098335}
+  m_LocalScale: {x: .99999994, y: .99999994, z: .99999994}
+  m_Children:
+  - {fileID: 430200527}
+  m_Father: {fileID: 623884743}
+  m_RootOrder: 0
+--- !u!1 &1924325636
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100264, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1924325637}
+  m_Layer: 0
+  m_Name: SnowBear_LeftHandRing4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1924325637
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400264, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 1924325636}
+  m_LocalRotation: {x: 0, y: 0, z: 4.26189308e-06, w: 1}
+  m_LocalPosition: {x: -.00574373687, y: -.00618525874, z: -.00193804351}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2005299718}
+  m_RootOrder: 0
+--- !u!1 &1938646046
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100314, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1938646047}
+  m_Layer: 0
+  m_Name: SnowBear_RightHandPinky3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1938646047
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400314, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 1938646046}
+  m_LocalRotation: {x: -6.02080654e-05, y: .000109399269, z: .514737546, w: .857347786}
+  m_LocalPosition: {x: .00837622676, y: .0022195843, z: -.00198968314}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1767826786}
+  m_Father: {fileID: 398253173}
+  m_RootOrder: 0
+--- !u!1 &1987498159
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100336, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1987498160}
+  m_Layer: 0
+  m_Name: SnowBear_RightShoulder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1987498160
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400336, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 1987498159}
+  m_LocalRotation: {x: .273730159, y: -.0357266739, z: .798488975, w: .534986675}
+  m_LocalPosition: {x: .0458132997, y: -.00815862603, z: -.0292688813}
+  m_LocalScale: {x: 1, y: 1, z: 1.00000036}
+  m_Children:
+  - {fileID: 214483604}
+  m_Father: {fileID: 143770308}
+  m_RootOrder: 2
+--- !u!1 &2005299717
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100262, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2005299718}
+  m_Layer: 0
+  m_Name: SnowBear_LeftHandRing3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2005299718
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400262, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 2005299717}
+  m_LocalRotation: {x: 0, y: 0, z: .514711976, w: .857363164}
+  m_LocalPosition: {x: .00330539839, y: -.00955830328, z: -.00232212874}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1924325637}
+  m_Father: {fileID: 2064757802}
+  m_RootOrder: 0
+--- !u!1 &2030507021
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100338, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2030507022}
+  m_Layer: 0
+  m_Name: SnowBear_RightToeBase
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2030507022
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400338, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 2030507021}
+  m_LocalRotation: {x: -.0111791287, y: -.116077691, z: .360762149, w: .925338686}
+  m_LocalPosition: {x: -.0100667775, y: -.015609175, z: .0620713346}
+  m_LocalScale: {x: 1, y: 1, z: .99999994}
+  m_Children: []
+  m_Father: {fileID: 1589665904}
+  m_RootOrder: 0
+--- !u!1 &2040725475
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100030, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2040725476}
+  m_Layer: 0
+  m_Name: pasted__polySurface10
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2040725476
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400030, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 2040725475}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: -1}
+  m_Children:
+  - {fileID: 968903573}
+  m_Father: {fileID: 409346057}
+  m_RootOrder: 3
+--- !u!1 &2064757801
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100260, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2064757802}
+  m_Layer: 0
+  m_Name: SnowBear_LeftHandRing2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2064757802
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400260, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 2064757801}
+  m_LocalRotation: {x: 0, y: 0, z: -.599781752, w: .800163627}
+  m_LocalPosition: {x: -.0162394177, y: -.0115269143, z: -.00457242271}
+  m_LocalScale: {x: 1.00000036, y: 1.00000036, z: 1.00000048}
+  m_Children:
+  - {fileID: 2005299718}
+  m_Father: {fileID: 1181540875}
+  m_RootOrder: 0
+--- !u!1 &2098337897
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100268, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2098337898}
+  m_Layer: 0
+  m_Name: SnowBear_LeftHandThumb2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2098337898
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400268, guid: 4b548f8e8163f46af87d84b453a6e954, type: 3}
+  m_PrefabInternal: {fileID: 1518394757}
+  m_GameObject: {fileID: 2098337897}
+  m_LocalRotation: {x: 0, y: 0, z: -.599781752, w: .800163627}
+  m_LocalPosition: {x: -.00835462939, y: -.00858021714, z: .000745256722}
+  m_LocalScale: {x: 1.00000036, y: 1.00000036, z: 1.00000048}
+  m_Children:
+  - {fileID: 73559091}
+  m_Father: {fileID: 631344140}
+  m_RootOrder: 0
