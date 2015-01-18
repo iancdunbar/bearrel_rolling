@@ -89,7 +89,17 @@ public class SimpleColliderGenerator : MonoBehaviour {
 
     /////////////////////////////////////////////
 
+    /////////////////////////////////////////////
+    // Messages
+    /////////////////////////////////////////////
 
+    public void Heartbeat(object beat)
+    {
+
+        Debug.Log( "Testing the beat! " + beat.ToString() );
+    }
+
+    /////////////////////////////////////////////
 
 
     /////////////////////////////////////////////
@@ -105,6 +115,8 @@ public class SimpleColliderGenerator : MonoBehaviour {
     void Start( )
     {
         GenerateNewPoint( Mathf.Deg2Rad * -30, 1 );
+
+        MessageDispatch.RegisterListener( "OnHeartbeat", Heartbeat );
     }
 	
 	// Update is called once per frame
@@ -112,6 +124,8 @@ public class SimpleColliderGenerator : MonoBehaviour {
     {
         if( bear.position.x > spawn_x )
             GenerateNewPoints( 1 );
+
+        MessageDispatch.BroadcastMessage( "OnHeartbeat", "Get Down To It" );
 	}
 
     void OnDrawGizmos( )
