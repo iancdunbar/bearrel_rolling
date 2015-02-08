@@ -62,8 +62,6 @@ public class SimpleColliderGenerator : MonoBehaviour {
 
         angle = Mathf.Atan2( tgt.y, tgt.x );
 
-        //Debug.Log( angle );
-
         for( int i = 0; i < num_points; i++ )
         {
             //float angle = Random.Range( -1f, 1f );

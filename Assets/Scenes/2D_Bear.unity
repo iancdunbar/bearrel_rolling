@@ -82,6 +82,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 153984576}
+  - 114: {fileID: 153984577}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -102,6 +103,22 @@ Transform:
   - {fileID: 1937834631}
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &153984577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 153984575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d0206b08aaa84243958bc3386eefd71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quad_width: 3.29999995
+  quad_height: 1
+  terrain_material: {fileID: 2100000, guid: 13189217fac3865409fcc48788ade051, type: 2}
+  collider_gen: {fileID: 1937834632}
+  bear: {fileID: 1919834440}
 --- !u!1 &270238089
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,7 +232,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1288464943}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9ed8974b97efe144bb08b05867226c9b, type: 3}
   m_Name: 
@@ -228,7 +245,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1288464943}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3942ad66fa085247b2fee560826faf9, type: 3}
   m_Name: 
@@ -241,13 +258,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1288464943}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 24b5b49493cf9f74585aed0d660164a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   follow_target: {fileID: 1765019530}
-  follow_amount: {x: 1, y: 0, z: 0}
+  follow_amount: {x: 1, y: 1, z: 0}
 --- !u!1 &1765019525
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,7 +371,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1765019525}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a48c30e5350d88438feb675817d6406, type: 3}
   m_Name: 
@@ -493,8 +510,8 @@ EdgeCollider2D:
   m_Material: {fileID: 6200000, guid: a9383b6ea06a76d42b8b4748dabe0c48, type: 2}
   m_IsTrigger: 0
   m_Points:
-  - {x: -.557399035, y: -.560257673}
-  - {x: .262858868, y: -.550709724}
+  - {x: -1.95497394, y: 1.11683154}
+  - {x: -.785322428, y: .357713878}
 --- !u!4 &1937834631
 Transform:
   m_ObjectHideFlags: 0

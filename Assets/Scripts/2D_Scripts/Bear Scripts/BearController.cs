@@ -27,7 +27,7 @@ public class BearController : MonoBehaviour {
 
     public void OnSwipeUp( object unused )
     {
-
+        rigidbody2D.AddForce( Vector2.up * jump_strength, ForceMode2D.Impulse );
         Debug.Log( "Swipe Up" );
     }
 
