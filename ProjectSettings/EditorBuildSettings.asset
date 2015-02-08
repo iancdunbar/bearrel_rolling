@@ -5,7 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Bear Naked Physics.unity
   - enabled: 0
     path: Assets/Scenes/Bear Naked Physics.unity
+  - enabled: 1
+    path: Assets/Scenes/2D_Bear.unity

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Vectrosity;
 
 [RequireComponent( typeof( EdgeCollider2D ) )]
 public class SimpleColliderGenerator : MonoBehaviour {
@@ -9,7 +10,7 @@ public class SimpleColliderGenerator : MonoBehaviour {
     /////////////////////////////////////////////
 
     private EdgeCollider2D collider_ref;
-
+    private VectorLine ground_line;
     private float spawn_x;
 
     /////////////////////////////////////////////
@@ -33,6 +34,14 @@ public class SimpleColliderGenerator : MonoBehaviour {
 
 
     /////////////////////////////////////////////
+
+
+    /////////////////////////////////////////////
+    // Private Methods
+    /////////////////////////////////////////////
+
+    /////////////////////////////////////////////
+
 
     /////////////////////////////////////////////
     // Public Methods

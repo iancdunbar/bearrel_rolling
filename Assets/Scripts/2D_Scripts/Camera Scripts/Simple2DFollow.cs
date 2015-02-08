@@ -7,7 +7,9 @@ public class Simple2DFollow : MonoBehaviour {
     // Private Variable
     /////////////////////////////////////////////
 
-    Transform trans_ref;
+    private Transform trans_ref;
+    private Vector3 previous_position;
+    private Vector3 position_delta;
 
     /////////////////////////////////////////////
 
@@ -17,9 +19,9 @@ public class Simple2DFollow : MonoBehaviour {
     /////////////////////////////////////////////
 
     [SerializeField]
-    Transform target;
+    private Transform follow_target;
     [SerializeField]
-    Vector2 offset;
+    private Vector3 follow_amount;
 
     /////////////////////////////////////////////
 
@@ -30,10 +32,24 @@ public class Simple2DFollow : MonoBehaviour {
     {
         trans_ref = this.transform;
 	}
-	
+
+    void Start( )
+    {
+        // Initialize the previous position
+        previous_position = follow_target.position;
+
+    }
+
 	// Update is called once per frame
 	void Update () 
     {
-        trans_ref.position = new Vector3( target.position.x + offset.x, target.position.y + offset.y, trans_ref.position.z );
+        // Calculate the change in position of the target object
+        position_delta = follow_target.position - previous_position;
+
+        // Add the position delta scaled by the follow amount to this transform's position
+        trans_ref.position = trans_ref.position + Vector3.Scale( position_delta, follow_amount );
+
+        // Capture the current target position for use in the next frame
+        previous_position = follow_target.position;
 	}
 }

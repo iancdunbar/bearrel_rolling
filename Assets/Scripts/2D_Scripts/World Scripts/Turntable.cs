@@ -34,6 +34,8 @@ public class Turntable : MonoBehaviour {
     // Public Access
     /////////////////////////////////////////////
 
+    public float Generation_Angle { get { return generation_angle; } set { generation_angle = value; } }
+
     public Vector3 GetGenerationPoint( )
     {
        return new Vector3( Mathf.Cos( generation_angle ), Mathf.Sin( generation_angle ), 0 ) * generation_radius;
@@ -106,7 +108,9 @@ public class Turntable : MonoBehaviour {
 
     void OnDrawGizmos( )
     {
-       
+        if( trans_ref == null )
+            trans_ref = transform;
+
         Vector3 target_pos = GetGenerationPoint( );
 
         Gizmos.DrawLine( transform.position, transform.position + target_pos );

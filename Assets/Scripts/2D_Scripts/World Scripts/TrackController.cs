@@ -8,7 +8,7 @@ public class TrackController : MonoBehaviour {
     /////////////////////////////////////////////
     
     private Transform trans_ref;
-    private Vector3 previous_postion;
+    private Vector3 previous_position;
     private Vector3 target_position;
 
     /////////////////////////////////////////////
@@ -40,22 +40,26 @@ public class TrackController : MonoBehaviour {
 
     void Start( )
     {
-        target_position = turntable_generator.GetGenerationPoint( );
+
+        previous_position = trans_ref.position;
+        target_position = turntable_generator.GetGenerationPoint( ) + trans_ref.position;
         simple_collider.AddPoint( target_position );
-        previous_postion = trans_ref.position;
+        
     }
 
 	// Update is called once per frame
 	void Update ()
     {
-        if( Vector3.Magnitude( trans_ref.position - previous_postion ) > 2 )
+
+        if( Vector3.Distance( trans_ref.position, previous_position ) > 2 )
         {
-            target_position = turntable_generator.GetGenerationPoint( );
+
+            target_position = turntable_generator.GetGenerationPoint( ) + trans_ref.position;
             simple_collider.AddPoint( target_position );
-            previous_postion = trans_ref.position;
+            previous_position = trans_ref.position;
         }
 
-        Vector3.MoveTowards( trans_ref.position, target_position, speed * Time.deltaTime );
+        //trans_ref.position = Vector3.MoveTowards( trans_ref.position, target_position, speed * Time.deltaTime );
 	}
 
     /////////////////////////////////////////////
