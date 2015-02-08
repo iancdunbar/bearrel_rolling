@@ -20,12 +20,15 @@ public class PolygonTerrainGenerator : MonoBehaviour {
     /////////////////////////////////////////////
     // Inspector Variables
     /////////////////////////////////////////////
+
     [SerializeField]
-    private float quad_width;
+    private GameObject terrain_piece;
     [SerializeField]
-    private float quad_height;
+    private int end_vert;
+
     [SerializeField]
-    private Material terrain_material;
+    private bool override_mesh;
+
     [SerializeField]
     private SimpleColliderGenerator collider_gen;
     [SerializeField]
@@ -84,28 +87,41 @@ public class PolygonTerrainGenerator : MonoBehaviour {
         return mesh;
     }
 
-    private void generate_next_quad( Vector3 start_position )
+    private void generate_next_piece( Vector3 start_position )
     {
-        GameObject go = new GameObject( );
-        go.name = "Terrain_Piece";
+        //GameObject go = new GameObject( );
+        //go.name = "Terrain_Piece";
+        //
+        //Transform trans_ref = go.transform;
+        //MeshFilter mf = go.AddComponent<MeshFilter>( );
+        //MeshRenderer mr = go.AddComponent<MeshRenderer>( );
+        //
+        //
+        //
+        //mf.mesh = simple_quad;
+        //mr.material = terrain_material;
 
-        Transform trans_ref = go.transform;
-        MeshFilter mf = go.AddComponent<MeshFilter>( );
-        MeshRenderer mr = go.AddComponent<MeshRenderer>( );
+        GameObject piece = (GameObject)Instantiate( terrain_piece );
+        Transform trans_ref = piece.transform;
+
+        if( override_mesh )
+        {
+            piece.GetComponent<MeshFilter>( ).mesh = simple_quad;
+        }
+
+        Mesh piece_mesh = piece.GetComponent<MeshFilter>( ).mesh;
+
 
         trans_ref.eulerAngles = new Vector3( 0, 0, Random.RandomRange( -1f, 0 ) * 75 );  
 
-        mf.mesh = simple_quad;
-        mr.material = terrain_material;
-
         trans_ref.position = start_position;
 
-        next_point = trans_ref.TransformPoint( simple_quad.vertices[ 1 ] );
+        next_point = trans_ref.TransformPoint( piece_mesh.vertices[ end_vert ] );
 
         delta_x = next_point.x - start_position.x;
         save_point = bear.position;
 
-        active_terrain_segments.Enqueue( go );
+        active_terrain_segments.Enqueue( piece );
 
     }
 
@@ -119,7 +135,7 @@ public class PolygonTerrainGenerator : MonoBehaviour {
     void Awake( )
     {
         active_terrain_segments = new Queue<GameObject>( );
-        simple_quad = create_simple_quad( quad_width, quad_height );
+        simple_quad = create_simple_quad( 3.3f, 1 );
 
     }
 
@@ -130,7 +146,7 @@ public class PolygonTerrainGenerator : MonoBehaviour {
         next_point = new Vector3( 0, 0, -1 );
         for( int i = 0; i < 10; i++ )
         {
-            generate_next_quad( next_point );
+            generate_next_piece( next_point );
             collider_gen.AddPoint( next_point );
         }
 
@@ -142,7 +158,7 @@ public class PolygonTerrainGenerator : MonoBehaviour {
     {
         if( bear.position.x - save_point.x > delta_x )
         {
-            generate_next_quad( next_point );
+            generate_next_piece( next_point );
             collider_gen.AddPoint( next_point );
 
             if( active_terrain_segments.Count > 20 )
