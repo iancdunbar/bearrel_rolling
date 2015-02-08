@@ -9,6 +9,7 @@ public class SimpleColliderGenerator : MonoBehaviour {
     /////////////////////////////////////////////
 
     private EdgeCollider2D collider_ref;
+
     private float spawn_x;
 
     /////////////////////////////////////////////
@@ -87,6 +88,24 @@ public class SimpleColliderGenerator : MonoBehaviour {
         collider_ref.points = points;
     }
 
+    public void AddPoint( Vector3 target_pos )
+    {
+        //Vector2 point = new Vector2( collider_ref.transform.position.x, collider_ref.transform.position.y ) + collider_ref.points[ collider_ref.pointCount - 1 ];
+
+        Vector3 offset = target_pos - transform.position;
+
+        Vector2[] points = collider_ref.points;
+
+        Vector2 point = new Vector2( offset.x, offset.y );
+
+        System.Array.Resize<Vector2>( ref points, points.Length + 1 );
+
+        points[ points.Length - 1 ] = point;
+
+        collider_ref.points = points;
+
+    }
+
     /////////////////////////////////////////////
 
 
@@ -100,31 +119,31 @@ public class SimpleColliderGenerator : MonoBehaviour {
     void Awake( ) 
     {
         collider_ref = this.GetComponent<EdgeCollider2D>( );
+
 	}
 
     void Start( )
     {
-        GenerateNewPoint( Mathf.Deg2Rad * -30, 1 );
+        
     }
 	
 	// Update is called once per frame
 	void Update () 
     {
-        if( bear.position.x > spawn_x )
-            GenerateNewPoints( 1 );
+
 	}
 
-    void OnDrawGizmos( )
-    {
-        Vector3 target_pos = Camera.main.ScreenToWorldPoint( Input.mousePosition );
+    //void OnDrawGizmos( )
+    //{
+    //    Vector3 target_pos = Camera.main.ScreenToWorldPoint( Input.mousePosition );
 
-        if( collider_ref != null )
-        {
-            Vector2 point = new Vector2( collider_ref.transform.position.x, collider_ref.transform.position.y ) + collider_ref.points[ collider_ref.pointCount - 1 ];
+    //    if( collider_ref != null )
+    //    {
+    //        Vector2 point = new Vector2( collider_ref.transform.position.x, collider_ref.transform.position.y ) + collider_ref.points[ collider_ref.pointCount - 1 ];
 
-            Gizmos.DrawLine( new Vector3( point.x, point.y, 0 ), target_pos );
-        }
-    }
+    //        Gizmos.DrawLine( new Vector3( point.x, point.y, 0 ), target_pos );
+    //    }
+    //}
 
     /////////////////////////////////////////////
 }

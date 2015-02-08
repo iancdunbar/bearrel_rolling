@@ -52,3 +52,5 @@ The Dunbar Dev Journal
 	constraints on the motion need to be established and then we can decide from there if we need the physics.
 	Though since we will be using them for the ragdoll do we need to be using them for the movement as well? 
 	Needs to be thought through and figured out.
+	
+	
