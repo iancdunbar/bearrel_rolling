@@ -108,7 +108,17 @@ public class SimpleColliderGenerator : MonoBehaviour {
 
     /////////////////////////////////////////////
 
+    /////////////////////////////////////////////
+    // Messages
+    /////////////////////////////////////////////
 
+    public void Heartbeat(object beat)
+    {
+
+        Debug.Log( "Testing the beat! " + beat.ToString() );
+    }
+
+    /////////////////////////////////////////////
 
 
     /////////////////////////////////////////////
@@ -124,12 +134,13 @@ public class SimpleColliderGenerator : MonoBehaviour {
 
     void Start( )
     {
-        
+	
     }
 	
 	// Update is called once per frame
 	void Update () 
     {
+
 
 	}
 
