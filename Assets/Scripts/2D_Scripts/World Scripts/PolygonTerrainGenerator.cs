@@ -30,6 +30,9 @@ public class PolygonTerrainGenerator : MonoBehaviour {
     private bool override_mesh;
 
     [SerializeField]
+    private Mesh temp_mesh;
+    
+    [SerializeField]
     private SimpleColliderGenerator collider_gen;
     [SerializeField]
     private Transform bear;
@@ -89,34 +92,23 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 
     private void generate_next_piece( Vector3 start_position )
     {
-        //GameObject go = new GameObject( );
-        //go.name = "Terrain_Piece";
-        //
-        //Transform trans_ref = go.transform;
-        //MeshFilter mf = go.AddComponent<MeshFilter>( );
-        //MeshRenderer mr = go.AddComponent<MeshRenderer>( );
-        //
-        //
-        //
-        //mf.mesh = simple_quad;
-        //mr.material = terrain_material;
 
         GameObject piece = (GameObject)Instantiate( terrain_piece );
         Transform trans_ref = piece.transform;
 
-        if( override_mesh )
-        {
-            piece.GetComponent<MeshFilter>( ).mesh = simple_quad;
-        }
+        //if( override_mesh )
+        //{
+        //    piece.GetComponent<MeshFilter>( ).mesh = simple_quad;
+        //}
 
-        Mesh piece_mesh = piece.GetComponent<MeshFilter>( ).mesh;
+       // Mesh piece_mesh = piece.GetComponent<MeshFilter>( ).mesh;
 
 
-        trans_ref.eulerAngles = new Vector3( 0, 0, Random.RandomRange( -1f, 0 ) * 75 );  
+        trans_ref.eulerAngles = new Vector3( trans_ref.eulerAngles.x, trans_ref.eulerAngles.y, Random.RandomRange( -1f, 0 ) * 75 );  
 
-        trans_ref.position = start_position;
+        trans_ref.position = start_position - trans_ref.FindChild("Start").position;
 
-        next_point = trans_ref.TransformPoint( piece_mesh.vertices[ end_vert ] );
+        next_point = trans_ref.FindChild( "End" ).position;// TransformPoint( piece_mesh.vertices[ end_vert ] );
 
         delta_x = next_point.x - start_position.x;
         save_point = bear.position;
@@ -142,6 +134,11 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
     {
+
+        foreach( Vector3 vert in temp_mesh.vertices )
+        {
+            Debug.Log( vert );
+        }
 
         next_point = new Vector3( 0, 0, -1 );
         for( int i = 0; i < 10; i++ )
