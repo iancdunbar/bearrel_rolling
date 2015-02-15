@@ -162,7 +162,7 @@ public class PolygonTerrainGenerator : MonoBehaviour {
         mask_obj.transform.position = start_position;
 
         delta_x = next_point.x - start_position.x;
-        Debug.Log( delta_x );
+
         save_point = bear.position;
 
         active_terrain_segments.Enqueue( piece );
