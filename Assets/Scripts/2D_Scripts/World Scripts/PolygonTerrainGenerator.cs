@@ -9,6 +9,7 @@ public class PolygonTerrainGenerator : MonoBehaviour {
     /////////////////////////////////////////////
 
     private Queue<GameObject> active_terrain_segments;
+    private Queue<GameObject> active_masks;
     private Vector3 next_point;
     private Vector3 save_point;
     private float delta_x;
@@ -30,9 +31,6 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 
     [SerializeField]
     private bool override_mesh;
-
-    [SerializeField]
-    private Mesh temp_mesh;
     
     [SerializeField]
     private SimpleColliderGenerator collider_gen;
@@ -52,7 +50,7 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 
 
         float w = end.x - start.x;
-        float h = 10;
+        float h = 20;
         float end_off_y = end.y - start.y;
         
         Vector3[] verts = new Vector3[ ]
@@ -163,11 +161,12 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 
         mask_obj.transform.position = start_position;
 
-
         delta_x = next_point.x - start_position.x;
+        Debug.Log( delta_x );
         save_point = bear.position;
 
         active_terrain_segments.Enqueue( piece );
+        active_masks.Enqueue( mask_obj );
 
     }
 
@@ -181,6 +180,8 @@ public class PolygonTerrainGenerator : MonoBehaviour {
     void Awake( )
     {
         active_terrain_segments = new Queue<GameObject>( );
+        active_masks = new Queue<GameObject>( );
+
         simple_quad = create_simple_quad( 3.3f, 1 );
 
     }
@@ -210,6 +211,7 @@ public class PolygonTerrainGenerator : MonoBehaviour {
             if( active_terrain_segments.Count > 20 )
             {
                 Destroy( active_terrain_segments.Dequeue( ) );
+                Destroy( active_masks.Dequeue( ) );
             }
         }
 	}
