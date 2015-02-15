@@ -1,0 +1,39 @@
+﻿Merge remote-tracking branch 'origin/master'
+
+Conflicts:
+	Assets/Terrain/New Terrain.asset
+#
+# It looks like you may be committing a merge.
+# If this is not correct, please remove the file
+#	.git/MERGE_HEAD
+# and try again.
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch and 'origin/master' have diverged,
+# and have 1 and 2 different commits each, respectively.
+#   (use "git pull" to merge the remote branch into yours)
+#
+# All conflicts fixed but you are still merging.
+#
+# Changes to be committed:
+#	modified:   Assets/Prefabs/terrain_test.prefab
+#	modified:   Assets/Scenes/2D_Bear.unity
+#	new file:   Assets/Sprites/Environment/snow copy.png
+#	new file:   Assets/Sprites/Environment/snow copy.png.meta
+#	modified:   Assets/Sprites/Environment/snow.jpg
+#	modified:   Assets/Sprites/Environment/snow.jpg.meta
+#	modified:   Assets/Sprites/Environment/snow.png
+#	modified:   Assets/Sprites/Environment/snow.png.meta
+#	new file:   Assets/Sprites/Environment/snow.tga
+#	new file:   Assets/Sprites/Environment/snow.tga.meta
+#	modified:   Assets/Standard Assets/Materials/lambert1.mat
+#	modified:   Assets/Standard Assets/Terrain Assets/terrain_test.fbx
+#	modified:   Assets/Standard Assets/Terrain Assets/terrain_test.fbx.meta
+#	new file:   Assets/Standard Assets/Terrain Assets/terrain_test.prefab
+#	new file:   Assets/Standard Assets/Terrain Assets/terrain_test.prefab.meta
+#	modified:   Assets/Terrain/test_terrain.asset
+#
+
