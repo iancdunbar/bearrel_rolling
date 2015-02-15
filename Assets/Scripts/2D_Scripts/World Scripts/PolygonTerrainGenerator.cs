@@ -25,6 +25,8 @@ public class PolygonTerrainGenerator : MonoBehaviour {
     private GameObject terrain_piece;
     [SerializeField]
     private int end_vert;
+    [SerializeField]
+    private GameObject mask_prefab;
 
     [SerializeField]
     private bool override_mesh;
@@ -44,6 +46,55 @@ public class PolygonTerrainGenerator : MonoBehaviour {
     // Private Fuctions
     /////////////////////////////////////////////
 
+    private Mesh create_mask( Vector3 start, Vector3 end )
+    {
+        Mesh mesh = new Mesh( );
+
+
+        float w = end.x - start.x;
+        float h = 10;
+        float end_off_y = end.y - start.y;
+        
+        Vector3[] verts = new Vector3[ ]
+        {
+
+            new Vector3( 0, 0, 0 ),
+            new Vector3( 0, h, 0 ),
+            new Vector3( w, h, 0 ),
+            new Vector3( w, end_off_y, 0 )
+
+        };
+
+        Vector2[] uv = new Vector2[ ]
+        {
+            new Vector2(0, 1),
+            new Vector2(0, 0),
+            new Vector2(1, 0),
+            new Vector2(1, 1),
+        };
+
+        int[] triangles = new int[ ]
+        {
+            0, 1, 2,
+            2, 3, 0
+        };
+
+        Vector3[] normals = new Vector3[ ]
+        {
+            Vector3.back,
+            Vector3.back,
+            Vector3.back,
+            Vector3.back,
+        };
+
+        mesh.vertices = verts;
+        mesh.normals = normals;
+        mesh.uv = uv;
+        mesh.triangles = triangles;
+
+        return mesh;
+    }
+
     private Mesh create_simple_quad( float w, float h )
     {
         Mesh mesh = new Mesh( );
@@ -54,10 +105,6 @@ public class PolygonTerrainGenerator : MonoBehaviour {
             new Vector3( w, 0, 0),
             new Vector3( w, -h, 0),
             new Vector3( 0, -h, 0)
-            //new Vector3( w, 0,  h),
-            //new Vector3( w, 0, -h),
-            //new Vector3(-w, 0,  h),
-            //new Vector3(-w, 0, -h),
         };
 
         Vector2[] uv = new Vector2[ ]
@@ -96,12 +143,13 @@ public class PolygonTerrainGenerator : MonoBehaviour {
         GameObject piece = (GameObject)Instantiate( terrain_piece );
         Transform trans_ref = piece.transform;
 
+        
         //if( override_mesh )
         //{
         //    piece.GetComponent<MeshFilter>( ).mesh = simple_quad;
         //}
 
-       // Mesh piece_mesh = piece.GetComponent<MeshFilter>( ).mesh;
+        //Mesh piece_mesh = piece.GetComponent<MeshFilter>( ).mesh;
 
 
         trans_ref.eulerAngles = new Vector3( trans_ref.eulerAngles.x, trans_ref.eulerAngles.y, Random.RandomRange( -1f, 0 ) * 75 );  
@@ -109,6 +157,12 @@ public class PolygonTerrainGenerator : MonoBehaviour {
         trans_ref.position = start_position - trans_ref.FindChild("Start").position;
 
         next_point = trans_ref.FindChild( "End" ).position;// TransformPoint( piece_mesh.vertices[ end_vert ] );
+
+        GameObject mask_obj = (GameObject)Instantiate( mask_prefab );
+        mask_obj.GetComponent<MeshFilter>( ).mesh = create_mask( start_position, next_point );
+
+        mask_obj.transform.position = start_position;
+
 
         delta_x = next_point.x - start_position.x;
         save_point = bear.position;
@@ -134,11 +188,6 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
     {
-
-        foreach( Vector3 vert in temp_mesh.vertices )
-        {
-            Debug.Log( vert );
-        }
 
         next_point = new Vector3( 0, 0, -1 );
         for( int i = 0; i < 10; i++ )
