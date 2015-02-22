@@ -6,16 +6,16 @@ public class ImpactEmittor : MonoBehaviour {
 	// Use this for initialization
 	public ParticleSystem snow;
 	
-	void OnCollisionEnter2D (Collider2D col){
-		
-		if(col.gameObject.tag == "Ground"){
+	void OnTriggerEnter2D(Collider2D other){
+
 			Debug.Log ("Collision Occured");
-			snow.Play ();
+			Instantiate(snow, transform.position, Quaternion.identity);
+			
 
 			
 		}
 		
-	}
+
 	void Start () {
 	
 	}
