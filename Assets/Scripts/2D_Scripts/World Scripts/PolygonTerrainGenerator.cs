@@ -30,7 +30,7 @@ public class PolygonTerrainGenerator : MonoBehaviour {
     private GameObject mask_prefab;
 
     [SerializeField]
-    private bool override_mesh;
+    private float gen_distance;
     
     [SerializeField]
     private SimpleColliderGenerator collider_gen;
@@ -141,16 +141,7 @@ public class PolygonTerrainGenerator : MonoBehaviour {
         GameObject piece = (GameObject)Instantiate( terrain_piece );
         Transform trans_ref = piece.transform;
 
-        
-        //if( override_mesh )
-        //{
-        //    piece.GetComponent<MeshFilter>( ).mesh = simple_quad;
-        //}
-
-        //Mesh piece_mesh = piece.GetComponent<MeshFilter>( ).mesh;
-
-
-        trans_ref.eulerAngles = new Vector3( trans_ref.eulerAngles.x, trans_ref.eulerAngles.y, Random.RandomRange( -1f, 0 ) * 75 );  
+        trans_ref.eulerAngles = new Vector3( trans_ref.eulerAngles.x, trans_ref.eulerAngles.y, Random.RandomRange( -1f, 0f ) * 90 );  
 
         trans_ref.position = start_position - trans_ref.FindChild("Start").position;
 
@@ -203,7 +194,8 @@ public class PolygonTerrainGenerator : MonoBehaviour {
     // Update is called once per frame
     void Update( ) 
     {
-        if( bear.position.x - save_point.x > delta_x )
+        if( next_point.x - bear.position.x < gen_distance )
+        //if( Vector3.Distance(bear.position, next_point) < gen_distance )
         {
             generate_next_piece( next_point );
             collider_gen.AddPoint( next_point );

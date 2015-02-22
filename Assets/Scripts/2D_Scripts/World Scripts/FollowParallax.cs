@@ -30,14 +30,15 @@ public class FollowParallax : MonoBehaviour {
     // Private Functions
     ////////////////////////////////////////////
 
-    private Vector2 GetDimensionInPX( GameObject obj )
+    private Vector2 GetDimension( GameObject obj )
     {
         Vector2 tmpDimension;
 
-        Vector3 size =  obj.GetComponent<SpriteRenderer>( ).sprite.bounds.size;
-
-        tmpDimension.x = obj.transform.localScale.x * size.x;  // this is gonna be our width
-        tmpDimension.y = obj.transform.localScale.y * size.y;  // this is gonna be our height
+        //Vector3 size =  obj.GetComponent<SpriteRenderer>( ).sprite.bounds.size;
+        Vector3 size = obj.renderer.bounds.size;
+        
+        tmpDimension.x = size.x; //obj.transform.localScale.x * size.x;  // this is gonna be our width
+        tmpDimension.y = size.y; //obj.transform.localScale.y * size.y;  // this is gonna be our height
 
         return tmpDimension;
     }
@@ -51,7 +52,7 @@ public class FollowParallax : MonoBehaviour {
 
     void Awake( )
     {
-        dimensions = GetDimensionInPX( gameObject );
+        dimensions = GetDimension( gameObject );
         initial_position = transform.localPosition;
         previous_target_position = target.position;
     }

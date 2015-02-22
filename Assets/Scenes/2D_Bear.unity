@@ -117,7 +117,7 @@ MonoBehaviour:
   terrain_piece: {fileID: 182160, guid: 04793b98dfe2ea94d9b16b34293b2bf1, type: 2}
   end_vert: 1
   mask_prefab: {fileID: 110194, guid: 15406bc7fb5ed84438b96069728796bf, type: 2}
-  override_mesh: 0
+  gen_distance: 20
   collider_gen: {fileID: 1937834632}
   bear: {fileID: 1919834440}
 --- !u!1 &270238089
@@ -1364,7 +1364,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 533389027}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.6000004, y: 0, z: 17.7000008}
+  m_LocalPosition: {x: 25.6000004, y: -33.9000015, z: 17.7000008}
   m_LocalScale: {x: 5, y: 60.0516319, z: 5.87841082}
   m_Children: []
   m_Father: {fileID: 1765019530}
@@ -1626,7 +1626,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1227125989}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 17.7299995}
+  m_LocalPosition: {x: 0, y: -33.9000015, z: 17.7000008}
   m_LocalScale: {x: 5, y: 60.0516319, z: 5.87841082}
   m_Children: []
   m_Father: {fileID: 1765019530}
@@ -1987,7 +1987,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1760423693}
-  m_LocalRotation: {x: .408217937, y: -.234569728, z: .109381676, w: .875426054}
+  m_LocalRotation: {x: .408217967, y: -.234569743, z: .109381683, w: .875426114}
   m_LocalPosition: {x: 2.88504934, y: -.863203943, z: -2.84900475}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2227,6 +2227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jump_strength: 300
+  max_speed: 30
 --- !u!233 &1919834443
 HingeJoint2D:
   m_ObjectHideFlags: 0
