@@ -11,6 +11,7 @@ TextureImporter:
     21300012: trees2_6
     21300014: trees2_7
     21300016: trees2_8
+    21300018: trees2_8
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -52,16 +53,6 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: trees2_0
-      rect:
-        serializedVersion: 2
-        x: 285
-        y: 1231
-        width: 292
-        height: 776
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: trees2_1
       rect:
         serializedVersion: 2
@@ -139,6 +130,16 @@ TextureImporter:
         y: 107
         width: 232
         height: 648
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: trees2_8
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 1233
+        width: 289
+        height: 772
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
