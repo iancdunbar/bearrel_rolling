@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
+using System.Linq;
 
 public class PolygonTerrainGenerator : MonoBehaviour {
 
@@ -28,6 +30,15 @@ public class PolygonTerrainGenerator : MonoBehaviour {
     private int end_vert;
     [SerializeField]
     private GameObject mask_prefab;
+
+	[SerializeField]
+	private GameObject rock_embellishment;
+	
+	[SerializeField]
+	private int rock_embellishment_perentage;
+	
+	[SerializeField]
+	private Texture2D rock_embellishment_texture; //texture where we keep all the rock decoration sprites
 
     [SerializeField]
     private float gen_distance;
@@ -159,7 +170,38 @@ public class PolygonTerrainGenerator : MonoBehaviour {
         active_terrain_segments.Enqueue( piece );
         active_masks.Enqueue( mask_obj );
 
+		generateMountainRocks(next_point);
+
     }
+
+	private void generateMountainRocks(Vector3 EndOfLastTerrainPiece){
+		
+		//use embellishment percentage to determine whether to actually add one or not
+		float random = Random.Range (0f, 100f);
+		
+		if (random > rock_embellishment_perentage) {
+			return;
+		} 
+		
+		GameObject rock_embellishment_obj = (GameObject)Instantiate( rock_embellishment );
+		Transform trans_ref = rock_embellishment_obj.transform;	
+		
+		string assetPath = AssetDatabase.GetAssetPath (rock_embellishment_texture);
+		
+		Sprite[] sprites = AssetDatabase.LoadAllAssetsAtPath (assetPath).OfType<Sprite>().ToArray();
+		
+		Sprite spriteToDraw = sprites[Random.Range (0, sprites.Length)];
+		
+		//we've chosen the sprite to draw on the mountain. Now we use it's length to determine where to draw it. 
+		//We must draw it at <= (EndOfLastTerrainPiece.X - spriteWidth). Probably add some random padding to that so embellishments dont end right where 
+		//terrain pieces do.
+		
+		trans_ref.position = new Vector3 (EndOfLastTerrainPiece.x - 10f, EndOfLastTerrainPiece.y - 3f, EndOfLastTerrainPiece.z);//EndOfLastTerrainPiece;
+		
+		rock_embellishment_obj.GetComponent<SpriteRenderer>().sprite = spriteToDraw;
+		
+		
+	}
 
     /////////////////////////////////////////////
 
