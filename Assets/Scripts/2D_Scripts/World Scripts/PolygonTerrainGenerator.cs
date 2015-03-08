@@ -11,11 +11,15 @@ public class PolygonTerrainGenerator : MonoBehaviour {
     /////////////////////////////////////////////
 
     private Queue<GameObject> active_terrain_segments;
+	private Queue<GameObject> active_rock_embellishments;
+	private Queue<GameObject> active_trees;
     private Queue<GameObject> active_masks;
     private Vector3 next_point;
     private Vector3 save_point;
     private float delta_x;
     private Mesh simple_quad;
+
+	private float treeDrawingOffset = 0.2f;
 
     /////////////////////////////////////////////
 
@@ -32,7 +36,16 @@ public class PolygonTerrainGenerator : MonoBehaviour {
     private GameObject mask_prefab;
 
 	[SerializeField]
-	private GameObject rock_embellishment;
+	private float gen_distance;
+	
+	[SerializeField]
+	private SimpleColliderGenerator collider_gen;
+	[SerializeField]
+	private Transform bear;
+
+	//Rock embellishment variables
+	[SerializeField]
+	private GameObject rock_embellishment_prefab;
 	
 	[SerializeField]
 	private int rock_embellishment_perentage;
@@ -40,13 +53,24 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 	[SerializeField]
 	private Texture2D rock_embellishment_texture; //texture where we keep all the rock decoration sprites
 
-    [SerializeField]
-    private float gen_distance;
-    
-    [SerializeField]
-    private SimpleColliderGenerator collider_gen;
-    [SerializeField]
-    private Transform bear;
+	//tree variables
+	[SerializeField]
+	private GameObject tree_prefab;
+	
+	[SerializeField]
+	private int minTreesPerSegment; //code generates between minTreesPerSegment and maxTreesPerSegment at random.
+	
+	[SerializeField]
+	private int maxTreesPerSegment;
+	
+	[SerializeField]
+	private Texture2D treeTexture1; //currently we have 3 seperate textures for tree sprites, so thats why there are 3 here. May want to consolidate into one sheet.
+	
+	[SerializeField]
+	private Texture2D treeTexture2;
+	
+	[SerializeField]
+	private Texture2D treeTexture3; 
 
     /////////////////////////////////////////////
 
@@ -171,6 +195,8 @@ public class PolygonTerrainGenerator : MonoBehaviour {
         active_masks.Enqueue( mask_obj );
 
 		generateMountainRocks(next_point);
+		generateTrees(start_position, next_point);
+
 
     }
 
@@ -183,7 +209,7 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 			return;
 		} 
 		
-		GameObject rock_embellishment_obj = (GameObject)Instantiate( rock_embellishment );
+		GameObject rock_embellishment_obj = (GameObject)Instantiate( rock_embellishment_prefab );
 		Transform trans_ref = rock_embellishment_obj.transform;	
 		
 		string assetPath = AssetDatabase.GetAssetPath (rock_embellishment_texture);
@@ -199,10 +225,64 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 		trans_ref.position = new Vector3 (EndOfLastTerrainPiece.x - 10f, EndOfLastTerrainPiece.y - 3f, EndOfLastTerrainPiece.z);//EndOfLastTerrainPiece;
 		
 		rock_embellishment_obj.GetComponent<SpriteRenderer>().sprite = spriteToDraw;
-		
+
+		active_rock_embellishments.Enqueue (rock_embellishment_obj);
 		
 	}
 
+	private void generateTrees(Vector3 startPoint, Vector3 endPoint){
+
+		//generate x random points between end and start
+
+		int numberOfTrees = Random.Range (minTreesPerSegment, maxTreesPerSegment);
+
+		float lineSlope = (endPoint.y - startPoint.y) / (endPoint.x - startPoint.x); // M value in y=mx+b
+
+		float lineOffset = startPoint.y - (lineSlope * startPoint.x);// b value in y=mx+b
+
+		//now we have a function which represents the slope of the hill. lets get 3 random x points and find the cooresponding y. 
+
+		for(int x = 0; x <= numberOfTrees; x++ ){
+			//instantiate trees
+			GameObject tree_obj = (GameObject)Instantiate( tree_prefab );
+			Transform tree_trans = tree_obj.transform;	
+
+			string assetPath = AssetDatabase.GetAssetPath (treeTexture1); //update later to use texture files 2 and 3
+
+			int treeTextureNumber = Random.Range (1,3);
+
+			switch(treeTextureNumber)
+			{
+			case 2:
+				assetPath = AssetDatabase.GetAssetPath (treeTexture2);
+				break;
+			case 3:
+				assetPath = AssetDatabase.GetAssetPath (treeTexture3); 
+				break;
+			}
+
+			Sprite[] sprites = AssetDatabase.LoadAllAssetsAtPath (assetPath).OfType<Sprite>().ToArray();
+
+			Sprite spriteToDraw = sprites[Random.Range (0, sprites.Length)]; 
+
+			//generate random x along segment for this tree. Find corresponding y:
+
+			float tree_base_x = Random.Range (startPoint.x, endPoint.x);
+
+			tree_obj.GetComponent<SpriteRenderer>().sprite = spriteToDraw;
+
+
+			float tree_height = tree_obj.transform.localScale.y * tree_obj.GetComponent<SpriteRenderer>().sprite.bounds.size.y;
+
+			float tree_base_y = tree_base_x*lineSlope+lineOffset-(tree_height/2)-treeDrawingOffset;
+
+			tree_trans.position = new Vector3(tree_base_x, tree_base_y + tree_height, -2f);
+
+			active_trees.Enqueue(tree_obj);
+
+		} 
+	
+	}
     /////////////////////////////////////////////
 
 
@@ -214,6 +294,8 @@ public class PolygonTerrainGenerator : MonoBehaviour {
     {
         active_terrain_segments = new Queue<GameObject>( );
         active_masks = new Queue<GameObject>( );
+		active_rock_embellishments = new Queue<GameObject> ();
+		active_trees = new Queue<GameObject> ();
 
         simple_quad = create_simple_quad( 3.3f, 1 );
 
@@ -247,6 +329,16 @@ public class PolygonTerrainGenerator : MonoBehaviour {
                 Destroy( active_terrain_segments.Dequeue( ) );
                 Destroy( active_masks.Dequeue( ) );
             }
+
+			if( active_rock_embellishments.Count > 20)
+			{
+				Destroy (active_rock_embellishments.Dequeue());
+			}
+
+			if( active_trees.Count > maxTreesPerSegment*6)
+			{
+				Destroy (active_trees.Dequeue());
+			}
         }
 	}
 
