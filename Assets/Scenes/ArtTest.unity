@@ -177,6 +177,9 @@ MonoBehaviour:
   terrain_piece: {fileID: 100002, guid: 658c95f25cbe745509e44755156a4a6f, type: 2}
   end_vert: 1
   mask_prefab: {fileID: 110194, guid: 15406bc7fb5ed84438b96069728796bf, type: 2}
+  rock_embellishment: {fileID: 0}
+  rock_embellishment_perentage: 0
+  rock_embellishment_texture: {fileID: 0}
   gen_distance: 20
   collider_gen: {fileID: 1937834632}
   bear: {fileID: 1919834440}
