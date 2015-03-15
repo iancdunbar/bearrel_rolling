@@ -8,6 +8,7 @@ public class BearController : MonoBehaviour {
     /////////////////////////////////////////////
 
     private Rigidbody2D rbody;
+    private bool jumped;
 
     /////////////////////////////////////////////
 
@@ -30,8 +31,11 @@ public class BearController : MonoBehaviour {
 
     public void OnSwipeUp( object unused )
     {
-        rigidbody2D.AddForce( Vector2.up * jump_strength, ForceMode2D.Impulse );
-        Debug.Log( "Swipe Up" );
+        if( !jumped )
+        {
+            rigidbody2D.AddForce( Vector2.up * jump_strength, ForceMode2D.Impulse );
+            jumped = true;
+        }
     }
 
     /////////////////////////////////////////////
@@ -44,6 +48,7 @@ public class BearController : MonoBehaviour {
     void Awake( )
     {
         rbody = GetComponent<Rigidbody2D>( );
+        jumped = true;
     }
 
     // Use this for initialization
@@ -51,7 +56,16 @@ public class BearController : MonoBehaviour {
     {
         MessageDispatch.RegisterListener( "OnSwipeUp", OnSwipeUp );
 	}
-	
+
+    void OnCollisionEnter2D( Collision2D other )
+    {
+
+        if( other.gameObject.tag == "Ground" )
+        {
+            jumped = false;
+        }
+    }
+
 	// Update is called once per frame
 	void FixedUpdate () 
     {

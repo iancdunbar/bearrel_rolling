@@ -34,10 +34,13 @@ public class PolygonTerrainGenerator : MonoBehaviour {
     private int end_vert;
     [SerializeField]
     private GameObject mask_prefab;
-
 	[SerializeField]
 	private float gen_distance;
-	
+    [SerializeField]
+    private float min_angle = 10;
+    [SerializeField]
+    private float max_angle = 90;
+
 	[SerializeField]
 	private SimpleColliderGenerator collider_gen;
 	[SerializeField]
@@ -85,7 +88,7 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 
 
         float w = end.x - start.x;
-        float h = 20;
+        float h = 100;
         float end_off_y = end.y - start.y;
         
         Vector3[] verts = new Vector3[ ]
@@ -128,55 +131,13 @@ public class PolygonTerrainGenerator : MonoBehaviour {
         return mesh;
     }
 
-    private Mesh create_simple_quad( float w, float h )
-    {
-        Mesh mesh = new Mesh( );
-
-        Vector3[] vertices = new Vector3[ ]
-        {
-            new Vector3( 0, 0, 0),
-            new Vector3( w, 0, 0),
-            new Vector3( w, -h, 0),
-            new Vector3( 0, -h, 0)
-        };
-
-        Vector2[] uv = new Vector2[ ]
-        {
-            new Vector2(0, 0),
-            new Vector2(1, 0),
-            new Vector2(1, 1),
-            new Vector2(0, 1),
-        };
-
-        int[] triangles = new int[ ]
-        {
-            0, 1, 2,
-            2, 3, 0
-        };
-
-        Vector3[] normals = new Vector3[ ]
-        {
-            Vector3.back,
-            Vector3.back,
-            Vector3.back,
-            Vector3.back,
-        };
-
-        mesh.vertices = vertices;
-        mesh.normals = normals;
-        mesh.uv = uv;
-        mesh.triangles = triangles;
-
-        return mesh;
-    }
-
     private void generate_next_piece( Vector3 start_position )
     {
 
         GameObject piece = (GameObject)Instantiate( terrain_piece );
         Transform trans_ref = piece.transform;
 
-        trans_ref.eulerAngles = new Vector3( trans_ref.eulerAngles.x, trans_ref.eulerAngles.y, Random.RandomRange( -1f, 0f ) * 90 );  
+        trans_ref.eulerAngles = new Vector3( trans_ref.eulerAngles.x, trans_ref.eulerAngles.y, -(min_angle) + Random.RandomRange( -1f, 0f ) * (max_angle - min_angle) );  
 
         trans_ref.position = start_position - trans_ref.FindChild("Start").position;
 
@@ -296,9 +257,6 @@ public class PolygonTerrainGenerator : MonoBehaviour {
         active_masks = new Queue<GameObject>( );
 		active_rock_embellishments = new Queue<GameObject> ();
 		active_trees = new Queue<GameObject> ();
-
-        simple_quad = create_simple_quad( 3.3f, 1 );
-
     }
 
 	// Use this for initialization
