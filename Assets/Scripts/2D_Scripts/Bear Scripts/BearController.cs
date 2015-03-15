@@ -71,6 +71,20 @@ public class BearController : MonoBehaviour {
     {
         rbody.velocity = Vector3.ClampMagnitude( rbody.velocity, max_speed );
 	}
+	//Slow the bear down if it collides with a tree
+	void OnTriggerExit2D( Collider2D other )
+	{
+		if ( other.tag == "tree" )
+		{
+			max_speed = 10;
+			other.gameObject.transform.Rotate (0,0,-2);
+			StartCoroutine(SpeedLimitCooldown());
+		}
+	}
+	IEnumerator SpeedLimitCooldown (){
+		yield return new WaitForSeconds(1);
+		max_speed = 200;
+	}
 
     /////////////////////////////////////////////
 }
