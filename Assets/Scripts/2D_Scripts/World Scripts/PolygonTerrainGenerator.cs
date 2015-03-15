@@ -137,15 +137,16 @@ public class PolygonTerrainGenerator : MonoBehaviour {
         GameObject piece = (GameObject)Instantiate( terrain_piece );
         Transform trans_ref = piece.transform;
 
-        trans_ref.eulerAngles = new Vector3( trans_ref.eulerAngles.x, trans_ref.eulerAngles.y, -(min_angle) + Random.RandomRange( -1f, 0f ) * (max_angle - min_angle) );  
+        trans_ref.eulerAngles = new Vector3( trans_ref.eulerAngles.x, trans_ref.eulerAngles.y, -(min_angle) + Random.Range( -1f, 0f ) * (max_angle - min_angle) );  
 
         trans_ref.position = start_position - trans_ref.FindChild("Start").position;
 
-        next_point = trans_ref.FindChild( "End" ).position;// TransformPoint( piece_mesh.vertices[ end_vert ] );
+        next_point = trans_ref.FindChild( "End" ).position;
+
+        AvalanceController.AddPoint( next_point );
 
         GameObject mask_obj = (GameObject)Instantiate( mask_prefab );
         mask_obj.GetComponent<MeshFilter>( ).mesh = create_mask( start_position, next_point );
-
         mask_obj.transform.position = start_position;
 
         delta_x = next_point.x - start_position.x;
