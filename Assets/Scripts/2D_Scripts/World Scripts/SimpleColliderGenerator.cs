@@ -136,7 +136,7 @@ public class SimpleColliderGenerator : MonoBehaviour {
     void Awake( ) 
     {
         collider_ref = this.GetComponent<EdgeCollider2D>( );
-
+        tag = "Ground";
 	}
 
     void Start( )
