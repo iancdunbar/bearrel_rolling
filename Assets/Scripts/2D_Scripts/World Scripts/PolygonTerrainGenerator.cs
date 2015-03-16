@@ -10,6 +10,7 @@ public class PolygonTerrainGenerator : MonoBehaviour {
     // Private Variable
     /////////////////////////////////////////////
 
+	private Queue<GameObject> active_terrain_segment_containers;
     private Queue<GameObject> active_terrain_segments;
 	private Queue<GameObject> active_rock_embellishments;
 	private Queue<GameObject> active_trees;
@@ -59,7 +60,10 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 	//tree variables
 	[SerializeField]
 	private GameObject tree_prefab;
-	
+
+	[SerializeField]
+	private int chanceOfTrees; //code generates between minTreesPerSegment and maxTreesPerSegment at random.
+
 	[SerializeField]
 	private int minTreesPerSegment; //code generates between minTreesPerSegment and maxTreesPerSegment at random.
 	
@@ -133,9 +137,12 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 
     private void generate_next_piece( Vector3 start_position )
     {
+		GameObject terrain_piece_container = new GameObject (); //create container to hold all terrain obects
 
         GameObject piece = (GameObject)Instantiate( terrain_piece );
         Transform trans_ref = piece.transform;
+
+		piece.transform.parent = terrain_piece_container.transform; //assign terrain as a child of the terrain container
 
         trans_ref.eulerAngles = new Vector3( trans_ref.eulerAngles.x, trans_ref.eulerAngles.y, -(min_angle) + Random.RandomRange( -1f, 0f ) * (max_angle - min_angle) );  
 
@@ -152,26 +159,31 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 
         save_point = bear.position;
 
+		active_terrain_segment_containers.Enqueue (terrain_piece_container);
+
+
         active_terrain_segments.Enqueue( piece );
         active_masks.Enqueue( mask_obj );
 
-		generateMountainRocks(next_point);
-		generateTrees(start_position, next_point);
+		generateMountainRocks(next_point, terrain_piece_container);
+		generateTrees(start_position, next_point, terrain_piece_container);
 
 
     }
 
-	private void generateMountainRocks(Vector3 EndOfLastTerrainPiece){
+	private void generateMountainRocks(Vector3 EndOfLastTerrainPiece, GameObject currentPiece_Container){
 		
 		//use embellishment percentage to determine whether to actually add one or not
 		float random = Random.Range (0f, 100f);
 		
-		if (random > rock_embellishment_perentage) {
+		if (random < rock_embellishment_perentage) {
 			return;
 		} 
 		
 		GameObject rock_embellishment_obj = (GameObject)Instantiate( rock_embellishment_prefab );
 		Transform trans_ref = rock_embellishment_obj.transform;	
+
+		rock_embellishment_obj.transform.parent = currentPiece_Container.transform;
 		
 		string assetPath = AssetDatabase.GetAssetPath (rock_embellishment_texture);
 		
@@ -191,11 +203,17 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 		
 	}
 
-	private void generateTrees(Vector3 startPoint, Vector3 endPoint){
+	private void generateTrees(Vector3 startPoint, Vector3 endPoint, GameObject currentPiece_container){
 
 		//generate x random points between end and start
 
-		int numberOfTrees = Random.Range (minTreesPerSegment, maxTreesPerSegment);
+		int numberOfTrees = 0;
+
+		float random = Random.Range (0f, 100f);
+		
+		if (random < chanceOfTrees) {
+			numberOfTrees = Random.Range (minTreesPerSegment, maxTreesPerSegment);
+		} 
 
 		float lineSlope = (endPoint.y - startPoint.y) / (endPoint.x - startPoint.x); // M value in y=mx+b
 
@@ -203,10 +221,12 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 
 		//now we have a function which represents the slope of the hill. lets get 3 random x points and find the cooresponding y. 
 
-		for(int x = 0; x <= numberOfTrees; x++ ){
+		for(int x = 0; x < numberOfTrees; x++ ){
 			//instantiate trees
 			GameObject tree_obj = (GameObject)Instantiate( tree_prefab );
 			Transform tree_trans = tree_obj.transform;	
+
+			tree_obj.transform.parent = currentPiece_container.transform;
 
 			string assetPath = AssetDatabase.GetAssetPath (treeTexture1); //update later to use texture files 2 and 3
 
@@ -253,6 +273,7 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 
     void Awake( )
     {
+		active_terrain_segment_containers = new Queue<GameObject>( );
         active_terrain_segments = new Queue<GameObject>( );
         active_masks = new Queue<GameObject>( );
 		active_rock_embellishments = new Queue<GameObject> ();
@@ -282,21 +303,12 @@ public class PolygonTerrainGenerator : MonoBehaviour {
             generate_next_piece( next_point );
             collider_gen.AddPoint( next_point );
 
-            if( active_terrain_segments.Count > 20 )
-            {
-                Destroy( active_terrain_segments.Dequeue( ) );
-                Destroy( active_masks.Dequeue( ) );
-            }
-
-			if( active_rock_embellishments.Count > 20)
+			if( active_terrain_segment_containers.Count > 30 )
 			{
-				Destroy (active_rock_embellishments.Dequeue());
+				Destroy( active_terrain_segment_containers.Dequeue( ) );
+				//Destroy( active_masks.Dequeue( ) );
 			}
 
-			if( active_trees.Count > maxTreesPerSegment*6)
-			{
-				Destroy (active_trees.Dequeue());
-			}
         }
 	}
 
