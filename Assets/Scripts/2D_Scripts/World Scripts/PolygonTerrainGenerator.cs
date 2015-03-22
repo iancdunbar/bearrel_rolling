@@ -144,6 +144,8 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 
         Transform trans_ref = piece.transform;
 
+		GameObject terrain_piece_container = new GameObject();
+
 		piece.transform.parent = terrain_piece_container.transform; //assign terrain as a child of the terrain container
 
         trans_ref.eulerAngles = new Vector3( trans_ref.eulerAngles.x, trans_ref.eulerAngles.y, -(min_angle) + Random.RandomRange( -1f, 0f ) * (max_angle - min_angle) );  
