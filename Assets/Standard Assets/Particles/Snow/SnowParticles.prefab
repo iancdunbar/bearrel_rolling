@@ -11,7 +11,6 @@ GameObject:
   - 198: {fileID: 19800000}
   - 199: {fileID: 19900000}
   - 212: {fileID: 21200000}
-  - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: SnowParticles
   m_TagString: Untagged
@@ -31,17 +30,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 118df88cf0ee44e69ab24fe5d474e00f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -92,7 +80,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 0
     startSpeed:
-      scalar: 7.82999992
+      scalar: 7.94000006
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -291,7 +279,7 @@ ParticleSystem:
     serializedVersion: 2
     enabled: 1
     type: 4
-    radius: .178965747
+    radius: .0477972589
     angle: 11.6999998
     length: 5
     boxX: 1
@@ -304,7 +292,7 @@ ParticleSystem:
     enabled: 1
     m_Type: 0
     rate:
-      scalar: 200
+      scalar: 210
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -396,7 +384,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 3
   ColorModule:
-    enabled: 1
+    enabled: 0
     gradient:
       maxGradient:
         key0:
@@ -1118,7 +1106,7 @@ SpriteRenderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 452ec835c803948d7bf9e7415691e957, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1126,7 +1114,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 20
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: ee41aea9baf9244668b06ed232c8298b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
