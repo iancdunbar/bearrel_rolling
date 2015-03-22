@@ -11,6 +11,7 @@ public class BearController : MonoBehaviour {
     private bool jumped;
     private bool slammed;
     private BearStateController bsc;
+	private bool deathBool = false;
 
     /////////////////////////////////////////////
 
@@ -120,8 +121,14 @@ public class BearController : MonoBehaviour {
 		Debug.Log(gameObject.rigidbody2D.velocity);
 	}
 
+	void OnGUI(){
+		if(deathBool){
+			GUI.Box (new Rect (0,0,Screen.width,Screen.height), "<color=red><size=80>BEAR DEATH</size></color>");
+		}
+	}
+
 	//Slow the bear down if it collides with a tree
-	void OnTriggerEnter2D( Collider2D other )
+	IEnumerator OnTriggerEnter2D( Collider2D other )
 	{
 	
 		if ( other.tag == "tree" )
@@ -139,7 +146,10 @@ public class BearController : MonoBehaviour {
 
 		if ( other.tag =="Death")
 		{
-			Application.LoadLevel("Arttest");
+			deathBool = true;
+			yield return new WaitForSeconds(5.0f);
+			Application.LoadLevel(Application.loadedLevel);
+		
 		}
 	}
 	IEnumerator SpeedLimitCooldown (){
