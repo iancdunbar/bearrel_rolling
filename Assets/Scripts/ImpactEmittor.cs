@@ -6,20 +6,32 @@ public class ImpactEmittor : MonoBehaviour {
 	// Use this for initialization
 	public ParticleSystem snow;
     public bool can_blood = true;
+	public bool grounded = false;
+	private ParticleSystem Contact;
 
-	void OnTriggerEnter2D(Collider2D other){
+	void Start ()
+	{
+
+	}
+
+	void Update () 
+	{
+		
+	}
+	void OnTriggerEnter2D(Collider2D other)
+	{
 
 
         can_blood = true;
 			
 
 			
-		}
+	}
 
 
     void OnCollisionEnter2D( Collision2D other )
     {
-        Debug.Log( "Collision enter" );
+        
         if( can_blood )
         {
             Debug.Log( "Collision Occured" );
@@ -32,13 +44,13 @@ public class ImpactEmittor : MonoBehaviour {
             can_blood = false;
         }
     }
+	void OnCollisionExit2D( Collision2D other)
+	{
 
-	void Start () {
 	
+
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
+
+
 }

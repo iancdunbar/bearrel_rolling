@@ -24,6 +24,8 @@ public class AvalanceController : MonoBehaviour {
 
     [SerializeField]
     private float avalance_speed;
+	public ParticleSystem snow;
+	public bool can_blood = true;
 
     ///////////////////////////////////////////////
 
@@ -73,6 +75,31 @@ public class AvalanceController : MonoBehaviour {
             path.Dequeue( );
 
 	}
+
+	void OnTriggerEnter2D( Collider2D other ){
+
+		can_blood = true;
+	
+	
+	}
+
+
+	void OnTriggerExit2D( Collision2D other )
+	{
+		Debug.Log( "Collision enter" );
+		if( can_blood )
+		{
+			Debug.Log( "Collision Occured" );
+			Vector3 pos = other.contacts[0].point;
+			pos.z = transform.position.z;
+		
+			Instantiate( snow, pos, Quaternion.identity );
+			SimpleAudioController.PlayCrashEmote( );
+		
+			can_blood = false;
+		}
+	}
+
 
     ///////////////////////////////////////////////
 

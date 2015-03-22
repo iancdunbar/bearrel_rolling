@@ -80,7 +80,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 0
     startSpeed:
-      scalar: 7.94000006
+      scalar: 4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -207,7 +207,7 @@ ParticleSystem:
         rgba: 4294967295
       minMaxState: 0
     startSize:
-      scalar: .189999998
+      scalar: 1.01999998
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -279,7 +279,7 @@ ParticleSystem:
     serializedVersion: 2
     enabled: 1
     type: 4
-    radius: .0477972589
+    radius: .0700000003
     angle: 11.6999998
     length: 5
     boxX: 1
@@ -1074,7 +1074,7 @@ ParticleSystemRenderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 452ec835c803948d7bf9e7415691e957, type: 2}
+  - {fileID: 2100000, guid: be7a62dedcb104f888587f74a10feab0, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0

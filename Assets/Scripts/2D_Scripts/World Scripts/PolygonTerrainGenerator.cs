@@ -29,7 +29,10 @@ public class PolygonTerrainGenerator : MonoBehaviour {
     /////////////////////////////////////////////
 
     [SerializeField]
-    private GameObject terrain_piece;
+    private GameObject[] terrain_piece;
+	private GameObject getTerrain() {
+		return terrain_piece [Random.Range(0, terrain_piece.Length )];
+	}
     [SerializeField]
     private int end_vert;
     [SerializeField]
@@ -133,8 +136,9 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 
     private void generate_next_piece( Vector3 start_position )
     {
-
-        GameObject piece = (GameObject)Instantiate( terrain_piece );
+	
+	
+        GameObject piece = Instantiate( getTerrain () ) as GameObject;
         Transform trans_ref = piece.transform;
 
         trans_ref.eulerAngles = new Vector3( trans_ref.eulerAngles.x, trans_ref.eulerAngles.y, -(min_angle) + Random.Range( -1f, 0f ) * (max_angle - min_angle) );  
