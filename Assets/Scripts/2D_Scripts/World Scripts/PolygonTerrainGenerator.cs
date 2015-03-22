@@ -148,7 +148,6 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 
         trans_ref.position = start_position - trans_ref.FindChild("Start").position;
 
-        next_point = trans_ref.FindChild( "End" ).position;// TransformPoint( piece_mesh.vertices[ end_vert ] );
         next_point = trans_ref.FindChild( "End" ).position;
 
         AvalanceController.AddPoint( next_point );

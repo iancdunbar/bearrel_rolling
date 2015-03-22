@@ -9,6 +9,8 @@ public class BearController : MonoBehaviour {
 
     private Rigidbody2D rbody;
     private bool jumped;
+    private bool slammed;
+    private BearStateController bsc;
 
     /////////////////////////////////////////////
 
@@ -26,6 +28,20 @@ public class BearController : MonoBehaviour {
 
 
     /////////////////////////////////////////////
+    // State Messages
+    /////////////////////////////////////////////
+
+    public void OnEnterState( object arg )
+    {
+        BearState state = (BearState)arg;
+
+        Debug.Log( "Entering " + state + " from BearController" );
+    }
+
+    /////////////////////////////////////////////
+
+
+    /////////////////////////////////////////////
     // Input Messages
     /////////////////////////////////////////////
 
@@ -38,6 +54,18 @@ public class BearController : MonoBehaviour {
         }
     }
 
+    public void OnSwipeDown( object unused )
+    {
+
+        if( !slammed )
+        {
+            rigidbody2D.velocity = new Vector2( rigidbody2D.velocity.x, -10 );
+            slammed = true;
+            jumped = true;
+        }
+
+    }
+
     /////////////////////////////////////////////
 
 
@@ -48,6 +76,8 @@ public class BearController : MonoBehaviour {
     void Awake( )
     {
         rbody = GetComponent<Rigidbody2D>( );
+        bsc = new BearStateController( );
+
         jumped = true;
     }
 
@@ -55,6 +85,10 @@ public class BearController : MonoBehaviour {
 	void Start () 
     {
         MessageDispatch.RegisterListener( "OnSwipeUp", OnSwipeUp );
+        MessageDispatch.RegisterListener( "OnSwipeDown", OnSwipeDown );
+        MessageDispatch.RegisterListener( "OnEnterState", OnEnterState );
+
+        bsc.ChangeState( BearState.IDLE );
 	}
 
     void OnCollisionEnter2D( Collision2D other )
@@ -63,6 +97,7 @@ public class BearController : MonoBehaviour {
         if( other.gameObject.tag == "Ground" )
         {
             jumped = false;
+            slammed = false;
         }
     }
 
