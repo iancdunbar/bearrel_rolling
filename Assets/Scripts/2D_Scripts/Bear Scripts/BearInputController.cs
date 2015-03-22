@@ -55,6 +55,11 @@ public class BearInputController : MonoBehaviour {
                     gesture_processed = true;
                     MessageDispatch.BroadcastMessage( "OnSwipeUp" );
                 }
+                else if( !gesture_processed && touch_begin.y - curr.position.y > swipe_minimum )
+                {
+                    gesture_processed = true;
+                    MessageDispatch.BroadcastMessage( "OnSwipeDown" );
+                }
             }
             else if( curr.phase == TouchPhase.Ended )
             {
@@ -65,6 +70,11 @@ public class BearInputController : MonoBehaviour {
         if( Input.GetKeyUp( KeyCode.Space ) )
         {
             MessageDispatch.BroadcastMessage( "OnSwipeUp" );
+        }
+
+        if( Input.GetKeyUp( KeyCode.LeftShift ) )
+        {
+            MessageDispatch.BroadcastMessage( "OnSwipeDown" );
         }
 #endif
     }
