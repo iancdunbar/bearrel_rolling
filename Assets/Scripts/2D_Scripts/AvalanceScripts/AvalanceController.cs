@@ -76,29 +76,10 @@ public class AvalanceController : MonoBehaviour {
 
 	}
 
-	void OnTriggerEnter2D( Collider2D other ){
-
-		can_blood = true;
-	
-	
-	}
 
 
-	void OnTriggerExit2D( Collision2D other )
-	{
-		Debug.Log( "Collision enter" );
-		if( can_blood )
-		{
-			Debug.Log( "Collision Occured" );
-			Vector3 pos = other.contacts[0].point;
-			pos.z = transform.position.z;
-		
-			Instantiate( snow, pos, Quaternion.identity );
-			SimpleAudioController.PlayCrashEmote( );
-		
-			can_blood = false;
-		}
-	}
+
+
 
 
     ///////////////////////////////////////////////
