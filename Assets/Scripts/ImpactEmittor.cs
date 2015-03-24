@@ -7,7 +7,9 @@ public class ImpactEmittor : MonoBehaviour {
 	public ParticleSystem snow;
     public bool can_blood = true;
 	public bool grounded = false;
-	private ParticleSystem Contact;
+	public ParticleSystem ContactEmitter;
+	private bool movingfast = false;
+	public float movingfastSpeed;
 
 	void Start ()
 	{
@@ -16,7 +18,20 @@ public class ImpactEmittor : MonoBehaviour {
 
 	void Update () 
 	{
-		
+		if (rigidbody2D.velocity.x >= movingfastSpeed){
+			movingfast = true;
+		}
+		else {
+			movingfast = false;
+		}
+
+		if(grounded == true && movingfast == true){
+			ContactEmitter.Play();
+		}
+		else { 
+			ContactEmitter.Stop();
+		}
+
 	}
 	void OnTriggerEnter2D(Collider2D other)
 	{
@@ -31,8 +46,11 @@ public class ImpactEmittor : MonoBehaviour {
 
     void OnCollisionEnter2D( Collision2D other )
     {
-        
-        if( can_blood )
+
+			grounded = true;
+
+
+		if( can_blood )
         {
             Debug.Log( "Collision Occured" );
             Vector3 pos = other.contacts[0].point;
@@ -47,7 +65,9 @@ public class ImpactEmittor : MonoBehaviour {
 	void OnCollisionExit2D( Collision2D other)
 	{
 
-	
+
+			grounded = false;
+
 
 	}
 

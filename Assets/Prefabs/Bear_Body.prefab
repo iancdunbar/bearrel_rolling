@@ -344,6 +344,7 @@ MonoBehaviour:
   snow: {fileID: 19800000, guid: 35630977bb43b48eb80920ad41fd60ba, type: 2}
   can_blood: 1
   grounded: 0
+  ContactEmitter: {fileID: 0}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
