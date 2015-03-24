@@ -345,6 +345,9 @@ MonoBehaviour:
   can_blood: 1
   grounded: 0
   ContactEmitter: {fileID: 0}
+  MovingFastEmitter: {fileID: 0}
+  MovingFastSpeed: 0
+  ReallyFastSpeed: 0
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

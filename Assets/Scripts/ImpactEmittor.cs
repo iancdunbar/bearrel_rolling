@@ -8,8 +8,11 @@ public class ImpactEmittor : MonoBehaviour {
     public bool can_blood = true;
 	public bool grounded = false;
 	public ParticleSystem ContactEmitter;
+	public ParticleSystem MovingFastEmitter;
 	private bool movingfast = false;
-	public float movingfastSpeed;
+	private bool reallyfast = false;
+	public float MovingFastSpeed;
+	public float ReallyFastSpeed;
 
 	void Start ()
 	{
@@ -18,19 +21,38 @@ public class ImpactEmittor : MonoBehaviour {
 
 	void Update () 
 	{
-		if (rigidbody2D.velocity.x >= movingfastSpeed){
+
+		//Establish if the bear is moving fast
+		if (rigidbody2D.velocity.x >= MovingFastSpeed){
 			movingfast = true;
 		}
 		else {
 			movingfast = false;
 		}
 
+		//Establish if the bear is moving REALLY fast
+			if (rigidbody2D.velocity.x >= ReallyFastSpeed){
+				reallyfast = true;
+			}
+			else {
+				reallyfast = false;
+			}
+		//Emit particles if the bear is touching the ground while moving fast
 		if(grounded == true && movingfast == true){
 			ContactEmitter.Play();
 		}
 		else { 
 			ContactEmitter.Stop();
 		}
+
+		//Emit particles if the bear is moving REALLY fast ANYTIME.
+		if (reallyfast == true){
+			MovingFastEmitter.Play();
+		}
+		else {
+			MovingFastEmitter.Stop ();
+		}
+
 
 	}
 	void OnTriggerEnter2D(Collider2D other)
