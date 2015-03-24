@@ -21,7 +21,8 @@ public class ImpactEmittor : MonoBehaviour {
 
 	void Update () 
 	{
-
+		ContactEmitter.startSpeed = rigidbody2D.velocity.x;
+		MovingFastEmitter.startSpeed = rigidbody2D.velocity.x;
 		//Establish if the bear is moving fast
 		if (rigidbody2D.velocity.x >= MovingFastSpeed){
 			movingfast = true;
@@ -30,27 +31,41 @@ public class ImpactEmittor : MonoBehaviour {
 			movingfast = false;
 		}
 
-		//Establish if the bear is moving REALLY fast
+		//Establish if the bear is moving REALLY fast in x
 			if (rigidbody2D.velocity.x >= ReallyFastSpeed){
 				reallyfast = true;
 			}
 			else {
 				reallyfast = false;
 			}
+
+		//Establish if the bear is moving REALLY fast in y
+		if (rigidbody2D.velocity.y <= -ReallyFastSpeed){
+			reallyfast = true;
+		}
+		else {
+			reallyfast = false;
+		}
+
 		//Emit particles if the bear is touching the ground while moving fast
 		if(grounded == true && movingfast == true){
 			ContactEmitter.Play();
+
+
 		}
 		else { 
 			ContactEmitter.Stop();
+		
 		}
 
 		//Emit particles if the bear is moving REALLY fast ANYTIME.
 		if (reallyfast == true){
 			MovingFastEmitter.Play();
+
 		}
 		else {
 			MovingFastEmitter.Stop ();
+
 		}
 
 
