@@ -118,7 +118,7 @@ public class BearController : MonoBehaviour {
 	void FixedUpdate () 
     {
 		rbody.velocity = Vector3.ClampMagnitude( rbody.velocity, max_speed );
-		Debug.Log(gameObject.rigidbody2D.velocity);
+
 	}
 
 	void OnGUI(){
@@ -158,7 +158,7 @@ public class BearController : MonoBehaviour {
 	}
 	IEnumerator BoostCoolDown(){
 		yield return new WaitForSeconds(2);
-	//	gameObject.rigidbody2D.velocity = max_speed;
+		//gameObject.rigidbody2D.velocity = max_speed;
 	}
 
     /////////////////////////////////////////////

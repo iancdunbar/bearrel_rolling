@@ -13,6 +13,8 @@ public class ImpactEmittor : MonoBehaviour {
 	private bool reallyfast = false;
 	public float MovingFastSpeed;
 	public float ReallyFastSpeed;
+	private float BearVelocityX;
+	private float BearVelocityY;
 
 	void Start ()
 	{
@@ -21,8 +23,14 @@ public class ImpactEmittor : MonoBehaviour {
 
 	void Update () 
 	{
-		ContactEmitter.startSpeed = rigidbody2D.velocity.x;
-		MovingFastEmitter.startSpeed = rigidbody2D.velocity.x;
+		Debug.Log (rigidbody2D.velocity);
+
+		//clamp the min max value of the bears velocity for particle speed
+		BearVelocityX = Mathf.Clamp (rigidbody2D.velocity.x, 0,8);
+		BearVelocityY = Mathf.Clamp (rigidbody2D.velocity.y, 0,8);
+		ContactEmitter.startSpeed = BearVelocityX;
+		MovingFastEmitter.startSpeed = BearVelocityX;
+
 		//Establish if the bear is moving fast
 		if (rigidbody2D.velocity.x >= MovingFastSpeed){
 			movingfast = true;
@@ -50,8 +58,6 @@ public class ImpactEmittor : MonoBehaviour {
 		//Emit particles if the bear is touching the ground while moving fast
 		if(grounded == true && movingfast == true){
 			ContactEmitter.Play();
-
-
 		}
 		else { 
 			ContactEmitter.Stop();
@@ -89,7 +95,7 @@ public class ImpactEmittor : MonoBehaviour {
 
 		if( can_blood )
         {
-            Debug.Log( "Collision Occured" );
+            
             Vector3 pos = other.contacts[0].point;
             pos.z = transform.position.z;
 

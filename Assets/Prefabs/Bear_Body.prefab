@@ -324,10 +324,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 788fbfed3c6a3664588169e1cd6973a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jump_strength: 400
+  jump_strength: 300
   jump_distance: 130
   max_speed: 2000
-  collision_speed: 20
+  collision_speed: 8
   slow_duration: .200000003
   boostSpeed: 4000
 --- !u!114 &11400004
@@ -347,7 +347,7 @@ MonoBehaviour:
   ContactEmitter: {fileID: 0}
   MovingFastEmitter: {fileID: 0}
   MovingFastSpeed: 5
-  ReallyFastSpeed: 20
+  ReallyFastSpeed: 10
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -514,7 +514,7 @@ HingeJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 1
+  m_UseLimits: 0
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 50
