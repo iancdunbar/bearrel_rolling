@@ -62,6 +62,7 @@ public class BearController : MonoBehaviour {
         {
             rigidbody2D.AddForce( Vector2.up * jump_strength, ForceMode2D.Impulse );
 			rigidbody2D.AddForce( Vector2.right * jump_distance, ForceMode2D.Impulse );
+            bsc.ChangeState( BearState.JUMPING );
             jumped = true;
         }
     }
@@ -72,6 +73,7 @@ public class BearController : MonoBehaviour {
         if( !slammed )
         {
             rigidbody2D.velocity = new Vector2( rigidbody2D.velocity.x, -10 );
+            bsc.ChangeState( BearState.SLAMMING );
             slammed = true;
             jumped = true;
         }
@@ -109,6 +111,7 @@ public class BearController : MonoBehaviour {
 
         if( other.gameObject.tag == "Ground" )
         {
+            bsc.ChangeState( BearState.IDLE );
             jumped = false;
             slammed = false;
         }
