@@ -18,6 +18,7 @@ public class FollowBear : MonoBehaviour {
 
 		{
 			transform.position = new Vector2 ( target.rigidbody2D.position.x + offset.x, target.rigidbody2D.position.y + offset.y );
+
 		}
 	}
 }

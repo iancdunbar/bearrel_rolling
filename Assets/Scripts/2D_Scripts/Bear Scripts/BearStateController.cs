@@ -10,8 +10,8 @@ public class BearStateController
     // Private Variable
     /////////////////////////////////////////////
 
-    private BearState previous_state;
-    private BearState current_state;
+    public BearState previous_state;
+    public BearState current_state;
 
     /////////////////////////////////////////////
 

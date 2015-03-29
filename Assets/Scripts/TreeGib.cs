@@ -9,20 +9,44 @@ public class TreeGib : MonoBehaviour {
 	public float breakforce;
 	public ParticleSystem snow;
 	public ParticleSystem branches;
+	private bool slamming = false;
+	private BearStateController bsc;
 
+	void Awake (){
+
+	}
 	// Use this for initialization
 	void Start () {
+		MessageDispatch.RegisterListener( "OnEnterState", OnEnterState );
+		MessageDispatch.RegisterListener( "OnExitState", OnExitState );
 	
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	
+
+
+	void OnEnterState ( object arg){
+		BearState state = (BearState)arg;
+		if (state == BearState.SLAMMING){
+
+			slamming = true;
+
+		}
 	}
+	void OnExitState (object arg){
+		BearState  state = (BearState)arg;
+		if (state == BearState.SLAMMING){
+			slamming = false;
+		}
+	}
+
+	
+	
+
 
 	void OnTriggerExit2D(Collider2D other)
 	{
-		if (other.tag == "Bear")
+		if (other.tag == "Bear" && slamming == true)
 		{ 
 			foreach (GameObject gib in gibs)
 			{
@@ -35,6 +59,12 @@ public class TreeGib : MonoBehaviour {
 				Destroy(gameObject);
 			}
 		}
+		if (other.tag == "Bear" && slamming == false)
+		{
+			Instantiate( snow, transform.position, Quaternion.identity );
+			SimpleAudioController.PlayCrashEmote();
+		}
+
 	}
 
 

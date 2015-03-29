@@ -82,10 +82,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   terrain_piece:
-  - {fileID: 100006, guid: 3f187a2c14290403bbbfc3f45bd02ef8, type: 2}
-  - {fileID: 100000, guid: 14f54dec0ae6b405b8c3d4a679947119, type: 2}
+  - {fileID: 100004, guid: 6b42be91267c244409119afa8496c94b, type: 2}
+  - {fileID: 100004, guid: 6b42be91267c244409119afa8496c94b, type: 2}
   - {fileID: 100000, guid: 0c6eabd965f064261be54586526219b4, type: 2}
-  - {fileID: 100000, guid: d3db336b73d984124ab5da3a9ce0c741, type: 2}
+  - {fileID: 100000, guid: 0c6eabd965f064261be54586526219b4, type: 2}
+  - {fileID: 100000, guid: 14f54dec0ae6b405b8c3d4a679947119, type: 2}
   end_vert: 1
   mask_prefab: {fileID: 110194, guid: 15406bc7fb5ed84438b96069728796bf, type: 2}
   gen_distance: 20
@@ -99,9 +100,9 @@ MonoBehaviour:
   rock_embellishment_texture: {fileID: 2800000, guid: bfb56362eb4cc47eaa59da0aaeb87a10,
     type: 3}
   tree_prefab: {fileID: 100000, guid: 6296ce22412e2294b9d378f148866aae, type: 2}
-  chanceOfTrees: 100
+  chanceOfTrees: 80
   minTreesPerSegment: 1
-  maxTreesPerSegment: 20
+  maxTreesPerSegment: 8
   treeTexture1: {fileID: 2800000, guid: a0a1db463f00a445598df452043720bb, type: 3}
   treeTexture2: {fileID: 2800000, guid: a0a1db463f00a445598df452043720bb, type: 3}
   treeTexture3: {fileID: 2800000, guid: a0a1db463f00a445598df452043720bb, type: 3}
