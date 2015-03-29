@@ -1,0 +1,147 @@
+fileFormatVersion: 2
+guid: 4e4d055c302534571bc2472f0451f4ac
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: trees2_0
+    21300002: trees2_1
+    21300004: trees2_2
+    21300006: trees2_3
+    21300008: trees2_4
+    21300010: trees2_5
+    21300012: trees2_6
+    21300014: trees2_7
+    21300016: trees2_8
+    21300018: trees2_8
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: trees2_1
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 91
+        width: 232
+        height: 1154
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: trees2_2
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 169
+        width: 182
+        height: 764
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: trees2_3
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 1265
+        width: 320
+        height: 690
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: trees2_4
+      rect:
+        serializedVersion: 2
+        x: 1223
+        y: 1295
+        width: 330
+        height: 614
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: trees2_5
+      rect:
+        serializedVersion: 2
+        x: 1679
+        y: 891
+        width: 234
+        height: 1020
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: trees2_6
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 649
+        width: 336
+        height: 440
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: trees2_7
+      rect:
+        serializedVersion: 2
+        x: 1235
+        y: 291
+        width: 182
+        height: 762
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: trees2_8
+      rect:
+        serializedVersion: 2
+        x: 1641
+        y: 107
+        width: 232
+        height: 648
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: trees2_8
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 1233
+        width: 289
+        height: 772
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

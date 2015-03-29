@@ -1,0 +1,141 @@
+fileFormatVersion: 2
+guid: 2ae029cc6f20cb44a880f0600df4caeb
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: snow_rocks_0
+    21300002: snow_rocks_1
+    21300004: snow_rocks_2
+    21300006: snow_rocks_3
+    21300008: snow_rocks_4
+    21300010: snow_rocks_5
+    21300012: snow_rocks_6
+    21300014: snow_rocks_7
+    21300016: snow_rocks_8
+    21300018: snow_rocks_9
+    21300020: snow_rocks_10
+    21300022: snow_rocks_11
+    21300024: snow_rocks_12
+    21300026: snow_rocks_13
+    21300028: snow_rocks_14
+    21300030: snow_rocks_15
+    21300032: snow_rocks_16
+    21300034: snow_rocks_17
+    21300036: snow_rocks_18
+    21300038: snow_rocks_19
+    21300040: snow_rocks_20
+    21300042: snow_rocks_21
+    21300044: snow_rocks_22
+    21300046: snow_rocks_23
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: snow_rocks_0
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 1641
+        width: 644
+        height: 286
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: snow_rocks_1
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 1665
+        width: 932
+        height: 294
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: snow_rocks_2
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 1186
+        width: 1034
+        height: 293
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: snow_rocks_3
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 857
+        width: 932
+        height: 204
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: snow_rocks_4
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 663
+        width: 690
+        height: 502
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: snow_rocks_5
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 49
+        width: 562
+        height: 601
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: snow_rocks_6
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 53
+        width: 862
+        height: 654
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

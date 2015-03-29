@@ -22,8 +22,26 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 
 	private float treeDrawingOffset = 0.2f;
 
-    /////////////////////////////////////////////
+	//Asset Paths from Resource Folder
 
+	//**Rocks
+	private const string rock_embellishment_prefab_path = "Assets/Resources/Terrain Assets/rock_embellishments/rock_embelishment.prefab";
+	private const string rock_embellishment_sprites_path = "Terrain Assets/rock_embellishments/sprites";
+	//**Trees
+	private const string tree_prefab_path = "Assets/Resources/Terrain Assets/trees/tree_prefab.prefab";
+	private const string tree_sprites_path = "Terrain Assets/trees/sprites";
+
+    /////////////////////////////////////////////
+	/// 
+	/// 
+
+	//Private Assets 
+	private GameObject rock_embellishment_prefab;// = Resources.LoadAssetAtPath<GameObject>(rock_embellishment_prefab_path);
+
+	private GameObject tree_prefab; // = Resources.LoadAssetAtPath<GameObject>(tree_prefab_path);
+	private Texture2D treeTexture1;// = Resources.LoadAssetAtPath<Texture2D>(tree_sprites_1_path);
+	//private Texture2D treeTexture2 = Resources.LoadAssetAtPath<Texture2D>(tree_sprites_2_path);
+	//private Texture2D treeTexture3 = Resources.LoadAssetAtPath<Texture2D>(tree_sprites_3_path);
 
     /////////////////////////////////////////////
     // Inspector Variables
@@ -51,19 +69,11 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 	private Transform bear;
 
 	//Rock embellishment variables
-	[SerializeField]
-	private GameObject rock_embellishment_prefab;
 	
 	[SerializeField]
 	private int rock_embellishment_perentage;
-	
-	[SerializeField]
-	private Texture2D rock_embellishment_texture; //texture where we keep all the rock decoration sprites
 
 	//tree variables
-	[SerializeField]
-	private GameObject tree_prefab;
-
 	[SerializeField]
 	private int chanceOfTrees; //code generates between minTreesPerSegment and maxTreesPerSegment at random.
 
@@ -72,15 +82,7 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 	
 	[SerializeField]
 	private int maxTreesPerSegment;
-	
-	[SerializeField]
-	private Texture2D treeTexture1; //currently we have 3 seperate textures for tree sprites, so thats why there are 3 here. May want to consolidate into one sheet.
-	
-	[SerializeField]
-	private Texture2D treeTexture2;
-	
-	[SerializeField]
-	private Texture2D treeTexture3; 
+
 
     /////////////////////////////////////////////
 
@@ -184,16 +186,18 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 		if (random < rock_embellishment_perentage) {
 			return;
 		} 
-		
-		GameObject rock_embellishment_obj = (GameObject)Instantiate( rock_embellishment_prefab );
+
+		//rock_embellishment_prefab = Resources.LoadAssetAtPath<GameObject>(rock_embellishment_prefab_path);
+
+		GameObject rock_embellishment_obj = Instantiate(Resources.LoadAssetAtPath(rock_embellishment_prefab_path, typeof(GameObject))) as GameObject;
+
 		Transform trans_ref = rock_embellishment_obj.transform;	
 
 		rock_embellishment_obj.transform.parent = currentPiece_Container.transform;
-		
-		string assetPath = AssetDatabase.GetAssetPath (rock_embellishment_texture);
-		
-		Sprite[] sprites = AssetDatabase.LoadAllAssetsAtPath (assetPath).OfType<Sprite>().ToArray();
-		
+
+		Sprite[] spritesSingle = Resources.LoadAll<Sprite> (rock_embellishment_sprites_path);
+	
+		Sprite[] sprites = new Sprite[3];
 		Sprite spriteToDraw = sprites[Random.Range (0, sprites.Length)];
 		
 		//we've chosen the sprite to draw on the mountain. Now we use it's length to determine where to draw it. 
@@ -228,26 +232,14 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 
 		for(int x = 0; x < numberOfTrees; x++ ){
 			//instantiate trees
+			tree_prefab = Resources.LoadAssetAtPath<GameObject>(tree_prefab_path);
+
 			GameObject tree_obj = (GameObject)Instantiate( tree_prefab );
 			Transform tree_trans = tree_obj.transform;	
 
 			tree_obj.transform.parent = currentPiece_container.transform;
 
-			string assetPath = AssetDatabase.GetAssetPath (treeTexture1); //update later to use texture files 2 and 3
-
-			int treeTextureNumber = Random.Range (1,3);
-
-			switch(treeTextureNumber)
-			{
-			case 2:
-				assetPath = AssetDatabase.GetAssetPath (treeTexture2);
-				break;
-			case 3:
-				assetPath = AssetDatabase.GetAssetPath (treeTexture3); 
-				break;
-			}
-
-			Sprite[] sprites = AssetDatabase.LoadAllAssetsAtPath (assetPath).OfType<Sprite>().ToArray();
+			Sprite[] sprites = Resources.LoadAll<Sprite> (tree_sprites_path);
 
 			Sprite spriteToDraw = sprites[Random.Range (0, sprites.Length)]; 
 
