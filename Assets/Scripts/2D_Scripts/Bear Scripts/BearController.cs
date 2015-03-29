@@ -130,7 +130,7 @@ public class BearController : MonoBehaviour {
 	void FixedUpdate () 
     {
 		rbody.velocity = Vector3.ClampMagnitude( rbody.velocity, max_speed );
-		Debug.Log (rigidbody2D.velocity.x)Z
+		Debug.Log (rigidbody2D.velocity.x);
 
 	}
 
