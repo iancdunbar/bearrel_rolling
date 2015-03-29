@@ -76,6 +76,7 @@ public class BearInputController : MonoBehaviour {
         {
             MessageDispatch.BroadcastMessage( "OnSwipeDown" );
         }
+
 #endif
     }
 

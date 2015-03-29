@@ -82,10 +82,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   terrain_piece:
-  - {fileID: 100006, guid: 3f187a2c14290403bbbfc3f45bd02ef8, type: 2}
+  - {fileID: 100004, guid: 6b42be91267c244409119afa8496c94b, type: 2}
   - {fileID: 100000, guid: 14f54dec0ae6b405b8c3d4a679947119, type: 2}
   - {fileID: 100000, guid: 0c6eabd965f064261be54586526219b4, type: 2}
   - {fileID: 100000, guid: d3db336b73d984124ab5da3a9ce0c741, type: 2}
+  - {fileID: 100004, guid: f5122a3cbc3044e2b82f6f8d63aa3f3f, type: 2}
   end_vert: 1
   mask_prefab: {fileID: 110194, guid: 15406bc7fb5ed84438b96069728796bf, type: 2}
   gen_distance: 20

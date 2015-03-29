@@ -179,7 +179,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -35.2000008, y: 43.7999992, z: -1.17999995}
+  m_LocalPosition: {x: -85.9000015, y: 96, z: -1.20000005}
   m_LocalScale: {x: .203550652, y: .180587843, z: .203550711}
   m_Children:
   - {fileID: 400006}
@@ -197,7 +197,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 100000}
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: 0
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -212,7 +212,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 100002}
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: 0
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -227,7 +227,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 100004}
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: 0
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -242,7 +242,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 100006}
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: 0
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -257,7 +257,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 100008}
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: 0
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -326,10 +326,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jump_strength: 300
   jump_distance: 130
-  max_speed: 2000
-  collision_speed: 8
+  max_speed: 200
+  collision_speed: 5
   slow_duration: .200000003
   boostSpeed: 4000
+  slam_speed: 0
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -347,7 +348,10 @@ MonoBehaviour:
   ContactEmitter: {fileID: 0}
   MovingFastEmitter: {fileID: 0}
   MovingFastSpeed: 5
-  ReallyFastSpeed: 10
+  ReallyFastSpeed: 25
+  slam: {fileID: 0}
+  slamImpact: {fileID: 19800000, guid: 25684edf9351f434b8279ac735de9f64, type: 2}
+  slamspeed: 1000
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -509,12 +513,12 @@ HingeJoint2D:
   m_CollideConnected: 0
   m_ConnectedRigidBody: {fileID: 5000002}
   m_Anchor: {x: .939999998, y: -1.01999998}
-  m_ConnectedAnchor: {x: .0399999991, y: 1.05999994}
+  m_ConnectedAnchor: {x: .0825999081, y: 1.04796267}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 50

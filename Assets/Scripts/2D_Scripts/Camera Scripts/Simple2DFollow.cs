@@ -51,5 +51,9 @@ public class Simple2DFollow : MonoBehaviour {
 
         // Capture the current target position for use in the next frame
         previous_position = follow_target.position;
-	}
+
+
+		}
+
+
 }

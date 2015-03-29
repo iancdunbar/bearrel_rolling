@@ -13,6 +13,7 @@ public class BearController : MonoBehaviour {
     private BearStateController bsc;
 	private bool deathBool = false;
 
+
     /////////////////////////////////////////////
 
 
@@ -33,7 +34,8 @@ public class BearController : MonoBehaviour {
 	private float return_value;
 	[SerializeField]
 	private float boostSpeed;
-
+	[SerializeField]
+	private float slam_speed;
 
     /////////////////////////////////////////////
 
@@ -45,6 +47,8 @@ public class BearController : MonoBehaviour {
     public void OnEnterState( object arg )
     {
         BearState state = (BearState)arg;
+
+
 
         Debug.Log( "Entering " + state + " from BearController" );
     }
@@ -72,13 +76,17 @@ public class BearController : MonoBehaviour {
 
         if( !slammed )
         {
-            rigidbody2D.velocity = new Vector2( rigidbody2D.velocity.x, -10 );
+			//Jared's temp adjustment
+			rigidbody2D.AddForce (Vector2.up * -slam_speed, ForceMode2D.Impulse);
+			rigidbody2D.AddTorque (-200, ForceMode2D.Impulse);
+            //rigidbody2D.velocity = new Vector2( rigidbody2D.velocity.x, -10 );
             bsc.ChangeState( BearState.SLAMMING );
             slammed = true;
             jumped = true;
         }
 
     }
+
 
     /////////////////////////////////////////////
 
@@ -114,6 +122,7 @@ public class BearController : MonoBehaviour {
             bsc.ChangeState( BearState.IDLE );
             jumped = false;
             slammed = false;
+			max_speed = return_value;
         }
     }
 
@@ -121,6 +130,7 @@ public class BearController : MonoBehaviour {
 	void FixedUpdate () 
     {
 		rbody.velocity = Vector3.ClampMagnitude( rbody.velocity, max_speed );
+		Debug.Log (rigidbody2D.velocity.x)Z
 
 	}
 
@@ -134,11 +144,20 @@ public class BearController : MonoBehaviour {
 	IEnumerator OnTriggerEnter2D( Collider2D other )
 	{
 	
-		if ( other.tag == "tree" )
+		if ( other.tag == "tree" && slammed == true)
 		{
-			max_speed = collision_speed;
+			max_speed = return_value;
 			other.gameObject.transform.Rotate (0,0,-4);
 			StartCoroutine(SpeedLimitCooldown());
+		}
+		else
+		{
+			if(other.tag=="tree")
+			{
+				max_speed = collision_speed;
+				other.gameObject.transform.Rotate (0,0,-4);
+				StartCoroutine(SpeedLimitCooldown());
+			}
 		}
 
 		if (other.tag =="Boost")
@@ -159,6 +178,8 @@ public class BearController : MonoBehaviour {
 		yield return new WaitForSeconds(slow_duration);
 		max_speed = return_value;
 	}
+
+
 	IEnumerator BoostCoolDown(){
 		yield return new WaitForSeconds(2);
 		//gameObject.rigidbody2D.velocity = max_speed;
