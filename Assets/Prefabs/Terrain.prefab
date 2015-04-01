@@ -82,11 +82,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   terrain_piece:
-  - {fileID: 100004, guid: 6b42be91267c244409119afa8496c94b, type: 2}
-  - {fileID: 100004, guid: 6b42be91267c244409119afa8496c94b, type: 2}
-  - {fileID: 100000, guid: 0c6eabd965f064261be54586526219b4, type: 2}
-  - {fileID: 100000, guid: 0c6eabd965f064261be54586526219b4, type: 2}
-  - {fileID: 100000, guid: 14f54dec0ae6b405b8c3d4a679947119, type: 2}
+  - {fileID: 100006, guid: 0d2754250df97439395def0a0c0dfbf5, type: 2}
+  - {fileID: 100006, guid: 650e9f0637e574ade8ea90e685a53af8, type: 2}
+  - {fileID: 100006, guid: 41391e0729be64b65b741423d67ecc0b, type: 2}
   end_vert: 1
   mask_prefab: {fileID: 110194, guid: 15406bc7fb5ed84438b96069728796bf, type: 2}
   gen_distance: 20
@@ -94,18 +92,10 @@ MonoBehaviour:
   max_angle: 0
   collider_gen: {fileID: 11400002}
   bear: {fileID: 0}
-  rock_embellishment_prefab: {fileID: 100000, guid: 3bfa8c68a535fa9429933f1bcf501f51,
-    type: 2}
   rock_embellishment_perentage: 0
-  rock_embellishment_texture: {fileID: 2800000, guid: bfb56362eb4cc47eaa59da0aaeb87a10,
-    type: 3}
-  tree_prefab: {fileID: 100000, guid: 6296ce22412e2294b9d378f148866aae, type: 2}
-  chanceOfTrees: 80
+  chanceOfTrees: 20
   minTreesPerSegment: 1
-  maxTreesPerSegment: 8
-  treeTexture1: {fileID: 2800000, guid: a0a1db463f00a445598df452043720bb, type: 3}
-  treeTexture2: {fileID: 2800000, guid: a0a1db463f00a445598df452043720bb, type: 3}
-  treeTexture3: {fileID: 2800000, guid: a0a1db463f00a445598df452043720bb, type: 3}
+  maxTreesPerSegment: 100
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
