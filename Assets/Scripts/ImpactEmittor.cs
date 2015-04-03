@@ -16,6 +16,7 @@ public class ImpactEmittor : MonoBehaviour {
 	private float BearVelocityX;
 	private float BearVelocityY;
 	private bool slamming = false;
+	private bool jumping = false;
 	public ParticleSystem slam;
 	public ParticleSystem slamImpact;
 
@@ -30,6 +31,9 @@ public class ImpactEmittor : MonoBehaviour {
 		if (state == BearState.SLAMMING){
 			slamming = true;
 			
+		}
+		if(state == BearState.JUMPING){
+			jumping = true;
 		}
 		}
 
@@ -49,6 +53,10 @@ public class ImpactEmittor : MonoBehaviour {
 		ContactEmitter.startSpeed = BearVelocityX;
 		MovingFastEmitter.startSpeed = BearVelocityX;
 
+		if (jumping == true)
+		{
+			ContactEmitter.Stop ();
+		}
 		//SLAMMING VFX
 
 		if (slamming == true)
@@ -117,7 +125,7 @@ public class ImpactEmittor : MonoBehaviour {
 
 
 		grounded = true;
-
+		jumping = false;
 		slam.Stop ();
 		
 		if( slamming == true && can_blood )

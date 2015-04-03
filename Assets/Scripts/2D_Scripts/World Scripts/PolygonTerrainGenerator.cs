@@ -254,7 +254,7 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 
 			float tree_base_y = tree_base_x*lineSlope+lineOffset-(tree_height/2)-treeDrawingOffset;
 
-			tree_trans.position = new Vector3(tree_base_x, tree_base_y + tree_height, -2f);
+			tree_trans.position = new Vector3(tree_base_x, tree_base_y + tree_height, -1.01f);
 
 			active_trees.Enqueue(tree_obj);
 
@@ -281,7 +281,7 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 	void Start () 
     {
 
-        next_point = new Vector3( 0, 0, -1 );
+        next_point = new Vector3( 0, 0, 0 );
         for( int i = 0; i < 10; i++ )
         {
             generate_next_piece( next_point );

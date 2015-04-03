@@ -9,18 +9,56 @@ public class FollowBear : MonoBehaviour {
 	public GameObject target;
 	public Vector3 offset;
 	Vector3 targetPos;
+	private BearController bc;
+	public Animator anim;
+
+
+
+
+
 	// Use this for initialization
 	void Start () {
+		anim = GetComponent<Animator>();
+
 		targetPos = transform.position;
+		target = GameObject.Find ("Bear_Body");
+		bc = target.GetComponent<BearController>();
+
+
 	}
-	void Update (){
+	void FixedUpdate (){
+
+		if (bc.isSloped == true)
+
+		{
+			Debug.Log ("Terrain is Sloped");
+			anim.Play ("tilt");
+
+		}
+		else
+		{
+			Debug.Log ("Terrain is flat");
+			anim.Play ("Idle");
+
+
+		}
+			                 
+
+			                
+
+
+			            
+
 		if(target)
 
 		{
 			transform.position = new Vector2 ( target.rigidbody2D.position.x + offset.x, target.rigidbody2D.position.y + offset.y );
 
 		}
-	}
+
+
+	
+}
 }
 	// Update is called once per frame
 //	void FixedUpdate () {

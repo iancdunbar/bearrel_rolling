@@ -84,10 +84,9 @@ MonoBehaviour:
   terrain_piece:
   - {fileID: 100006, guid: 0d2754250df97439395def0a0c0dfbf5, type: 2}
   - {fileID: 100006, guid: 650e9f0637e574ade8ea90e685a53af8, type: 2}
-  - {fileID: 100006, guid: 41391e0729be64b65b741423d67ecc0b, type: 2}
   end_vert: 1
   mask_prefab: {fileID: 110194, guid: 15406bc7fb5ed84438b96069728796bf, type: 2}
-  gen_distance: 20
+  gen_distance: 30
   min_angle: 0
   max_angle: 0
   collider_gen: {fileID: 11400002}

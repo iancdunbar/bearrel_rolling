@@ -12,6 +12,7 @@ public class BearController : MonoBehaviour {
     private bool slammed;
     private BearStateController bsc;
 	private bool deathBool = false;
+	public bool isSloped = false;
 
 
     /////////////////////////////////////////////
@@ -36,6 +37,7 @@ public class BearController : MonoBehaviour {
 	private float boostSpeed;
 	[SerializeField]
 	private float slam_speed;
+	public Vector2 normal;
 
     /////////////////////////////////////////////
 
@@ -129,8 +131,30 @@ public class BearController : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () 
     {
+		//Detecting the normal direction of the terrain below
+		RaycastHit2D hit = Physics2D.Raycast(new Vector2(transform.position.x - 1, transform.position.y + 0.5f), -Vector2.up * 1);
+		Debug.DrawRay (new Vector2(transform.position.x - 1, transform.position.y + 0.5f), -Vector2.up * 1, Color.green);
+
+		//What is the Vector2 normal of the object being hit by the raycast
+		//Debug.Log (hit.normal.y);
+
+		//Whats the tag of the collider hit by the raycast
+		//Debug.Log (hit.collider.tag);
+
+		//If the x value of the normal being detected is greater than or = to 0.1 and the collider is named Ground then the terrain is sloped
+		if (hit.normal.y <= 0.83f && hit.collider.tag == "Ground")
+		{
+			isSloped = true;
+		}
+		else{
+			isSloped = false;
+		}
+
+
+		//Clamp the maximum velocity of the bear to max_speed
 		rbody.velocity = Vector3.ClampMagnitude( rbody.velocity, max_speed );
-		Debug.Log (rigidbody2D.velocity.x);
+		//Debug.Log (rigidbody2D.velocity.x);
+		
 
 	}
 
