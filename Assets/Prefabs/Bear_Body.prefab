@@ -345,6 +345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snow: {fileID: 19800000, guid: 35630977bb43b48eb80920ad41fd60ba, type: 2}
+  Impact: {fileID: 19800000, guid: 9cb02869cbbe748cbb2afc948b28f678, type: 2}
   can_blood: 1
   grounded: 0
   ContactEmitter: {fileID: 0}
@@ -568,7 +569,7 @@ HingeJoint2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100010}
   m_Enabled: 1
-  m_CollideConnected: 0
+  m_CollideConnected: 1
   m_ConnectedRigidBody: {fileID: 5000006}
   m_Anchor: {x: .800000012, y: 1.72000003}
   m_ConnectedAnchor: {x: -.239999995, y: 1.66999996}

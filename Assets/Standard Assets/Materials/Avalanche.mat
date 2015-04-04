@@ -17,12 +17,20 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: 2b74e5de2fdf141e59e7781a06824352, type: 3}
+          m_Texture: {fileID: 2800000, guid: 57263bce8361e4e7897587087bcf64b6, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
-    m_Floats: {}
+    m_Floats:
+      data:
+        first:
+          name: _InvFade
+        second: 1.10678566
     m_Colors:
       data:
         first:
           name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
+        second: {r: 1, g: 1, b: 1, a: .717647076}
+      data:
+        first:
+          name: _TintColor
+        second: {r: .541176438, g: .858135343, b: 1, a: .376470596}

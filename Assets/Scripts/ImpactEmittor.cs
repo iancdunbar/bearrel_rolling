@@ -5,6 +5,7 @@ public class ImpactEmittor : MonoBehaviour {
 
 	// Use this for initialization
 	public ParticleSystem snow;
+	public ParticleSystem Impact;
     public bool can_blood = true;
 	public bool grounded = false;
 	public ParticleSystem ContactEmitter;
@@ -13,8 +14,8 @@ public class ImpactEmittor : MonoBehaviour {
 	private bool reallyfast = false;
 	public float MovingFastSpeed;
 	public float ReallyFastSpeed;
-	private float BearVelocityX;
-	private float BearVelocityY;
+	private float ContactClamp;
+	private float MovingFastClamp;
 	private bool slamming = false;
 	private bool jumping = false;
 	public ParticleSystem slam;
@@ -48,10 +49,10 @@ public class ImpactEmittor : MonoBehaviour {
 
 
 		//clamp the min max value of the bears velocity for particle speed
-		BearVelocityX = Mathf.Clamp (rigidbody2D.velocity.x, 0,10);
-		BearVelocityY = Mathf.Clamp (rigidbody2D.velocity.y, 0,8);
-		ContactEmitter.startSpeed = BearVelocityX;
-		MovingFastEmitter.startSpeed = BearVelocityX;
+		ContactClamp = Mathf.Clamp (rigidbody2D.velocity.x, 0,10);
+		MovingFastClamp = Mathf.Clamp (rigidbody2D.velocity.x, 0,3);
+		ContactEmitter.startSpeed = ContactClamp;
+		MovingFastEmitter.startSpeed = MovingFastClamp;
 
 		if (jumping == true)
 		{
@@ -135,6 +136,7 @@ public class ImpactEmittor : MonoBehaviour {
 			pos.z = transform.position.z;
 			
 			Instantiate( slamImpact, pos, Quaternion.identity );
+			Instantiate( Impact, transform.position, Quaternion.identity );
 			SimpleAudioController.PlayCrashEmote( );
 			
 			can_blood = false;
