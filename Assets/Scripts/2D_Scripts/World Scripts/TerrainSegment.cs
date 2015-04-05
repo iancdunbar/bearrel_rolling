@@ -45,8 +45,8 @@ public class TerrainSegment : MonoBehaviour {
 
     public MeshFilter CollisionMesh { get { return collisionMesh; } }
 
-    public Vector3 StartPoint { get { if( getStartEndFromColors && points_init ) return transform.position + start_point; else return transform.FindChild( "Start" ).position; } }
-    public Vector3 EndPoint { get { if( getStartEndFromColors && points_init ) return transform.position + end_point; else return transform.FindChild( "End" ).position; } }
+    public Vector3 StartPoint { get { if( getStartEndFromColors && points_init ) return transform.position + Vector3.Scale(start_point, transform.localScale); else return transform.FindChild( "Start" ).position; } }
+    public Vector3 EndPoint { get { if( getStartEndFromColors && points_init ) return transform.position + Vector3.Scale( end_point, transform.localScale ); else return transform.FindChild( "End" ).position; } }
 
     public bool PointsFromColor { get { return getStartEndFromColors; } }
 
