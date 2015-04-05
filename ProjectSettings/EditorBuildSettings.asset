@@ -6,9 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/Bear Naked Physics.unity
+    path: Assets/Scenes/Archive/Bear Naked Physics.unity
   - enabled: 0
-    path: Assets/Scenes/Bear Naked Physics.unity
+    path: Assets/Scenes/Archive/Bear Naked Physics.unity
   - enabled: 0
     path: Assets/Scenes/2D_Bear.unity
   - enabled: 1
