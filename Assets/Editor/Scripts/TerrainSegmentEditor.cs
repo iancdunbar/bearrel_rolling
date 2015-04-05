@@ -6,9 +6,12 @@ using System.Collections.Generic;
 [ CustomEditor( typeof( TerrainSegment ) ) ]
 public class TerrainSegmentEditor : Editor 
 {
-    private readonly Color START  = new Color( 1, 0, 0, 1 );
+    private readonly Color START  = new Color( 0, 1, 0, 1 );
     private readonly Color MIDDLE = new Color( 0, 0, 1, 1 );
-    private readonly Color END    = new Color( 0, 1, 0, 1 );
+    private readonly Color END    = new Color( 1, 0, 0, 1 );
+
+    List<Vector3> starts = new List<Vector3>( );
+    List<Vector3> ends = new List<Vector3>( );
 
     string[] choices = new string[ ] { };
     int choice_index = 0;
@@ -17,12 +20,17 @@ public class TerrainSegmentEditor : Editor
     {
         DrawDefaultInspector( );
 
-        choice_index = EditorGUILayout.Popup( "Options!", choice_index, choices );
+        TerrainSegment tgt = (TerrainSegment) target;
+
+        if( tgt.PointsFromColor )
+        {
+            choice_index = EditorGUILayout.Popup( "Start Index", choice_index, choices );
+            choice_index = EditorGUILayout.Popup( "End Index", choice_index, choices );
+        }
+
 
         if( GUILayout.Button( "Generate Basic Collider" ) )
         {
-
-            TerrainSegment tgt = (TerrainSegment)target;
 
             EdgeCollider2D col = tgt.GetComponent<EdgeCollider2D>( );
 
@@ -45,8 +53,6 @@ public class TerrainSegmentEditor : Editor
 
         if( GUILayout.Button( "Generate Collider From Mesh Colors" ) )
         {
-            TerrainSegment tgt = (TerrainSegment) target;
-
             MeshFilter mesh_filter = tgt.CollisionMesh;
 
             if( mesh_filter == null )
@@ -77,21 +83,26 @@ public class TerrainSegmentEditor : Editor
                 old_edges[ i ].enabled = false;
             }
 
+
+            bool found_start = false;
+            Vector3 start_point = Vector3.zero;
+            Vector3 end_point = Vector3.zero;
+
             Vector3[] points = mesh.vertices;
             Color[] colors   = mesh.colors;
             List<Vector2> edge_points = null;
+            Vector2 mesh_filter_offset = mesh_filter.transform.position - tgt.transform.position;
 
             int old_edge_index = 0;
             bool generating = false;
 
             for( int i = 0; i < colors.Length; i++ )
             {
-                // TEMP FIX
-                if( colors[ i ].g != 1 ) colors[ i ].g = 0;
+                Debug.Log( colors[ i ] );
 
                 if( generating )
                 {
-                    //Debug.Log( "Comparing for middle ( " + MIDDLE + " ) and Current ( " + colors[ i ] + " )" );
+
                     // We are currently adding points to an edge collider
                     // Check to see if we are at a mid point
                     if( colors[ i ] == MIDDLE || colors[ i ] == START )
@@ -99,13 +110,15 @@ public class TerrainSegmentEditor : Editor
                         if( colors[ i ] == START )
                             Debug.LogWarning( "Encountered a Start at index " + i + " without reaching an end. Treating it as if it were a midpoint." );
 
-                        edge_points.Add( new Vector2( points[ i ].x, points[ i ].y ) );
+                        edge_points.Add( new Vector2( points[ i ].x, points[ i ].y ) + mesh_filter_offset );
 
                     }
                     else if( colors[ i ] == END )
                     {
                         // We have reached the end of the sequence and now its time to make the points
-                        edge_points.Add( new Vector2( points[ i ].x, points[ i ].y ) );
+                        edge_points.Add( new Vector2( points[ i ].x, points[ i ].y ) + mesh_filter_offset );
+
+                        end_point = points[ i ];
 
                         // Get or create the edge collider
                         EdgeCollider2D edge = null;
@@ -134,11 +147,20 @@ public class TerrainSegmentEditor : Editor
                     {
                         // We have found a start point
                         edge_points = new List<Vector2>( );
-                        edge_points.Add( new Vector2( points[ i ].x, points[ i ].y ) );
+                        edge_points.Add( new Vector2( points[ i ].x, points[ i ].y ) + mesh_filter_offset );
                         generating = true;
+
+                        // If this is the first start point
+                        if( !found_start )
+                        {
+                            start_point = points[ i ];
+                            found_start = true;
+                        }
                     }
                 }
             }
+
+            tgt.InitStartEndPoints( start_point, end_point );
         }
     }
 

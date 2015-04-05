@@ -8,7 +8,12 @@ public class TerrainSegment : MonoBehaviour {
     /////////////////////////////////////////////
 
     private EdgeCollider2D collider_ref;
-    
+    [SerializeField, HideInInspector]
+    private Vector3 start_point;
+    [SerializeField, HideInInspector]
+    private Vector3 end_point;
+    [SerializeField, HideInInspector]
+    private bool points_init;
 
     /////////////////////////////////////////////
 
@@ -18,6 +23,8 @@ public class TerrainSegment : MonoBehaviour {
 
     [SerializeField]
     private MeshFilter collisionMesh;
+    [SerializeField]
+    private bool getStartEndFromColors;
 
     /////////////////////////////////////////////
 
@@ -38,8 +45,19 @@ public class TerrainSegment : MonoBehaviour {
 
     public MeshFilter CollisionMesh { get { return collisionMesh; } }
 
-    public Vector3 StartPoint { get { return transform.FindChild( "Start" ).position; } }
-    public Vector3 EndPoint { get { return transform.FindChild( "End" ).position; } }
+    public Vector3 StartPoint { get { if( getStartEndFromColors && points_init ) return transform.position + start_point; else return transform.FindChild( "Start" ).position; } }
+    public Vector3 EndPoint { get { if( getStartEndFromColors && points_init ) return transform.position + end_point; else return transform.FindChild( "End" ).position; } }
+
+    public bool PointsFromColor { get { return getStartEndFromColors; } }
+
+    public void InitStartEndPoints( Vector3 start, Vector3 end )
+    {
+        start_point = start;
+        end_point = end;
+
+        points_init = true;
+        getStartEndFromColors = true;
+    }
 
     /////////////////////////////////////////////
 

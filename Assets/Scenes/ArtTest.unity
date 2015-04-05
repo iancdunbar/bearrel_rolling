@@ -73,6 +73,7 @@ NavMeshSettings:
     minRegionArea: 2
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
+    tileSizeHint: 0
   m_NavMesh: {fileID: 0}
 --- !u!1 &7733286
 GameObject:
@@ -10502,6 +10503,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1036d6073ee822648aeef2ee2ff6cb44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  start_point: {x: 0, y: 0, z: 0}
+  end_point: {x: 0, y: 0, z: 0}
+  points_init: 0
+  collisionMesh: {fileID: 0}
+  getStartEndFromColors: 0
 --- !u!1 &1847225846
 GameObject:
   m_ObjectHideFlags: 0
