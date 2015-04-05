@@ -28,6 +28,10 @@ public class TerrainSegmentEditor : Editor
             choice_index = EditorGUILayout.Popup( "End Index", choice_index, choices );
         }
 
+        if( GUILayout.Button( "Print Start End" ) )
+        {
+            Debug.Log( "Start: " + tgt.StartPoint + ", End: " + tgt.EndPoint );
+        }
 
         if( GUILayout.Button( "Generate Basic Collider" ) )
         {
@@ -115,6 +119,7 @@ public class TerrainSegmentEditor : Editor
                     }
                     else if( colors[ i ] == END )
                     {
+                        Debug.Log( "Found End" );
                         // We have reached the end of the sequence and now its time to make the points
                         edge_points.Add( new Vector2( points[ i ].x, points[ i ].y ) + mesh_filter_offset );
 
@@ -145,6 +150,7 @@ public class TerrainSegmentEditor : Editor
                     // We are looking for the next point to begin a collider
                     if( colors[ i ] == START )
                     {
+                        Debug.Log( "Found Start" );
                         // We have found a start point
                         edge_points = new List<Vector2>( );
                         edge_points.Add( new Vector2( points[ i ].x, points[ i ].y ) + mesh_filter_offset );
