@@ -145,6 +145,7 @@ public class PolygonTerrainGenerator : MonoBehaviour {
         GameObject piece = Instantiate( getTerrain () ) as GameObject;
 
         Transform trans_ref = piece.transform;
+        TerrainSegment ts   = piece.GetComponent<TerrainSegment>( );
 
 		GameObject terrain_piece_container = new GameObject();
 
@@ -152,9 +153,9 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 
         trans_ref.eulerAngles = new Vector3( trans_ref.eulerAngles.x, trans_ref.eulerAngles.y, -(min_angle) + Random.RandomRange( -1f, 0f ) * (max_angle - min_angle) );  
 
-        trans_ref.position = start_position - trans_ref.FindChild("Start").position;
+        trans_ref.position = start_position - ts.StartPoint;
 
-        next_point = trans_ref.FindChild( "End" ).position;
+        next_point = ts.EndPoint;
 
         AvalanceController.AddPoint( next_point );
 

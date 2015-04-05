@@ -8,6 +8,7 @@ public class TerrainSegment : MonoBehaviour {
     /////////////////////////////////////////////
 
     private EdgeCollider2D collider_ref;
+    
 
     /////////////////////////////////////////////
 
@@ -15,7 +16,8 @@ public class TerrainSegment : MonoBehaviour {
     // Inspector Variables
     /////////////////////////////////////////////
 
-
+    [SerializeField]
+    private MeshFilter collisionMesh;
 
     /////////////////////////////////////////////
 
@@ -34,7 +36,10 @@ public class TerrainSegment : MonoBehaviour {
     // Public Functions
     /////////////////////////////////////////////
 
+    public MeshFilter CollisionMesh { get { return collisionMesh; } }
 
+    public Vector3 StartPoint { get { return transform.FindChild( "Start" ).position; } }
+    public Vector3 EndPoint { get { return transform.FindChild( "End" ).position; } }
 
     /////////////////////////////////////////////
 
