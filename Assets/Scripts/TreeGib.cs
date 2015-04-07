@@ -10,7 +10,9 @@ public class TreeGib : MonoBehaviour {
 	public ParticleSystem snow;
 	public ParticleSystem branches;
 	private bool slamming = false;
+	private bool dashing = false;
 	private BearStateController bsc;
+	private BearController bc;
 
 	void Awake (){
 
@@ -19,7 +21,15 @@ public class TreeGib : MonoBehaviour {
 	void Start () {
 		MessageDispatch.RegisterListener( "OnEnterState", OnEnterState );
 		MessageDispatch.RegisterListener( "OnExitState", OnExitState );
-	
+		bc = GameObject.Find("Bear_Body").GetComponent<BearController>();
+	}
+	void Update () {
+		if (bc.dashed == true){
+			dashing = true;
+		}
+		if (bc.dashed == false){
+			dashing = false;
+		}
 	}
 	
 	// Update is called once per frame
@@ -27,17 +37,21 @@ public class TreeGib : MonoBehaviour {
 
 	void OnEnterState ( object arg){
 		BearState state = (BearState)arg;
+
 		if (state == BearState.SLAMMING){
 
 			slamming = true;
 
 		}
+
+
 	}
 	void OnExitState (object arg){
 		BearState  state = (BearState)arg;
 		if (state == BearState.SLAMMING){
 			slamming = false;
 		}
+
 	}
 
 	
@@ -46,7 +60,7 @@ public class TreeGib : MonoBehaviour {
 
 	void OnTriggerExit2D(Collider2D other)
 	{
-		if (other.tag == "Bear" && slamming == true)
+		if (other.tag == "Bear" && dashing == true)
 		{ 
 			foreach (GameObject gib in gibs)
 			{
@@ -59,7 +73,7 @@ public class TreeGib : MonoBehaviour {
 				Destroy(gameObject);
 			}
 		}
-		if (other.tag == "Bear" && slamming == false)
+		if (other.tag == "Bear" && dashing == false)
 		{
 			Instantiate( snow, transform.position, Quaternion.identity );
 			SimpleAudioController.PlayCrashEmote();

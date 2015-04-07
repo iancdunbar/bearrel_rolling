@@ -50,7 +50,7 @@ public class ImpactEmittor : MonoBehaviour {
 
 		//clamp the min max value of the bears velocity for particle speed
 		ContactClamp = Mathf.Clamp (rigidbody2D.velocity.x, 0,10);
-		MovingFastClamp = Mathf.Clamp (rigidbody2D.velocity.x, 0,3);
+		MovingFastClamp = Mathf.Clamp (rigidbody2D.velocity.x, 0,1);
 		ContactEmitter.startSpeed = ContactClamp;
 		MovingFastEmitter.startSpeed = MovingFastClamp;
 
@@ -112,7 +112,10 @@ public class ImpactEmittor : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other)
 	{
 
-
+		if ( other.tag == "tree")
+		{
+			Instantiate( Impact, transform.position, Quaternion.identity );
+		}
         can_blood = true;
 			
 
@@ -128,7 +131,8 @@ public class ImpactEmittor : MonoBehaviour {
 		grounded = true;
 		jumping = false;
 		slam.Stop ();
-		
+
+
 		if( slamming == true && can_blood )
 		{
 			

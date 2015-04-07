@@ -994,7 +994,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: -40, z: -218.399994}
+  m_LocalPosition: {x: 0, y: -40, z: -219.100006}
   m_LocalScale: {x: .0971240327, y: .0971240401, z: .0971240401}
   m_Children: []
   m_Father: {fileID: 400006}
@@ -1883,6 +1883,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1036d6073ee822648aeef2ee2ff6cb44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  start_point: {x: 0, y: 0, z: 0}
+  end_point: {x: 0, y: 0, z: 0}
+  points_init: 0
+  collisionMesh: {fileID: 0}
+  getStartEndFromColors: 0
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

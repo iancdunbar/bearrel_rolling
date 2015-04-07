@@ -333,6 +333,7 @@ MonoBehaviour:
   boostSpeed: 4000
   slam_speed: 2000
   normal: {x: 0, y: 0}
+  dash_cooldown: .5
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1

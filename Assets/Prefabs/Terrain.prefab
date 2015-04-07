@@ -82,8 +82,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   terrain_piece:
-  - {fileID: 100006, guid: 0d2754250df97439395def0a0c0dfbf5, type: 2}
+  - {fileID: 100006, guid: 395707fea46b044dfbfb871fea061389, type: 2}
   - {fileID: 100006, guid: 650e9f0637e574ade8ea90e685a53af8, type: 2}
+  - {fileID: 100006, guid: 0d2754250df97439395def0a0c0dfbf5, type: 2}
+  - {fileID: 100006, guid: 41391e0729be64b65b741423d67ecc0b, type: 2}
   end_vert: 1
   mask_prefab: {fileID: 110194, guid: 15406bc7fb5ed84438b96069728796bf, type: 2}
   gen_distance: 30
@@ -94,7 +96,7 @@ MonoBehaviour:
   rock_embellishment_perentage: 0
   chanceOfTrees: 100
   minTreesPerSegment: 1
-  maxTreesPerSegment: 6
+  maxTreesPerSegment: 40
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1

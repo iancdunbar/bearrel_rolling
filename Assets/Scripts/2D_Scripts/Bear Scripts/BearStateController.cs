@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public enum BearState { IDLE, JUMPING, SLAMMING, PAUSED }
+public enum BearState { IDLE, JUMPING, SLAMMING, DASHING, PAUSED }
 
 public class BearStateController 
 {

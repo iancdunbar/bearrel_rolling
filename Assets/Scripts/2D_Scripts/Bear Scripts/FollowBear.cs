@@ -31,13 +31,13 @@ public class FollowBear : MonoBehaviour {
 		if (bc.isSloped == true)
 
 		{
-			Debug.Log ("Terrain is Sloped");
+			//Debug.Log ("Terrain is Sloped");
 			anim.Play ("tilt");
 
 		}
 		else
 		{
-			Debug.Log ("Terrain is flat");
+			//Debug.Log ("Terrain is flat");
 			anim.Play ("Idle");
 
 

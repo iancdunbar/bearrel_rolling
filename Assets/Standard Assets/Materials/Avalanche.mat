@@ -20,17 +20,36 @@ Material:
           m_Texture: {fileID: 2800000, guid: 57263bce8361e4e7897587087bcf64b6, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Illum
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
     m_Floats:
+      data:
+        first:
+          name: PixelSnap
+        second: 0
       data:
         first:
           name: _InvFade
         second: 1.10678566
+      data:
+        first:
+          name: _EmissionLM
+        second: 0
     m_Colors:
       data:
         first:
           name: _Color
-        second: {r: 1, g: 1, b: 1, a: .717647076}
+        second: {r: 1, g: 1, b: 1, a: .843137264}
       data:
         first:
           name: _TintColor
         second: {r: .541176438, g: .858135343, b: 1, a: .376470596}
+      data:
+        first:
+          name: _EmisColor
+        second: {r: 1, g: 1, b: 1, a: .545098066}
