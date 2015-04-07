@@ -324,6 +324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 788fbfed3c6a3664588169e1cd6973a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dashed: 0
   isSloped: 0
   jump_strength: 400
   jump_distance: 200
@@ -333,7 +334,7 @@ MonoBehaviour:
   boostSpeed: 4000
   slam_speed: 2000
   normal: {x: 0, y: 0}
-  dash_cooldown: .5
+  dash_cooldown: 2
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
