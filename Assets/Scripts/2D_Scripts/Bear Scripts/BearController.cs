@@ -78,9 +78,10 @@ public class BearController : MonoBehaviour {
 
 	public void OnTap( object unused )
 	{
-		if( !dashed ) 
+		if( !dashed && dashed == false) 
 		{
 			rigidbody2D.AddTorque (-200, ForceMode2D.Impulse);
+			rigidbody2D.AddForce( Vector2.right * 1000, ForceMode2D.Impulse);
 			dashed = true;
 			bsc.ChangeState( BearState.DASHING );
 			StartCoroutine (DashCoolDown());
@@ -145,6 +146,7 @@ public class BearController : MonoBehaviour {
         }
 	
     }
+
 	void OnCollisionExit2D (Collision2D other)
 	{
 		if (other.gameObject.tag == "Ground")
@@ -156,7 +158,9 @@ public class BearController : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () 
     {
-		// If the bear is on the ground it is impossible for it to slam.
+
+
+		// If the bear is on the ground they cannot SLAMAJAM.
 		if (Grounded == true)
 		{
 			slammed = false;

@@ -20,10 +20,14 @@ public class ImpactEmittor : MonoBehaviour {
 	private bool jumping = false;
 	public ParticleSystem slam;
 	public ParticleSystem slamImpact;
+	public ParticleSystem dash;
+	private BearController bc;
+
 
 
 	void Start ()
 	{
+		bc = GameObject.Find ("Bear_Body").GetComponent<BearController>();
 		MessageDispatch.RegisterListener( "OnEnterState", OnEnterState );
 		MessageDispatch.RegisterListener( "OnExitState", OnExitState );
 	}
@@ -68,6 +72,16 @@ public class ImpactEmittor : MonoBehaviour {
 		else
 		{
 			slam.Stop ();
+		}
+
+		//DASH VFX
+		if (bc.dashed == true)
+		{
+			dash.Play ();
+		}
+		if(bc.dashed == false)
+		{
+			dash.Stop ();
 		}
 
 		//Establish if the bear is moving fast

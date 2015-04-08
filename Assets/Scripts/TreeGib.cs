@@ -60,7 +60,7 @@ public class TreeGib : MonoBehaviour {
 
 	void OnTriggerExit2D(Collider2D other)
 	{
-		if (other.tag == "Bear" && dashing == true)
+		if (other.tag == "Bear" && dashing == true || slamming == true)
 		{ 
 			foreach (GameObject gib in gibs)
 			{
@@ -73,7 +73,7 @@ public class TreeGib : MonoBehaviour {
 				Destroy(gameObject);
 			}
 		}
-		if (other.tag == "Bear" && dashing == false)
+		if (other.tag == "Bear" && dashing == false || slamming == false)
 		{
 			Instantiate( snow, transform.position, Quaternion.identity );
 			SimpleAudioController.PlayCrashEmote();

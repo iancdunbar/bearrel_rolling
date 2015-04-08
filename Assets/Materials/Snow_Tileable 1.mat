@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Snow_Tileable 1
-  m_Shader: {fileID: 10, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 13, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -22,9 +22,16 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _BumpMap
+        second:
+          m_Texture: {fileID: 2800000, guid: 19d62d3fe17e7462e9b85ae18a8304dd, type: 3}
+          m_Scale: {x: 5, y: 5}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _Illum
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: 964172c4376744ff5a8e6aaa991c5f80, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -34,10 +41,18 @@ Material:
         second: 0
       data:
         first:
+          name: _Shininess
+        second: 1
+      data:
+        first:
           name: _EmissionLM
         second: 0
     m_Colors:
       data:
         first:
           name: _Color
-        second: {r: .458731264, g: .59864676, b: .717647076, a: 1}
+        second: {r: .457670122, g: .549418032, b: .627451003, a: 1}
+      data:
+        first:
+          name: _SpecColor
+        second: {r: .5, g: .5, b: .5, a: 1}
