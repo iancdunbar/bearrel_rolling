@@ -236,7 +236,7 @@ public class Mask : MonoBehaviour
 										rotationAngle = sign * transform.eulerAngles.z;
 									}
 
-									Vector2 scaleTexture = gameObject.renderer.sharedMaterial.mainTextureScale;
+									Vector2 scaleTexture = gameObject.GetComponent<Renderer>().sharedMaterial.mainTextureScale;
 									scale.x *= scaleTexture.x;
 									scale.y *= scaleTexture.y;
 									
@@ -249,7 +249,7 @@ public class Mask : MonoBehaviour
 									offset.x = (c * offsetTemporary.x - s * offsetTemporary.y) * scale.x + 0.5f * scaleTexture.x;
 									offset.y = (s * offsetTemporary.x + c * offsetTemporary.y) * scale.y + 0.5f * scaleTexture.y;
 
-									offset += gameObject.renderer.sharedMaterial.mainTextureOffset;
+									offset += gameObject.GetComponent<Renderer>().sharedMaterial.mainTextureOffset;
 
 									material.SetTextureOffset("_AlphaTex", offset);
 									material.SetTextureScale("_AlphaTex", scale);
@@ -442,15 +442,15 @@ public class Mask : MonoBehaviour
 
 	public void SetMaskRendererActive (bool value)
 	{
-		if (renderer != null)
+		if (GetComponent<Renderer>() != null)
 		{
 			if (value == true)
 			{
-				renderer.enabled = true;
+				GetComponent<Renderer>().enabled = true;
 			}
 			else
 			{
-				renderer.enabled = false;
+				GetComponent<Renderer>().enabled = false;
 			}
 		}
 	}

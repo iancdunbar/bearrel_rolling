@@ -57,6 +57,7 @@ public class TerrainSegment : MonoBehaviour {
 
         points_init = true;
         getStartEndFromColors = true;
+
     }
 
     /////////////////////////////////////////////
@@ -65,10 +66,14 @@ public class TerrainSegment : MonoBehaviour {
     /////////////////////////////////////////////
     // Unity Messages
     /////////////////////////////////////////////
-
+	void OnEnable()
+	{
+		gameObject.tag = "Ground";
+	}
     void Awake( )
     {
         collider_ref = GetComponent<EdgeCollider2D>( );
+		gameObject.tag = "Ground";
     }
 
     /////////////////////////////////////////////

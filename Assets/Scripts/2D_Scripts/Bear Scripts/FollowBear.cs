@@ -23,22 +23,29 @@ public class FollowBear : MonoBehaviour {
 		targetPos = transform.position;
 		target = GameObject.Find ("Bear_Body");
 		bc = target.GetComponent<BearController>();
-
-
+	
+	
 	}
 	void FixedUpdate (){
 
 		if (bc.isSloped == true)
 
 		{
+
 			//Debug.Log ("Terrain is Sloped");
-			anim.Play ("tilt");
+
+			//Set the animator parameter to true (triggers animation)
+			anim.SetBool ("isSloped", true);
+
 
 		}
 		else
 		{
 			//Debug.Log ("Terrain is flat");
-			anim.Play ("Idle");
+
+			//Set the animator parameter to false (triggers animation)
+			anim.SetBool ("isSloped", false);
+
 
 
 		}
@@ -52,7 +59,7 @@ public class FollowBear : MonoBehaviour {
 		if(target)
 
 		{
-			transform.position = new Vector2 ( target.rigidbody2D.position.x + offset.x, target.rigidbody2D.position.y + offset.y );
+			transform.position = new Vector2 ( target.GetComponent<Rigidbody2D>().position.x + offset.x, target.GetComponent<Rigidbody2D>().position.y + offset.y );
 
 		}
 

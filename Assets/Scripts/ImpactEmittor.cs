@@ -13,15 +13,20 @@ public class ImpactEmittor : MonoBehaviour {
 	private bool movingfast = false;
 	private bool reallyfast = false;
 	public float MovingFastSpeed;
-	public float ReallyFastSpeed;
+	public Vector2 ReallyFastSpeed;
 	private float ContactClamp;
 	private float MovingFastClamp;
+	private float RotationClamp;
 	private bool slamming = false;
 	private bool jumping = false;
 	public ParticleSystem slam;
 	public ParticleSystem slamImpact;
 	public ParticleSystem dash;
 	private BearController bc;
+	private Vector2 bearpos;
+	private Vector2 bearspeed;
+	public Animator anim;
+	public Component[] Trails;
 
 
 
@@ -31,6 +36,8 @@ public class ImpactEmittor : MonoBehaviour {
 		MessageDispatch.RegisterListener( "OnEnterState", OnEnterState );
 		MessageDispatch.RegisterListener( "OnExitState", OnExitState );
 	}
+
+
 	void OnEnterState ( object arg){
 		BearState state = (BearState)arg;
 		if (state == BearState.SLAMMING){
@@ -40,7 +47,7 @@ public class ImpactEmittor : MonoBehaviour {
 		if(state == BearState.JUMPING){
 			jumping = true;
 		}
-		}
+	}
 
 	void OnExitState (object arg){
 		BearState  state = (BearState)arg;
@@ -50,29 +57,41 @@ public class ImpactEmittor : MonoBehaviour {
 	}
 	void Update () 
 	{
+		bearspeed = GetComponent<Rigidbody2D>().velocity;
+		bearpos = GetComponent<Rigidbody2D>().position;
+		//CLAMP the min max value of the bears velocity for particle speed
 
+		ContactClamp = Mathf.Clamp (GetComponent<Rigidbody2D>().velocity.x, 0,20);
+		MovingFastClamp = Mathf.Clamp (GetComponent<Rigidbody2D>().velocity.x, 0,0.65f);
+		RotationClamp = Mathf.Clamp (GetComponent<Rigidbody2D>().velocity.x, 0, 1);
 
-		//clamp the min max value of the bears velocity for particle speed
-		ContactClamp = Mathf.Clamp (rigidbody2D.velocity.x, 0,10);
-		MovingFastClamp = Mathf.Clamp (rigidbody2D.velocity.x, 0,1);
 		ContactEmitter.startSpeed = ContactClamp;
-		MovingFastEmitter.startSpeed = MovingFastClamp;
+		ContactEmitter.startSize = MovingFastClamp;
+		MovingFastEmitter.startSpeed = ContactClamp;
 
 		if (jumping == true)
 		{
 			ContactEmitter.Stop ();
 		}
+
+
+
+
 		//SLAMMING VFX
 
 		if (slamming == true)
 		{
 			slam.Play ();
-			reallyfast = false;
+			//reallyfast = false;
 		}
 		else
 		{
 			slam.Stop ();
 		}
+
+
+
+
 
 		//DASH VFX
 		if (bc.dashed == true)
@@ -84,16 +103,18 @@ public class ImpactEmittor : MonoBehaviour {
 			dash.Stop ();
 		}
 
-		//Establish if the bear is moving fast
-		if (rigidbody2D.velocity.x >= MovingFastSpeed){
+
+		//Is the bear moving fast?
+		if (GetComponent<Rigidbody2D>().velocity.x >= MovingFastSpeed){
 			movingfast = true;
 		}
 		else {
 			movingfast = false;
 		}
 
-		//Establish if the bear is moving REALLY fast in x
-			if (rigidbody2D.velocity.x >= ReallyFastSpeed){
+		//Is the bear moving REALLY fast?
+		Debug.Log (GetComponent<Rigidbody2D>().velocity);
+			if (GetComponent<Rigidbody2D>().velocity.x >= ReallyFastSpeed.x && GetComponent<Rigidbody2D>().velocity.y <= ReallyFastSpeed.y){
 				reallyfast = true;
 			}
 			else {
@@ -102,6 +123,8 @@ public class ImpactEmittor : MonoBehaviour {
 
 
 
+
+		//CONTACT EMITTER (Rooster Tail)
 		//Emit particles if the bear is touching the ground while moving fast
 		if(grounded == true && movingfast == true){
 			ContactEmitter.Play();
@@ -111,24 +134,57 @@ public class ImpactEmittor : MonoBehaviour {
 		
 		}
 
-		//Emit particles if the bear is moving REALLY fast ANYTIME.
-		if (reallyfast == true){
-			MovingFastEmitter.Play();
+
+
+
+		//Emit TRAILS if the bear is moving REALLY fast ANYTIME.
+		if ( grounded == false && reallyfast == true)
+		{
+			Trails = GetComponentsInChildren<TrailRenderer>();
+			
+			foreach (TrailRenderer Trail in Trails) 
+			{
+				Trail.enabled = true;
+				Trail.time = 0.3f;
+			}
+
 
 		}
-		else {
-			MovingFastEmitter.Stop ();
-
+		else
+		{
+			if (grounded == false)
+			{
+			Trails = GetComponentsInChildren<TrailRenderer>();
+			
+			foreach (TrailRenderer Trail in Trails) 
+				{
+					Trail.enabled = true;
+					Trail.time = 0.01f;
+				}
+			}
+			if (grounded == true)
+			{
+				Trails = GetComponentsInChildren<TrailRenderer>();
+				
+				foreach (TrailRenderer Trail in Trails) 
+				{
+					
+					Trail.enabled = false;
+				}
+			}
 		}
-
-
 	}
+	
+
 	void OnTriggerEnter2D(Collider2D other)
 	{
 
 		if ( other.tag == "tree")
 		{
+			//Ping VFX if tree is collided with
 			Instantiate( Impact, transform.position, Quaternion.identity );
+			//Momentarily interrupt contact vfx if collided with tree.
+			ContactEmitter.Stop ();
 		}
         can_blood = true;
 			

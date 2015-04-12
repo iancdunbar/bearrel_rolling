@@ -133,7 +133,7 @@ public class InputController : MonoBehaviour
 	void Start () 
     {
 
-        main_camera = GameObject.FindGameObjectWithTag("MainCamera").camera;
+        main_camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
 
         collider_last = null;
         rigidbody_last = null;

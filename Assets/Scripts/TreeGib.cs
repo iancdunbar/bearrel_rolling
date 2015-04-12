@@ -68,8 +68,8 @@ public class TreeGib : MonoBehaviour {
 				Instantiate( branches, transform.position, Quaternion.identity);
 				SimpleAudioController.PlayCrashEmote();
 				gibspawn = (GameObject)Instantiate( gib, transform.position + Random.insideUnitSphere*spawnRadius, transform.rotation);
-				gibspawn.rigidbody2D.AddForce(Vector2.up * breakforce, ForceMode2D.Impulse);
-				gibspawn.rigidbody2D.AddForce(Vector2.right * 40, ForceMode2D.Impulse);
+				gibspawn.GetComponent<Rigidbody2D>().AddForce(Vector2.up * breakforce, ForceMode2D.Impulse);
+				gibspawn.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 40, ForceMode2D.Impulse);
 				Destroy(gameObject);
 			}
 		}

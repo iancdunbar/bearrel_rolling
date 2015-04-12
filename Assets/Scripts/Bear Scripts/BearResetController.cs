@@ -37,7 +37,7 @@ public class BearResetController : MonoBehaviour {
 	void Awake () 
     {
         transRef = this.transform;
-        rigidRef = this.rigidbody;
+        rigidRef = this.GetComponent<Rigidbody>();
 	}
 
     void Start( )

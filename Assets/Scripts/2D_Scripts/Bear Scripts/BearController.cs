@@ -26,6 +26,8 @@ public class BearController : MonoBehaviour {
     [SerializeField]
     private float jump_strength;
 	[SerializeField]
+	private float dash_strength;
+	[SerializeField]
 	private float jump_distance;
     [SerializeField]
     private float max_speed;
@@ -69,8 +71,8 @@ public class BearController : MonoBehaviour {
     {
         if( !jumped && dashed == false)
         {
-            rigidbody2D.AddForce( Vector2.up * jump_strength, ForceMode2D.Impulse );
-			rigidbody2D.AddForce( Vector2.right * jump_distance, ForceMode2D.Impulse );
+            GetComponent<Rigidbody2D>().AddForce( Vector2.up * jump_strength, ForceMode2D.Impulse );
+			GetComponent<Rigidbody2D>().AddForce( Vector2.right * jump_distance, ForceMode2D.Impulse );
             bsc.ChangeState( BearState.JUMPING );
             jumped = true;
         }
@@ -80,8 +82,8 @@ public class BearController : MonoBehaviour {
 	{
 		if( !dashed && dashed == false) 
 		{
-			rigidbody2D.AddTorque (-200, ForceMode2D.Impulse);
-			rigidbody2D.AddForce( Vector2.right * 1000, ForceMode2D.Impulse);
+			GetComponent<Rigidbody2D>().AddTorque (-200, ForceMode2D.Impulse);
+			GetComponent<Rigidbody2D>().AddForce( new Vector2(GetComponent<Rigidbody2D>().velocity.x * dash_strength, GetComponent<Rigidbody2D>().velocity.x * -dash_strength), ForceMode2D.Impulse);
 			dashed = true;
 			bsc.ChangeState( BearState.DASHING );
 			StartCoroutine (DashCoolDown());
@@ -93,8 +95,8 @@ public class BearController : MonoBehaviour {
         if( !slammed && Grounded == false)
         {
 			//Jared's temp adjustment
-			rigidbody2D.AddForce (Vector2.up * -slam_speed, ForceMode2D.Impulse);
-			rigidbody2D.AddTorque (-200, ForceMode2D.Impulse);
+			GetComponent<Rigidbody2D>().AddForce (Vector2.up * -slam_speed, ForceMode2D.Impulse);
+			GetComponent<Rigidbody2D>().AddTorque (-200, ForceMode2D.Impulse);
 			//Original slamming
             //rigidbody2D.velocity = new Vector2( rigidbody2D.velocity.x, -10 );
             bsc.ChangeState( BearState.SLAMMING );
@@ -170,10 +172,10 @@ public class BearController : MonoBehaviour {
 		Debug.DrawRay (new Vector2(transform.position.x - 1, transform.position.y + 2), -Vector2.up * 1, Color.green);
 
 		//What is the Vector2 normal of the object being hit by the raycast
-		//Debug.Log (hit.normal.y);
+		//Debug.Log (hit.normal);
 
 		//Whats the tag of the collider hit by the raycast
-		//Debug.Log (hit.normal.y);
+		//Debug.Log (hit.collider.tag);
 	
 
 		//If the x value of the normal being detected is greater than or = to 0.1 and the collider is named Ground then the terrain is sloped
@@ -184,14 +186,16 @@ public class BearController : MonoBehaviour {
 		{
 			isSloped = true;
 		}
-		else{
+		else
+		{
 			isSloped = false;
 		}
 
 
+
 		//Clamp the maximum velocity of the bear to max_speed
 		rbody.velocity = Vector3.ClampMagnitude( rbody.velocity, max_speed );
-		//Debug.Log (rigidbody2D.velocity.x);
+
 		
 
 	}
@@ -224,7 +228,7 @@ public class BearController : MonoBehaviour {
 
 		if (other.tag =="Boost")
 		{
-			gameObject.rigidbody2D.AddForce(Vector2.right * boostSpeed);
+			gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.right * boostSpeed);
 			StartCoroutine(BoostCoolDown());
 		}
 

@@ -27,7 +27,7 @@ public class BearMovementController : MonoBehaviour {
 	void Awake () 
     {
         transRef = this.transform;
-        rigidbodyRef = this.rigidbody;
+        rigidbodyRef = this.GetComponent<Rigidbody>();
 	}
 	
 	// Update is called once per frame

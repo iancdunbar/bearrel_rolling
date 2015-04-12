@@ -18,8 +18,8 @@ public class MaskEditor : Editor
 
 		if ((maskTarget.GetComponent<MeshRenderer>() != null) &&
 		    (maskTarget.GetComponent<MeshFilter>() != null) &&
-		    (maskTarget.renderer.sharedMaterial != null) &&
-		    (maskTarget.renderer.sharedMaterial.mainTexture != null))
+		    (maskTarget.GetComponent<Renderer>().sharedMaterial != null) &&
+		    (maskTarget.GetComponent<Renderer>().sharedMaterial.mainTexture != null))
 		{
 
 			//maskTarget.maskMappingWorldAxis = (Mask.MappingAxis)EditorGUILayout.EnumPopup("Mask Mapping World Axis", maskTarget.maskMappingWorldAxis);
@@ -64,10 +64,10 @@ public class MaskEditor : Editor
 			
 			if (!Application.isPlaying)
 			{
-				bool displayMask = EditorGUILayout.Toggle("Display Mask", maskTarget.renderer.enabled);
-				if (displayMask != maskTarget.renderer.enabled)
+				bool displayMask = EditorGUILayout.Toggle("Display Mask", maskTarget.GetComponent<Renderer>().enabled);
+				if (displayMask != maskTarget.GetComponent<Renderer>().enabled)
 				{
-					maskTarget.renderer.enabled = displayMask;
+					maskTarget.GetComponent<Renderer>().enabled = displayMask;
 				}
 
 			}
@@ -107,7 +107,7 @@ public class MaskEditor : Editor
 			return;
 		}
 
-		Texture maskTexture = maskTarget.renderer.sharedMaterial.mainTexture;
+		Texture maskTexture = maskTarget.GetComponent<Renderer>().sharedMaterial.mainTexture;
 
 		Renderer[] renderers = maskTarget.transform.parent.gameObject.GetComponentsInChildren<Renderer>();
 		List<Material> differentOriginalMaterials = new List<Material>();

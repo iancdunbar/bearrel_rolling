@@ -35,7 +35,7 @@ public class FollowParallax : MonoBehaviour {
         Vector2 tmpDimension;
 
         //Vector3 size =  obj.GetComponent<SpriteRenderer>( ).sprite.bounds.size;
-        Vector3 size = obj.renderer.bounds.size;
+        Vector3 size = obj.GetComponent<Renderer>().bounds.size;
         
         tmpDimension.x = size.x; //obj.transform.localScale.x * size.x;  // this is gonna be our width
         tmpDimension.y = size.y; //obj.transform.localScale.y * size.y;  // this is gonna be our height

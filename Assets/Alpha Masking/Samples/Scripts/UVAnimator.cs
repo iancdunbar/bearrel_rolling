@@ -13,9 +13,9 @@ public class UVAnimator : MonoBehaviour
 
 	void Update ()
 	{
-		Vector2 offset = renderer.material.mainTextureOffset + new Vector2(USpeed * Time.deltaTime, VSpeed * Time.deltaTime);
+		Vector2 offset = GetComponent<Renderer>().material.mainTextureOffset + new Vector2(USpeed * Time.deltaTime, VSpeed * Time.deltaTime);
 		offset.x = offset.x % 1f;
 		offset.y = offset.y % 1f;
-		renderer.material.mainTextureOffset = offset;
+		GetComponent<Renderer>().material.mainTextureOffset = offset;
 	}
 }

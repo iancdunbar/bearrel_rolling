@@ -8,8 +8,8 @@ public class ParticleSorting : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-		particleSystem.renderer.sortingLayerID = spriteRenderer.sortingLayerID;
-		particleSystem.renderer.sortingOrder = spriteRenderer.sortingOrder;
+		GetComponent<ParticleSystem>().GetComponent<Renderer>().sortingLayerID = spriteRenderer.sortingLayerID;
+		GetComponent<ParticleSystem>().GetComponent<Renderer>().sortingOrder = spriteRenderer.sortingOrder;
 	}
 	
 }
