@@ -27,11 +27,19 @@ public class ImpactEmittor : MonoBehaviour {
 	private Vector2 bearspeed;
 	public Animator anim;
 	public Component[] Trails;
+	private GameObject mCamera;
+	private Vector3 originalOffset;
+	private float startTime;
+	public float resetTime = 1;
+
 
 
 
 	void Start ()
-	{
+	{	
+		startTime = Time.time;
+		mCamera = GameObject.FindGameObjectWithTag("MainCamera");
+		originalOffset = mCamera.GetComponent<GameCamera>().offset;
 		bc = GameObject.Find ("Bear_Body").GetComponent<BearController>();
 		MessageDispatch.RegisterListener( "OnEnterState", OnEnterState );
 		MessageDispatch.RegisterListener( "OnExitState", OnExitState );
@@ -69,10 +77,6 @@ public class ImpactEmittor : MonoBehaviour {
 		ContactEmitter.startSize = MovingFastClamp;
 		MovingFastEmitter.startSpeed = ContactClamp;
 
-		if (jumping == true)
-		{
-			ContactEmitter.Stop ();
-		}
 
 
 
@@ -112,19 +116,12 @@ public class ImpactEmittor : MonoBehaviour {
 			movingfast = false;
 		}
 
-		//Is the bear moving REALLY fast?
-		Debug.Log (GetComponent<Rigidbody2D>().velocity);
-			if (GetComponent<Rigidbody2D>().velocity.x >= ReallyFastSpeed.x && GetComponent<Rigidbody2D>().velocity.y <= ReallyFastSpeed.y){
-				reallyfast = true;
-			}
-			else {
-				reallyfast = false;
-			}
 
 
 
 
-		//CONTACT EMITTER (Rooster Tail)
+
+		//CONTACT EMITTER (Rooster Tail) // 
 		//Emit particles if the bear is touching the ground while moving fast
 		if(grounded == true && movingfast == true){
 			ContactEmitter.Play();
@@ -133,11 +130,33 @@ public class ImpactEmittor : MonoBehaviour {
 			ContactEmitter.Stop();
 		
 		}
+		//The contact emitter shouldn't be running if the bear moves off of the terrain
+		if (jumping == true)
+		{
+			ContactEmitter.Stop ();
+		}
 
 
 
 
-		//Emit TRAILS if the bear is moving REALLY fast ANYTIME.
+		//REALLY FAST MOVEMENT//
+
+		if (GetComponent<Rigidbody2D>().velocity.x >= ReallyFastSpeed.x && GetComponent<Rigidbody2D>().velocity.y <= ReallyFastSpeed.y){
+			reallyfast = true;
+
+			//if Bear is moving REALLY FAST zoom the camera out and give the bear a slight lead
+			mCamera.GetComponent<GameCamera>().offset = Vector3.Slerp (mCamera.GetComponent<GameCamera>().offset, mCamera.GetComponent<GameCamera>().FastOffset, 0.001f);
+
+		}
+		else {
+
+			mCamera.GetComponent<GameCamera>().offset = Vector3.Slerp (mCamera.GetComponent<GameCamera>().offset, originalOffset, 0.001f);
+			reallyfast = false;
+
+		}
+
+
+		//Emit TRAILS if the bear is moving REALLY fast ANYTIME in the air.
 		if ( grounded == false && reallyfast == true)
 		{
 			Trails = GetComponentsInChildren<TrailRenderer>();
@@ -159,7 +178,7 @@ public class ImpactEmittor : MonoBehaviour {
 			foreach (TrailRenderer Trail in Trails) 
 				{
 					Trail.enabled = true;
-					Trail.time = 0.01f;
+					Trail.time = 0.05f;
 				}
 			}
 			if (grounded == true)
@@ -176,8 +195,16 @@ public class ImpactEmittor : MonoBehaviour {
 	}
 	
 
+	//TREE COLLISION//
 	void OnTriggerEnter2D(Collider2D other)
 	{
+		//If colliding with object tagged Avalanche then shake the main Camera. Currently this seems to shake on collision with anything.
+		if (other.tag == "Avalanche");
+		{
+			//tell the GameCamera script to shake the cam
+			mCamera.GetComponent<GameCamera>().Shake = true;
+		}
+
 
 		if ( other.tag == "tree")
 		{
@@ -186,8 +213,9 @@ public class ImpactEmittor : MonoBehaviour {
 			//Momentarily interrupt contact vfx if collided with tree.
 			ContactEmitter.Stop ();
 		}
+
         can_blood = true;
-			
+
 
 			
 	}

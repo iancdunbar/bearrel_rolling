@@ -16,6 +16,7 @@ public class BearController : MonoBehaviour {
 	public bool isSloped = false;
 
 
+
     /////////////////////////////////////////////
 
 
@@ -40,9 +41,10 @@ public class BearController : MonoBehaviour {
 	private float boostSpeed;
 	[SerializeField]
 	private float slam_speed;
-	public Vector2 normal;
+	private Vector2 normal;
 	private bool Grounded;
 	public float dash_cooldown;
+	public GameObject mCamera;
 
     /////////////////////////////////////////////
 
@@ -67,9 +69,10 @@ public class BearController : MonoBehaviour {
     // Input Messages
     /////////////////////////////////////////////
 
+	//JUMP//
     public void OnSwipeUp( object unused )
     {
-        if( !jumped && dashed == false)
+        if( !jumped && Grounded == true)
         {
             GetComponent<Rigidbody2D>().AddForce( Vector2.up * jump_strength, ForceMode2D.Impulse );
 			GetComponent<Rigidbody2D>().AddForce( Vector2.right * jump_distance, ForceMode2D.Impulse );
@@ -78,10 +81,12 @@ public class BearController : MonoBehaviour {
         }
     }
 
+	//DASH//
 	public void OnTap( object unused )
 	{
 		if( !dashed && dashed == false) 
 		{
+			//Spin & increase velocity in both directions
 			GetComponent<Rigidbody2D>().AddTorque (-200, ForceMode2D.Impulse);
 			GetComponent<Rigidbody2D>().AddForce( new Vector2(GetComponent<Rigidbody2D>().velocity.x * dash_strength, GetComponent<Rigidbody2D>().velocity.x * -dash_strength), ForceMode2D.Impulse);
 			dashed = true;
@@ -89,13 +94,17 @@ public class BearController : MonoBehaviour {
 			StartCoroutine (DashCoolDown());
 		}
 	}
+
+	//SLAM//
     public void OnSwipeDown( object unused )
     {
 
         if( !slammed && Grounded == false)
         {
 			//Jared's temp adjustment
+			//AddForce down instantly
 			GetComponent<Rigidbody2D>().AddForce (Vector2.up * -slam_speed, ForceMode2D.Impulse);
+			//AddTorque to spin the bear by ammount (Z-axis)
 			GetComponent<Rigidbody2D>().AddTorque (-200, ForceMode2D.Impulse);
 			//Original slamming
             //rigidbody2D.velocity = new Vector2( rigidbody2D.velocity.x, -10 );
@@ -114,17 +123,18 @@ public class BearController : MonoBehaviour {
     // Unity Messages
     /////////////////////////////////////////////
 
-    void Awake( )
-    {
-        rbody = GetComponent<Rigidbody2D>( );
-        bsc = new BearStateController( );
-
-        jumped = true;
-    }
+	void Awake( )
+	{
+		rbody = GetComponent<Rigidbody2D>( );
+		bsc = new BearStateController( );
+		
+		jumped = true;
+	}
 
     // Use this for initialization
 	void Start () 
     {
+		mCamera = GameObject.FindGameObjectWithTag("MainCamera");
 		return_value = max_speed;
         MessageDispatch.RegisterListener( "OnSwipeUp", OnSwipeUp );
         MessageDispatch.RegisterListener( "OnSwipeDown", OnSwipeDown );
@@ -162,7 +172,7 @@ public class BearController : MonoBehaviour {
     {
 
 
-		// If the bear is on the ground they cannot SLAMAJAM.
+		// If the bear is on the ground they cannot SLAM-A-JAM.
 		if (Grounded == true)
 		{
 			slammed = false;
@@ -239,6 +249,7 @@ public class BearController : MonoBehaviour {
 			Application.LoadLevel(Application.loadedLevel);
 		
 		}
+
 	}
 	IEnumerator SpeedLimitCooldown (){
 		yield return new WaitForSeconds(slow_duration);

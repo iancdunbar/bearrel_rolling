@@ -47,7 +47,7 @@ GameObject:
   - 23: {fileID: 2352048}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Avalanche
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04e393c960f982a42a8e1f03075c2275, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  avalance_speed: 20
+  avalance_speed: 26.5
   snow: {fileID: 19800000, guid: 76ce9212c89c449699171245450aed11, type: 2}
   can_blood: 1
 --- !u!198 &19800000

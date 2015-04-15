@@ -463,8 +463,8 @@ GameObject:
   - 92: {fileID: 9200000}
   - 124: {fileID: 12400000}
   - 81: {fileID: 8100000}
-  - 114: {fileID: 11400012}
   - 114: {fileID: 11400010}
+  - 114: {fileID: 11422306}
   m_Layer: 0
   m_Name: Main Camera Perspective
   m_TagString: MainCamera
@@ -915,7 +915,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100054}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -53.0999985, y: 41, z: -31.7199993}
+  m_LocalPosition: {x: -52, y: 42.2999992, z: -30}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400014}
@@ -1682,7 +1682,7 @@ MonoBehaviour:
   speed: 3
   turntable_generator: {fileID: 0}
   simple_collider: {fileID: 0}
---- !u!114 &11400012
+--- !u!114 &11422306
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1690,9 +1690,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 100054}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24b5b49493cf9f74585aed0d660164a2, type: 3}
+  m_Script: {fileID: 11500000, guid: ddb3222853db34708850fabeaebeeff8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camTransform: {fileID: 0}
+  shake: 0
+  shakeAmount: .699999988
+  decreaseFactor: 1
+  Shake: 0
+  Bear: {fileID: 0}
+  offset: {x: 6, y: -4, z: -30}
+  FastOffset: {x: 25, y: -10, z: -60}
   follow_target: {fileID: 0}
   follow_amount: {x: 1, y: 1, z: 0}
 --- !u!124 &12400000
