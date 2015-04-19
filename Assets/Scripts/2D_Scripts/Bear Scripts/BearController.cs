@@ -10,11 +10,14 @@ public class BearController : MonoBehaviour {
     private Rigidbody2D rbody;
     private bool jumped;
     private bool slammed;
-	public bool dashed;
+	public bool dashed = false;
     private BearStateController bsc;
 	private bool deathBool = false;
 	public bool isSloped = false;
 
+	private static string[] deathMessages = {"FUCK TUCKER","U DED ;_;", "LIFE IS FUTILE", "SO METAL"};
+	private static int random = Random.Range(0, deathMessages.Length);
+	private static string deathMessage = deathMessages[random];
 
 
     /////////////////////////////////////////////
@@ -212,7 +215,8 @@ public class BearController : MonoBehaviour {
 
 	void OnGUI(){
 		if(deathBool){
-			GUI.Box (new Rect (0,0,Screen.width,Screen.height), "<color=red><size=80>BEAR DEATH</size></color>");
+
+			GUI.Box (new Rect (0,0,Screen.width,Screen.height), "<color=red><size=80>" + deathMessage + "</size></color>");
 		}
 	}
 

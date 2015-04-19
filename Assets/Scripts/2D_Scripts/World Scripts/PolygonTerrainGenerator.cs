@@ -174,7 +174,7 @@ public class PolygonTerrainGenerator : MonoBehaviour {
         active_masks.Enqueue( mask_obj );
 
 		generateMountainRocks(next_point, terrain_piece_container);
-		generateTrees(start_position, next_point, terrain_piece_container);
+		generateTrees(start_position, next_point, terrain_piece_container, ts);
 
 
     }
@@ -213,7 +213,7 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 		
 	}
 
-	private void generateTrees(Vector3 startPoint, Vector3 endPoint, GameObject currentPiece_container){
+	private void generateTrees(Vector3 startPoint, Vector3 endPoint, GameObject currentPiece_container, TerrainSegment currentSegment){
 
 		//generate x random points between end and start
 
@@ -225,11 +225,8 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 			numberOfTrees = Random.Range (minTreesPerSegment, maxTreesPerSegment);
 		} 
 
-		float lineSlope = (endPoint.y - startPoint.y) / (endPoint.x - startPoint.x); // M value in y=mx+b
-
-		float lineOffset = startPoint.y - (lineSlope * startPoint.x);// b value in y=mx+b
-
 		//now we have a function which represents the slope of the hill. lets get 3 random x points and find the cooresponding y. 
+		Vector2[] colliderPoints = currentSegment.EdgeColliderPoints;
 
 		for(int x = 0; x < numberOfTrees; x++ ){
 			//instantiate trees
@@ -244,16 +241,44 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 
 			Sprite spriteToDraw = sprites[Random.Range (0, sprites.Length)]; 
 
-			//generate random x along segment for this tree. Find corresponding y:
 
-			float tree_base_x = Random.Range (startPoint.x, endPoint.x);
+		
+			//get two points in the collider of the currentPiece with x values on either side of tree_base_x
+
+			Vector2 lowerPoint = Vector2.zero;
+			Vector2 upperPoint = Vector2.zero;
+
+			//generate random x along segment for this tree. Find corresponding y:
+			
+			float tree_base_x = Random.Range (colliderPoints[0].x, colliderPoints[colliderPoints.Length-1].x);
+
+			foreach (Vector2 point in colliderPoints)
+			{
+
+				int indexOfCurrentPoint = System.Array.IndexOf(colliderPoints, point);
+
+				if(indexOfCurrentPoint == colliderPoints.Length-1){
+					break;
+				}
+				if(point.x < tree_base_x && colliderPoints[indexOfCurrentPoint + 1].x > tree_base_x)
+				{
+					lowerPoint = point;
+					upperPoint = colliderPoints[indexOfCurrentPoint + 1];
+					break;
+				}
+
+
+			}
+
+			float localSlope = (upperPoint.y - lowerPoint.y) / (upperPoint.x - lowerPoint.x); // M value in y=mx+b
+			float lineOffset = lowerPoint.y - (localSlope * lowerPoint.x); // b value in y=mx+b
 
 			tree_obj.GetComponent<SpriteRenderer>().sprite = spriteToDraw;
 
 
 			float tree_height = tree_obj.transform.localScale.y * tree_obj.GetComponent<SpriteRenderer>().sprite.bounds.size.y;
 
-			float tree_base_y = tree_base_x*lineSlope+lineOffset-(tree_height/2)-treeDrawingOffset;
+			float tree_base_y = tree_base_x*localSlope+lineOffset-(tree_height/2)-treeDrawingOffset;
 
 			tree_trans.position = new Vector3(tree_base_x, tree_base_y + tree_height, -1.01f);
 
