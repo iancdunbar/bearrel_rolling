@@ -238,6 +238,7 @@ public class BearController : MonoBehaviour {
 				other.gameObject.transform.Rotate (0,0,-4);
 				StartCoroutine(SpeedLimitCooldown());
 			}
+
 		}
 
 		if (other.tag =="Boost")

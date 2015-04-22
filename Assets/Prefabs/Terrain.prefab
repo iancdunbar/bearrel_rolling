@@ -84,14 +84,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   terrain_piece:
-  - {fileID: 100006, guid: 395707fea46b044dfbfb871fea061389, type: 2}
-  - {fileID: 100006, guid: 650e9f0637e574ade8ea90e685a53af8, type: 2}
-  - {fileID: 100006, guid: 0d2754250df97439395def0a0c0dfbf5, type: 2}
-  - {fileID: 100006, guid: 41391e0729be64b65b741423d67ecc0b, type: 2}
-  - {fileID: 0}
+  - {fileID: 134072, guid: fec210cab61ff4f92863ed3b6363e619, type: 2}
+  - {fileID: 134072, guid: fec210cab61ff4f92863ed3b6363e619, type: 2}
+  - {fileID: 163188, guid: a74a37c450574404d8c93ad5fbe13ce6, type: 2}
+  - {fileID: 163188, guid: a74a37c450574404d8c93ad5fbe13ce6, type: 2}
+  - {fileID: 163188, guid: a74a37c450574404d8c93ad5fbe13ce6, type: 2}
   end_vert: 1
   mask_prefab: {fileID: 110194, guid: 15406bc7fb5ed84438b96069728796bf, type: 2}
-  gen_distance: 30
+  gen_distance: 40
   min_angle: 0
   max_angle: 0
   collider_gen: {fileID: 11400002}

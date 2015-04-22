@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Snow_Tileable
-  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _NORMALMAP _SPECGLOSSMAP
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
@@ -127,11 +127,11 @@ Material:
       data:
         first:
           name: _Glossiness
-        second: .328999996
+        second: 0
       data:
         first:
           name: _BumpScale
-        second: 2
+        second: .300000012
       data:
         first:
           name: _OcclusionStrength
@@ -139,7 +139,7 @@ Material:
       data:
         first:
           name: _DetailNormalMapScale
-        second: 1
+        second: .100000001
       data:
         first:
           name: _UVSec
@@ -147,7 +147,7 @@ Material:
       data:
         first:
           name: _EmissionScaleUI
-        second: 1
+        second: 0
       data:
         first:
           name: _Mode
@@ -160,7 +160,7 @@ Material:
       data:
         first:
           name: _EmissionColor
-        second: {r: 0, g: 0, b: 0, a: 1}
+        second: {r: 0, g: 0, b: 0, a: 0}
       data:
         first:
           name: _Color
@@ -172,4 +172,4 @@ Material:
       data:
         first:
           name: _EmissionColorUI
-        second: {r: 0, g: 0, b: 0, a: 1}
+        second: {r: 1, g: 1, b: 1, a: 1}

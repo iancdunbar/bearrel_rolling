@@ -13,6 +13,7 @@ public class TreeGib : MonoBehaviour {
 	private bool dashing = false;
 	private BearStateController bsc;
 	private BearController bc;
+	private GameObject mCamera;
 
 	void Awake (){
 
@@ -22,6 +23,7 @@ public class TreeGib : MonoBehaviour {
 		MessageDispatch.RegisterListener( "OnEnterState", OnEnterState );
 		MessageDispatch.RegisterListener( "OnExitState", OnExitState );
 		bc = GameObject.Find("Bear_Body").GetComponent<BearController>();
+		mCamera = GameObject.FindGameObjectWithTag("MainCamera");
 	}
 	void Update () {
 		if (bc.dashed == true){
@@ -58,7 +60,7 @@ public class TreeGib : MonoBehaviour {
 	
 
 
-	void OnTriggerExit2D(Collider2D other)
+	void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.tag == "Bear" && dashing == true || slamming == true)
 		{ 
@@ -73,10 +75,12 @@ public class TreeGib : MonoBehaviour {
 				Destroy(gameObject);
 			}
 		}
-		if (other.tag == "Bear" && dashing == false || slamming == false)
+		if (other.tag == "Bear" && dashing == false && slamming == false)
 		{
 			Instantiate( snow, transform.position, Quaternion.identity );
 			SimpleAudioController.PlayCrashEmote();
+			//tell the GameCamera script to shake the cam
+			mCamera.GetComponent<GameCamera>().Shake = true;
 		}
 
 	}

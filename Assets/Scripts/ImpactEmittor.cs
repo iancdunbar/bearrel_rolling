@@ -69,12 +69,12 @@ public class ImpactEmittor : MonoBehaviour {
 		bearpos = GetComponent<Rigidbody2D>().position;
 		//CLAMP the min max value of the bears velocity for particle speed
 
-		ContactClamp = Mathf.Clamp (GetComponent<Rigidbody2D>().velocity.x, 0,20);
-		MovingFastClamp = Mathf.Clamp (GetComponent<Rigidbody2D>().velocity.x, 0,0.65f);
-		RotationClamp = Mathf.Clamp (GetComponent<Rigidbody2D>().velocity.x, 0, 1);
+		ContactClamp = Mathf.Clamp (GetComponent<Rigidbody2D>().velocity.x, 4,14);
+		MovingFastClamp = Mathf.Clamp (GetComponent<Rigidbody2D>().velocity.x, 0,1f);
+		RotationClamp = Mathf.Clamp (GetComponent<Rigidbody2D>().velocity.x, 0, 0.1f);
 
-		ContactEmitter.startSpeed = ContactClamp;
-		ContactEmitter.startSize = MovingFastClamp;
+		//ContactEmitter.startSpeed = ContactClamp;
+		//ContactEmitter.startSize = MovingFastClamp;
 		MovingFastEmitter.startSpeed = ContactClamp;
 
 
@@ -145,19 +145,19 @@ public class ImpactEmittor : MonoBehaviour {
 			reallyfast = true;
 
 			//if Bear is moving REALLY FAST zoom the camera out and give the bear a slight lead
-			mCamera.GetComponent<GameCamera>().offset = Vector3.Slerp (mCamera.GetComponent<GameCamera>().offset, mCamera.GetComponent<GameCamera>().FastOffset, 0.001f);
+			mCamera.GetComponent<GameCamera>().offset = Vector3.Slerp (mCamera.GetComponent<GameCamera>().offset, mCamera.GetComponent<GameCamera>().FastOffset, 0.008f);
 
 		}
 		else {
 
-			mCamera.GetComponent<GameCamera>().offset = Vector3.Slerp (mCamera.GetComponent<GameCamera>().offset, originalOffset, 0.001f);
+			mCamera.GetComponent<GameCamera>().offset = Vector3.Slerp (mCamera.GetComponent<GameCamera>().offset, originalOffset, 0.008f);
 			reallyfast = false;
 
 		}
 
 
 		//Emit TRAILS if the bear is moving REALLY fast ANYTIME in the air.
-		if ( grounded == false && reallyfast == true)
+		if (reallyfast == true)
 		{
 			Trails = GetComponentsInChildren<TrailRenderer>();
 			
@@ -202,7 +202,7 @@ public class ImpactEmittor : MonoBehaviour {
 		if (other.tag == "Avalanche");
 		{
 			//tell the GameCamera script to shake the cam
-			mCamera.GetComponent<GameCamera>().Shake = true;
+			//mCamera.GetComponent<GameCamera>().Shake = true;
 		}
 
 
@@ -212,6 +212,7 @@ public class ImpactEmittor : MonoBehaviour {
 			Instantiate( Impact, transform.position, Quaternion.identity );
 			//Momentarily interrupt contact vfx if collided with tree.
 			ContactEmitter.Stop ();
+
 		}
 
         can_blood = true;

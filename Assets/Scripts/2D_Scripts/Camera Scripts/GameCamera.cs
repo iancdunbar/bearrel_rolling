@@ -19,6 +19,8 @@ public class GameCamera : MonoBehaviour {
 	private Vector3 position_delta;
 	public Vector3 offset;
 	public Vector3 FastOffset;
+	private float shakeOriginal;
+	private GameObject BearLight;
 
 	/////////////////////////////////////////////
 	// Inspector Variables
@@ -47,11 +49,12 @@ public class GameCamera : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+		BearLight = GameObject.Find("BearLight");
 		Bear = GameObject.Find("Bear_Body");
 		follow_target = Bear.GetComponent(typeof(Transform)) as Transform;
 		// Initialize the previous position
 		previous_position = follow_target.position + offset;
+		shakeOriginal = shakeAmount;
 
 
 	}
@@ -79,6 +82,7 @@ public class GameCamera : MonoBehaviour {
 			
 
 		}
+		BearLight.transform.position = new Vector3(BearLight.transform.position.x, BearLight.transform.position.y, offset.z /2);
 
 
 		
@@ -93,6 +97,7 @@ public class GameCamera : MonoBehaviour {
 		Shake = false;
 		// Return to position after shake
 		camTransform.localPosition = trans_ref.position;
+		shakeAmount = shakeOriginal;
 
 	}
 }
