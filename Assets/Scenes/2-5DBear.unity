@@ -134,6 +134,22 @@ Prefab:
       propertyPath: target
       value: 
       objectReference: {fileID: 1828695598}
+    - target: {fileID: 19800000, guid: e5420b92f03404e7ca172f064bada093, type: 2}
+      propertyPath: InitialModule.startColor.maxColor.rgba
+      value: 4278233087
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800004, guid: e5420b92f03404e7ca172f064bada093, type: 2}
+      propertyPath: InitialModule.startSize.scalar
+      value: .0900000036
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800004, guid: e5420b92f03404e7ca172f064bada093, type: 2}
+      propertyPath: EmissionModule.rate.scalar
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800004, guid: e5420b92f03404e7ca172f064bada093, type: 2}
+      propertyPath: SizeModule.curve.scalar
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5420b92f03404e7ca172f064bada093, type: 2}
   m_IsPrefabParent: 0
@@ -1275,6 +1291,10 @@ Prefab:
       propertyPath: bear
       value: 
       objectReference: {fileID: 1828695599}
+    - target: {fileID: 11400000, guid: 3bb4384f2c7a344808d596c018e3103e, type: 2}
+      propertyPath: maxTreesPerSegment
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3bb4384f2c7a344808d596c018e3103e, type: 2}
   m_IsPrefabParent: 0
@@ -4017,6 +4037,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: c2e0f1f4b0d284a728b178a282608d83, type: 2}
+      propertyPath: dash_cooldown
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c2e0f1f4b0d284a728b178a282608d83, type: 2}
   m_IsPrefabParent: 0
@@ -6574,6 +6598,10 @@ Prefab:
     - target: {fileID: 447322, guid: e79efc938426148a889dc250e4ef5a7b, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 10850248, guid: e79efc938426148a889dc250e4ef5a7b, type: 2}
+      propertyPath: m_Shadows.m_Strength
+      value: .52700001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e79efc938426148a889dc250e4ef5a7b, type: 2}
