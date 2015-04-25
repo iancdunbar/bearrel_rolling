@@ -43,8 +43,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 452048}
   - 33: {fileID: 3352048}
-  - 65: {fileID: 6552048}
   - 23: {fileID: 2352048}
+  - 61: {fileID: 6140798}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Avalanche
@@ -86,7 +86,7 @@ Transform:
   m_GameObject: {fileID: 152048}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 40.0357666, y: 7.01842356, z: 15.0898581}
+  m_LocalScale: {x: 40.0357666, y: 7.01842356, z: 23.363306}
   m_Children: []
   m_Father: {fileID: 452046}
   m_RootOrder: 0
@@ -134,18 +134,19 @@ BoxCollider2D:
   m_Offset: {x: 12.1199999, y: 0}
   serializedVersion: 2
   m_Size: {x: 8.78999996, y: 5.30000019}
---- !u!65 &6552048
-BoxCollider:
+--- !u!61 &6140798
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 152048}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.12, y: .99999994}
 --- !u!114 &11452048
 MonoBehaviour:
   m_ObjectHideFlags: 1

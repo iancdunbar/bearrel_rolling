@@ -254,6 +254,12 @@ public class BearController : MonoBehaviour {
 			Application.LoadLevel(Application.loadedLevel);
 		
 		}
+		if (other.tag == "Avalanche")
+		{
+			Debug.Log ("Avalanche impact");
+			mCamera.GetComponent<GameCamera>().follow_target = GameObject.Find ("Avalance").GetComponent(typeof(Transform)) as Transform;;
+			mCamera.GetComponent<GameCamera>().offset = mCamera.GetComponent<GameCamera>().AvalancheOffset;
+		}
 
 	}
 	IEnumerator SpeedLimitCooldown (){
