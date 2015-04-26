@@ -28,27 +28,7 @@ public class FollowBear : MonoBehaviour {
 	}
 	void FixedUpdate (){
 
-		if (bc.isSloped == true)
 
-		{
-
-			//Debug.Log ("Terrain is Sloped");
-
-			//Set the animator parameter to true (triggers animation)
-			anim.SetBool ("isSloped", true);
-
-
-		}
-		else
-		{
-			//Debug.Log ("Terrain is flat");
-
-			//Set the animator parameter to false (triggers animation)
-			anim.SetBool ("isSloped", false);
-
-
-
-		}
 			                 
 
 			                
