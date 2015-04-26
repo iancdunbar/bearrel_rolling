@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 489678}
   - 108: {fileID: 10850248}
   m_Layer: 0
-  m_Name: Bear_Light
+  m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52,7 +52,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 135860}
-  m_LocalRotation: {x: .454404294, y: .0188156143, z: -.289330542, w: .842288911}
+  m_LocalRotation: {x: .430963337, y: .0108159538, z: -.289738536, w: .8545205}
   m_LocalPosition: {x: -.200000763, y: 9.89999962, z: 10.7399969}
   m_LocalScale: {x: 1, y: 1.00056589, z: 1.00056589}
   m_Children: []
