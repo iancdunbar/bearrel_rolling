@@ -33,14 +33,17 @@ public class ImpactEmittor : MonoBehaviour {
 	public float resetTime = 1;
 
 
+	void Awake () 
+	{
+		bc = GameObject.Find ("Bear_Body").GetComponent<BearController>();
 
+	}
 
 	void Start ()
 	{	
 		startTime = Time.time;
 		mCamera = GameObject.FindGameObjectWithTag("MainCamera");
 		originalOffset = mCamera.GetComponent<GameCamera>().offset;
-		bc = GameObject.Find ("Bear_Body").GetComponent<BearController>();
 		MessageDispatch.RegisterListener( "OnEnterState", OnEnterState );
 		MessageDispatch.RegisterListener( "OnExitState", OnExitState );
 	}

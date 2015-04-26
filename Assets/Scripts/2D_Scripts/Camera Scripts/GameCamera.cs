@@ -82,13 +82,8 @@ public class GameCamera : MonoBehaviour {
 			
 
 		}
-		BearLight.transform.position = new Vector3(BearLight.transform.position.x, BearLight.transform.position.y, offset.z /2);
+		BearLight.transform.position = new Vector3 (BearLight.transform.position.x, BearLight.transform.position.y, offset.z / 2);
 
-
-		
-
-		
-		
 	}
 	IEnumerator ShakeCam(){
 

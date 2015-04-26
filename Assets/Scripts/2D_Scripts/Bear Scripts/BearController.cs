@@ -34,9 +34,15 @@ public class BearController : MonoBehaviour {
 	[SerializeField]
 	private float jump_distance;
     [SerializeField]
-    private float max_speed;
+	private float max_speed; //The max speed regardless of the accelleration
+	[SerializeField]
+	private float min_speed; //The minimum speed regardless of the accelleration - cant let the bear roll backwards!
+	[SerializeField]
+	private float min_accelleration; //minimum accell at all times
 	[SerializeField]
 	private float collision_speed;
+	[SerializeField]
+	private float tree_decell_amount;
 	[SerializeField]
 	private float slow_duration;
 	private float return_value;
@@ -48,6 +54,8 @@ public class BearController : MonoBehaviour {
 	private bool Grounded;
 	public float dash_cooldown;
 	public GameObject mCamera;
+	private float current_accelleration;
+
 
     /////////////////////////////////////////////
 
@@ -59,14 +67,11 @@ public class BearController : MonoBehaviour {
     public void OnEnterState( object arg )
     {
         BearState state = (BearState)arg;
-
-
-
+		
         Debug.Log( "Entering " + state + " from BearController" );
     }
 
     /////////////////////////////////////////////
-
 
     /////////////////////////////////////////////
     // Input Messages
@@ -204,12 +209,15 @@ public class BearController : MonoBehaviour {
 			isSloped = false;
 		}
 
+		if (current_accelleration < 2) {
+			current_accelleration = 2;
+		}
 
+		rbody.velocity = rbody.velocity + (rbody.velocity.normalized * current_accelleration);
 
 		//Clamp the maximum velocity of the bear to max_speed
 		rbody.velocity = Vector3.ClampMagnitude( rbody.velocity, max_speed );
 
-		
 
 	}
 
@@ -226,17 +234,19 @@ public class BearController : MonoBehaviour {
 	
 		if ( other.tag == "tree" && dashed == true)
 		{
-			max_speed = return_value;
+			//max_speed = return_value;
 			other.gameObject.transform.Rotate (0,0,-2);
-			StartCoroutine(SpeedLimitCooldown());
+			//StartCoroutine(SpeedLimitCooldown());
+			current_accelleration += tree_decell_amount;
 		}
 		else
 		{
 			if(other.tag=="tree")
 			{
-				max_speed = collision_speed;
+				//max_speed = collision_speed;
 				other.gameObject.transform.Rotate (0,0,-4);
-				StartCoroutine(SpeedLimitCooldown());
+				//StartCoroutine(SpeedLimitCooldown());
+				current_accelleration += tree_decell_amount;
 			}
 
 		}
