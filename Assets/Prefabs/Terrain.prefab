@@ -99,7 +99,7 @@ MonoBehaviour:
   rock_embellishment_perentage: 0
   chanceOfTrees: 100
   minTreesPerSegment: 1
-  maxTreesPerSegment: 8
+  maxTreesPerSegment: 15
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
