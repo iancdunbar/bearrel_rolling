@@ -326,7 +326,7 @@ public class PolygonTerrainGenerator : MonoBehaviour {
             generate_next_piece( next_point );
             collider_gen.AddPoint( next_point );
 
-			if( active_terrain_segment_containers.Count > 30 )
+			if( active_terrain_segment_containers.Count > 3 )
 			{
 				Destroy( active_terrain_segment_containers.Dequeue( ) );
 				//Destroy( active_masks.Dequeue( ) );
