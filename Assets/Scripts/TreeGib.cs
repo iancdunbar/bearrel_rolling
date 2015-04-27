@@ -64,14 +64,24 @@ public class TreeGib : MonoBehaviour {
 	{
 		if (other.tag == "Bear" && dashing == true || slamming == true)
 		{ 
+			//let's make every gib shoot off in a direction + or - 90 degrees from the bear's velocity vector. 
+			//We'll also make their speed relted to the bear's speed. 
+			//Sick gib explosion!
+
+			Vector2 currentBearVelocity = bc.currentVelocity;
+
 			foreach (GameObject gib in gibs)
 			{
 				Instantiate( snow, transform.position, Quaternion.identity );
 				Instantiate( branches, transform.position, Quaternion.identity);
 				SimpleAudioController.PlayCrashEmote();
-				gibspawn = (GameObject)Instantiate( gib, transform.position + Random.insideUnitSphere*spawnRadius, transform.rotation);
-				gibspawn.GetComponent<Rigidbody2D>().AddForce(Vector2.up * breakforce, ForceMode2D.Impulse);
-				gibspawn.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 40, ForceMode2D.Impulse);
+
+				gibspawn = (GameObject)Instantiate( gib, transform.position + Random.insideUnitSphere*spawnRadius, transform.rotation * Quaternion.Euler(0,0,Random.Range(0,360)));
+
+				float randomTrajectoryAngle = Random.Range(-65, 65);
+				Vector2 gibTrajectory = Vector2Extension.Rotate(currentBearVelocity, randomTrajectoryAngle);
+
+				gibspawn.GetComponent<Rigidbody2D>().AddForce(gibTrajectory * 20, ForceMode2D.Impulse);
 				Destroy(gameObject);
 			}
 		}
@@ -84,9 +94,20 @@ public class TreeGib : MonoBehaviour {
 		}
 
 	}
-
-
-
 		
 
+}
+
+public static class Vector2Extension {
+	
+	public static Vector2 Rotate(this Vector2 v, float degrees) {
+		float sin = Mathf.Sin(degrees * Mathf.Deg2Rad);
+		float cos = Mathf.Cos(degrees * Mathf.Deg2Rad);
+		
+		float tx = v.x;
+		float ty = v.y;
+		v.x = (cos * tx) - (sin * ty);
+		v.y = (sin * tx) + (cos * ty);
+		return v;
+	}
 }

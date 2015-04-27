@@ -10,10 +10,13 @@ public class BearController : MonoBehaviour {
     private Rigidbody2D rbody;
     private bool jumped;
     private bool slammed;
+	public bool immune_to_slow = false; //rob is trying a design thing. When bear is has boosted or slammed, it is immune to slows from trees.
 	public bool dashed = false;
     private BearStateController bsc;
 	private bool deathBool = false;
 	public bool isSloped = false;
+	public float currentSpeed;
+	public Vector2 currentVelocity;
 
 	private static string[] deathMessages = {"FUCK TUCKER","U DED ;_;", "LIFE IS FUTILE", "SO METAL"};
 	private static int random = Random.Range(0, deathMessages.Length);
@@ -50,6 +53,8 @@ public class BearController : MonoBehaviour {
 	private float boostSpeed;
 	[SerializeField]
 	private float slam_speed;
+	[SerializeField]
+	private float immune_to_slow_duration;
 	private Vector2 normal;
 	private bool Grounded;
 	public float dash_cooldown;
@@ -179,6 +184,8 @@ public class BearController : MonoBehaviour {
 	void FixedUpdate () 
     {
 
+		currentSpeed = rbody.velocity.magnitude;
+		currentVelocity = rbody.velocity;
 
 		// If the bear is on the ground they cannot SLAM-A-JAM.
 		if (Grounded == true)
@@ -209,11 +216,15 @@ public class BearController : MonoBehaviour {
 			isSloped = false;
 		}
 
-		if (current_accelleration < 2) {
-			current_accelleration = 2;
+		if (current_accelleration < min_accelleration) {
+			current_accelleration = min_accelleration;
 		}
 
-		rbody.velocity = rbody.velocity + (rbody.velocity.normalized * current_accelleration);
+		if (rbody.velocity.magnitude < min_speed) {
+			rbody.velocity = rbody.velocity + (rbody.velocity.normalized * min_speed);
+		} else{
+			rbody.velocity = rbody.velocity + (rbody.velocity.normalized * current_accelleration);
+		}
 
 		//Clamp the maximum velocity of the bear to max_speed
 		rbody.velocity = Vector3.ClampMagnitude( rbody.velocity, max_speed );
@@ -236,8 +247,6 @@ public class BearController : MonoBehaviour {
 		{
 			//max_speed = return_value;
 			other.gameObject.transform.Rotate (0,0,-2);
-			//StartCoroutine(SpeedLimitCooldown());
-			current_accelleration += tree_decell_amount;
 		}
 		else
 		{
@@ -247,6 +256,11 @@ public class BearController : MonoBehaviour {
 				other.gameObject.transform.Rotate (0,0,-4);
 				//StartCoroutine(SpeedLimitCooldown());
 				current_accelleration += tree_decell_amount;
+				if(rbody.velocity.magnitude + tree_decell_amount > min_speed){
+					rbody.velocity = rbody.velocity + (rbody.velocity.normalized * tree_decell_amount);
+				} else {
+					rbody.velocity = rbody.velocity + (rbody.velocity.normalized * min_speed);
+				}
 			}
 
 		}
@@ -272,6 +286,11 @@ public class BearController : MonoBehaviour {
 		}
 
 	}
+
+	IEnumerator immuneToSlowCooldown (){
+		yield return new WaitForSeconds(immune_to_slow_duration);
+		immune_to_slow = true;
+	}
 	IEnumerator SpeedLimitCooldown (){
 		yield return new WaitForSeconds(slow_duration);
 		max_speed = return_value;
@@ -284,6 +303,7 @@ public class BearController : MonoBehaviour {
 		yield return new WaitForSeconds(2);
 		//gameObject.rigidbody2D.velocity = max_speed;
 	}
+
 
     /////////////////////////////////////////////
 }
