@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class TreeGib : MonoBehaviour {
 	public GameObject[] gibs;
@@ -62,9 +63,10 @@ public class TreeGib : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
+
 		if (other.tag == "Bear" && dashing == true || slamming == true)
 		{ 
-			//let's make every gib shoot off in a direction + or - 90 degrees from the bear's velocity vector. 
+			//let's make every gib shoot off in a direction + or - 65 degrees from the bear's velocity vector. 
 			//We'll also make their speed relted to the bear's speed. 
 			//Sick gib explosion!
 
@@ -99,7 +101,9 @@ public class TreeGib : MonoBehaviour {
 }
 
 public static class Vector2Extension {
-	
+
+	//some code to rotate vecotr2s by x degrees around z axis
+
 	public static Vector2 Rotate(this Vector2 v, float degrees) {
 		float sin = Mathf.Sin(degrees * Mathf.Deg2Rad);
 		float cos = Mathf.Cos(degrees * Mathf.Deg2Rad);
