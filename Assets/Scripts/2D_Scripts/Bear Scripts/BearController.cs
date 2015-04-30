@@ -273,16 +273,19 @@ public class BearController : MonoBehaviour {
 
 		if ( other.tag =="Death")
 		{
+			
+			Debug.Log ("Avalanche impact");
+			mCamera.GetComponent<GameCamera>().follow_target = GameObject.Find ("Avalance").GetComponent(typeof(Transform)) as Transform;;
+			mCamera.GetComponent<GameCamera>().offset = mCamera.GetComponent<GameCamera>().AvalancheOffset;
 			deathBool = true;
+
 			yield return new WaitForSeconds(5.0f);
 			Application.LoadLevel(Application.loadedLevel);
+
 		
 		}
 		if (other.tag == "Avalanche")
 		{
-			Debug.Log ("Avalanche impact");
-			mCamera.GetComponent<GameCamera>().follow_target = GameObject.Find ("Avalance").GetComponent(typeof(Transform)) as Transform;;
-			mCamera.GetComponent<GameCamera>().offset = mCamera.GetComponent<GameCamera>().AvalancheOffset;
 		}
 
 	}

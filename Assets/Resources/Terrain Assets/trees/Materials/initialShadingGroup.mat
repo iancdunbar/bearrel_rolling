@@ -6,10 +6,10 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Snow_Tileable 1
+  m_Name: initialShadingGroup
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _EMISSION _NORMALMAP
-  m_LightmapFlags: 1
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   m_SavedProperties:
     serializedVersion: 2
@@ -18,28 +18,21 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: 917fec16f95064ae2b70f3fc3888c4fe, type: 3}
-          m_Scale: {x: 3, y: 3}
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _BumpMap
-        second:
-          m_Texture: {fileID: 2800000, guid: 19d62d3fe17e7462e9b85ae18a8304dd, type: 3}
-          m_Scale: {x: 5, y: 5}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _DetailNormalMap
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Illum
+          name: _DetailNormalMap
         second:
-          m_Texture: {fileID: 2800000, guid: 964172c4376744ff5a8e6aaa991c5f80, type: 3}
+          m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -61,7 +54,7 @@ Material:
           name: _EmissionMap
         second:
           m_Texture: {fileID: 0}
-          m_Scale: {x: 3, y: 3}
+          m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
@@ -91,23 +84,11 @@ Material:
         second: .5
       data:
         first:
-          name: _Shininess
-        second: 1
-      data:
-        first:
-          name: PixelSnap
-        second: 0
-      data:
-        first:
           name: _SrcBlend
         second: 1
       data:
         first:
           name: _DstBlend
-        second: 0
-      data:
-        first:
-          name: _EmissionLM
         second: 0
       data:
         first:
@@ -120,7 +101,7 @@ Material:
       data:
         first:
           name: _Glossiness
-        second: 0
+        second: .5
       data:
         first:
           name: _BumpScale
@@ -140,7 +121,7 @@ Material:
       data:
         first:
           name: _EmissionScaleUI
-        second: .230000004
+        second: 0
       data:
         first:
           name: _Mode
@@ -153,14 +134,10 @@ Material:
       data:
         first:
           name: _EmissionColor
-        second: {r: .230000004, g: .230000004, b: .230000004, a: .230000004}
+        second: {r: 0, g: 0, b: 0, a: 1}
       data:
         first:
           name: _Color
-        second: {r: .681228399, g: .730312288, b: .772058845, a: 1}
-      data:
-        first:
-          name: _SpecColor
         second: {r: .5, g: .5, b: .5, a: 1}
       data:
         first:

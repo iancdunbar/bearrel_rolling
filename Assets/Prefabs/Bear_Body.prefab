@@ -97,7 +97,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &159540
 GameObject:
   m_ObjectHideFlags: 1
@@ -519,7 +519,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 127282}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
@@ -779,12 +779,12 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Time: .300000012
-  m_StartWidth: 1.5
+  m_StartWidth: 3
   m_EndWidth: 0
   m_Colors:
     m_Color[0]:
       serializedVersion: 2
-      rgba: 1207959551
+      rgba: 4294967295
     m_Color[1]:
       serializedVersion: 2
       rgba: 1207959551
@@ -867,16 +867,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 788fbfed3c6a3664588169e1cd6973a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  immune_to_slow: 0
   dashed: 0
   isSloped: 0
+  currentSpeed: 0
+  currentVelocity: {x: 0, y: 0}
   jump_strength: 400
   dash_strength: 800
   jump_distance: 200
   max_speed: 35
+  min_speed: 0
+  min_accelleration: 0
   collision_speed: 10
+  tree_decell_amount: 0
   slow_duration: .200000003
   boostSpeed: 4000
   slam_speed: 1e+10
+  immune_to_slow_duration: 0
   dash_cooldown: 1
   mCamera: {fileID: 0}
 --- !u!114 &11400004
