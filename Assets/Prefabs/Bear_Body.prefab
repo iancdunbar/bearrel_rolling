@@ -979,7 +979,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2.45000005
+  m_Radius: 3.06999993
 --- !u!96 &9624364
 TrailRenderer:
   m_ObjectHideFlags: 1
@@ -1157,6 +1157,7 @@ MonoBehaviour:
   immune_to_slow_duration: 0
   dash_cooldown: 1
   mCamera: {fileID: 0}
+  knockback: -100
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
