@@ -69,6 +69,7 @@ public class TreeGib : MonoBehaviour {
 			//let's make every gib shoot off in a direction + or - 65 degrees from the bear's velocity vector. 
 			//We'll also make their speed relted to the bear's speed. 
 			//Sick gib explosion!
+			bc.regenSmashDashBar(bc.smash_bar_tree_bonus);
 
 			Vector2 currentBearVelocity = bc.currentVelocity;
 

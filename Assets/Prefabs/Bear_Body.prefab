@@ -867,7 +867,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 788fbfed3c6a3664588169e1cd6973a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  immune_to_slow: 0
   dashed: 0
   isSloped: 0
   currentSpeed: 0
@@ -879,11 +878,14 @@ MonoBehaviour:
   min_speed: 0
   min_accelleration: 0
   collision_speed: 10
-  tree_decell_amount: 0
+  tree_decell_amount: -5
+  max_smashes_and_dashes: 3
+  smash_bar_regen_rate: 6
+  smash_bar_tree_bonus: 0
   slow_duration: .200000003
   boostSpeed: 4000
   slam_speed: 1e+10
-  immune_to_slow_duration: 0
+  normal: {x: 0, y: 0}
   dash_cooldown: 1
   mCamera: {fileID: 0}
 --- !u!114 &11400004
