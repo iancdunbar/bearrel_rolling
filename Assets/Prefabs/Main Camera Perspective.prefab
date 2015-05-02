@@ -32,7 +32,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100008
 GameObject:
   m_ObjectHideFlags: 1
@@ -816,7 +816,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100054}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -52, y: 44.1570015, z: -20}
+  m_LocalPosition: {x: -57.7999992, y: 43.7000008, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400014}
@@ -1769,8 +1769,8 @@ MonoBehaviour:
   decreaseFactor: 1
   Shake: 0
   Bear: {fileID: 0}
-  offset: {x: 3, y: 0, z: -20}
-  FastOffset: {x: 15, y: -4, z: -40}
+  offset: {x: 3, y: 0, z: -10}
+  FastOffset: {x: 6, y: -1, z: -40}
   AvalancheOffset: {x: 40, y: 0, z: -45}
   follow_target: {fileID: 0}
   follow_amount: {x: 1, y: 1, z: 0}

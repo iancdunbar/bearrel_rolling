@@ -11,6 +11,8 @@ TagManager:
   - Boost
   - Avalanche
   - treeGib
+  - tree_gib
+  - Rock
   layers:
   - Default
   - TransparentFX

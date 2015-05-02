@@ -74,6 +74,7 @@ public class BearController : MonoBehaviour {
 	public float dash_cooldown;
 	public GameObject mCamera;
 	private float current_accelleration;
+	public float knockback;
 
 
     /////////////////////////////////////////////
@@ -372,6 +373,12 @@ public class BearController : MonoBehaviour {
 				}
 			}
 
+		}
+		if(other.tag=="Rock")
+		{
+			//GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
+			GetComponent<Rigidbody2D>().AddForce (Vector2.right * -knockback, ForceMode2D.Impulse );
+			GetComponent<Rigidbody2D>().AddForce (Vector2.up * knockback, ForceMode2D.Impulse );
 		}
 
 		if (other.tag =="Boost")
