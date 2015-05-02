@@ -12,7 +12,7 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 
 	private Queue<GameObject> active_terrain_segment_containers;
     private Queue<GameObject> active_terrain_segments;
-	private Queue<GameObject> active_rock_embellishments;
+	private Queue<GameObject> active_rocks;
 	private Queue<GameObject> active_trees;
     private Queue<GameObject> active_masks;
     private Vector3 next_point;
@@ -25,8 +25,8 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 	//Asset Paths from Resource Folder
 
 	//**Rocks
-	private const string rock_embellishment_prefab_path = "Assets/Resources/Terrain Assets/rock_embellishments/rock_embelishment.prefab";
-	private const string rock_embellishment_sprites_path = "Terrain Assets/rock_embellishments/sprites";
+	private const string rock_prefab_path = "Assets/Resources/Terrain Assets/Rocks/Rock_Prefab.prefab";
+
 	//**Trees
 	private const string tree_prefab_path = "Assets/Resources/Terrain Assets/trees/tree_prefab.prefab";
 	private const string tree_sprites_path = "Terrain Assets/trees/sprites";
@@ -36,9 +36,9 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 	/// 
 
 	//Private Assets 
-	private GameObject rock_embellishment_prefab;// = Resources.LoadAssetAtPath<GameObject>(rock_embellishment_prefab_path);
+	private GameObject rock_prefab;// = Resources.LoadAssetAtPath<GameObject>(rock_prefab_path);
 
-	private GameObject tree_prefab; // = Resources.LoadAssetAtPath<GameObject>(tree_prefab_path);
+	private GameObject tree_prefab;//
 	private Texture2D treeTexture1;// = Resources.LoadAssetAtPath<Texture2D>(tree_sprites_1_path);
 	//private Texture2D treeTexture2 = Resources.LoadAssetAtPath<Texture2D>(tree_sprites_2_path);
 	//private Texture2D treeTexture3 = Resources.LoadAssetAtPath<Texture2D>(tree_sprites_3_path);
@@ -68,10 +68,14 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 	[SerializeField]
 	private Transform bear;
 
-	//Rock embellishment variables
+	//Rock variables
 	
 	[SerializeField]
-	private int rock_embellishment_perentage;
+	private int chanceOfRocks;
+	[SerializeField]
+	private int minRocksPerSegment;
+	[SerializeField]
+	private int maxRocksPerSegment;
 
 	//tree variables
 	[SerializeField]
@@ -173,43 +177,69 @@ public class PolygonTerrainGenerator : MonoBehaviour {
         active_terrain_segments.Enqueue( piece );
         active_masks.Enqueue( mask_obj );
 
-		generateMountainRocks(next_point, terrain_piece_container);
+		generateRocks(terrain_piece_container, ts);
 		generateTrees(start_position, next_point, terrain_piece_container, ts);
 
 
     }
 
-	private void generateMountainRocks(Vector3 EndOfLastTerrainPiece, GameObject currentPiece_Container){
+	private void generateRocks(GameObject currentPiece_container, TerrainSegment currentSegment){
 		
-		//use embellishment percentage to determine whether to actually add one or not
+		int numberOfRocks = 0;
+
 		float random = Random.Range (0f, 100f);
-		
-		if (random < rock_embellishment_perentage) {
-			return;
-		} 
 
-		//rock_embellishment_prefab = Resources.LoadAssetAtPath<GameObject>(rock_embellishment_prefab_path);
+		if (random < chanceOfRocks) {
+			numberOfRocks = Random.Range (minRocksPerSegment, maxRocksPerSegment);
+		}
 
-		GameObject rock_embellishment_obj = Instantiate(Resources.LoadAssetAtPath(rock_embellishment_prefab_path, typeof(GameObject))) as GameObject;
+		Vector2[] colliderPoints = currentSegment.EdgeColliderPoints;
 
-		Transform trans_ref = rock_embellishment_obj.transform;	
+		for (int x = 0; x < numberOfRocks; x++) {
+			GameObject rockObject = (GameObject)Instantiate( rock_prefab );
+			Transform rockTransform = rockObject.transform;
 
-		rock_embellishment_obj.transform.parent = currentPiece_Container.transform;
+			rockTransform.parent = currentPiece_container.transform;
 
-		Sprite[] spritesSingle = Resources.LoadAll<Sprite> (rock_embellishment_sprites_path);
-	
-		Sprite[] sprites = new Sprite[3];
-		Sprite spriteToDraw = sprites[Random.Range (0, sprites.Length)];
-		
-		//we've chosen the sprite to draw on the mountain. Now we use it's length to determine where to draw it. 
-		//We must draw it at <= (EndOfLastTerrainPiece.X - spriteWidth). Probably add some random padding to that so embellishments dont end right where 
-		//terrain pieces do.
-		
-		trans_ref.position = new Vector3 (EndOfLastTerrainPiece.x - 10f, EndOfLastTerrainPiece.y - 3f, EndOfLastTerrainPiece.z);//EndOfLastTerrainPiece;
-		
-		rock_embellishment_obj.GetComponent<SpriteRenderer>().sprite = spriteToDraw;
+			
+			Vector2 lowerPoint = Vector2.zero;
+			Vector2 upperPoint = Vector2.zero;
 
-		active_rock_embellishments.Enqueue (rock_embellishment_obj);
+			float rock_base_x = Random.Range (colliderPoints[0].x, colliderPoints[colliderPoints.Length-1].x);
+
+			foreach (Vector2 point in colliderPoints)
+			{
+				
+				int indexOfCurrentPoint = System.Array.IndexOf(colliderPoints, point);
+				
+				if(indexOfCurrentPoint == colliderPoints.Length-1){
+					break;
+				}
+				if(point.x < rock_base_x && colliderPoints[indexOfCurrentPoint + 1].x > rock_base_x)
+				{
+					lowerPoint = point;
+					upperPoint = colliderPoints[indexOfCurrentPoint + 1];
+					break;
+				}
+				
+				
+			}
+
+			float localSlope = (upperPoint.y - lowerPoint.y) / (upperPoint.x - lowerPoint.x); // M value in y=mx+b
+			float lineOffset = lowerPoint.y - (localSlope * lowerPoint.x); // b value in y=mx+b
+			
+			float rock_height = rockTransform.localScale.y * rockTransform.position.y;
+			
+			float rock_base_y = rock_base_x*localSlope+lineOffset-(rock_height/2)-treeDrawingOffset;
+			
+			rockTransform.position = new Vector3(rock_base_x, rock_base_y + rock_height, -1.01f);
+
+			//scale the rock by 50% to see how it is
+			Vector3 newRockScale = new Vector3(rockTransform.localScale.x * 0.25f,rockTransform.localScale.y * 0.25f,rockTransform.localScale.z * 0.25f);
+			rockTransform.localScale = newRockScale;
+			
+			active_rocks.Enqueue(rockObject);
+		}
 		
 	}
 
@@ -230,19 +260,13 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 
 		for(int x = 0; x < numberOfTrees; x++ ){
 			//instantiate trees
-			tree_prefab = Resources.LoadAssetAtPath<GameObject>(tree_prefab_path);
+
 
 			GameObject tree_obj = (GameObject)Instantiate( tree_prefab );
 			Transform tree_trans = tree_obj.transform;	
 
-			tree_obj.transform.parent = currentPiece_container.transform;
+			tree_trans.parent = currentPiece_container.transform;
 
-			Sprite[] sprites = Resources.LoadAll<Sprite> (tree_sprites_path);
-
-			Sprite spriteToDraw = sprites[Random.Range (0, sprites.Length)]; 
-
-
-		
 			//get two points in the collider of the currentPiece with x values on either side of tree_base_x
 
 			Vector2 lowerPoint = Vector2.zero;
@@ -273,10 +297,7 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 			float localSlope = (upperPoint.y - lowerPoint.y) / (upperPoint.x - lowerPoint.x); // M value in y=mx+b
 			float lineOffset = lowerPoint.y - (localSlope * lowerPoint.x); // b value in y=mx+b
 
-			tree_obj.GetComponent<SpriteRenderer>().sprite = spriteToDraw;
-
-
-			float tree_height = tree_obj.transform.localScale.y * tree_obj.GetComponent<SpriteRenderer>().sprite.bounds.size.y;
+			float tree_height = tree_trans.localScale.y * tree_trans.position.y;
 
 			float tree_base_y = tree_base_x*localSlope+lineOffset-(tree_height/2)-treeDrawingOffset;
 
@@ -298,9 +319,12 @@ public class PolygonTerrainGenerator : MonoBehaviour {
     {
 		active_terrain_segment_containers = new Queue<GameObject>( );
         active_terrain_segments = new Queue<GameObject>( );
-        active_masks = new Queue<GameObject>( );
-		active_rock_embellishments = new Queue<GameObject> ();
-		active_trees = new Queue<GameObject> ();
+        active_masks = new Queue<GameObject>();
+		active_rocks = new Queue<GameObject>();
+		active_trees = new Queue<GameObject>();
+
+		tree_prefab = Resources.LoadAssetAtPath<GameObject>(tree_prefab_path);
+		rock_prefab = Resources.LoadAssetAtPath<GameObject>(rock_prefab_path);
     }
 
 	// Use this for initialization
