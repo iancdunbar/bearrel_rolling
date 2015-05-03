@@ -17,6 +17,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &109704
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 445912}
+  - 61: {fileID: 6169716}
+  m_Layer: 0
+  m_Name: Collider 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &127082
 GameObject:
   m_ObjectHideFlags: 0
@@ -34,6 +50,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &135282
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 430110}
+  - 61: {fileID: 6122206}
+  m_Layer: 0
+  m_Name: Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &148586
 GameObject:
   m_ObjectHideFlags: 0
@@ -42,7 +74,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 437440}
-  - 58: {fileID: 5888454}
+  - 61: {fileID: 6130810}
   m_Layer: 0
   m_Name: Rock_Prefab
   m_TagString: Rock
@@ -91,6 +123,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 437440}
   m_RootOrder: 1
+--- !u!4 &430110
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 135282}
+  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
+  m_LocalPosition: {x: -.644509494, y: 4.37658167, z: 1.3162626}
+  m_LocalScale: {x: 2.6450119, y: 1.34167039, z: 2.6450119}
+  m_Children: []
+  m_Father: {fileID: 437440}
+  m_RootOrder: 3
 --- !u!4 &437440
 Transform:
   m_ObjectHideFlags: 1
@@ -98,14 +142,28 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 148586}
   m_LocalRotation: {x: 0, y: -.707106829, z: 0, w: .707106709}
-  m_LocalPosition: {x: 2.25999999, y: -1.19000006, z: 0}
+  m_LocalPosition: {x: 11.2799997, y: -1.19000006, z: 0}
   m_LocalScale: {x: .378070205, y: .745339572, z: .378070205}
   m_Children:
   - {fileID: 489536}
   - {fileID: 424988}
   - {fileID: 421610}
+  - {fileID: 430110}
+  - {fileID: 445912}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!4 &445912
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 109704}
+  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
+  m_LocalPosition: {x: -.644509435, y: 4.37658167, z: 1.3162626}
+  m_LocalScale: {x: 2.6450119, y: 1.34167039, z: 2.6450119}
+  m_Children: []
+  m_Father: {fileID: 437440}
+  m_RootOrder: 4
 --- !u!4 &489536
 Transform:
   m_ObjectHideFlags: 1
@@ -211,8 +269,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 109478}
   m_Mesh: {fileID: 4300004, guid: bf4e11785edf54dea800758ae9aa9d96, type: 3}
---- !u!58 &5888454
-CircleCollider2D:
+--- !u!61 &6122206
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 135282}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: -.600000024}
+  serializedVersion: 2
+  m_Size: {x: 5, y: 6}
+--- !u!61 &6130810
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -221,9 +292,22 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -.600000024}
   serializedVersion: 2
-  m_Radius: 10.75
+  m_Size: {x: 5, y: 6}
+--- !u!61 &6169716
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 109704}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: .600000024, y: -.600000024}
+  serializedVersion: 2
+  m_Size: {x: 4, y: 10}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
