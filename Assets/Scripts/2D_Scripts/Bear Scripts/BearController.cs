@@ -100,7 +100,7 @@ public class BearController : MonoBehaviour {
 	//JUMP//
     public void OnSwipeUp( object unused )
     {
-        if( !jumped && Grounded == true)
+        if(Grounded == true)
         {
             GetComponent<Rigidbody2D>().AddForce( Vector2.up * jump_strength, ForceMode2D.Impulse );
 			GetComponent<Rigidbody2D>().AddForce( Vector2.right * jump_distance, ForceMode2D.Impulse );
@@ -211,6 +211,10 @@ public class BearController : MonoBehaviour {
 	void OnCollisionExit2D (Collision2D other)
 	{
 		if (other.gameObject.tag == "Ground")
+		{
+			Grounded = false;
+		}
+		if (other.gameObject.tag == "Rock")
 		{
 			Grounded = false;
 		}
@@ -376,6 +380,7 @@ public class BearController : MonoBehaviour {
 		}
 		if(other.tag=="Rock")
 		{
+			Grounded = true;
 			//GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
 			GetComponent<Rigidbody2D>().AddForce (Vector2.right * -knockback, ForceMode2D.Impulse );
 			GetComponent<Rigidbody2D>().AddForce (Vector2.up * knockback, ForceMode2D.Impulse );

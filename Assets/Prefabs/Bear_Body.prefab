@@ -873,7 +873,7 @@ Rigidbody2D:
   m_Mass: 30
   m_LinearDrag: 0
   m_AngularDrag: 3
-  m_GravityScale: 1.5
+  m_GravityScale: 8
   m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -979,7 +979,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 3.06999993
+  m_Radius: 4.26000023
 --- !u!96 &9624364
 TrailRenderer:
   m_ObjectHideFlags: 1
@@ -1142,17 +1142,17 @@ MonoBehaviour:
   isSloped: 0
   currentSpeed: 0
   currentVelocity: {x: 0, y: 0}
-  jump_strength: 400
+  jump_strength: 1500
   dash_strength: 800
-  jump_distance: 200
+  jump_distance: 500
   max_speed: 35
   min_speed: 0
   min_accelleration: 0
   collision_speed: 10
   tree_decell_amount: -5
-  max_smashes_and_dashes: 3
-  smash_bar_regen_rate: 6
-  smash_bar_tree_bonus: 0
+  max_smashes_and_dashes: 5
+  smash_bar_regen_rate: 2
+  smash_bar_tree_bonus: 30
   slow_duration: .200000003
   boostSpeed: 4000
   slam_speed: 1e+10
