@@ -232,29 +232,31 @@ public class BearController : MonoBehaviour {
 		{
 			slammed = false;
 		}
-		//Detecting the normal direction of the terrain below
-		RaycastHit2D hit = Physics2D.Raycast(new Vector2(transform.position.x - 1, transform.position.y + 2), -Vector2.up * 1);
-		Debug.DrawRay (new Vector2(transform.position.x - 1, transform.position.y + 2), -Vector2.up * 1, Color.green);
 
-		//What is the Vector2 normal of the object being hit by the raycast
-		//Debug.Log (hit.normal);
+//		//Detecting the normal direction of the terrain below
+//		RaycastHit2D hit = Physics2D.Raycast(new Vector2(transform.position.x - 1, transform.position.y + 2), -Vector2.up * 1);
+//		Debug.DrawRay (new Vector2(transform.position.x - 1, transform.position.y + 2), -Vector2.up * 1, Color.green);
+//
+//		//What is the Vector2 normal of the object being hit by the raycast
+//		//Debug.Log (hit.normal);
+//
+//		//Whats the tag of the collider hit by the raycast
+//		//Debug.Log (hit.collider.tag);
+//	
+//
+//		//If the x value of the normal being detected is greater than or = to 0.1 and the collider is named Ground then the terrain is sloped
+//		if( hit.collider == null ){ 
+//			Debug.Log( "The hit is null, this is what is causing the program to crash"); 
+//		}
+//		if (hit.normal.y <= 0.83f && hit.collider.tag == "Ground")
+//		{
+//			isSloped = true;
+//		}
+//		else
+//		{
+//			isSloped = false;
+//		}
 
-		//Whats the tag of the collider hit by the raycast
-		//Debug.Log (hit.collider.tag);
-	
-
-		//If the x value of the normal being detected is greater than or = to 0.1 and the collider is named Ground then the terrain is sloped
-		if( hit.collider == null ){ 
-			Debug.Log( "The hit is null, this is what is causing the program to crash"); 
-		}
-		if (hit.normal.y <= 0.83f && hit.collider.tag == "Ground")
-		{
-			isSloped = true;
-		}
-		else
-		{
-			isSloped = false;
-		}
 
 		if (current_accelleration < min_accelleration) {
 			current_accelleration = min_accelleration;
@@ -382,8 +384,15 @@ public class BearController : MonoBehaviour {
 		{
 			Grounded = true;
 			//GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
-			GetComponent<Rigidbody2D>().AddForce (Vector2.right * -knockback, ForceMode2D.Impulse );
-			GetComponent<Rigidbody2D>().AddForce (Vector2.up * knockback, ForceMode2D.Impulse );
+
+			//KNOCK BACK //////
+
+			//GetComponent<Rigidbody2D>().AddForce (Vector2.right * -knockback, ForceMode2D.Impulse );
+			//GetComponent<Rigidbody2D>().AddForce (Vector2.up * knockback, ForceMode2D.Impulse );
+		}
+		if(other.tag == "tree_gib")
+		{
+			Grounded = true;
 		}
 
 		if (other.tag =="Boost")

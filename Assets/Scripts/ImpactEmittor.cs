@@ -84,7 +84,7 @@ public class ImpactEmittor : MonoBehaviour {
 
 
 
-		//SLAMMING VFX
+		//SLAMMING VFX //////
 
 		if (slamming == true)
 		{
@@ -100,7 +100,8 @@ public class ImpactEmittor : MonoBehaviour {
 
 
 
-		//DASH VFX
+		//DASH VFX //////
+
 		if (bc.dashed == true)
 		{
 			dash.Play ();
@@ -124,7 +125,8 @@ public class ImpactEmittor : MonoBehaviour {
 
 
 
-		//CONTACT EMITTER (Rooster Tail) // 
+		//CONTACT EMITTER (Rooster Tail) ////// 
+
 		//Emit particles if the bear is touching the ground while moving fast
 		if(grounded == true && movingfast == true){
 			ContactEmitter.Play();
@@ -214,11 +216,19 @@ public class ImpactEmittor : MonoBehaviour {
 			//Ping VFX if tree is collided with
 			Instantiate( Impact, transform.position, Quaternion.identity );
 			//Momentarily interrupt contact vfx if collided with tree.
-			ContactEmitter.Stop ();
 
+
+		}
+		if (other.tag == "Rock")
+		{
+			Instantiate( Impact, transform.position, Quaternion.identity );
+			mCamera.GetComponent<GameCamera>().Shake = true;
 		}
 
         can_blood = true;
+
+
+
 
 
 			

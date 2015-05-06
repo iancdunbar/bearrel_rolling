@@ -1769,8 +1769,9 @@ MonoBehaviour:
   decreaseFactor: 1
   Shake: 0
   Bear: {fileID: 0}
-  offset: {x: 4, y: 0, z: -25}
-  FastOffset: {x: 8, y: -1, z: -40}
+  offset: {x: 8, y: -1, z: -30}
+  MovingOffset: {x: 0, y: 0, z: 0}
+  FastOffset: {x: 10, y: -4, z: -48}
   AvalancheOffset: {x: 40, y: 0, z: -45}
   follow_target: {fileID: 0}
   follow_amount: {x: 1, y: 1, z: 0}

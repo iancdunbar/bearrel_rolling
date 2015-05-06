@@ -96,7 +96,9 @@ MonoBehaviour:
   max_angle: 0
   collider_gen: {fileID: 11400002}
   bear: {fileID: 0}
-  rock_embellishment_perentage: 0
+  chanceOfRocks: 100
+  minRocksPerSegment: 1
+  maxRocksPerSegment: 2
   chanceOfTrees: 100
   minTreesPerSegment: 1
   maxTreesPerSegment: 15

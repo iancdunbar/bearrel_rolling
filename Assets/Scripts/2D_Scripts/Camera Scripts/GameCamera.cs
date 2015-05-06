@@ -18,6 +18,7 @@ public class GameCamera : MonoBehaviour {
 	private Vector3 previous_position;
 	private Vector3 position_delta;
 	public Vector3 offset;
+	public Vector3 MovingOffset;
 	public Vector3 FastOffset;
 	public Vector3 AvalancheOffset;
 	private float shakeOriginal;

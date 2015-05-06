@@ -872,7 +872,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 100010}
   m_Mass: 30
   m_LinearDrag: 0
-  m_AngularDrag: 3
+  m_AngularDrag: 20
   m_GravityScale: 8
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -979,7 +979,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 4.26000023
+  m_Radius: 5.53999996
 --- !u!96 &9624364
 TrailRenderer:
   m_ObjectHideFlags: 1
