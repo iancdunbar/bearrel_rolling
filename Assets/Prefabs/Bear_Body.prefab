@@ -872,7 +872,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 100010}
   m_Mass: 30
   m_LinearDrag: 0
-  m_AngularDrag: 20
+  m_AngularDrag: 10
   m_GravityScale: 8
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -1149,7 +1149,7 @@ MonoBehaviour:
   min_speed: 0
   min_accelleration: 0
   collision_speed: 10
-  tree_decell_amount: -5
+  tree_decell_amount: -2
   max_smashes_and_dashes: 5
   smash_bar_regen_rate: 2
   smash_bar_tree_bonus: 30
