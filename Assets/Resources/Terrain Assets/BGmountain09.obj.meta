@@ -1,16 +1,17 @@
 fileFormatVersion: 2
-guid: 0aa618e91eb754f75b7af564504391b4
-timeCreated: 1430700106
+guid: 4373f6ea33809418fb5e4df3c85fa5c0
+timeCreated: 1431214355
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
     100000: //RootNode
+    100002: polySurface2
     400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
+    400002: polySurface2
+    2300000: polySurface2
+    3300000: polySurface2
     4300000: polySurface2
-    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -64,7 +65,7 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
