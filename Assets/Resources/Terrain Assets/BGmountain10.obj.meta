@@ -1,16 +1,17 @@
 fileFormatVersion: 2
-guid: 0cf6a1ea180694a0e83a2eee370b2f00
-timeCreated: 1430440889
+guid: e741a24c919a249d780f781fab97eb9c
+timeCreated: 1431215227
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
     100000: //RootNode
+    100002: pPyramid33
     400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: polySurface14
-    9500000: //RootNode
+    400002: pPyramid33
+    2300000: pPyramid33
+    3300000: pPyramid33
+    4300000: pPyramid33
   materials:
     importMaterials: 1
     materialName: 0
@@ -64,7 +65,7 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
