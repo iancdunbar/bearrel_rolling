@@ -67,12 +67,12 @@ public class BearInputController : MonoBehaviour {
             }
         }
 #else
-        if( Input.GetKeyUp( KeyCode.Space ) )
+        if( Input.GetKeyDown( KeyCode.Space ) )
         {
             MessageDispatch.BroadcastMessage( "OnSwipeUp" );
         }
 
-        if( Input.GetKeyUp( KeyCode.LeftShift ) )
+        if( Input.GetKeyDown( KeyCode.LeftShift ) )
         {
             MessageDispatch.BroadcastMessage( "OnSwipeDown" );
         }
