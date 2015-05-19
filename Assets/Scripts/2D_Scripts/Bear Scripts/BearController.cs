@@ -6,18 +6,16 @@ using UnityEngine.UI;
 public class BearController : MonoBehaviour {
 
     /////////////////////////////////////////////
-    // Private Variable
+    // Private Variables
     /////////////////////////////////////////////
 
     private Rigidbody2D rbody;
     private bool jumped;
     private bool slammed;
-	public bool dashed = false;
     private BearStateController bsc;
-	private bool deathBool = false; 
-	public bool isSloped = false;
-	public float currentSpeed;
-	public Vector2 currentVelocity;
+	private bool deathBool = false;
+
+    private float saved_forward_vel;
 
 	//HUD
 	private int currentSmashDashNumber;
@@ -38,6 +36,11 @@ public class BearController : MonoBehaviour {
     /////////////////////////////////////////////
     // Inspector Variables
     /////////////////////////////////////////////
+
+    public bool dashed = false;
+    public bool isSloped = false;
+    public float currentSpeed;
+    public Vector2 currentVelocity;
 
     [SerializeField]
     private float jump_strength;
@@ -102,8 +105,8 @@ public class BearController : MonoBehaviour {
     {
         if(Grounded == true)
         {
-            GetComponent<Rigidbody2D>().AddForce( Vector2.up * jump_strength, ForceMode2D.Impulse );
-			GetComponent<Rigidbody2D>().AddForce( Vector2.right * jump_distance, ForceMode2D.Impulse );
+            rbody.AddForce( Vector2.up * jump_strength, ForceMode2D.Impulse );
+			rbody.AddForce( Vector2.right * jump_distance, ForceMode2D.Impulse );
             bsc.ChangeState( BearState.JUMPING );
             jumped = true;
         }
@@ -115,8 +118,8 @@ public class BearController : MonoBehaviour {
 		if( !dashed && dashed == false && currentSmashDashNumber > 0) 
 		{
 			//Spin & increase velocity in both directions
-			GetComponent<Rigidbody2D>().AddTorque (-200, ForceMode2D.Impulse);
-			GetComponent<Rigidbody2D>().AddForce( new Vector2(GetComponent<Rigidbody2D>().velocity.x * dash_strength, GetComponent<Rigidbody2D>().velocity.x * -dash_strength), ForceMode2D.Impulse);
+			rbody.AddTorque (-200, ForceMode2D.Impulse);
+			rbody.AddForce( new Vector2(rbody.velocity.x * dash_strength, rbody.velocity.x * -dash_strength), ForceMode2D.Impulse);
 			dashed = true;
 			bsc.ChangeState( BearState.DASHING );
 			emptySmashDashBox();
@@ -130,11 +133,12 @@ public class BearController : MonoBehaviour {
 
 		if( !slammed && Grounded == false && currentSmashDashNumber > 0)
         {
+            saved_forward_vel = rbody.velocity.x;
 			//Jared's temp adjustment
 			//AddForce down instantly
-			GetComponent<Rigidbody2D>().AddForce (Vector2.up * -slam_speed, ForceMode2D.Impulse);
+			rbody.AddForce (Vector2.up * -slam_speed, ForceMode2D.Impulse);
 			//AddTorque to spin the bear by ammount (Z-axis)
-			GetComponent<Rigidbody2D>().AddTorque (-200, ForceMode2D.Impulse);
+			rbody.AddTorque (-200, ForceMode2D.Impulse);
 			//Original slamming
             //rigidbody2D.velocity = new Vector2( rigidbody2D.velocity.x, -10 );
             bsc.ChangeState( BearState.SLAMMING );
@@ -199,6 +203,9 @@ public class BearController : MonoBehaviour {
         if( other.gameObject.tag == "Ground" )
         {
             bsc.ChangeState( BearState.IDLE );
+
+            rbody.velocity = rbody.velocity + new Vector2( saved_forward_vel, 0 );
+
 			Grounded = true;
             jumped = false;
             slammed = false;
@@ -397,7 +404,7 @@ public class BearController : MonoBehaviour {
 
 		if (other.tag =="Boost")
 		{
-			gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.right * boostSpeed);
+			rbody.AddForce(Vector2.right * boostSpeed);
 			StartCoroutine(BoostCoolDown());
 		}
 
