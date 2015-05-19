@@ -2,7 +2,9 @@
 using System.Collections;
 
 public class ImpactEmittor : MonoBehaviour {
-	
+
+    private Rigidbody2D rbdy;
+
 	// Use this for initialization
 	public ParticleSystem snow;
 	public ParticleSystem Impact;
@@ -36,7 +38,7 @@ public class ImpactEmittor : MonoBehaviour {
 	void Awake () 
 	{
 		bc = GameObject.Find ("Bear_Body").GetComponent<BearController>();
-		
+        rbdy = GetComponent<Rigidbody2D>();
 	}
 	
 	void Start ()
@@ -68,13 +70,13 @@ public class ImpactEmittor : MonoBehaviour {
 	}
 	void Update () 
 	{
-		bearspeed = GetComponent<Rigidbody2D>().velocity;
-		bearpos = GetComponent<Rigidbody2D>().position;
+		bearspeed = rbdy.velocity;
+		bearpos = rbdy.position;
 		//CLAMP the min max value of the bears velocity for particle speed
 		
-		ContactClamp = Mathf.Clamp (GetComponent<Rigidbody2D>().velocity.x, 4,14);
-		MovingFastClamp = Mathf.Clamp (GetComponent<Rigidbody2D>().velocity.x, 0,1f);
-		RotationClamp = Mathf.Clamp (GetComponent<Rigidbody2D>().velocity.x, 0, 0.1f);
+		ContactClamp = Mathf.Clamp (rbdy.velocity.x, 4,14);
+		MovingFastClamp = Mathf.Clamp (rbdy.velocity.x, 0,1f);
+		RotationClamp = Mathf.Clamp (rbdy.velocity.x, 0, 0.1f);
 		
 		//ContactEmitter.startSpeed = ContactClamp;
 		//ContactEmitter.startSize = MovingFastClamp;
@@ -88,12 +90,14 @@ public class ImpactEmittor : MonoBehaviour {
 		
 		if (slamming == true)
 		{
-			slam.Play ();
+            if( slam.isStopped )
+			    slam.Play ();
 			//reallyfast = false;
 		}
 		else
 		{
-			slam.Stop ();
+            if( slam.isPlaying )
+			 slam.Stop ();
 		}
 		
 		
@@ -104,10 +108,12 @@ public class ImpactEmittor : MonoBehaviour {
 		
 		if (bc.dashed == true)
 		{
+            if( dash.isStopped )
 			dash.Play ();
 		}
 		if(bc.dashed == false)
 		{
+            if( dash.isPlaying )
 			dash.Stop ();
 		}
 		
@@ -121,22 +127,26 @@ public class ImpactEmittor : MonoBehaviour {
 		//CONTACT EMITTER (Rooster Tail) ////// 
 		
 		//Emit particles if the bear is touching the ground while moving fast
-		if(grounded == true && movingfast == true){
-			ContactEmitter.Play();
+		if(grounded == true && movingfast == true)
+        {
+            if( ContactEmitter.isStopped )
+			    ContactEmitter.Play();
 		}
-		else { 
-			ContactEmitter.Stop();
-			
+		else
+        { 
+            if( ContactEmitter.isPlaying )
+			    ContactEmitter.Stop();	
 		}
 		//The contact emitter shouldn't be running if the bear moves off of the terrain
 		if (jumping == true)
 		{
+            if( ContactEmitter.isPlaying )
 			ContactEmitter.Stop ();
 		}
 		
 		
 		//FAST MOVEMENT //
-		if (GetComponent<Rigidbody2D>().velocity.x >= MovingFastSpeed)
+		if (rbdy.velocity.x >= MovingFastSpeed)
 		{
 			movingfast = true;
 			mCamera.GetComponent<GameCamera>().offset = Vector3.Slerp (mCamera.GetComponent<GameCamera>().offset, mCamera.GetComponent<GameCamera>().MovingOffset, 0.008f);
@@ -150,7 +160,7 @@ public class ImpactEmittor : MonoBehaviour {
 		
 		//REALLY FAST MOVEMENT//
 		
-		if (GetComponent<Rigidbody2D>().velocity.x >= ReallyFastSpeed.x && GetComponent<Rigidbody2D>().velocity.y <= ReallyFastSpeed.y){
+		if (rbdy.velocity.x >= ReallyFastSpeed.x && rbdy.velocity.y <= ReallyFastSpeed.y){
 			reallyfast = true;
 			
 			//if Bear is moving REALLY FAST zoom the camera out and give the bear a slight lead
