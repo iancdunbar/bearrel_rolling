@@ -13,6 +13,7 @@ public class GameCamera : MonoBehaviour {
 	public float shakeAmount = 0.7f;
 	public float decreaseFactor = 1.0f;
 	public bool Shake = false;
+	public bool keepStatic = false;
 	public GameObject Bear;
 	private Transform trans_ref;
 	private Vector3 previous_position;
@@ -66,18 +67,23 @@ public class GameCamera : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		// Follow the bear at an offset that is being updated every frame
-		trans_ref.position = follow_target.position +offset ;
-
-		// Capture the current target position for use in the next frame
-		previous_position = follow_target.position + offset;
-
+		if (!keepStatic) {
 		
 
-		//SHAKE original pos
-		originalPos = previous_position;
+			// Follow the bear at an offset that is being updated every frame
+			trans_ref.position = follow_target.position + offset;
 
-		//Tell the camera to shake if called externally ex. ImpactEmitter
+			// Capture the current target position for use in the next frame
+			previous_position = follow_target.position + offset;
+
+	
+
+			//SHAKE original pos
+			originalPos = previous_position;
+
+			//Tell the camera to shake if called externally ex. ImpactEmitter
+		}
+
 		if (Shake == true )
 		{
 			StartCoroutine(ShakeCam());

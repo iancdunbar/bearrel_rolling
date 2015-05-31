@@ -25,13 +25,9 @@ public class BearController : MonoBehaviour {
 	private Color HUDColor = new Color(0.957f, 1.000f, 0.221f, 1.000f);
 	private const int maxRegenSliderAmount = 100;
 	private Slider smashDashRegenSlider;
-	private static string[] deathMessages = {"FUCK TUCKER","U DED ;_;", "LIFE IS FUTILE", "SO METAL"};
+	private static string[] deathMessages = {"U DED ;_;"};
 	private static int random = Random.Range(0, deathMessages.Length);
 	private static string deathMessage = deathMessages[random];
-
-
-    /////////////////////////////////////////////
-
 
     /////////////////////////////////////////////
     // Inspector Variables
@@ -362,6 +358,42 @@ public class BearController : MonoBehaviour {
 		}
 	}
 
+	private void HandleEndGame(GameCamera gameCam)
+	{
+		GameObject town = GameObject.Find ("Town");
+		Transform townTransform = town.GetComponent(typeof(Transform)) as Transform;
+
+		GameObject avalanche = GameObject.Find ("Avalance");
+
+
+		Vector3 avalancheSpawnPos = townTransform.position + new Vector3(-300,0,0);
+
+		avalanche.transform.position = avalancheSpawnPos;
+
+
+		Vector3 avalancheTargetPos = townTransform.position + new Vector3 (1000, -100, 0);
+
+		gameCam.follow_target = townTransform;
+		gameCam.keepStatic = true;
+		
+		AvalanceController thisInstance = AvalanceController.Instance;
+		thisInstance.PathOverride = true;
+		thisInstance.PathOverrideTarget = avalancheTargetPos;
+
+		//AvalanceController.AddPoint (avalancheTargetPos);
+
+		gameCam.transform.position = new Vector3 (-445, -320, 10);
+
+		//gameCam.keepStatic = true;
+		//gameCam.offset = new Vector3 (0, 0, 0);
+		//gameCam.MovingOffset = gameCam.offset;
+		//gameCam.FastOffset = gameCam.offset;
+
+	    //yield WaitForSeconds(3.0f);
+		//Application.LoadLevel(Application.loadedLevel);
+
+	}
+
 
 	//Slow the bear down if it collides with a tree
 	IEnumerator OnTriggerEnter2D( Collider2D other )
@@ -408,18 +440,21 @@ public class BearController : MonoBehaviour {
 			StartCoroutine(BoostCoolDown());
 		}
 
-		if ( other.tag =="Death")
+		if ( other.tag =="Death" && deathBool == false)
 		{
 			
 			Debug.Log ("Avalanche impact");
-			mCamera.GetComponent<GameCamera>().follow_target = GameObject.Find ("Avalance").GetComponent(typeof(Transform)) as Transform;;
-			mCamera.GetComponent<GameCamera>().offset = mCamera.GetComponent<GameCamera>().AvalancheOffset;
+			GameCamera camera = mCamera.GetComponent<GameCamera>();
+			//camera.follow_target = GameObject.Find ("Avalance").GetComponent(typeof(Transform)) as Transform;
+			//camera.GetComponent<GameCamera>().offset = mCamera.GetComponent<GameCamera>().AvalancheOffset;
+			this.rbody.isKinematic = true; //stop the bear, otherwise camera will be affected by impacts
 			deathBool = true;
 
-			yield return new WaitForSeconds(5.0f);
-			Application.LoadLevel(Application.loadedLevel);
+			yield return new WaitForSeconds(3.0f);
+			deathBool = false;
+			//Application.LoadLevel(Application.loadedLevel);
 
-		
+			HandleEndGame(camera);
 		}
 		if (other.tag == "Avalanche")
 		{

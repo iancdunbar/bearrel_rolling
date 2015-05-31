@@ -11,6 +11,9 @@ public class AvalanceController : MonoBehaviour {
 
     private static AvalanceController instance;
     public static AvalanceController Instance { get { return instance; } }
+	public bool PathOverride = false; 
+	public Vector3 PathOverrideTarget;
+
     
     private Queue<Vector3> path;
 
@@ -67,7 +70,12 @@ public class AvalanceController : MonoBehaviour {
 	void Update () 
     {
         if( path.Count == 0 ) return;
-        Vector3 target = path.Peek( );
+
+		Vector3 target = path.Peek ();
+
+		if (PathOverride) {
+			target = PathOverrideTarget;
+		}
 
         transform.position = Vector3.MoveTowards( transform.position, target, avalance_speed * Time.deltaTime );
 
