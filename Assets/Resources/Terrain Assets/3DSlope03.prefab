@@ -15,7 +15,7 @@ GameObject:
   - 68: {fileID: 6849066}
   m_Layer: 0
   m_Name: 3DSlope03
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
