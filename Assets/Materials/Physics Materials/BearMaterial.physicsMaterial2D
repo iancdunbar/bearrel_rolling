@@ -7,4 +7,4 @@ PhysicsMaterial2D:
   m_PrefabInternal: {fileID: 0}
   m_Name: BearMaterial
   friction: .200000003
-  bounciness: .00999999978
+  bounciness: 0

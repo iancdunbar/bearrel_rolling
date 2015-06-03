@@ -12,6 +12,7 @@ public class TreeGib : MonoBehaviour {
 	public ParticleSystem branches;
 	private bool slamming = false;
 	private bool dashing = false;
+	private bool bearInvuln = false;
 	private BearStateController bsc;
 	private BearController bc;
 	private GameObject mCamera;
@@ -26,13 +27,21 @@ public class TreeGib : MonoBehaviour {
 		bc = GameObject.Find("Bear_Body").GetComponent<BearController>();
 		mCamera = GameObject.FindGameObjectWithTag("MainCamera");
 	}
+
 	void Update () {
 		if (bc.dashed == true){
 			dashing = true;
-		}
-		if (bc.dashed == false){
+		} 
+		if (bc.dashed == false) {
 			dashing = false;
 		}
+		if (bc.bearInvuln == true) {
+			bearInvuln = true;
+		} 
+		if (bc.bearInvuln == false) {
+			bearInvuln = false;
+		}
+
 	}
 	
 	// Update is called once per frame
@@ -64,12 +73,12 @@ public class TreeGib : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other)
 	{
 
-		if (other.tag == "Bear" && dashing == true || slamming == true)
+		if (other.tag == "Bear" && (dashing || slamming || bearInvuln))
 		{ 
 			//let's make every gib shoot off in a direction + or - 65 degrees from the bear's velocity vector. 
 			//We'll also make their speed relted to the bear's speed. 
 			//Sick gib explosion!
-			bc.regenSmashDashBar(bc.smash_bar_tree_bonus);
+			//bc.decreaseInvulnSlider(bc.invuln_bar_tree_penalty);
 
 			Vector2 currentBearVelocity = bc.currentVelocity;
 

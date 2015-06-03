@@ -20,11 +20,9 @@ public class BearController : MonoBehaviour {
 	//HUD
 	private int currentSmashDashNumber;
 	private Image SmashDashHUDPrefab;
-	private GameObject SmashDashMeterContainer; 
-	private Image[] SmashDashContainers;
 	private Color HUDColor = new Color(0.957f, 1.000f, 0.221f, 1.000f);
-	private const int maxRegenSliderAmount = 100;
-	private Slider smashDashRegenSlider;
+	private const int maxInvulnSliderAmount = 100;
+	private Slider invulnSlider;
 	private static string[] deathMessages = {"U DED ;_;"};
 	private static int random = Random.Range(0, deathMessages.Length);
 	private static string deathMessage = deathMessages[random];
@@ -55,13 +53,13 @@ public class BearController : MonoBehaviour {
 	[SerializeField]
 	private float tree_decell_amount;
 	[SerializeField]
-	private int max_smashes_and_dashes;
+	private float invuln_bar_regen_rate;
 	[SerializeField]
-	private float smash_bar_regen_rate;
-	[SerializeField]
-	public float smash_bar_tree_bonus;
+	public float invuln_bar_tree_penalty;
 	[SerializeField]
 	private float slow_duration;
+	[SerializeField]
+	private float invulnDuration;
 	private float return_value;
 	[SerializeField]
 	private float boostSpeed;
@@ -74,12 +72,14 @@ public class BearController : MonoBehaviour {
 	public GameObject mCamera;
 	private float current_accelleration;
 	public float knockback;
+	public bool jumpElligible = true;
+	public bool bearInvuln = false;
+
+    /////////////////////////////////////////////
 
 
     /////////////////////////////////////////////
-
-
-    /////////////////////////////////////////////
+	/// 
     // State Messages
     /////////////////////////////////////////////
 
@@ -99,26 +99,26 @@ public class BearController : MonoBehaviour {
 	//JUMP//
     public void OnSwipeUp( object unused )
     {
-        if(Grounded == true)
+        if(jumpElligible)
         {
             rbody.AddForce( Vector2.up * jump_strength, ForceMode2D.Impulse );
 			rbody.AddForce( Vector2.right * jump_distance, ForceMode2D.Impulse );
             bsc.ChangeState( BearState.JUMPING );
             jumped = true;
+			jumpElligible = false;
         }
     }
 
 	//DASH//
 	public void OnTap( object unused )
 	{
-		if( !dashed && dashed == false && currentSmashDashNumber > 0) 
+		if( !dashed && dashed == false) 
 		{
 			//Spin & increase velocity in both directions
 			rbody.AddTorque (-200, ForceMode2D.Impulse);
 			rbody.AddForce( new Vector2(rbody.velocity.x * dash_strength, rbody.velocity.x * -dash_strength), ForceMode2D.Impulse);
 			dashed = true;
 			bsc.ChangeState( BearState.DASHING );
-			emptySmashDashBox();
 			StartCoroutine (DashCoolDown());
 		}
 	}
@@ -127,7 +127,7 @@ public class BearController : MonoBehaviour {
 	public void OnSwipeDown( object unused )
     {
 
-		if( !slammed && Grounded == false && currentSmashDashNumber > 0)
+		if( !slammed && jumpElligible == false)
         {
             saved_forward_vel = rbody.velocity.x;
 			//Jared's temp adjustment
@@ -138,7 +138,6 @@ public class BearController : MonoBehaviour {
 			//Original slamming
             //rigidbody2D.velocity = new Vector2( rigidbody2D.velocity.x, -10 );
             bsc.ChangeState( BearState.SLAMMING );
-			emptySmashDashBox();
             slammed = true;
             jumped = true;
         }
@@ -157,23 +156,17 @@ public class BearController : MonoBehaviour {
 	{
 		rbody = GetComponent<Rigidbody2D>( );
 		bsc = new BearStateController( );
-		SmashDashContainers = new Image[max_smashes_and_dashes];
-		
-		currentSmashDashNumber = max_smashes_and_dashes;
 
 		SmashDashHUDPrefab = Resources.LoadAssetAtPath<Image>("Assets/Resources/HUD/DashSmash_Container.prefab");
 
-		GameObject smashDashRegenSliderObj = GameObject.Find("Slider");
+		GameObject invulnSliderObj = GameObject.Find("Slider");
 
-		if (smashDashRegenSliderObj != null) {
-			smashDashRegenSlider = smashDashRegenSliderObj.GetComponent<Slider>();	
+		if (invulnSliderObj != null) {
+			invulnSlider = invulnSliderObj.GetComponent<Slider>();	
 
-			smashDashRegenSlider.maxValue = maxRegenSliderAmount;
-			smashDashRegenSlider.value = maxRegenSliderAmount;
+			invulnSlider.maxValue = maxInvulnSliderAmount;
+			invulnSlider.value = 0;
 		}
-
-		SmashDashMeterContainer = GameObject.Find("DashSmash_Meter");
-
 		
 		initialize_HUD ();
 		
@@ -198,6 +191,8 @@ public class BearController : MonoBehaviour {
 
         if( other.gameObject.tag == "Ground" )
         {
+			jumpElligible = true; //if you jump, you may jump again after contacting the ground
+
             bsc.ChangeState( BearState.IDLE );
 
             rbody.velocity = rbody.velocity + new Vector2( saved_forward_vel, 0 );
@@ -213,10 +208,10 @@ public class BearController : MonoBehaviour {
 
 	void OnCollisionExit2D (Collision2D other)
 	{
-		if (other.gameObject.tag == "Ground")
+		/*if (other.gameObject.tag == "Ground")
 		{
 			Grounded = false;
-		}
+		}*/
 		if (other.gameObject.tag == "Rock")
 		{
 			Grounded = false;
@@ -265,14 +260,17 @@ public class BearController : MonoBehaviour {
 			current_accelleration = min_accelleration;
 		}
 
-		if (rbody.velocity.magnitude < min_speed) {
+		if (currentSpeed < min_speed) {
 			rbody.velocity = rbody.velocity + (rbody.velocity.normalized * min_speed);
 		} else{
 			rbody.velocity = rbody.velocity + (rbody.velocity.normalized * current_accelleration);
 		}
 
 		//Clamp the maximum velocity of the bear to max_speed
-		rbody.velocity = Vector3.ClampMagnitude( rbody.velocity, max_speed );
+		//invulnBear means youre camping to max
+		if ((rbody.velocity.magnitude > max_speed) || bearInvuln) {
+			rbody.velocity = Vector3.ClampMagnitude (rbody.velocity, max_speed);
+		}
 
 
 	}
@@ -284,78 +282,63 @@ public class BearController : MonoBehaviour {
 
 			GUI.Box (new Rect (0,0,Screen.width,Screen.height), "<color=red><size=80>" + deathMessage + "</size></color>");
 		}
+
+		if (bearInvuln) {
+			GUI.Box (new Rect (0,0,150,30), "<color=yellow><size=12>INVULNERABEAR</size></color>");
+		}
 	}
 
 	private void initialize_HUD()
 	{
 		float smashHudElementWidth = SmashDashHUDPrefab.rectTransform.sizeDelta.x;
 
-		for (int i = 1; i <= max_smashes_and_dashes; i++) {
-			//instantiate yellow HUD box for each smash/dash in the max number
-			//x pos = i*length + (i-1)*3
-
-			Image SmashDashHudImage = Instantiate(SmashDashHUDPrefab) as Image;
-			SmashDashHudImage.rectTransform.position = new Vector3 (smashHudElementWidth*(i-1) + (i-1)*3,0,0);
-
-			SmashDashHudImage.rectTransform.parent = SmashDashMeterContainer.transform;
-
-			SmashDashContainers[i-1] = SmashDashHudImage;
-
-		}
-
-		for (int i = 0; i < max_smashes_and_dashes; i++) {
-			SmashDashContainers[i].transform.localScale = new Vector3(1,1,1); //HACK
-		}
-
-		InvokeRepeating ("regenSmashDashBarConstant", 0f, 0.2f);
+		InvokeRepeating ("regenInvulnSliderConstant", 0f, 0.2f);
 
 	}
 
-	private void regenSmashDashBarConstant(){
-
-		if (smashDashRegenSlider.value + smash_bar_regen_rate > maxRegenSliderAmount) {
-			smashDashRegenSlider.value = smashDashRegenSlider.value + smash_bar_regen_rate - maxRegenSliderAmount;
-			fillSmashDashBox ();
+	private void toggleInvulnerabear()
+	{
+		if (bearInvuln) {
+			bearInvuln = false;
+			max_speed = max_speed -= 10;
+			min_speed = min_speed -= 10;
 		} else {
-			smashDashRegenSlider.value += smash_bar_regen_rate; 
+			bearInvuln = true;
+			max_speed = max_speed += 10;
+			min_speed = min_speed += 10;
 		}
+	}
 
+	private void regenInvulnSliderConstant(){
+
+		if (bearInvuln) {
+			invulnSlider.value -= invuln_bar_regen_rate/2;
+
+			if(invulnSlider.value <= 0){
+				toggleInvulnerabear();
+			}
+
+		} else {
+			if (invulnSlider.value + invuln_bar_regen_rate > maxInvulnSliderAmount) {
+				//smashDashRegenSlider.value = smashDashRegenSlider.value + smash_bar_regen_rate - maxRegenSliderAmount;
+				//fillSmashDashBox ();
+				toggleInvulnerabear();
+			} else {
+				invulnSlider.value += invuln_bar_regen_rate; 
+			}
+		}
 
 	}
 
-	public void regenSmashDashBar(float refillAmount){
+	public void decreaseInvulnSlider(float decreaseAmount){
 
-		if (smashDashRegenSlider.value + refillAmount > maxRegenSliderAmount) {
-			smashDashRegenSlider.value = smashDashRegenSlider.value + refillAmount - maxRegenSliderAmount;
-			fillSmashDashBox ();
+		if (invulnSlider.value - decreaseAmount < 0) {
+			invulnSlider.value = 0;
 		} else {
-			smashDashRegenSlider.value += refillAmount; 
+			invulnSlider.value -= decreaseAmount; 
 		}
 		
 		
-	}
-
-	private void fillSmashDashBox()
-	{
-		if (currentSmashDashNumber < max_smashes_and_dashes) {
-			Image SmashDashContainerToFill = SmashDashContainers [currentSmashDashNumber];
-
-			SmashDashContainerToFill.color = HUDColor;
-
-			currentSmashDashNumber += 1;
-		}
-	}
-
-	private void emptySmashDashBox()
-	{
-
-		if (currentSmashDashNumber > 0) {
-			Image SmashDashContainerToEmpty = SmashDashContainers[currentSmashDashNumber-1];
-
-			SmashDashContainerToEmpty.color = Color.clear;
-
-			currentSmashDashNumber -= 1;
-		}
 	}
 
 	private void HandleEndGame(GameCamera gameCam)
@@ -401,7 +384,7 @@ public class BearController : MonoBehaviour {
 	
 		if ( other.tag == "tree" && (bsc.current_state == BearState.DASHING || bsc.current_state == BearState.SLAMMING))
 		{
-			regenSmashDashBar(smash_bar_tree_bonus);
+
 		}
 		else
 		{
@@ -410,8 +393,9 @@ public class BearController : MonoBehaviour {
 				//max_speed = collision_speed;
 				other.gameObject.transform.Rotate (0,0,-4);
 				//StartCoroutine(SpeedLimitCooldown());
+				decreaseInvulnSlider(invuln_bar_tree_penalty);
 				current_accelleration += tree_decell_amount;
-				if(rbody.velocity.magnitude + tree_decell_amount > min_speed){
+				if(rbody.velocity.magnitude + tree_decell_amount > 0){
 					rbody.velocity = rbody.velocity + (rbody.velocity.normalized * tree_decell_amount);
 				} else {
 					rbody.velocity = rbody.velocity + (rbody.velocity.normalized * min_speed);
