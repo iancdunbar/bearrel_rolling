@@ -21,9 +21,11 @@ public class ImpactEmittor : MonoBehaviour {
 	private float RotationClamp;
 	private bool slamming = false;
 	private bool jumping = false;
+	private bool bearInvuln = false;
 	public ParticleSystem slam;
 	public ParticleSystem slamImpact;
 	public ParticleSystem dash;
+	public ParticleSystem invulnerable;
 	private BearController bc;
 	private Vector2 bearpos;
 	private Vector2 bearspeed;
@@ -98,6 +100,15 @@ public class ImpactEmittor : MonoBehaviour {
 		{
             if( slam.isPlaying )
 			 slam.Stop ();
+		}
+
+		if (bc.bearInvuln) {
+			if( invulnerable.isStopped )
+				invulnerable.Play ();
+		}else
+		{
+			if( invulnerable.isPlaying )
+				invulnerable.Stop ();
 		}
 		
 		
