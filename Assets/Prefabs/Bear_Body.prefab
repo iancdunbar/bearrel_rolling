@@ -292,7 +292,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -58, y: 43.8569984, z: -.100000001}
+  m_LocalPosition: {x: -58, y: 46.3800011, z: -.100000001}
   m_LocalScale: {x: .268337637, y: .238066137, z: .268337727}
   m_Children:
   - {fileID: 428116}
@@ -872,7 +872,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 100010}
   m_Mass: 30
   m_LinearDrag: 0
-  m_AngularDrag: 10
+  m_AngularDrag: 4
   m_GravityScale: 8
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -979,7 +979,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 5.53999996
+  m_Radius: 4
 --- !u!96 &9624364
 TrailRenderer:
   m_ObjectHideFlags: 1
@@ -1143,23 +1143,25 @@ MonoBehaviour:
   currentSpeed: 0
   currentVelocity: {x: 0, y: 0}
   jump_strength: 1500
-  dash_strength: 800
-  jump_distance: 500
-  max_speed: 35
-  min_speed: 0
+  dash_strength: 2500
+  jump_distance: 1600
+  max_speed: 33
+  min_speed: 5
   min_accelleration: 0
   collision_speed: 10
-  tree_decell_amount: -2
-  max_smashes_and_dashes: 5
-  smash_bar_regen_rate: 2
-  smash_bar_tree_bonus: 30
+  tree_decell_amount: -15
+  invuln_bar_regen_rate: 4
+  invuln_bar_tree_penalty: 10
   slow_duration: .200000003
+  invulnDuration: 5
   boostSpeed: 4000
   slam_speed: 1e+10
   normal: {x: 0, y: 0}
   dash_cooldown: 1
   mCamera: {fileID: 0}
   knockback: -100
+  jumpElligible: 1
+  bearInvuln: 0
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1182,6 +1184,7 @@ MonoBehaviour:
   slam: {fileID: 0}
   slamImpact: {fileID: 19800000, guid: 25684edf9351f434b8279ac735de9f64, type: 2}
   dash: {fileID: 19832758}
+  invulnerable: {fileID: 0}
   anim: {fileID: 0}
   Trails: []
   resetTime: 9.99999975e-06
