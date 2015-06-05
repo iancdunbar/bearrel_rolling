@@ -188,7 +188,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04e393c960f982a42a8e1f03075c2275, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  avalance_speed: 22
+  PathOverride: 0
+  PathOverrideTarget: {x: 0, y: 0, z: 0}
+  avalance_speed: 25
   snow: {fileID: 19800000, guid: 76ce9212c89c449699171245450aed11, type: 2}
   can_blood: 1
 --- !u!198 &19800000
