@@ -30,8 +30,8 @@ GameObject:
   - 23: {fileID: 2379638}
   - 95: {fileID: 9523852}
   - 114: {fileID: 11456382}
-  - 68: {fileID: 6813550}
-  - 68: {fileID: 6886416}
+  - 68: {fileID: 6848380}
+  - 68: {fileID: 6825290}
   m_Layer: 0
   m_Name: 3DSlopeCrevasse
   m_TagString: Untagged
@@ -59,7 +59,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 102116}
   m_LocalRotation: {x: 0, y: 0, z: -.038634032, w: .999253452}
-  m_LocalPosition: {x: 62.2000008, y: -102, z: -3.79999995}
+  m_LocalPosition: {x: 71, y: -102.699997, z: -3.79999995}
   m_LocalScale: {x: 23.5231438, y: 56.9639397, z: 9.22179985}
   m_Children: []
   m_Father: {fileID: 451712}
@@ -138,8 +138,22 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
---- !u!68 &6813550
+  m_Size: {x: 1, y: .699999988}
+--- !u!68 &6825290
+EdgeCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193486}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: 77.7788925, y: -58.7066116}
+  - {x: 90.5755463, y: -72.0516129}
+--- !u!68 &6848380
 EdgeCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -156,20 +170,6 @@ EdgeCollider2D:
   - {x: 55.3649101, y: -46.7978897}
   - {x: 60.7395782, y: -47.4757767}
   - {x: 64.5207977, y: -46.6666069}
---- !u!68 &6886416
-EdgeCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 193486}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  m_Points:
-  - {x: 72.2241592, y: -59.0749626}
-  - {x: 85.0208054, y: -72.4199677}
 --- !u!95 &9523852
 Animator:
   serializedVersion: 3
@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   start_point: {x: 0, y: 0, z: 0}
-  end_point: {x: 85.0208054, y: -72.4199677, z: -.509504974}
+  end_point: {x: 90.5755463, y: -72.0516129, z: -.509504974}
   points_init: 1
   collisionMesh: {fileID: 0}
   getStartEndFromColors: 1
