@@ -93,7 +93,7 @@ public class TreeGib : MonoBehaviour {
 				float randomTrajectoryAngle = Random.Range(-65, 65);
 				Vector2 gibTrajectory = Vector2Extension.Rotate(currentBearVelocity, randomTrajectoryAngle);
 
-				gibspawn.GetComponent<Rigidbody2D>().AddForce(gibTrajectory * 20, ForceMode2D.Impulse);
+				gibspawn.GetComponent<Rigidbody2D>().AddForce(gibTrajectory * 2);
 				Destroy(gameObject);
 			}
 		}
