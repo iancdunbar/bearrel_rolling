@@ -25,10 +25,10 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 	//Asset Paths from Resource Folder
 
 	//**Rocks
-	private const string rock_prefab_path = "Assets/Resources/Terrain Assets/Rocks/Rock_Prefab.prefab";
+	private const string rock_prefab_path = "Terrain Assets/Rocks/Rock_Prefab";
 
 	//**Trees
-	private const string tree_prefab_path = "Assets/Resources/Terrain Assets/trees/tree_prefab.prefab";
+	private const string tree_prefab_path = "Terrain Assets/trees/tree_prefab";
 	private const string tree_sprites_path = "Terrain Assets/trees/sprites";
 
     /////////////////////////////////////////////
@@ -323,8 +323,8 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 		active_rocks = new Queue<GameObject>();
 		active_trees = new Queue<GameObject>();
 
-		tree_prefab = Resources.LoadAssetAtPath<GameObject>(tree_prefab_path);
-		rock_prefab = Resources.LoadAssetAtPath<GameObject>(rock_prefab_path);
+		tree_prefab = Resources.Load<GameObject>(tree_prefab_path);
+		rock_prefab = Resources.Load<GameObject>(rock_prefab_path);
     }
 
 	// Use this for initialization

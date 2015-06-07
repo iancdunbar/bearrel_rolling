@@ -157,7 +157,7 @@ public class BearController : MonoBehaviour {
 		rbody = GetComponent<Rigidbody2D>( );
 		bsc = new BearStateController( );
 
-		SmashDashHUDPrefab = Resources.LoadAssetAtPath<Image>("Assets/Resources/HUD/DashSmash_Container.prefab");
+		SmashDashHUDPrefab = Resources.Load<Image>("HUD/DashSmash_Container");
 
 		GameObject invulnSliderObj = GameObject.Find("Slider");
 
