@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &103280
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 429510}
+  - 212: {fileID: 21203726}
+  m_Layer: 0
+  m_Name: Cloud8
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &132654
 GameObject:
   m_ObjectHideFlags: 0
@@ -11,8 +27,8 @@ GameObject:
   - 33: {fileID: 3319112}
   - 23: {fileID: 2357288}
   - 95: {fileID: 9598060}
-  - 114: {fileID: 11434884}
-  - 68: {fileID: 6849066}
+  - 114: {fileID: 11424630}
+  - 68: {fileID: 6824246}
   m_Layer: 0
   m_Name: 3DSlope03
   m_TagString: Ground
@@ -29,8 +45,21 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
-  m_Children: []
+  m_Children:
+  - {fileID: 429510}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!4 &429510
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 103280}
+  m_LocalRotation: {x: 0, y: 0, z: .16813305, w: .985764384}
+  m_LocalPosition: {x: 49.7999992, y: -21.2999992, z: 41.7000008}
+  m_LocalScale: {x: 6.13135719, y: 6.1313591, z: 6.1313591}
+  m_Children: []
+  m_Father: {fileID: 423470}
   m_RootOrder: 0
 --- !u!23 &2357288
 MeshRenderer:
@@ -62,8 +91,8 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132654}
-  m_Mesh: {fileID: 4300002, guid: af9a425edf68646c0b3848486455fa56, type: 3}
---- !u!68 &6849066
+  m_Mesh: {fileID: 4300000, guid: af9a425edf68646c0b3848486455fa56, type: 3}
+--- !u!68 &6824246
 EdgeCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -73,7 +102,7 @@ EdgeCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: -.100000001}
+  m_Offset: {x: 0, y: 0}
   m_Points:
   - {x: 0, y: 0}
   - {x: 13.8720207, y: -14.1308985}
@@ -103,7 +132,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11434884
+--- !u!114 &11424630
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -115,10 +144,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   start_point: {x: 0, y: 0, z: 0}
-  end_point: {x: 87.0071106, y: -52.6468658, z: -.270567209}
+  end_point: {x: 87.0071106, y: -52.6468658, z: 0}
   points_init: 1
-  collisionMesh: {fileID: 0}
+  collisionMesh: {fileID: 3319112}
   getStartEndFromColors: 1
+--- !u!212 &21203726
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 103280}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 7ffe136e33fae4f6ab43e921b0b4ca5a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: .243137255}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

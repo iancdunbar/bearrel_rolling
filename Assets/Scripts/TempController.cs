@@ -147,7 +147,7 @@ public class TempController : MonoBehaviour {
         string data = velocity_follow_value + "," + braking_force_value + "," + shear_force_value + "," + forward_force_value  + "," +
                         bearrel_roll_value + "," + air_steer_value + "," + air_yaw_force + "," + air_velocity_follow;
 
-        File.WriteAllText( filename, data );
+//        File.WriteAllText( filename, data );
 #endif
     }
 

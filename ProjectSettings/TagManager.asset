@@ -13,6 +13,7 @@ TagManager:
   - treeGib
   - tree_gib
   - Rock
+  - Cabin
   layers:
   - Default
   - TransparentFX

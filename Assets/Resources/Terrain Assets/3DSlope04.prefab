@@ -29,9 +29,9 @@ GameObject:
   - 33: {fileID: 3312834}
   - 23: {fileID: 2370674}
   - 95: {fileID: 9501616}
-  - 114: {fileID: 11445304}
-  - 68: {fileID: 6839894}
-  - 68: {fileID: 6892792}
+  - 114: {fileID: 11437024}
+  - 68: {fileID: 6851836}
+  - 68: {fileID: 6851894}
   m_Layer: 0
   m_Name: 3DSlope04
   m_TagString: Ground
@@ -139,7 +139,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: .5}
---- !u!68 &6839894
+--- !u!68 &6851836
 EdgeCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -149,7 +149,7 @@ EdgeCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: -.100000001}
+  m_Offset: {x: 0, y: 0}
   m_Points:
   - {x: 0, y: 0}
   - {x: 13.8720207, y: -14.1308985}
@@ -158,7 +158,7 @@ EdgeCollider2D:
   - {x: 40.3182869, y: -32.2577934}
   - {x: 41.5134125, y: -34.8353958}
   - {x: 42.2319183, y: -49.3437843}
---- !u!68 &6892792
+--- !u!68 &6851894
 EdgeCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -168,7 +168,7 @@ EdgeCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: -.100000001}
+  m_Offset: {x: 0, y: 0}
   m_Points:
   - {x: 43.8647194, y: -45.8965034}
   - {x: 44.1547928, y: -36.3826637}
@@ -191,7 +191,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11445304
+--- !u!114 &11437024
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -203,9 +203,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   start_point: {x: 0, y: 0, z: 0}
-  end_point: {x: 65.487999, y: -54.6353645, z: -.270567209}
+  end_point: {x: 65.487999, y: -54.6353645, z: 0}
   points_init: 1
-  collisionMesh: {fileID: 0}
+  collisionMesh: {fileID: 3312834}
   getStartEndFromColors: 1
 --- !u!1001 &100100000
 Prefab:

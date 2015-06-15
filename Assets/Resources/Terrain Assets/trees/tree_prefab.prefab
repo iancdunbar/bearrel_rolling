@@ -293,8 +293,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.28999996, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 5.48999977, z: 0}
+  m_LocalScale: {x: 1.16667926, y: 1.46184385, z: 1.16667914}
   m_Children:
   - {fileID: 438872}
   - {fileID: 455746}
@@ -968,14 +968,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gibs:
-  - {fileID: 177270, guid: 58b29641ed8a14518bf19e166b6c6659, type: 2}
-  - {fileID: 176620, guid: 58b29641ed8a14518bf19e166b6c6659, type: 2}
-  - {fileID: 169660, guid: 58b29641ed8a14518bf19e166b6c6659, type: 2}
-  - {fileID: 172246, guid: 58b29641ed8a14518bf19e166b6c6659, type: 2}
-  - {fileID: 109232, guid: 58b29641ed8a14518bf19e166b6c6659, type: 2}
-  - {fileID: 124090, guid: 58b29641ed8a14518bf19e166b6c6659, type: 2}
-  - {fileID: 106126, guid: 58b29641ed8a14518bf19e166b6c6659, type: 2}
-  - {fileID: 179352, guid: 58b29641ed8a14518bf19e166b6c6659, type: 2}
+  - {fileID: 144304, guid: 58b29641ed8a14518bf19e166b6c6659, type: 2}
   explosionForce: 5
   spawnRadius: 1
   breakforce: 10

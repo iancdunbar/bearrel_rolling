@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
@@ -74,6 +74,9 @@ public class BearController : MonoBehaviour {
 	public float knockback;
 	public bool jumpElligible = true;
 	public bool bearInvuln = false;
+	private Component[] CabinBoards;
+	private Component[] Destroyers;
+
 
     /////////////////////////////////////////////
 
@@ -402,6 +405,16 @@ public class BearController : MonoBehaviour {
 				}
 			}
 
+		}
+		if (other.tag == "Cabin"){
+			CabinBoards = other.GetComponentsInChildren<Rigidbody>();
+			 foreach(Rigidbody board in CabinBoards){
+				board.isKinematic = false;
+			}
+			Destroyers = other.GetComponentsInChildren<TimedObjectDestructor>();
+			foreach(TimedObjectDestructor destroyer in Destroyers){
+				destroyer.enabled = true;
+			}
 		}
 		if(other.tag=="Rock")
 		{

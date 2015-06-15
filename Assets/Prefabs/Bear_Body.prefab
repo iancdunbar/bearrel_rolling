@@ -180,6 +180,7 @@ GameObject:
   - 4: {fileID: 410564}
   - 33: {fileID: 3327828}
   - 23: {fileID: 2399846}
+  - 135: {fileID: 13520332}
   m_Layer: 0
   m_Name: Bear_Body
   m_TagString: Untagged
@@ -260,7 +261,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -56.1500015, y: 46.3800011, z: -.100000001}
+  m_LocalPosition: {x: -58, y: 46.3800011, z: -.100000001}
   m_LocalScale: {x: .268337637, y: .238066137, z: .268337727}
   m_Children:
   - {fileID: 428116}
@@ -842,7 +843,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 164304}
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 1
@@ -946,7 +947,7 @@ TrailRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Time: .00999999978
+  m_Time: 1
   m_StartWidth: 1
   m_EndWidth: 0
   m_Colors:
@@ -994,7 +995,7 @@ MonoBehaviour:
   isSloped: 0
   currentSpeed: 0
   currentVelocity: {x: 0, y: 0}
-  jump_strength: 1500
+  jump_strength: 2000
   dash_strength: 2500
   jump_distance: 1600
   max_speed: 33
@@ -1040,6 +1041,18 @@ MonoBehaviour:
   anim: {fileID: 0}
   Trails: []
   resetTime: 9.99999975e-06
+--- !u!135 &13520332
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 166052}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 6.01999998
+  m_Center: {x: -.330045491, y: -.209213495, z: 0}
 --- !u!198 &19832758
 ParticleSystem:
   m_ObjectHideFlags: 1

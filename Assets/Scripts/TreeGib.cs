@@ -86,15 +86,17 @@ public class TreeGib : MonoBehaviour {
 			{
 				Instantiate( snow, transform.position, Quaternion.identity );
 				Instantiate( branches, transform.position, Quaternion.identity);
+				Destroy(gameObject);
 				SimpleAudioController.PlayCrashEmote();
 
-				gibspawn = (GameObject)Instantiate( gib, transform.position + Random.insideUnitSphere*spawnRadius, transform.rotation * Quaternion.Euler(0,0,Random.Range(0,360)));
-
-				float randomTrajectoryAngle = Random.Range(-65, 65);
+				gibspawn = (GameObject)Instantiate( gib, transform.position + Random.insideUnitSphere*spawnRadius, transform.rotation * Quaternion.Euler(0,0,Random.Range(0,0)));
+				//
+				float randomTrajectoryAngle = 0;
+				//Random.Range(0, 10);
 				Vector2 gibTrajectory = Vector2Extension.Rotate(currentBearVelocity, randomTrajectoryAngle);
 
 				gibspawn.GetComponent<Rigidbody2D>().AddForce(gibTrajectory * 2);
-				Destroy(gameObject);
+
 			}
 		}
 		if (other.tag == "Bear" && dashing == false && slamming == false)

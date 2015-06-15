@@ -1,37 +1,17 @@
 fileFormatVersion: 2
-guid: ba2d0d196f0f1400da66fd6bdf64fca6
-timeCreated: 1429542001
+guid: 855d956b670e649d89dfaee45b45164d
+timeCreated: 1434381594
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: pasted__polySurface2
-    100004: group
-    100006: pasted__polySurface3
-    100008: pasted__polySurface4
-    100010: polySurface1
-    100012: transform1
-    100014: transform2
-    400000: //RootNode
-    400002: pasted__polySurface2
-    400004: group
-    400006: pasted__polySurface3
-    400008: pasted__polySurface4
-    400010: polySurface1
-    400012: transform1
-    400014: transform2
-    2300000: pasted__polySurface2
-    2300002: polySurface1
-    2300004: //RootNode
-    3300000: pasted__polySurface2
-    3300002: polySurface1
-    3300004: //RootNode
-    4300000: pasted__polySurface2
-    4300002: polySurface1
-    4300004: Slope02
-    4300006: Slope04
-    9500000: //RootNode
+    100000: pPyramid1
+    100002: //RootNode
+    400000: pPyramid1
+    400002: //RootNode
+    2300000: pPyramid1
+    3300000: pPyramid1
+    4300000: pPyramid1
   materials:
     importMaterials: 1
     materialName: 0
@@ -58,7 +38,7 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 0
+    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     secondaryUVAngleDistortion: 8
@@ -85,7 +65,7 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
