@@ -76,7 +76,7 @@ public class BearInputController : MonoBehaviour {
         {
             MessageDispatch.BroadcastMessage( "OnSwipeDown" );
         }
-		if (Input.GetKeyDown( KeyCode.D ) )
+		if (Input.GetKeyDown( KeyCode.D ) || Input.GetKeyDown (KeyCode.Mouse0))
 		{
 			MessageDispatch.BroadcastMessage( "OnTap");
 		}
