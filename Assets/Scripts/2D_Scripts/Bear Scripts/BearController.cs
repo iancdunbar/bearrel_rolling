@@ -27,6 +27,8 @@ public class BearController : MonoBehaviour {
 	private static int random = Random.Range(0, deathMessages.Length);
 	private static string deathMessage = deathMessages[random];
 
+	public int currentScore = 0;
+
     /////////////////////////////////////////////
     // Inspector Variables
     /////////////////////////////////////////////
@@ -286,8 +288,10 @@ public class BearController : MonoBehaviour {
 			GUI.Box (new Rect (0,0,Screen.width,Screen.height), "<color=red><size=80>" + deathMessage + "</size></color>");
 		}
 
+		GUI.Box (new Rect (0,0,30,30), "<color=yellow><size=12>" + currentScore + "</size></color>");
+
 		if (bearInvuln) {
-			GUI.Box (new Rect (0,0,150,30), "<color=yellow><size=12>INVULNERABEAR</size></color>");
+			GUI.Box (new Rect (30,0,150,30), "<color=yellow><size=12>INVULNERABEAR</size></color>");
 		}
 	}
 
@@ -333,15 +337,19 @@ public class BearController : MonoBehaviour {
 
 	}
 
-	public void decreaseInvulnSlider(float decreaseAmount){
+	public void ChangeInvulnSliderValue(float changeAmount){
 
-		if (invulnSlider.value - decreaseAmount < 0) {
+		if (invulnSlider.value + changeAmount < 0) {
 			invulnSlider.value = 0;
 		} else {
-			invulnSlider.value -= decreaseAmount; 
+			invulnSlider.value += changeAmount; 
 		}
 		
 		
+	}
+
+	public void incrementScore(){
+		this.currentScore += 1;
 	}
 
 	private void HandleEndGame(GameCamera gameCam)
@@ -396,7 +404,8 @@ public class BearController : MonoBehaviour {
 				//max_speed = collision_speed;
 				other.gameObject.transform.Rotate (0,0,-4);
 				//StartCoroutine(SpeedLimitCooldown());
-				decreaseInvulnSlider(invuln_bar_tree_penalty);
+				ChangeInvulnSliderValue(-invuln_bar_tree_penalty);
+
 				current_accelleration += tree_decell_amount;
 				if(rbody.velocity.magnitude + tree_decell_amount > 0){
 					rbody.velocity = rbody.velocity + (rbody.velocity.normalized * tree_decell_amount);

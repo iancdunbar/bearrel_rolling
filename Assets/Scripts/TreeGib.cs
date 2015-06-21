@@ -98,6 +98,12 @@ public class TreeGib : MonoBehaviour {
 				gibspawn.GetComponent<Rigidbody2D>().AddForce(gibTrajectory * 2);
 
 			}
+
+			bc.incrementScore();
+
+			if(!bearInvuln){
+				bc.ChangeInvulnSliderValue(bc.invuln_bar_tree_penalty);
+			}
 		}
 		if (other.tag == "Bear" && dashing == false && slamming == false)
 		{
@@ -108,9 +114,10 @@ public class TreeGib : MonoBehaviour {
 		}
 
 	}
-		
 
 }
+
+
 
 public static class Vector2Extension {
 
