@@ -92,10 +92,6 @@ Material:
         second: 0
       data:
         first:
-          name: _InvFade
-        second: 1
-      data:
-        first:
           name: _Parallax
         second: .0199999996
       data:
@@ -125,7 +121,7 @@ Material:
       data:
         first:
           name: _EmissionScaleUI
-        second: .300000012
+        second: .230000004
       data:
         first:
           name: _Mode
@@ -134,23 +130,27 @@ Material:
         first:
           name: _Metallic
         second: 0
+      data:
+        first:
+          name: _InvFade
+        second: 1
     m_Colors:
       data:
         first:
           name: _EmissionColor
-        second: {r: .300000012, g: .300000012, b: .300000012, a: .300000012}
+        second: {r: .230000004, g: .230000004, b: .230000004, a: .230000004}
       data:
         first:
           name: _Color
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
-          name: _TintColor
-        second: {r: .461538434, g: .461538434, b: .461538434, a: .286274523}
-      data:
-        first:
           name: _EmissionColorUI
         second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _TintColor
+        second: {r: .461538434, g: .461538434, b: .461538434, a: .286274523}
 --- !u!1002 &2100001
 EditorExtensionImpl:
   serializedVersion: 6

@@ -20,10 +20,10 @@ RenderSettings:
   m_FogDensity: .00120000006
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: .0420090742, g: .303624362, b: .816176474, a: 1}
+  m_AmbientSkyColor: {r: .359104663, g: .441504717, b: .602941155, a: 1}
   m_AmbientEquatorColor: {r: .200000003, g: .200000003, b: .200000003, a: 1}
   m_AmbientGroundColor: {r: .200000003, g: .200000003, b: .200000003, a: 1}
-  m_AmbientIntensity: .709999979
+  m_AmbientIntensity: .730000019
   m_AmbientMode: 3
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: .5
@@ -367,10 +367,6 @@ Prefab:
     - target: {fileID: 452046, guid: 868b54ec7b1fe9646a2fad647531a18f, type: 2}
       propertyPath: m_RootOrder
       value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 11452048, guid: 868b54ec7b1fe9646a2fad647531a18f, type: 2}
-      propertyPath: avalance_speed
-      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 868b54ec7b1fe9646a2fad647531a18f, type: 2}
@@ -785,22 +781,6 @@ Prefab:
     - target: {fileID: 447322, guid: e79efc938426148a889dc250e4ef5a7b, type: 2}
       propertyPath: m_RootOrder
       value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 489678, guid: e79efc938426148a889dc250e4ef5a7b, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: .580204368
-      objectReference: {fileID: 0}
-    - target: {fileID: 489678, guid: e79efc938426148a889dc250e4ef5a7b, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: .367440701
-      objectReference: {fileID: 0}
-    - target: {fileID: 489678, guid: e79efc938426148a889dc250e4ef5a7b, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -.175146103
-      objectReference: {fileID: 0}
-    - target: {fileID: 489678, guid: e79efc938426148a889dc250e4ef5a7b, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: .70546025
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e79efc938426148a889dc250e4ef5a7b, type: 2}

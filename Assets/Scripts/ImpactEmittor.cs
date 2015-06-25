@@ -12,8 +12,8 @@ public class ImpactEmittor : MonoBehaviour {
 	public bool grounded = false;
 	public ParticleSystem ContactEmitter;
 	public ParticleSystem MovingFastEmitter;
-	private bool movingfast = false;
-	private bool reallyfast = false;
+	public bool movingfast = false;
+	public bool reallyfast = false;
 	public float MovingFastSpeed;
 	public Vector2 ReallyFastSpeed;
 	private float ContactClamp;
@@ -137,23 +137,17 @@ public class ImpactEmittor : MonoBehaviour {
 		
 		//CONTACT EMITTER (Rooster Tail) ////// 
 		
-		//Emit particles if the bear is touching the ground while moving fast
-		if(grounded == true && movingfast == true)
+		//Emit particles if the bear is touching the ground
+		if(grounded == true)
         {
-            if( ContactEmitter.isStopped )
+            if( ContactEmitter.isPaused )
 			    ContactEmitter.Play();
 		}
-		else
+		if (grounded == false)
         { 
-            if( ContactEmitter.isPlaying )
-			    ContactEmitter.Stop();	
+			ContactEmitter.Pause ();	
 		}
-		//The contact emitter shouldn't be running if the bear moves off of the terrain
-		if (jumping == true)
-		{
-            if( ContactEmitter.isPlaying )
-			ContactEmitter.Stop ();
-		}
+
 		
 		
 		//FAST MOVEMENT //
@@ -173,7 +167,7 @@ public class ImpactEmittor : MonoBehaviour {
 		
 		if (rbdy.velocity.x >= ReallyFastSpeed.x && rbdy.velocity.y <= ReallyFastSpeed.y){
 			reallyfast = true;
-			
+			movingfast = true;
 			//if Bear is moving REALLY FAST zoom the camera out and give the bear a slight lead
 			mCamera.GetComponent<GameCamera>().offset = Vector3.Slerp (mCamera.GetComponent<GameCamera>().offset, mCamera.GetComponent<GameCamera>().FastOffset, 0.008f);
 			
@@ -182,6 +176,7 @@ public class ImpactEmittor : MonoBehaviour {
 			
 			mCamera.GetComponent<GameCamera>().offset = Vector3.Slerp (mCamera.GetComponent<GameCamera>().offset, mCamera.GetComponent<GameCamera>().MovingOffset, 0.008f);
 			reallyfast = false;
+
 			
 		}
 		
@@ -190,7 +185,6 @@ public class ImpactEmittor : MonoBehaviour {
 		if (reallyfast == true)
 		{
 			Trails = GetComponentsInChildren<TrailRenderer>();
-			
 			foreach (TrailRenderer Trail in Trails) 
 			{
 				Trail.enabled = true;
@@ -248,6 +242,9 @@ public class ImpactEmittor : MonoBehaviour {
 		{
 			Instantiate( Impact, transform.position, Quaternion.identity );
 			mCamera.GetComponent<GameCamera>().Shake = true;
+		}
+		if (other.tag =="Ground"){
+			grounded = true;
 		}
 		
 		can_blood = true;

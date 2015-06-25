@@ -37,17 +37,18 @@ public class BearInputController : MonoBehaviour {
     void Update( )
     {
 
-#if UNITY_ANDROID && !UNITY_EDITOR
+#if (UNITY_ANDROID || UNITY_IOS) && !UNITY_EDITOR
         // Process Touch Input
+
         if( Input.touchCount > 0 )
         {
             Touch curr = Input.GetTouch( 0 );
-
+			MessageDispatch.BroadcastMessage( "OnTap" );
             if( curr.phase == TouchPhase.Began )
             {
                 gesture_processed = false;
                 touch_begin = curr.position;
-            }
+			}
             else if( curr.phase == TouchPhase.Moved )
             {
                 if( !gesture_processed && curr.position.y - touch_begin.y > swipe_minimum )
@@ -60,13 +61,17 @@ public class BearInputController : MonoBehaviour {
                     gesture_processed = true;
                     MessageDispatch.BroadcastMessage( "OnSwipeDown" );
                 }
+
             }
             else if( curr.phase == TouchPhase.Ended )
             {
                 
             }
+
+
         }
 #else
+		
         if( Input.GetKeyDown( KeyCode.Space ) )
         {
             MessageDispatch.BroadcastMessage( "OnSwipeUp" );

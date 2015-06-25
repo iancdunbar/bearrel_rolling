@@ -991,11 +991,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 788fbfed3c6a3664588169e1cd6973a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentScore: 0
   dashed: 0
   isSloped: 0
   currentSpeed: 0
   currentVelocity: {x: 0, y: 0}
-  jump_strength: 2000
+  jump_strength: 20000
   dash_strength: 2500
   jump_distance: 1600
   max_speed: 33
@@ -1032,6 +1033,8 @@ MonoBehaviour:
   grounded: 0
   ContactEmitter: {fileID: 0}
   MovingFastEmitter: {fileID: 0}
+  movingfast: 0
+  reallyfast: 0
   MovingFastSpeed: 5
   ReallyFastSpeed: {x: 10, y: -10}
   slam: {fileID: 0}

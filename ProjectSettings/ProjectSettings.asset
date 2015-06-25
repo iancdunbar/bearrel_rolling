@@ -11,8 +11,8 @@ PlayerSettings:
   targetIOSGraphics: -1
   targetResolution: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: Bearrel Roll 64
+  companyName: Koloa Dog
+  productName: Bearell Roll
   cloudProjectId: 
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -75,7 +75,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleIdentifier: com.iancdunbar.bear
+  bundleIdentifier: com.koloadog.bear
   bundleVersion: 0.1
   preloadedAssets: []
   metroEnableIndependentInputSource: 0
@@ -102,16 +102,25 @@ PlayerSettings:
   uIStatusBarHidden: 0
   uIExitOnSuspend: 0
   uIStatusBarStyle: 0
-  iPhoneSplashScreen: {fileID: 0}
-  iPhoneHighResSplashScreen: {fileID: 0}
-  iPhoneTallHighResSplashScreen: {fileID: 0}
-  iPhone47inSplashScreen: {fileID: 0}
-  iPhone55inPortraitSplashScreen: {fileID: 0}
-  iPhone55inLandscapeSplashScreen: {fileID: 0}
-  iPadPortraitSplashScreen: {fileID: 0}
-  iPadHighResPortraitSplashScreen: {fileID: 0}
-  iPadLandscapeSplashScreen: {fileID: 0}
-  iPadHighResLandscapeSplashScreen: {fileID: 0}
+  iPhoneSplashScreen: {fileID: 2800000, guid: 724346abafb014d7a8e014d8a5fda3f4, type: 3}
+  iPhoneHighResSplashScreen: {fileID: 2800000, guid: 724346abafb014d7a8e014d8a5fda3f4,
+    type: 3}
+  iPhoneTallHighResSplashScreen: {fileID: 2800000, guid: 724346abafb014d7a8e014d8a5fda3f4,
+    type: 3}
+  iPhone47inSplashScreen: {fileID: 2800000, guid: 724346abafb014d7a8e014d8a5fda3f4,
+    type: 3}
+  iPhone55inPortraitSplashScreen: {fileID: 2800000, guid: 724346abafb014d7a8e014d8a5fda3f4,
+    type: 3}
+  iPhone55inLandscapeSplashScreen: {fileID: 2800000, guid: 724346abafb014d7a8e014d8a5fda3f4,
+    type: 3}
+  iPadPortraitSplashScreen: {fileID: 2800000, guid: 724346abafb014d7a8e014d8a5fda3f4,
+    type: 3}
+  iPadHighResPortraitSplashScreen: {fileID: 2800000, guid: 724346abafb014d7a8e014d8a5fda3f4,
+    type: 3}
+  iPadLandscapeSplashScreen: {fileID: 2800000, guid: 724346abafb014d7a8e014d8a5fda3f4,
+    type: 3}
+  iPadHighResLandscapeSplashScreen: {fileID: 2800000, guid: 724346abafb014d7a8e014d8a5fda3f4,
+    type: 3}
   iOSLaunchScreenType: 0
   iOSLaunchScreenPortrait: {fileID: 0}
   iOSLaunchScreenLandscape: {fileID: 0}
@@ -137,7 +146,7 @@ PlayerSettings:
   m_BuildTargetIcons:
   - m_BuildTarget: 
     m_Icons:
-    - m_Icon: {fileID: 0}
+    - m_Icon: {fileID: 2800000, guid: 03b012f5dac7c7349876644989eeafe9, type: 3}
       m_Size: 128
   - m_BuildTarget: Android
     m_Icons:
@@ -151,8 +160,29 @@ PlayerSettings:
       m_Size: 48
     - m_Icon: {fileID: 2800000, guid: 03b012f5dac7c7349876644989eeafe9, type: 3}
       m_Size: 36
+  - m_BuildTarget: iPhone
+    m_Icons:
+    - m_Icon: {fileID: 2800000, guid: 03b012f5dac7c7349876644989eeafe9, type: 3}
+      m_Size: 180
+    - m_Icon: {fileID: 0}
+      m_Size: 152
+    - m_Icon: {fileID: 0}
+      m_Size: 144
+    - m_Icon: {fileID: 0}
+      m_Size: 120
+    - m_Icon: {fileID: 0}
+      m_Size: 114
+    - m_Icon: {fileID: 0}
+      m_Size: 76
+    - m_Icon: {fileID: 0}
+      m_Size: 72
+    - m_Icon: {fileID: 0}
+      m_Size: 57
   m_BuildTargetBatching:
   - m_BuildTarget: Android
+    m_StaticBatching: 1
+    m_DynamicBatching: 1
+  - m_BuildTarget: iPhone
     m_StaticBatching: 1
     m_DynamicBatching: 1
   webPlayerTemplate: APPLICATION:Default
@@ -227,6 +257,7 @@ PlayerSettings:
   psp2NPTrophyPackPath: 
   psp2NPSupportGBMorGJP: 0
   psp2NPAgeRating: 12
+  psp2NPTitleDatPath: 
   psp2NPCommsID: 
   psp2NPCommunicationsID: 
   psp2NPCommsPassphrase: 
@@ -241,6 +272,7 @@ PlayerSettings:
   psp2PatchOriginalPackage: 
   psp2PackagePassword: 
   psp2KeystoneFile: 
+  psp2MemoryExpansionMode: 0
   psp2DRMType: 0
   psp2StorageType: 0
   psp2MediaCapacity: 0
@@ -376,6 +408,7 @@ PlayerSettings:
   XboxOnePackagingOverridePath: 
   XboxOneAppManifestOverridePath: 
   XboxOnePackageEncryption: 0
+  XboxOnePackageUpdateGranularity: 2
   XboxOneDescription: 
   XboxOneIsContentPackage: 0
   XboxOneEnableGPUVariability: 0
@@ -398,8 +431,8 @@ PlayerSettings:
   WebGL::audioCompressionFormat: 4
   WebGL::exceptionSupport: 0
   WebGL::memorySize: 256
-  iOS::Architecture: 2
-  iOS::ScriptingBackend: 0
+  iOS::Architecture: 0
+  iOS::ScriptingBackend: 1
   boolPropertyNames:
   - WebGL::dataCaching
   WebGL::dataCaching: 0
