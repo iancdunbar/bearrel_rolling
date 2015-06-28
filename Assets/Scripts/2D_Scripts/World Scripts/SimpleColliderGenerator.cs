@@ -97,7 +97,6 @@ public class SimpleColliderGenerator : MonoBehaviour {
 
     public void AddPoint( Vector3 target_pos )
     {
-        //Vector2 point = new Vector2( collider_ref.transform.position.x, collider_ref.transform.position.y ) + collider_ref.points[ collider_ref.pointCount - 1 ];
 
         Vector3 offset = target_pos - transform.position;
 
@@ -138,30 +137,6 @@ public class SimpleColliderGenerator : MonoBehaviour {
         collider_ref = this.GetComponent<EdgeCollider2D>( );
         tag = "Ground";
 	}
-
-    void Start( )
-    {
-	
-    }
-	
-	// Update is called once per frame
-	void Update () 
-    {
-
-
-	}
-
-    //void OnDrawGizmos( )
-    //{
-    //    Vector3 target_pos = Camera.main.ScreenToWorldPoint( Input.mousePosition );
-
-    //    if( collider_ref != null )
-    //    {
-    //        Vector2 point = new Vector2( collider_ref.transform.position.x, collider_ref.transform.position.y ) + collider_ref.points[ collider_ref.pointCount - 1 ];
-
-    //        Gizmos.DrawLine( new Vector3( point.x, point.y, 0 ), target_pos );
-    //    }
-    //}
 
     /////////////////////////////////////////////
 }

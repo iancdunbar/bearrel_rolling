@@ -11,7 +11,7 @@ public class BearController : MonoBehaviour {
 
     private Rigidbody2D rbody;
     private bool jumped;
-    private bool slammed;
+    
     private BearStateController bsc;
 	private bool deathBool = false;
 
@@ -34,6 +34,7 @@ public class BearController : MonoBehaviour {
     /////////////////////////////////////////////
 
     public bool dashed = false;
+	public bool slammed;
     public bool isSloped = false;
     public float currentSpeed;
     public Vector2 currentVelocity;
@@ -70,6 +71,7 @@ public class BearController : MonoBehaviour {
 	[SerializeField]
 	private Vector2 normal;
 	private bool Grounded;
+
 	public float dash_cooldown;
 	public GameObject mCamera;
 	private float current_accelleration;
@@ -117,7 +119,7 @@ public class BearController : MonoBehaviour {
 	//DASH//
 	public void OnTap( object unused )
 	{
-		if( !dashed && dashed == false) 
+		if( !dashed && dashed == false ) 
 		{
 			//Spin & increase velocity in both directions
 			rbody.AddTorque (-200, ForceMode2D.Impulse);
@@ -173,7 +175,7 @@ public class BearController : MonoBehaviour {
 			invulnSlider.value = 0;
 		}
 		
-		initialize_HUD ();
+		initialize_HUD( );
 		
 		jumped = true;
 	}
@@ -213,10 +215,6 @@ public class BearController : MonoBehaviour {
 
 	void OnCollisionExit2D (Collision2D other)
 	{
-		/*if (other.gameObject.tag == "Ground")
-		{
-			Grounded = false;
-		}*/
 		if (other.gameObject.tag == "Rock")
 		{
 			Grounded = false;
