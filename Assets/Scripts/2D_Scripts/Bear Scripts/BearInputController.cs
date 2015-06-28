@@ -19,6 +19,8 @@ public class BearInputController : MonoBehaviour {
 
     [SerializeField]
     private float swipe_minimum;
+	private float touchDuration;
+	private Touch touch;
 
     /////////////////////////////////////////////
 
@@ -43,7 +45,6 @@ public class BearInputController : MonoBehaviour {
         if( Input.touchCount > 0 )
         {
             Touch curr = Input.GetTouch( 0 );
-			MessageDispatch.BroadcastMessage( "OnTap" );
             if( curr.phase == TouchPhase.Began )
             {
                 gesture_processed = false;
@@ -65,11 +66,19 @@ public class BearInputController : MonoBehaviour {
             }
             else if( curr.phase == TouchPhase.Ended )
             {
-                
+
             }
-
-
-        }
+		}
+		if(Input.touchCount > 0){ //if there is any touch
+			touchDuration += Time.deltaTime;
+			touch = Input.GetTouch(0);
+			
+			if(touch.phase == TouchPhase.Ended && touchDuration < 0.3f) //making sure it only check the touch once && it was a short touch/tap and not a dragging.
+				StartCoroutine("singleOrDouble");
+		}
+		else
+			touchDuration = 0.0f;
+			
 #else
 		
         if( Input.GetKeyDown( KeyCode.Space ) )
@@ -88,6 +97,19 @@ public class BearInputController : MonoBehaviour {
 
 #endif
     }
+	IEnumerator singleOrDouble(){
+		yield return new WaitForSeconds(0.3f);
+		if(touch.tapCount == 1)
+			Debug.Log ("Single");
+		else if(touch.tapCount == 2){
+			//this coroutine has been called twice. We should stop the next one here otherwise we get two double tap
+			StopCoroutine("singleOrDouble");
+			Debug.Log ("Double");
+			MessageDispatch.BroadcastMessage( "OnTap" );
+
+		}
+	}
+
 
     /////////////////////////////////////////////
 }

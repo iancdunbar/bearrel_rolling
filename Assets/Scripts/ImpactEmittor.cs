@@ -140,12 +140,13 @@ public class ImpactEmittor : MonoBehaviour {
 		//Emit particles if the bear is touching the ground
 		if(grounded == true)
         {
-            if( ContactEmitter.isPaused )
+			if( ContactEmitter.isPaused )
 			    ContactEmitter.Play();
+				
 		}
 		if (grounded == false)
         { 
-			ContactEmitter.Pause ();	
+			ContactEmitter.Pause();	
 		}
 
 		

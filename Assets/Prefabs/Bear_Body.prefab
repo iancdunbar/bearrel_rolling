@@ -947,25 +947,25 @@ TrailRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Time: 1
-  m_StartWidth: 1
-  m_EndWidth: 0
+  m_Time: 2
+  m_StartWidth: 1.39999998
+  m_EndWidth: .100000001
   m_Colors:
     m_Color[0]:
       serializedVersion: 2
       rgba: 4294967295
     m_Color[1]:
       serializedVersion: 2
-      rgba: 1207959551
+      rgba: 3942645759
     m_Color[2]:
       serializedVersion: 2
-      rgba: 1207959551
+      rgba: 3372220415
     m_Color[3]:
       serializedVersion: 2
-      rgba: 16777215
+      rgba: 2030043135
     m_Color[4]:
       serializedVersion: 2
-      rgba: 16777215
+      rgba: 956301311
   m_MinVertexDistance: 0
   m_Autodestruct: 0
 --- !u!114 &11400000
@@ -996,7 +996,7 @@ MonoBehaviour:
   isSloped: 0
   currentSpeed: 0
   currentVelocity: {x: 0, y: 0}
-  jump_strength: 20000
+  jump_strength: 2000
   dash_strength: 2500
   jump_distance: 1600
   max_speed: 33
