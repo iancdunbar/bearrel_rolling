@@ -373,8 +373,9 @@ public class BearController : MonoBehaviour {
 		thisInstance.PathOverrideTarget = avalancheTargetPos;
 
 		//AvalanceController.AddPoint (avalancheTargetPos);
+		thisInstance.avalance_speed = 30;
 
-		gameCam.transform.position = new Vector3 (-445, -320, 10);
+		gameCam.transform.position = new Vector3 (-550, -140, -130);
 
 		//gameCam.keepStatic = true;
 		//gameCam.offset = new Vector3 (0, 0, 0);

@@ -26,7 +26,7 @@ public class AvalanceController : MonoBehaviour {
     ///////////////////////////////////////////////
 
     [SerializeField]
-    private float avalance_speed;
+    public float avalance_speed;
 	public ParticleSystem snow;
 	public bool can_blood = true;
 
