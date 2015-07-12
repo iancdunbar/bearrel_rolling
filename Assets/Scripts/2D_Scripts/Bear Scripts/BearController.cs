@@ -26,6 +26,7 @@ public class BearController : MonoBehaviour {
 	private static string[] deathMessages = {"U DED ;_;"};
 	private static int random = Random.Range(0, deathMessages.Length);
 	private static string deathMessage = deathMessages[random];
+	public Font defaultFont;
 
 	public int currentScore = 0;
 
@@ -163,6 +164,7 @@ public class BearController : MonoBehaviour {
 	{
 		rbody = GetComponent<Rigidbody2D>( );
 		bsc = new BearStateController( );
+		defaultFont = (Font)Resources.Load("Fonts/AGENTORANGE", typeof(Font));
 
 		SmashDashHUDPrefab = Resources.Load<Image>("HUD/DashSmash_Container");
 
@@ -281,15 +283,24 @@ public class BearController : MonoBehaviour {
 	//HUD GUI stuff
 
 	void OnGUI(){
+
+		GUIStyle myStyle = new GUIStyle();
+		myStyle.font = defaultFont;
+
 		if(deathBool){
 
-			GUI.Box (new Rect (0,0,Screen.width,Screen.height), "<color=red><size=80>" + deathMessage + "</size></color>");
+			//GUI.Box (new Rect (0,0,Screen.width,Screen.height), "<color=red><size=80>" + deathMessage + "</size></color>");
+			GUI.Label(new Rect(0,0, Screen.width, Screen.height), "<color=red><size=80>" + deathMessage + "</size></color>", myStyle);
 		}
 
-		GUI.Box (new Rect (0,0,30,30), "<color=yellow><size=12>" + currentScore + "</size></color>");
+		//GUI.Box (new Rect (0,0,30,30), "<color=yellow><size=12>" + currentScore + "</size></color>");
+
+
+		GUI.Label(new Rect(0,0, 30, 30), "" + currentScore + "", myStyle);
 
 		if (bearInvuln) {
-			GUI.Box (new Rect (30,0,150,30), "<color=yellow><size=12>INVULNERABEAR</size></color>");
+			//GUI.Box (new Rect (30,0,150,30), "<color=yellow><size=12>INVULNERABEAR</size></color>");
+			GUI.Label(new Rect(30,0, 150, 30), "<color=yellow><size=12>INVULNERABEAR</size></color>", myStyle);
 		}
 	}
 
@@ -364,7 +375,7 @@ public class BearController : MonoBehaviour {
 		GameObject avalanche = GameObject.Find ("Avalance");
 
 
-		Vector3 avalancheSpawnPos = townTransform.position + new Vector3(-300,0,0);
+		Vector3 avalancheSpawnPos = townTransform.position + new Vector3(-160,0,0);
 
 		avalanche.transform.position = avalancheSpawnPos;
 
@@ -382,15 +393,16 @@ public class BearController : MonoBehaviour {
 		thisInstance.avalance_speed = 30;
 
 		gameCam.transform.position = new Vector3 (-550, -140, -130);
+		
+		StartCoroutine(waitForSecondsThenRestart(5));
 
-		//gameCam.keepStatic = true;
-		//gameCam.offset = new Vector3 (0, 0, 0);
-		//gameCam.MovingOffset = gameCam.offset;
-		//gameCam.FastOffset = gameCam.offset;
 
-	    //yield WaitForSeconds(3.0f);
-		//Application.LoadLevel(Application.loadedLevel);
 
+	}
+
+	IEnumerator waitForSecondsThenRestart(int seconds){
+		yield return new WaitForSeconds (seconds);
+		Application.LoadLevel(Application.loadedLevel);
 	}
 
 
