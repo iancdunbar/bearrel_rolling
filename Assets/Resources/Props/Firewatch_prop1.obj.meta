@@ -10,23 +10,58 @@ ModelImporter:
     100004: firewatch1_snow
     100006: //RootNode
     100008: room_firewatch1
+    100010: firewatch2_base_polySurface7
+    100012: firewatch2_base_polySurface8
+    100014: firewatch2_base_polySurface9
+    100016: firewatch2_glass
+    100018: firewatch2_polySurface6_base
+    100020: firewatch2_snow
+    100022: room_firewatch2
     400000: firewatch1_base
     400002: firewatch1_glass
     400004: firewatch1_snow
     400006: //RootNode
     400008: room_firewatch1
+    400010: firewatch2_base_polySurface7
+    400012: firewatch2_base_polySurface8
+    400014: firewatch2_base_polySurface9
+    400016: firewatch2_glass
+    400018: firewatch2_polySurface6_base
+    400020: firewatch2_snow
+    400022: room_firewatch2
     2300000: firewatch1_base
     2300002: firewatch1_glass
     2300004: firewatch1_snow
     2300006: room_firewatch1
+    2300008: firewatch2_base_polySurface7
+    2300010: firewatch2_base_polySurface8
+    2300012: firewatch2_base_polySurface9
+    2300014: firewatch2_glass
+    2300016: firewatch2_polySurface6_base
+    2300018: firewatch2_snow
+    2300020: room_firewatch2
     3300000: firewatch1_base
     3300002: firewatch1_glass
     3300004: firewatch1_snow
     3300006: room_firewatch1
+    3300008: firewatch2_base_polySurface7
+    3300010: firewatch2_base_polySurface8
+    3300012: firewatch2_base_polySurface9
+    3300014: firewatch2_glass
+    3300016: firewatch2_polySurface6_base
+    3300018: firewatch2_snow
+    3300020: room_firewatch2
     4300000: firewatch1_base
     4300002: firewatch1_glass
     4300004: firewatch1_snow
     4300006: room_firewatch1
+    4300008: firewatch2_base_polySurface7
+    4300010: firewatch2_base_polySurface8
+    4300012: firewatch2_base_polySurface9
+    4300014: firewatch2_glass
+    4300016: firewatch2_polySurface6_base
+    4300018: firewatch2_snow
+    4300020: room_firewatch2
   materials:
     importMaterials: 1
     materialName: 0
