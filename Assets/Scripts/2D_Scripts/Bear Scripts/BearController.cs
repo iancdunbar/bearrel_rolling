@@ -348,6 +348,12 @@ public class BearController : MonoBehaviour {
 
 	public void incrementScore(){
 		this.currentScore += 1;
+		var avalanche = AvalanceController.Instance;
+
+		if (avalanche.avalance_speed < 30) {
+			avalanche.avalance_speed += 0.25f;
+		}
+		
 	}
 
 	private void HandleEndGame(GameCamera gameCam)
