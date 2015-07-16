@@ -13,6 +13,8 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 	private Queue<GameObject> active_terrain_segment_containers;
     private Queue<GameObject> active_terrain_segments;
 	private Queue<GameObject> active_rocks;
+	private Queue<GameObject> active_Cabins;
+	private Queue<GameObject> active_Firewatch;
 	private Queue<GameObject> active_trees;
     private Queue<GameObject> active_masks;
     private Vector3 next_point;
@@ -27,6 +29,12 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 	//**Rocks
 	private const string rock_prefab_path = "Terrain Assets/Rocks/Rock_Prefab";
 
+	//**Cabins
+	private const string Cabin_prefab_path = "Terrain Assets/Rocks/Cabin_Prefab";
+
+	//**Firewatch
+	private const string Firewatch_prefab_path = "Terrain Assets/Rocks/Firewatch_Prefab";
+
 	//**Trees
 	private const string tree_prefab_path = "Terrain Assets/trees/tree_prefab";
 	private const string tree_sprites_path = "Terrain Assets/trees/sprites";
@@ -37,7 +45,8 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 
 	//Private Assets 
 	private GameObject rock_prefab;// = Resources.LoadAssetAtPath<GameObject>(rock_prefab_path);
-
+	private GameObject Cabin_prefab;
+	private GameObject Firewatch_prefab;
 	private GameObject tree_prefab;//
 	private Texture2D treeTexture1;// = Resources.LoadAssetAtPath<Texture2D>(tree_sprites_1_path);
 	//private Texture2D treeTexture2 = Resources.LoadAssetAtPath<Texture2D>(tree_sprites_2_path);
@@ -76,6 +85,24 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 	private int minRocksPerSegment;
 	[SerializeField]
 	private int maxRocksPerSegment;
+
+	//Cabin variables
+	
+	[SerializeField]
+	private int chanceOfCabins;
+	[SerializeField]
+	private int minCabinsPerSegment;
+	[SerializeField]
+	private int maxCabinsPerSegment;
+
+	//Firewatch variables
+	
+	[SerializeField]
+	private int chanceOfFirewatch;
+	[SerializeField]
+	private int minFirewatchPerSegment;
+	[SerializeField]
+	private int maxFirewatchPerSegment;
 
 	//tree variables
 	[SerializeField]
@@ -177,8 +204,11 @@ public class PolygonTerrainGenerator : MonoBehaviour {
         active_terrain_segments.Enqueue( piece );
         active_masks.Enqueue( mask_obj );
 
+		generateFirewatch(terrain_piece_container, ts);
+		generateCabins(terrain_piece_container, ts);
 		generateRocks(terrain_piece_container, ts);
 		generateTrees(start_position, next_point, terrain_piece_container, ts);
+
 
 
     }
@@ -239,6 +269,125 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 			rockTransform.localScale = newRockScale;
 			
 			active_rocks.Enqueue(rockObject);
+		}
+		
+	}
+
+	private void generateCabins(GameObject currentPiece_container, TerrainSegment currentSegment){
+		
+		int numberOfCabins = 0;
+		
+		float random = Random.Range (0f, 100f);
+		
+		if (random < chanceOfCabins) {
+			numberOfCabins = Random.Range (minCabinsPerSegment, maxCabinsPerSegment);
+		}
+		
+		Vector2[] colliderPoints = currentSegment.EdgeColliderPoints;
+		
+		for (int x = 0; x < numberOfCabins; x++) {
+			GameObject CabinObject = (GameObject)Instantiate( Cabin_prefab );
+			Transform CabinTransform = CabinObject.transform;
+			
+			CabinTransform.parent = currentPiece_container.transform;
+			
+			
+			Vector2 lowerPoint = Vector2.zero;
+			Vector2 upperPoint = Vector2.zero;
+			
+			float Cabin_base_x = Random.Range (colliderPoints[0].x, colliderPoints[colliderPoints.Length-1].x);
+			
+			foreach (Vector2 point in colliderPoints)
+			{
+				
+				int indexOfCurrentPoint = System.Array.IndexOf(colliderPoints, point);
+				
+				if(indexOfCurrentPoint == colliderPoints.Length-1){
+					break;
+				}
+				if(point.x < Cabin_base_x && colliderPoints[indexOfCurrentPoint + 1].x > Cabin_base_x)
+				{
+					lowerPoint = point;
+					upperPoint = colliderPoints[indexOfCurrentPoint + 1];
+					break;
+				}
+				
+				
+			}
+			
+			float localSlope = (upperPoint.y - lowerPoint.y) / (upperPoint.x - lowerPoint.x); // M value in y=mx+b
+			float lineOffset = lowerPoint.y - (localSlope * lowerPoint.x); // b value in y=mx+b
+			
+			float Cabin_height = CabinTransform.localScale.y * CabinTransform.position.y;
+			
+			float Cabin_base_y = Cabin_base_x*localSlope+lineOffset-(Cabin_height/2)-treeDrawingOffset;
+			
+			CabinTransform.position = new Vector3(Cabin_base_x, Cabin_base_y + Cabin_height, -1.01f);
+			
+			//scale the cabin by 50% to see how it is
+			Vector3 newCabinScale = new Vector3(CabinTransform.localScale.x * 0.25f,CabinTransform.localScale.y * 0.25f,CabinTransform.localScale.z * 0.25f);
+			CabinTransform.localScale = newCabinScale;
+			
+			active_Cabins.Enqueue(CabinObject);
+		}
+		
+	}
+	private void generateFirewatch(GameObject currentPiece_container, TerrainSegment currentSegment){
+		
+		int numberOfFirewatch = 0;
+		
+		float random = Random.Range (0f, 100f);
+		
+		if (random < chanceOfFirewatch) {
+			numberOfFirewatch = Random.Range (minFirewatchPerSegment, maxFirewatchPerSegment);
+		}
+		
+		Vector2[] colliderPoints = currentSegment.EdgeColliderPoints;
+		
+		for (int x = 0; x < numberOfFirewatch; x++) {
+			GameObject FirewatchObject = (GameObject)Instantiate( Firewatch_prefab );
+			Transform FirewatchTransform = FirewatchObject.transform;
+			
+			FirewatchTransform.parent = currentPiece_container.transform;
+			
+			
+			Vector2 lowerPoint = Vector2.zero;
+			Vector2 upperPoint = Vector2.zero;
+			
+			float Firewatch_base_x = Random.Range (colliderPoints[0].x, colliderPoints[colliderPoints.Length-1].x);
+			
+			foreach (Vector2 point in colliderPoints)
+			{
+				
+				int indexOfCurrentPoint = System.Array.IndexOf(colliderPoints, point);
+				
+				if(indexOfCurrentPoint == colliderPoints.Length-1){
+					break;
+				}
+				if(point.x < Firewatch_base_x && colliderPoints[indexOfCurrentPoint + 1].x > Firewatch_base_x)
+				{
+					lowerPoint = point;
+					upperPoint = colliderPoints[indexOfCurrentPoint + 1];
+					break;
+				}
+				
+				
+			}
+			
+			float localSlope = (upperPoint.y - lowerPoint.y) / (upperPoint.x - lowerPoint.x); // M value in y=mx+b
+			float lineOffset = lowerPoint.y - (localSlope * lowerPoint.x); // b value in y=mx+b
+			
+			float Firewatch_height = FirewatchTransform.localScale.y * FirewatchTransform.position.y;
+			
+			float Firewatch_base_y = Firewatch_base_x*localSlope+lineOffset-(Firewatch_height/2)-treeDrawingOffset;
+			
+			FirewatchTransform.position = new Vector3(Firewatch_base_x, Firewatch_base_y + Firewatch_height, -1.01f);
+			
+			//scale the rock by 50% to see how it is
+			Vector3 newFirewatchScale = new Vector3(FirewatchTransform.localScale.x * 0.25f,FirewatchTransform.localScale.y * 0.25f,FirewatchTransform.localScale.z * 0.25f);
+			FirewatchTransform.localScale = newFirewatchScale;
+			
+			active_Firewatch.Enqueue(FirewatchObject);
 		}
 		
 	}
@@ -322,9 +471,13 @@ public class PolygonTerrainGenerator : MonoBehaviour {
         active_masks = new Queue<GameObject>();
 		active_rocks = new Queue<GameObject>();
 		active_trees = new Queue<GameObject>();
+		active_Cabins = new Queue<GameObject>();
+		active_Firewatch = new Queue<GameObject>();
 
 		tree_prefab = Resources.Load<GameObject>(tree_prefab_path);
 		rock_prefab = Resources.Load<GameObject>(rock_prefab_path);
+		Cabin_prefab = Resources.Load<GameObject>(Cabin_prefab_path);
+		Firewatch_prefab = Resources.Load<GameObject>(Firewatch_prefab_path);
     }
 
 	// Use this for initialization

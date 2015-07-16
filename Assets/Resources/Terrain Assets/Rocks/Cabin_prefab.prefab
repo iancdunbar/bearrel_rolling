@@ -156,7 +156,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &109704
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,7 +172,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &111506
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,7 +188,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &111910
 GameObject:
   m_ObjectHideFlags: 1
@@ -345,7 +345,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &127658
 GameObject:
   m_ObjectHideFlags: 1
@@ -401,7 +401,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &140018
 GameObject:
   m_ObjectHideFlags: 1
@@ -452,7 +452,7 @@ GameObject:
   - 4: {fileID: 437440}
   - 61: {fileID: 6130810}
   m_Layer: 0
-  m_Name: Rock_Prefab
+  m_Name: Cabin_prefab
   m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -747,7 +747,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &191960
 GameObject:
   m_ObjectHideFlags: 1
@@ -1073,9 +1073,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 148586}
-  m_LocalRotation: {x: -.00518556358, y: -.999218643, z: .000203343792, w: .0391825251}
-  m_LocalPosition: {x: 0, y: -3.56999993, z: 0}
-  m_LocalScale: {x: 1, y: 1.30887842, z: 1}
+  m_LocalRotation: {x: -.00367886131, y: -.708888948, z: .00366024161, w: .705301106}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: .764567912, y: .764567912, z: .764567912}
   m_Children:
   - {fileID: 407090}
   - {fileID: 489536}
