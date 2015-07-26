@@ -384,8 +384,8 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 			FirewatchTransform.position = new Vector3(Firewatch_base_x, Firewatch_base_y + Firewatch_height, -1.01f);
 			
 			//scale the rock by 50% to see how it is
-			Vector3 newFirewatchScale = new Vector3(FirewatchTransform.localScale.x * 0.25f,FirewatchTransform.localScale.y * 0.25f,FirewatchTransform.localScale.z * 0.25f);
-			FirewatchTransform.localScale = newFirewatchScale;
+			//Vector3 newFirewatchScale = new Vector3(FirewatchTransform.localScale.x * 0.25f,FirewatchTransform.localScale.y * 0.25f,FirewatchTransform.localScale.z * 0.25f);
+			//FirewatchTransform.localScale = newFirewatchScale;
 			
 			active_Firewatch.Enqueue(FirewatchObject);
 		}
