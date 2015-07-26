@@ -59,6 +59,7 @@ GameObject:
   - 82: {fileID: 8200002}
   - 82: {fileID: 8200000}
   - 114: {fileID: 11400004}
+  - 82: {fileID: 8234738}
   m_Layer: 0
   m_Name: AudioSystem
   m_TagString: Untagged
@@ -937,12 +938,12 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100034}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: .0700000003
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1009,9 +1010,78 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f42476246425a184b9ad98b665a95181, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: .600000024
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!82 &8234738
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100034}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d682c942dde239943bcf1d34e16e5016, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: .330000013
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1275,26 +1345,11 @@ MonoBehaviour:
   music: {fileID: 8200002}
   sfx: {fileID: 8200000}
   crash_emotes:
-  - {fileID: 8300000, guid: fcae3012e85920848941de300587eae7, type: 3}
-  - {fileID: 8300000, guid: 0eb3f8e90d295a74d82943044e5260d4, type: 3}
-  - {fileID: 8300000, guid: 94e4dee96e3d584429398ae3d30bbdb1, type: 3}
-  - {fileID: 8300000, guid: 94d16ba6bf6019e4ea7a91097bfadd56, type: 3}
-  - {fileID: 8300000, guid: d21f7f9cc535f444f981ff605f6603b3, type: 3}
-  - {fileID: 8300000, guid: 93644ceb5b0d6994d94fa8be2c566f77, type: 3}
-  - {fileID: 8300000, guid: 0f8a4d40a97e56d4ebce2d29d96e4bae, type: 3}
-  - {fileID: 8300000, guid: e6ca0147cbbbb21439897c2cc04ca365, type: 3}
-  - {fileID: 8300000, guid: f706c8dec6e50604abbd156335c04568, type: 3}
-  - {fileID: 8300000, guid: 19ebc297f9a4fb84d9f793971372cf7a, type: 3}
-  - {fileID: 8300000, guid: f9044d2536fa709429566bff051a8856, type: 3}
-  - {fileID: 8300000, guid: c55ae0815a7cb5b409c76711638f31fd, type: 3}
-  - {fileID: 8300000, guid: 739f9d8fced5c4146bc7ed8e8e450196, type: 3}
-  - {fileID: 8300000, guid: beb701f9b4647b34b815fb54c7fac9e3, type: 3}
-  - {fileID: 8300000, guid: 402c76e878e780b4089d9cd1923ddfc2, type: 3}
-  - {fileID: 8300000, guid: f9ea5ae4b55cc56419c3f8f92718d375, type: 3}
-  - {fileID: 8300000, guid: caa36870cf44a3f42bc9cc590c0464d2, type: 3}
-  - {fileID: 8300000, guid: 88b96a0ef78827243bf2b9bbe326c4f6, type: 3}
-  - {fileID: 8300000, guid: 1362ffc1bcccf5346a24ae3f0c9219fd, type: 3}
-  - {fileID: 8300000, guid: d89432bd7eda2ff429bd22421bb0673b, type: 3}
+  - {fileID: 8300000, guid: a66241eb7630d0f40bf30ade498f1bc9, type: 3}
+  - {fileID: 8300000, guid: fb31088fc223e24418449a8708b26c26, type: 3}
+  - {fileID: 8300000, guid: bdf6d13f2fa23ca4690f834caf9507a5, type: 3}
+  - {fileID: 8300000, guid: 96d97919523dd614ebf165e30bc03d58, type: 3}
+  - {fileID: 8300000, guid: e08cdd859dd727048be5530561f077f0, type: 3}
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
