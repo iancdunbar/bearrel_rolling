@@ -114,6 +114,9 @@ MonoBehaviour:
   chanceOfRocks: 50
   minRocksPerSegment: 1
   maxRocksPerSegment: 2
+  chanceOfShrubs: 100
+  minShrubsPerSegment: 10
+  maxShrubsPerSegment: 20
   chanceOfCabins: 100
   minCabinsPerSegment: 1
   maxCabinsPerSegment: 5

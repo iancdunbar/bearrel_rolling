@@ -9,23 +9,17 @@ public class TimedObjectDestructor : MonoBehaviour {
 
 	void Awake ()
 	{	
-		if (gameObject.tag == "treeGib"){
 			StartCoroutine(DestroyNow ());
-		}
-
-		if (gameObject.tag == "Cabin" && gameObject.GetComponent<Rigidbody>().isKinematic == false){
-			Debug.Log ("Destroying 3D physics object");
-			StartCoroutine(DestroyNow ());
-		}
 	}
 	IEnumerator DestroyNow ()
 	{
 		yield return new WaitForSeconds(timeOut);
+		DestroyObject (gameObject);
 		if (detachChildren == true) {
 			transform.DetachChildren ();
 		}
 	
-		DestroyObject (gameObject);
+
 	
 	}
 }

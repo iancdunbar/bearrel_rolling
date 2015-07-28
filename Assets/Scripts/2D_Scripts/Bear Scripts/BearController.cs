@@ -434,12 +434,11 @@ public class BearController : MonoBehaviour {
 		}
 		if (other.tag == "Cabin"){
 			CabinBoards = other.GetComponentsInChildren<Rigidbody>();
+
 			 foreach(Rigidbody board in CabinBoards){
+				other.gameObject.AddComponent<TimedObjectDestructor>();
 				board.isKinematic = false;
-			}
-			Destroyers = other.GetComponentsInChildren<TimedObjectDestructor>();
-			foreach(TimedObjectDestructor destroyer in Destroyers){
-				destroyer.enabled = true;
+
 			}
 		}
 		if(other.tag=="Rock")
@@ -452,6 +451,13 @@ public class BearController : MonoBehaviour {
 			//GetComponent<Rigidbody2D>().AddForce (Vector2.right * -knockback, ForceMode2D.Impulse );
 			//GetComponent<Rigidbody2D>().AddForce (Vector2.up * knockback, ForceMode2D.Impulse );
 		}
+		if(other.tag=="Shrub")
+		{	
+			other.GetComponent<Rigidbody2D>().isKinematic = false;
+			other.gameObject.AddComponent<TimedObjectDestructor>();
+
+		}
+
 		if(other.tag == "tree_gib")
 		{
 			Grounded = true;
@@ -496,6 +502,7 @@ public class BearController : MonoBehaviour {
 		yield return new WaitForSeconds(2);
 		//gameObject.rigidbody2D.velocity = max_speed;
 	}
+
 
 
     /////////////////////////////////////////////
