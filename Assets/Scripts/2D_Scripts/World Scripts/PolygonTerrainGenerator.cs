@@ -28,10 +28,10 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 	//Asset Paths from Resource Folder
 
 	//**Rocks
-	private const string rock_prefab_path = "Terrain Assets/Rocks/Rock_Prefab";
+	private const string rock_prefab_path = "Rocks/";
 
 	//**Shrubs
-	private const string shrub_prefab_path = "Shrubs/Shrub_Prefab";
+	private const string shrub_prefab_path = "Shrubs/";
 
 	//**Cabins
 	private const string Cabin_prefab_path = "Terrain Assets/Rocks/Cabin_Prefab";
@@ -49,9 +49,15 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 	/// 
 
 	//Private Assets 
-	private GameObject rock_prefab;// = Resources.LoadAssetAtPath<GameObject>(rock_prefab_path);
+	public GameObject[] rock_prefab;// = Resources.LoadAssetAtPath<GameObject>(rock_prefab_path);
+	private GameObject getRock() {
+		return rock_prefab [Random.Range (0, rock_prefab.Length )];
+	}
 	private GameObject Cabin_prefab;
-	private GameObject shrub_prefab;
+	private GameObject[] shrub_prefab;
+	private GameObject getShrub() {
+		return shrub_prefab [Random.Range (0, shrub_prefab.Length )];
+	}
 	private GameObject Firewatch_prefab;
 	private GameObject tree_prefab;//
 	private Texture2D treeTexture1;// = Resources.LoadAssetAtPath<Texture2D>(tree_sprites_1_path);
@@ -242,7 +248,7 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 		Vector2[] colliderPoints = currentSegment.EdgeColliderPoints;
 
 		for (int x = 0; x < numberOfRocks; x++) {
-			GameObject rockObject = (GameObject)Instantiate( rock_prefab );
+			GameObject rockObject = Instantiate( getRock () ) as GameObject;
 			Transform rockTransform = rockObject.transform;
 
 			rockTransform.parent = currentPiece_container.transform;
@@ -302,7 +308,7 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 		Vector2[] colliderPoints = currentSegment.EdgeColliderPoints;
 		
 		for (int x = 0; x < numberOfShrubs; x++) {
-			GameObject shrubObject = (GameObject)Instantiate( shrub_prefab );
+			GameObject shrubObject = Instantiate( getShrub () ) as GameObject;;
 			Transform shrubTransform = shrubObject.transform;
 			
 			shrubTransform.parent = currentPiece_container.transform;
@@ -550,8 +556,8 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 		active_Firewatch = new Queue<GameObject>();
 
 		tree_prefab = Resources.Load<GameObject>(tree_prefab_path);
-		rock_prefab = Resources.Load<GameObject>(rock_prefab_path);
-		shrub_prefab = Resources.Load<GameObject>(shrub_prefab_path);
+		rock_prefab = Resources.LoadAll<GameObject>(rock_prefab_path);
+		shrub_prefab = Resources.LoadAll<GameObject>(shrub_prefab_path);
 		Cabin_prefab = Resources.Load<GameObject>(Cabin_prefab_path);
 		Firewatch_prefab = Resources.Load<GameObject>(Firewatch_prefab_path);
     }

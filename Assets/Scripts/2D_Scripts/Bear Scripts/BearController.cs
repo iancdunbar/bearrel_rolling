@@ -444,12 +444,7 @@ public class BearController : MonoBehaviour {
 		if(other.tag=="Rock")
 		{
 			Grounded = true;
-			//GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
 
-			//KNOCK BACK //////
-
-			//GetComponent<Rigidbody2D>().AddForce (Vector2.right * -knockback, ForceMode2D.Impulse );
-			//GetComponent<Rigidbody2D>().AddForce (Vector2.up * knockback, ForceMode2D.Impulse );
 		}
 		if(other.tag=="Shrub")
 		{	
