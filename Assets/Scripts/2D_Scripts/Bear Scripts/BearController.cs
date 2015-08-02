@@ -40,6 +40,10 @@ public class BearController : MonoBehaviour {
     public float currentSpeed;
     public Vector2 currentVelocity;
 
+	public GameObject bear;
+	public GameObject invulnerabear;
+	public MeshRenderer[] bearlimbs;
+
     [SerializeField]
     private float jump_strength;
 	[SerializeField]
@@ -185,6 +189,12 @@ public class BearController : MonoBehaviour {
     // Use this for initialization
 	void Start () 
     {
+//		bear = GameObject.Find ("Bear");
+//		invulnerabear = GameObject.Find ("Invulnerabear");
+
+
+		invulnerabear.SetActive(false);
+		bearlimbs = bear.GetComponentsInChildren<MeshRenderer>();
 		mCamera = GameObject.FindGameObjectWithTag("MainCamera");
 		return_value = max_speed;
         MessageDispatch.RegisterListener( "OnSwipeUp", OnSwipeUp );
@@ -230,6 +240,8 @@ public class BearController : MonoBehaviour {
 		currentSpeed = rbody.velocity.magnitude;
 		currentVelocity = rbody.velocity;
 
+
+
 		// If the bear is on the ground they cannot SLAM-A-JAM.
 		if (Grounded == true)
 		{
@@ -272,7 +284,7 @@ public class BearController : MonoBehaviour {
 		}
 
 		//Clamp the maximum velocity of the bear to max_speed
-		//invulnBear means youre camping to max
+		//invulnBear means youre clamping to max
 		if ((rbody.velocity.magnitude > max_speed) || bearInvuln) {
 			rbody.velocity = Vector3.ClampMagnitude (rbody.velocity, max_speed);
 		}
@@ -316,10 +328,18 @@ public class BearController : MonoBehaviour {
 	{
 		if (bearInvuln) {
 			bearInvuln = false;
+			invulnerabear.SetActive(false);
+			foreach (MeshRenderer limb in bearlimbs){
+				limb.enabled = true;
+			}
 			max_speed = max_speed -= 10;
 			min_speed = min_speed -= 10;
 		} else {
 			bearInvuln = true;
+			invulnerabear.SetActive(true);
+			foreach (MeshRenderer limb in bearlimbs){
+				limb.enabled = false;
+			}
 			max_speed = max_speed += 10;
 			min_speed = min_speed += 10;
 		}
