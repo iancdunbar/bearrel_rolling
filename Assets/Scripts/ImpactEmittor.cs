@@ -6,6 +6,8 @@ public class ImpactEmittor : MonoBehaviour {
     private Rigidbody2D rbdy;
 
 	// Use this for initialization
+	private TrailRenderer beartrail;
+	public GameObject glow;
 	public ParticleSystem snow;
 	public ParticleSystem Impact;
 	public bool can_blood = true;
@@ -30,17 +32,19 @@ public class ImpactEmittor : MonoBehaviour {
 	private Vector2 bearpos;
 	private Vector2 bearspeed;
 	public Animator anim;
-	public Component[] Trails;
 	private GameObject mCamera;
 	private Vector3 originalOffset;
 	private float startTime;
 	public float resetTime = 1;
+	private Vector3 startScale = new Vector3(10, 10, 10);
+	private Vector3 endScale = new Vector3(15, 15, 15);
 	
 	
 	void Awake () 
 	{
 		bc = GameObject.Find ("Bear_Body").GetComponent<BearController>();
         rbdy = GetComponent<Rigidbody2D>();
+		beartrail = GameObject.Find("Bear").GetComponent<TrailRenderer>();;
 	}
 	
 	void Start ()
@@ -50,6 +54,8 @@ public class ImpactEmittor : MonoBehaviour {
 		originalOffset = mCamera.GetComponent<GameCamera>().offset;
 		MessageDispatch.RegisterListener( "OnEnterState", OnEnterState );
 		MessageDispatch.RegisterListener( "OnExitState", OnExitState );
+		glow = GameObject.Find("Glow");
+	
 	}
 	
 	
@@ -102,14 +108,7 @@ public class ImpactEmittor : MonoBehaviour {
 			 slam.Stop ();
 		}
 
-		if (bc.bearInvuln) {
-			if( invulnerable.isStopped )
-				invulnerable.Play ();
-		}else
-		{
-			if( invulnerable.isPlaying )
-				invulnerable.Stop ();
-		}
+
 		
 		
 		
@@ -185,12 +184,8 @@ public class ImpactEmittor : MonoBehaviour {
 		//Emit TRAILS if the bear is moving REALLY fast ANYTIME
 		if (reallyfast == true)
 		{
-			Trails = GetComponentsInChildren<TrailRenderer>();
-			foreach (TrailRenderer Trail in Trails) 
-			{
-				Trail.enabled = true;
-				Trail.time = 0.3f;
-			}
+			beartrail.enabled = true;
+			beartrail.time = 0.3f;
 			
 			
 		}
@@ -198,27 +193,36 @@ public class ImpactEmittor : MonoBehaviour {
 		{
 			if (grounded == false)
 			{
-				Trails = GetComponentsInChildren<TrailRenderer>();
-				
-				foreach (TrailRenderer Trail in Trails) 
-				{
-					Trail.enabled = true;
-					Trail.time = 0.05f;
-				}
+				beartrail.enabled = true;
+				beartrail.time = 0.05f;
+
 			}
 			if (grounded == true)
 			{
-				Trails = GetComponentsInChildren<TrailRenderer>();
-				
-				foreach (TrailRenderer Trail in Trails) 
-				{
-					
-					Trail.enabled = false;
-				}
+				beartrail.enabled = false;
+			
 			}
 		}
+
+		//INVULNERABEAR >>>>>>>>>
+		
+		if (bc.bearInvuln) {
+			beartrail.enabled = false;
+			if( invulnerable.isStopped )
+				invulnerable.Play ();
+
+
+			//glow.transform.localScale = Vector3.Slerp(startScale, endScale, 3);
+
+			
+		}
+		else
+		{
+			if( invulnerable.isPlaying )
+				invulnerable.Stop ();
+		}
 	}
-	
+
 	
 	//TREE COLLISION//
 	void OnTriggerEnter2D(Collider2D other)
