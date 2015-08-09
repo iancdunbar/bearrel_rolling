@@ -27,7 +27,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 491084}
-  - 61: {fileID: 6102802}
   - 114: {fileID: 11441960}
   m_Layer: 0
   m_Name: Firewatch_Prefab
@@ -575,19 +574,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!61 &6102802
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 125998}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 2.04999995}
-  serializedVersion: 2
-  m_Size: {x: .879999995, y: .660000026}
 --- !u!65 &6527006
 BoxCollider:
   m_ObjectHideFlags: 1

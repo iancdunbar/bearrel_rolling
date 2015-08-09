@@ -28,20 +28,20 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 	//Asset Paths from Resource Folder
 
 	//**Rocks
-	private const string rock_prefab_path = "Rocks/";
+	private const string rock_prefab_path = "Environment/Rocks/";
 
 	//**Shrubs
-	private const string shrub_prefab_path = "Shrubs/";
+	private const string shrub_prefab_path = "Environment/Shrubs/";
 
 	//**Cabins
-	private const string Cabin_prefab_path = "Terrain Assets/Rocks/Cabin_Prefab";
+	private const string Cabin_prefab_path = "Environment/Buildings/Cabin_Prefab";
 
 	//**Firewatch
-	private const string Firewatch_prefab_path = "Terrain Assets/Rocks/Firewatch_Prefab";
+	private const string Firewatch_prefab_path = "Environment/Buildings/Firewatch_Prefab";
 
 
 	//**Trees
-	private const string tree_prefab_path = "Terrain Assets/trees/tree_prefab";
+	private const string tree_prefab_path = "Environment/Trees/tree_prefab";
 	private const string tree_sprites_path = "Terrain Assets/trees/sprites";
 
     /////////////////////////////////////////////
@@ -404,9 +404,7 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 			
 			CabinTransform.position = new Vector3(Cabin_base_x, Cabin_base_y + Cabin_height, -1.01f);
 			
-			//scale the cabin by 50% to see how it is
-			Vector3 newCabinScale = new Vector3(CabinTransform.localScale.x * 0.25f,CabinTransform.localScale.y * 0.25f,CabinTransform.localScale.z * 0.25f);
-			CabinTransform.localScale = newCabinScale;
+
 			
 			active_Cabins.Enqueue(CabinObject);
 		}
