@@ -29,7 +29,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 486928}
   - 95: {fileID: 9500270}
-  - 58: {fileID: 5806438}
   - 50: {fileID: 5061750}
   m_Layer: 0
   m_Name: Shrub06
@@ -248,19 +247,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &5806438
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 128790}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: .610000014}
-  serializedVersion: 2
-  m_Radius: .469999999
 --- !u!58 &5891392
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -269,7 +255,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 127722}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 4.47034836e-08, y: .378624648}
   serializedVersion: 2
@@ -317,6 +303,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Mass
       value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

@@ -41,7 +41,7 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 
 
 	//**Trees
-	private const string tree_prefab_path = "Environment/Trees/tree_prefab";
+	private const string tree_prefab_path = "Environment/Trees/";
 	private const string tree_sprites_path = "Terrain Assets/trees/sprites";
 
     /////////////////////////////////////////////
@@ -59,7 +59,10 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 		return shrub_prefab [Random.Range (0, shrub_prefab.Length )];
 	}
 	private GameObject Firewatch_prefab;
-	private GameObject tree_prefab;//
+	private GameObject[] tree_prefab;//
+	private GameObject getTree() {
+		return tree_prefab [Random.Range (0, tree_prefab.Length )];
+	}
 	private Texture2D treeTexture1;// = Resources.LoadAssetAtPath<Texture2D>(tree_sprites_1_path);
 	//private Texture2D treeTexture2 = Resources.LoadAssetAtPath<Texture2D>(tree_sprites_2_path);
 	//private Texture2D treeTexture3 = Resources.LoadAssetAtPath<Texture2D>(tree_sprites_3_path);
@@ -489,7 +492,7 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 			//instantiate trees
 
 
-			GameObject tree_obj = (GameObject)Instantiate( tree_prefab );
+			GameObject tree_obj = Instantiate( getTree () ) as GameObject;
 			Transform tree_trans = tree_obj.transform;	
 
 			tree_trans.parent = currentPiece_container.transform;
@@ -553,7 +556,7 @@ public class PolygonTerrainGenerator : MonoBehaviour {
 		active_Cabins = new Queue<GameObject>();
 		active_Firewatch = new Queue<GameObject>();
 
-		tree_prefab = Resources.Load<GameObject>(tree_prefab_path);
+		tree_prefab = Resources.LoadAll<GameObject>(tree_prefab_path);
 		rock_prefab = Resources.LoadAll<GameObject>(rock_prefab_path);
 		shrub_prefab = Resources.LoadAll<GameObject>(shrub_prefab_path);
 		Cabin_prefab = Resources.Load<GameObject>(Cabin_prefab_path);
