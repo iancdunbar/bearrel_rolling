@@ -175,6 +175,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 407090}
   - 58: {fileID: 5864436}
+  - 114: {fileID: 11453464}
   m_Layer: 0
   m_Name: Cabin
   m_TagString: Cabin
@@ -3501,6 +3502,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.89281201, y: .417163998, z: .0900919437}
   m_Center: {x: 0, y: .208581999, z: -1}
+--- !u!114 &11453464
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 111506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11515b3e835de8649a3506cedff589dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onTrigger: 1
+  onCollision: 0
+  triggerTag: Bear
+  clips:
+  - {fileID: 8300000, guid: fb31088fc223e24418449a8708b26c26, type: 3}
 --- !u!198 &19844598
 ParticleSystem:
   m_ObjectHideFlags: 1

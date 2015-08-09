@@ -28,6 +28,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 491084}
   - 61: {fileID: 6102802}
+  - 114: {fileID: 11441960}
   m_Layer: 0
   m_Name: Firewatch_Prefab
   m_TagString: Cabin
@@ -671,6 +672,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .0939359963, y: 2.35325575, z: .0663469955}
   m_Center: {x: -.339008987, y: .998946965, z: -.369010478}
+--- !u!114 &11441960
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 125998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11515b3e835de8649a3506cedff589dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onTrigger: 1
+  onCollision: 0
+  triggerTag: Bear
+  clips:
+  - {fileID: 8300000, guid: e08cdd859dd727048be5530561f077f0, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

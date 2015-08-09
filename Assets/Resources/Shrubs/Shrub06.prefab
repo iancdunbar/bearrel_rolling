@@ -12,6 +12,7 @@ GameObject:
   - 23: {fileID: 2324008}
   - 58: {fileID: 5891392}
   - 50: {fileID: 5095974}
+  - 114: {fileID: 11416664}
   m_Layer: 0
   m_Name: pSphere1
   m_TagString: Untagged
@@ -217,7 +218,6 @@ MeshFilter:
   m_Mesh: {fileID: 4300000, guid: 1ef0f9637266d41f69b54ceba8c98386, type: 3}
 --- !u!50 &5061750
 Rigidbody2D:
-  serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -226,14 +226,13 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
+  m_FixedAngle: 0
   m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!50 &5095974
 Rigidbody2D:
-  serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -242,11 +241,11 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
+  m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!58 &5806438
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -290,6 +289,22 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11416664
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 127722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11515b3e835de8649a3506cedff589dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onTrigger: 1
+  onCollision: 1
+  triggerTag: Bear
+  clips:
+  - {fileID: 8300000, guid: bdf6d13f2fa23ca4690f834caf9507a5, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
