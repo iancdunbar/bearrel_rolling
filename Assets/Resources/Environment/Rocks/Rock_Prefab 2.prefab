@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 437440}
   - 58: {fileID: 5850320}
+  - 114: {fileID: 11431920}
   m_Layer: 0
   m_Name: Rock_Prefab 2
   m_TagString: Rock
@@ -191,6 +192,22 @@ CircleCollider2D:
   m_Offset: {x: .910000026, y: 3.71000004}
   serializedVersion: 2
   m_Radius: 6.32000017
+--- !u!114 &11431920
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 148586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11515b3e835de8649a3506cedff589dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onTrigger: 1
+  onCollision: 0
+  triggerTag: Bear
+  clips:
+  - {fileID: 8300000, guid: 00ec64921e1277c429870a2464255f63, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
