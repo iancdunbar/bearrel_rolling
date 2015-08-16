@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d0206b08aaa84243958bc3386eefd71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rock_prefab: []
   terrain_piece:
   - {fileID: 134072, guid: fec210cab61ff4f92863ed3b6363e619, type: 2}
   - {fileID: 163188, guid: a74a37c450574404d8c93ad5fbe13ce6, type: 2}
@@ -119,13 +120,13 @@ MonoBehaviour:
   maxShrubsPerSegment: 20
   chanceOfCabins: 100
   minCabinsPerSegment: 1
-  maxCabinsPerSegment: 5
+  maxCabinsPerSegment: 2
   chanceOfFirewatch: 100
-  minFirewatchPerSegment: 5
+  minFirewatchPerSegment: 1
   maxFirewatchPerSegment: 10
   chanceOfTrees: 100
-  minTreesPerSegment: 5
-  maxTreesPerSegment: 10
+  minTreesPerSegment: 1
+  maxTreesPerSegment: 3
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
