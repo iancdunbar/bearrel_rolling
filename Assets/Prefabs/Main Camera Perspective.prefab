@@ -1010,7 +1010,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f42476246425a184b9ad98b665a95181, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: .600000024
   m_Pitch: 1
@@ -1337,7 +1337,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100034}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28d877d2c922ad74bb8e9154868700df, type: 3}
   m_Name: 
@@ -1345,11 +1345,7 @@ MonoBehaviour:
   music: {fileID: 8200002}
   sfx: {fileID: 8200000}
   crash_emotes:
-  - {fileID: 8300000, guid: a66241eb7630d0f40bf30ade498f1bc9, type: 3}
-  - {fileID: 8300000, guid: fb31088fc223e24418449a8708b26c26, type: 3}
-  - {fileID: 8300000, guid: bdf6d13f2fa23ca4690f834caf9507a5, type: 3}
-  - {fileID: 8300000, guid: 96d97919523dd614ebf165e30bc03d58, type: 3}
-  - {fileID: 8300000, guid: e08cdd859dd727048be5530561f077f0, type: 3}
+  - {fileID: 0}
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
