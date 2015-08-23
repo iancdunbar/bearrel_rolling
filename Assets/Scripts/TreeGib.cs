@@ -18,7 +18,8 @@ public class TreeGib : MonoBehaviour {
 	private GameObject mCamera;
 	
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 		bc = GameObject.Find("Bear_Body").GetComponent<BearController>();
 		mCamera = GameObject.FindGameObjectWithTag("MainCamera");
 	}

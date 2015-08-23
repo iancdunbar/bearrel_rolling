@@ -308,16 +308,16 @@ public class BearController : MonoBehaviour {
 			foreach (MeshRenderer limb in bearlimbs){
 				limb.enabled = true;
 			}
-			max_speed = max_speed -= 10;
-			min_speed = min_speed -= 10;
+			max_speed -= 10;
+			min_speed -= 10;
 		} else {
 			bearInvuln = true;
 			invulnerabear.SetActive(true);
 			foreach (MeshRenderer limb in bearlimbs){
 				limb.enabled = false;
 			}
-			max_speed = max_speed += 10;
-			min_speed = min_speed += 10;
+			max_speed += 10;
+			min_speed += 10;
 		}
 	}
 
@@ -443,8 +443,15 @@ public class BearController : MonoBehaviour {
 
 		}
 		if(other.tag=="Shrub")
-		{	
-			other.GetComponent<Rigidbody2D>().isKinematic = false;
+		{
+
+			Rigidbody2D rbdy = other.GetComponent<Rigidbody2D>();
+
+			if( rbdy )
+			{
+				rbdy.isKinematic = false;
+			}
+
 			other.gameObject.AddComponent<TimedObjectDestructor>();
 
 		}
