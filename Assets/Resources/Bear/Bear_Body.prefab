@@ -39,7 +39,7 @@ GameObject:
   - 33: {fileID: 3385148}
   - 23: {fileID: 2340472}
   - 50: {fileID: 5091706}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bear_Rt_Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   - 4: {fileID: 420936}
   - 58: {fileID: 5862418}
   - 96: {fileID: 9607366}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Invulnerabear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   - 4: {fileID: 403016}
   - 33: {fileID: 3383372}
   - 23: {fileID: 2389834}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Invulnerabear_Rt_Ear (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ GameObject:
   - 33: {fileID: 3310338}
   - 23: {fileID: 2387028}
   - 96: {fileID: 9671078}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Body_Invulnerabear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   - 33: {fileID: 3373996}
   - 23: {fileID: 2303746}
   - 50: {fileID: 5092786}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bear_Lf_leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ GameObject:
   - 33: {fileID: 3331080}
   - 23: {fileID: 2308444}
   - 50: {fileID: 5091126}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bear_Lf_Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   - 33: {fileID: 3345152}
   - 23: {fileID: 2346244}
   - 50: {fileID: 5007586}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bear_Rt_Leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,7 +162,7 @@ GameObject:
   - 4: {fileID: 440562}
   - 33: {fileID: 3306000}
   - 23: {fileID: 2326528}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Invulnerabear_Rt_Ear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   - 4: {fileID: 477650}
   - 33: {fileID: 3310972}
   - 23: {fileID: 2353154}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Invulnerabear_Lf_Ear (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,7 +196,7 @@ GameObject:
   - 4: {fileID: 430652}
   - 33: {fileID: 3324996}
   - 23: {fileID: 2398936}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Invulnerabear_Rt_Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,7 +214,7 @@ GameObject:
   - 33: {fileID: 3331666}
   - 64: {fileID: 6496346}
   - 23: {fileID: 2397502}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -231,7 +231,7 @@ GameObject:
   - 4: {fileID: 410876}
   - 33: {fileID: 3314070}
   - 23: {fileID: 2309344}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Invulnerabear_Lf_Ear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -247,7 +247,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 451456}
   - 50: {fileID: 5068790}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bear_Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -265,7 +265,7 @@ GameObject:
   - 33: {fileID: 3327828}
   - 23: {fileID: 2399846}
   - 135: {fileID: 13520332}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bear_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -282,7 +282,7 @@ GameObject:
   - 4: {fileID: 454288}
   - 33: {fileID: 3333728}
   - 23: {fileID: 2321400}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Body_Invulnerabear (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -299,7 +299,7 @@ GameObject:
   - 4: {fileID: 436774}
   - 33: {fileID: 3388802}
   - 23: {fileID: 2366464}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Invulnerabear_Rt_Eye (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -316,7 +316,7 @@ GameObject:
   - 4: {fileID: 438882}
   - 33: {fileID: 3393668}
   - 23: {fileID: 2354266}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Invulnerabear_Lf_Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -332,7 +332,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 428116}
   - 96: {fileID: 9646090}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -349,7 +349,7 @@ GameObject:
   - 4: {fileID: 404836}
   - 33: {fileID: 3373016}
   - 23: {fileID: 2314206}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Invulnerabear_Lf_Eye (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -366,7 +366,7 @@ GameObject:
   - 4: {fileID: 493452}
   - 198: {fileID: 19832758}
   - 199: {fileID: 19980394}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -420,7 +420,7 @@ Transform:
   m_GameObject: {fileID: 161452}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: .269826591, z: .958879352}
-  m_LocalScale: {x: 9.70522022, y: 10.9393082, z: 9.7052269}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 420936}
   m_RootOrder: 0
@@ -467,7 +467,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 109872}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.0202719998, y: -.214939997, z: -3}
+  m_LocalPosition: {x: 0, y: 0, z: -3}
   m_LocalScale: {x: .952234089, y: .952234089, z: .952234089}
   m_Children:
   - {fileID: 409430}

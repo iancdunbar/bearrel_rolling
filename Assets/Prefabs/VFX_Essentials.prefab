@@ -4548,7 +4548,7 @@ ParticleSystemRenderer:
   m_GameObject: {fileID: 100006}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 0
+  m_ReceiveShadows: 1
   m_Materials:
   - {fileID: 2100000, guid: f66268cc275df43039b74320461db6c1, type: 2}
   m_SubsetIndices: 

@@ -219,7 +219,7 @@ ParticleSystem:
         rgba: 738197503
       minMaxState: 0
     startSize:
-      scalar: .730000019
+      scalar: .170000002
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1070,7 +1070,7 @@ ParticleSystemRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 505506ad12b424974b2a51983775998f, type: 2}
+  - {fileID: 2100000, guid: f66268cc275df43039b74320461db6c1, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1084,7 +1084,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_RenderMode: 4
+  m_RenderMode: 0
   m_MaxParticleSize: .5
   m_CameraVelocityScale: 0
   m_VelocityScale: 0

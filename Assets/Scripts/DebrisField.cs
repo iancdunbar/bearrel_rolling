@@ -41,9 +41,9 @@ public class DebrisField : MonoBehaviour {
 				foreach(Rigidbody board in CabinBoards){
 					board.isKinematic = false;
 					//board.transform.parent = gameObject.transform;
-					timedDestructor = board.GetComponent("TimedObjectDestructor");
-					Destroy (timedDestructor);
-					Destroy(board);
+					//timedDestructor = board.GetComponent("TimedObjectDestructor");
+					//Destroy (timedDestructor);
+					//Destroy(board);
 					
 				}
 				//other.transform.parent = gameObject.transform;
