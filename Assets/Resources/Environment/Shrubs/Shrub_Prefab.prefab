@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 470536}
   - 95: {fileID: 9543856}
   - 50: {fileID: 5002442}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Shrub_Prefab
   m_TagString: Shrub
   m_Icon: {fileID: 0}
@@ -30,7 +30,8 @@ GameObject:
   - 50: {fileID: 5049996}
   - 58: {fileID: 5844082}
   - 114: {fileID: 11416098}
-  m_Layer: 0
+  - 58: {fileID: 5835048}
+  m_Layer: 11
   m_Name: pSphere2
   m_TagString: Shrub
   m_Icon: {fileID: 0}
@@ -47,7 +48,7 @@ GameObject:
   - 4: {fileID: 425194}
   - 33: {fileID: 3315966}
   - 23: {fileID: 2352548}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pCylinder1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +87,7 @@ Transform:
   m_GameObject: {fileID: 106018}
   m_LocalRotation: {x: .149543032, y: .881190538, z: -.0750378817, w: .44216454}
   m_LocalPosition: {x: 0, y: .180000007, z: 0}
-  m_LocalScale: {x: 2.28465724, y: 2.28465796, z: 2.28465796}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_Children:
   - {fileID: 425194}
   - {fileID: 412038}
@@ -186,6 +187,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &5835048
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114322}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: -3.7252903e-09, y: 5.96046448e-08}
+  serializedVersion: 2
+  m_Radius: .352316141
 --- !u!58 &5844082
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -198,7 +212,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: .379999995
+  m_Radius: .460000008
 --- !u!95 &9543856
 Animator:
   serializedVersion: 3
@@ -246,6 +260,22 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Mass
       value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

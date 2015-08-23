@@ -368,10 +368,10 @@ public class BearController : MonoBehaviour {
 		GameObject town = GameObject.Find ("Town");
 		Transform townTransform = town.GetComponent(typeof(Transform)) as Transform;
 
-		GameObject avalanche = GameObject.Find ("Avalance");
+		GameObject avalanche = GameObject.Find ("Avalanche");
 
 
-		Vector3 avalancheSpawnPos = townTransform.position + new Vector3(-160,0,0);
+		Vector3 avalancheSpawnPos = townTransform.position + new Vector3(-200,0,0);
 
 		avalanche.transform.position = avalancheSpawnPos;
 

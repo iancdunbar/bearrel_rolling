@@ -12,7 +12,8 @@ GameObject:
   - 61: {fileID: 6100000}
   - 114: {fileID: 11400000}
   - 114: {fileID: 11487256}
-  m_Layer: 0
+  - 50: {fileID: 5096444}
+  m_Layer: 14
   m_Name: tree_prefab
   m_TagString: tree
   m_Icon: {fileID: 0}
@@ -29,7 +30,7 @@ GameObject:
   - 4: {fileID: 483950}
   - 33: {fileID: 3376692}
   - 23: {fileID: 2324074}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: pCylinder1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +47,7 @@ GameObject:
   - 4: {fileID: 407440}
   - 33: {fileID: 3300430}
   - 23: {fileID: 2350144}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: pCylinder1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62,7 +63,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 455738}
   - 95: {fileID: 9501378}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Tree17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,7 +80,7 @@ GameObject:
   - 4: {fileID: 443150}
   - 33: {fileID: 3375670}
   - 23: {fileID: 2335496}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: polySurface13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +97,7 @@ GameObject:
   - 4: {fileID: 475190}
   - 33: {fileID: 3339666}
   - 23: {fileID: 2377866}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: pCone1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +114,7 @@ GameObject:
   - 4: {fileID: 457796}
   - 33: {fileID: 3334776}
   - 23: {fileID: 2315926}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: pCone4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +131,7 @@ GameObject:
   - 4: {fileID: 442464}
   - 33: {fileID: 3335612}
   - 23: {fileID: 2337252}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: pCone2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +148,7 @@ GameObject:
   - 4: {fileID: 488936}
   - 33: {fileID: 3365890}
   - 23: {fileID: 2390646}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: wood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +165,7 @@ GameObject:
   - 4: {fileID: 473880}
   - 33: {fileID: 3353694}
   - 23: {fileID: 2326508}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: pCone6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,7 +182,7 @@ GameObject:
   - 4: {fileID: 464124}
   - 33: {fileID: 3356796}
   - 23: {fileID: 2302704}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: pCone7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,7 +199,7 @@ GameObject:
   - 4: {fileID: 448628}
   - 33: {fileID: 3304868}
   - 23: {fileID: 2352142}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: pCone8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,7 +216,7 @@ GameObject:
   - 4: {fileID: 443680}
   - 33: {fileID: 3310744}
   - 23: {fileID: 2323746}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: pCone5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -232,7 +233,7 @@ GameObject:
   - 4: {fileID: 469882}
   - 33: {fileID: 3374290}
   - 23: {fileID: 2372106}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: pCone4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -249,7 +250,7 @@ GameObject:
   - 4: {fileID: 475798}
   - 33: {fileID: 3351716}
   - 23: {fileID: 2330598}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: pCylinder1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -266,7 +267,7 @@ GameObject:
   - 4: {fileID: 460376}
   - 33: {fileID: 3324364}
   - 23: {fileID: 2386704}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: pCone2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -281,7 +282,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 455746}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -296,7 +297,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 477980}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: bush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -313,7 +314,7 @@ GameObject:
   - 4: {fileID: 458996}
   - 33: {fileID: 3302782}
   - 23: {fileID: 2396642}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: pCone3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -329,7 +330,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 438872}
   - 95: {fileID: 9549396}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Treefab02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -346,7 +347,7 @@ GameObject:
   - 4: {fileID: 437394}
   - 33: {fileID: 3366414}
   - 23: {fileID: 2387062}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: pCone3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -362,7 +363,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 426970}
   - 95: {fileID: 9592366}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Treee17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -379,7 +380,7 @@ GameObject:
   - 4: {fileID: 413200}
   - 33: {fileID: 3370282}
   - 23: {fileID: 2338112}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: pCone1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -396,7 +397,7 @@ GameObject:
   - 4: {fileID: 422542}
   - 33: {fileID: 3304410}
   - 23: {fileID: 2378492}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: polySurface13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -411,7 +412,7 @@ Transform:
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 6.86000013, z: 0}
-  m_LocalScale: {x: 1.16667926, y: 1.46184385, z: 1.16667914}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 455738}
   - {fileID: 438872}
@@ -1272,6 +1273,22 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 101530}
   m_Mesh: {fileID: 4300000, guid: 53bfa980bbb014b14b39e3b2b2aa3134, type: 3}
+--- !u!50 &5096444
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!61 &6100000
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -1402,7 +1419,27 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}
