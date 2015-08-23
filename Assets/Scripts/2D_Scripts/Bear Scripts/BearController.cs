@@ -99,7 +99,7 @@ public class BearController : MonoBehaviour {
     {
         BearState state = (BearState)arg;
 		
-        Debug.Log( "Entering " + state + " from BearController" );
+        //Debug.Log( "Entering " + state + " from BearController" );
     }
 
     /////////////////////////////////////////////

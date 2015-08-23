@@ -632,10 +632,10 @@ Camera:
     height: 1
   near clip plane: .300000012
   far clip plane: 10000
-  field of view: 39.4000015
+  field of view: 48.9000015
   orthographic: 0
   orthographic size: 8.11999989
-  m_Depth: -1
+  m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -646,6 +646,7 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
+  m_StereoMirrorMode: 0
 --- !u!23 &2310106
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -1337,7 +1338,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100034}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28d877d2c922ad74bb8e9154868700df, type: 3}
   m_Name: 
