@@ -23,11 +23,10 @@ public class BearController : MonoBehaviour {
 	private Color HUDColor = new Color(0.957f, 1.000f, 0.221f, 1.000f);
 	private const int maxInvulnSliderAmount = 100;
 	private Slider invulnSlider;
-	private static string[] deathMessages = {"U DED ;_;"};
+	private static string[] deathMessages = { "DEATH IS UPON YOU, BEAR" };	
 	private static int random = Random.Range(0, deathMessages.Length);
 	private static string deathMessage = deathMessages[random];
-	public Font defaultFont;
-
+	public Font defaultFont;                                                                                                                                                                                                                                                                                                                                                                                                                                    
 	public int currentScore = 0;
 
     /////////////////////////////////////////////
@@ -189,9 +188,6 @@ public class BearController : MonoBehaviour {
     // Use this for initialization
 	void Start () 
     {
-//		bear = GameObject.Find ("Bear");
-//		invulnerabear = GameObject.Find ("Invulnerabear");
-
 
 		invulnerabear.SetActive(false);
 		bearlimbs = bear.GetComponentsInChildren<MeshRenderer>();
@@ -240,53 +236,32 @@ public class BearController : MonoBehaviour {
 		currentSpeed = rbody.velocity.magnitude;
 		currentVelocity = rbody.velocity;
 
-
-
+	
 		// If the bear is on the ground they cannot SLAM-A-JAM.
 		if (Grounded == true)
 		{
 			slammed = false;
 		}
 
-//		//Detecting the normal direction of the terrain below
-//		RaycastHit2D hit = Physics2D.Raycast(new Vector2(transform.position.x - 1, transform.position.y + 2), -Vector2.up * 1);
-//		Debug.DrawRay (new Vector2(transform.position.x - 1, transform.position.y + 2), -Vector2.up * 1, Color.green);
-//
-//		//What is the Vector2 normal of the object being hit by the raycast
-//		//Debug.Log (hit.normal);
-//
-//		//Whats the tag of the collider hit by the raycast
-//		//Debug.Log (hit.collider.tag);
-//	
-//
-//		//If the x value of the normal being detected is greater than or = to 0.1 and the collider is named Ground then the terrain is sloped
-//		if( hit.collider == null ){ 
-//			Debug.Log( "The hit is null, this is what is causing the program to crash"); 
-//		}
-//		if (hit.normal.y <= 0.83f && hit.collider.tag == "Ground")
-//		{
-//			isSloped = true;
-//		}
-//		else
-//		{
-//			isSloped = false;
-//		}
-
-
-		if (current_accelleration < min_accelleration) {
+		if (current_accelleration < min_accelleration) 
+		{
 			current_accelleration = min_accelleration;
 		}
 
-		if (currentSpeed < min_speed) {
+		if (currentSpeed < min_speed) 
+		{
 			rbody.velocity = rbody.velocity + (rbody.velocity.normalized * min_speed);
-		} else{
+		} 
+		else
+		{
 			rbody.velocity = rbody.velocity + (rbody.velocity.normalized * current_accelleration);
 		}
 
 		//Clamp the maximum velocity of the bear to max_speed
 		//invulnBear means youre clamping to max
-		if ((rbody.velocity.magnitude > max_speed) || bearInvuln) {
-			rbody.velocity = Vector3.ClampMagnitude (rbody.velocity, max_speed);
+		if( ( rbody.velocity.magnitude > max_speed ) || bearInvuln ) 
+		{ 
+			rbody.velocity = Vector3.ClampMagnitude ( rbody.velocity, max_speed );
 		}
 
 
@@ -299,8 +274,8 @@ public class BearController : MonoBehaviour {
 		GUIStyle myStyle = new GUIStyle();
 		myStyle.font = defaultFont;
 
-		if(deathBool){
-
+		if(deathBool)
+		{
 			//GUI.Box (new Rect (0,0,Screen.width,Screen.height), "<color=red><size=80>" + deathMessage + "</size></color>");
 			GUI.Label(new Rect(0,0, Screen.width, Screen.height), "<color=red><size=80>" + deathMessage + "</size></color>", myStyle);
 		}
@@ -310,7 +285,8 @@ public class BearController : MonoBehaviour {
 
 		GUI.Label(new Rect(0,0, 30, 30), "" + currentScore + "", myStyle);
 
-		if (bearInvuln) {
+		if (bearInvuln) 
+		{
 			//GUI.Box (new Rect (30,0,150,30), "<color=yellow><size=12>INVULNERABEAR</size></color>");
 			GUI.Label(new Rect(30,0, 150, 30), "<color=yellow><size=12>INVULNERABEAR</size></color>", myStyle);
 		}

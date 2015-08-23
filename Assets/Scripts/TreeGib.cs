@@ -28,51 +28,56 @@ public class TreeGib : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		bool local_slam = bc.slammed;
-		bool local_invuln = bc.bearInvuln;
-		bool local_dash = bc.dashed;
 
-		if (other.tag == "Bear" && (local_dash || local_slam || local_invuln))
+
+		if (other.tag == "Bear" )
 		{ 
-			//let's make every gib shoot off in a direction + or - 65 degrees from the bear's velocity vector. 
-			//We'll also make their speed relted to the bear's speed. 
-			//Sick gib explosion!
-			//bc.decreaseInvulnSlider(bc.invuln_bar_tree_penalty);
 
-			Vector2 currentBearVelocity = bc.currentVelocity;
+			bool local_slam = bc.slammed;
+			bool local_invuln = bc.bearInvuln;
+			bool local_dash = bc.dashed;
 
-			foreach (GameObject gib in gibs)
+			if(local_dash || local_slam || local_invuln)
+			{
+				//let's make every gib shoot off in a direction + or - 65 degrees from the bear's velocity vector. 
+				//We'll also make their speed relted to the bear's speed. 
+				//Sick gib explosion!
+				//bc.decreaseInvulnSlider(bc.invuln_bar_tree_penalty);
+
+				Vector2 currentBearVelocity = bc.currentVelocity;
+
+				foreach (GameObject gib in gibs)
+				{
+					Instantiate( snow, transform.position, Quaternion.identity );
+					Instantiate( branches, transform.position, Quaternion.identity);
+
+					SimpleAudioController.PlayCrashEmote();
+
+					gibspawn = (GameObject)Instantiate( gib, transform.position + Random.insideUnitSphere*spawnRadius, transform.rotation * Quaternion.Euler(0,0,Random.Range(0,0)));
+					//
+					float randomTrajectoryAngle = 0;
+					//Random.Range(0, 10);
+					Vector2 gibTrajectory = Vector2Extension.Rotate(currentBearVelocity, randomTrajectoryAngle);
+
+					gibspawn.GetComponent<Rigidbody2D>().AddForce(gibTrajectory * 2);
+
+				}
+
+				Destroy(gameObject);
+
+				bc.incrementScore();
+
+				if(!local_invuln){
+					bc.ChangeInvulnSliderValue(bc.invuln_bar_tree_penalty);
+				}
+			}
+			else if ( !( local_dash || local_slam ) )
 			{
 				Instantiate( snow, transform.position, Quaternion.identity );
-				Instantiate( branches, transform.position, Quaternion.identity);
-
 				SimpleAudioController.PlayCrashEmote();
-
-				gibspawn = (GameObject)Instantiate( gib, transform.position + Random.insideUnitSphere*spawnRadius, transform.rotation * Quaternion.Euler(0,0,Random.Range(0,0)));
-				//
-				float randomTrajectoryAngle = 0;
-				//Random.Range(0, 10);
-				Vector2 gibTrajectory = Vector2Extension.Rotate(currentBearVelocity, randomTrajectoryAngle);
-
-				gibspawn.GetComponent<Rigidbody2D>().AddForce(gibTrajectory * 2);
-
+				//tell the GameCamera script to shake the cam
+				mCamera.GetComponent<GameCamera>().Shake = true;
 			}
-
-			Destroy(gameObject);
-
-			bc.incrementScore();
-
-			if(!local_invuln){
-				bc.ChangeInvulnSliderValue(bc.invuln_bar_tree_penalty);
-			}
-		}
-
-		if (other.tag == "Bear" && local_dash == false && local_slam == false)
-		{
-			Instantiate( snow, transform.position, Quaternion.identity );
-			SimpleAudioController.PlayCrashEmote();
-			//tell the GameCamera script to shake the cam
-			mCamera.GetComponent<GameCamera>().Shake = true;
 		}
 
 	}
