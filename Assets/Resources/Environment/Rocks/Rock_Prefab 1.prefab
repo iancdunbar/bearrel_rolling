@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 421610}
   - 33: {fileID: 3382336}
   - 23: {fileID: 2351668}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: pCube1_group1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ GameObject:
   - 4: {fileID: 424988}
   - 33: {fileID: 3327712}
   - 23: {fileID: 2325650}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: group1_pCube3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,9 @@ GameObject:
   - 4: {fileID: 437440}
   - 58: {fileID: 5855844}
   - 114: {fileID: 11424360}
-  m_Layer: 0
+  - 58: {fileID: 5837632}
+  - 50: {fileID: 5032134}
+  m_Layer: 12
   m_Name: Rock_Prefab 1
   m_TagString: Rock
   m_Icon: {fileID: 0}
@@ -61,7 +63,7 @@ GameObject:
   - 4: {fileID: 489536}
   - 33: {fileID: 3350976}
   - 23: {fileID: 2378886}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: group1_pCube2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,8 +101,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 148586}
   m_LocalRotation: {x: 0, y: -.707106829, z: 0, w: .707106709}
-  m_LocalPosition: {x: 2.88721395, y: -3.57000017, z: .147707582}
-  m_LocalScale: {x: 1, y: 1.30887842, z: 1}
+  m_LocalPosition: {x: 0, y: -3.57000017, z: .147707582}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 489536}
   - {fileID: 424988}
@@ -212,6 +214,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 109478}
   m_Mesh: {fileID: 4300004, guid: bf4e11785edf54dea800758ae9aa9d96, type: 3}
+--- !u!50 &5032134
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 148586}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &5837632
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 148586}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 4.38999987}
+  serializedVersion: 2
+  m_Radius: 7.9000001
 --- !u!58 &5855844
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -247,7 +278,19 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 148586}

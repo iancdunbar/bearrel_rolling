@@ -29,6 +29,7 @@ GameObject:
   - 4: {fileID: 491084}
   - 114: {fileID: 11441960}
   - 58: {fileID: 5825440}
+  - 50: {fileID: 5099356}
   m_Layer: 0
   m_Name: Firewatch_Prefab
   m_TagString: Cabin
@@ -242,7 +243,7 @@ Transform:
   m_GameObject: {fileID: 125998}
   m_LocalRotation: {x: 0, y: .108340338, z: 0, w: .994113922}
   m_LocalPosition: {x: 0, y: 1.5, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 2.8544364, y: 2.85443687, z: 2.85443687}
   m_Children:
   - {fileID: 470092}
   - {fileID: 457076}
@@ -335,7 +336,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 8f333011551e94f02a09e3cc59af3951, type: 2}
+  - {fileID: 2100000, guid: 2fb75d9d29a9c41988ac2ca92ee2758c, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -470,6 +471,22 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 175450}
   m_Mesh: {fileID: 4300018, guid: 37362e2734cba458d818b1937bec1dbb, type: 3}
+--- !u!50 &5099356
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 125998}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!54 &5419356
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -698,6 +715,22 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
