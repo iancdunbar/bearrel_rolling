@@ -123,7 +123,7 @@ MonoBehaviour:
   maxCabinsPerSegment: 2
   chanceOfFirewatch: 100
   minFirewatchPerSegment: 1
-  maxFirewatchPerSegment: 10
+  maxFirewatchPerSegment: 2
   chanceOfTrees: 100
   minTreesPerSegment: 1
   maxTreesPerSegment: 3
