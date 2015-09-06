@@ -167,7 +167,7 @@ public class BearController : MonoBehaviour {
 	{
 		rbody = GetComponent<Rigidbody2D>( );
 		bsc = new BearStateController( );
-		defaultFont = (Font)Resources.Load("Fonts/AGENTORANGE", typeof(Font));
+		defaultFont = (Font)Resources.Load("Fonts/Trebuchet MS Bold", typeof(Font));
 
 		SmashDashHUDPrefab = Resources.Load<Image>("HUD/DashSmash_Container");
 
@@ -277,7 +277,7 @@ public class BearController : MonoBehaviour {
 		if(deathBool)
 		{
 			//GUI.Box (new Rect (0,0,Screen.width,Screen.height), "<color=red><size=80>" + deathMessage + "</size></color>");
-			GUI.Label(new Rect(0,0, Screen.width, Screen.height), "<color=red><size=80>" + deathMessage + "</size></color>", myStyle);
+			GUI.Label(new Rect(0,0, Screen.width, Screen.height), "<color=red><size=60>" + deathMessage + "</size></color>", myStyle);
 		}
 
 		//GUI.Box (new Rect (0,0,30,30), "<color=yellow><size=12>" + currentScore + "</size></color>");
