@@ -6,8 +6,11 @@ public class BearInputController : MonoBehaviour {
     /////////////////////////////////////////////
     // Private Variable
     /////////////////////////////////////////////
-
+	
+	private bool active_touch;
     private Vector2 touch_begin;
+	private float sqr_swipe_minimum;
+	private float sqr_tap_tolerance;
     private bool gesture_processed;
 
     /////////////////////////////////////////////
@@ -19,6 +22,7 @@ public class BearInputController : MonoBehaviour {
 
     [SerializeField]
     private float swipe_minimum;
+	private float tap_tolerance;
 	private float touchDuration;
 	private Touch touch;
 
@@ -32,7 +36,8 @@ public class BearInputController : MonoBehaviour {
     // Use this for initialization
     void Start( )
     {
-
+		sqr_swipe_minimum = swipe_minimum * swipe_minimum;
+		sqr_tap_tolerance = tap_tolerance * tap_tolerance;
     }
 
     // Update is called once per frame
@@ -80,7 +85,58 @@ public class BearInputController : MonoBehaviour {
 			touchDuration = 0.0f;
 			
 #else
-		
+
+		if( Input.GetKey( KeyCode.Mouse0 ) )
+		{
+			if( !gesture_processed )
+			{
+				if( active_touch )
+				{
+					Vector2 curr_pos = Input.mousePosition;
+					Vector2 delta = curr_pos - touch_begin;
+
+					if( delta.sqrMagnitude > sqr_swipe_minimum )
+					{
+						// Send the swipe message
+						MessageDispatch.BroadcastMessage( "OnSwipe", delta.normalized );
+
+						// Process the swipe
+						gesture_processed = true;
+
+					}
+				}
+				else
+				{
+					active_touch = true;
+					gesture_processed = false;
+					touch_begin = Input.mousePosition;
+				}
+			}
+
+		}
+		else
+		{
+			if( active_touch )
+			{
+				// Check to see for a tap
+				if( !gesture_processed )
+				{
+					Vector2 curr_pos = Input.mousePosition;
+					Vector2 delta = curr_pos - touch_begin;
+					if( delta.sqrMagnitude < sqr_tap_tolerance )
+					{
+						MessageDispatch.BroadcastMessage( "OnTap" );
+					}
+
+				}
+
+				// Set active touch to false
+				active_touch = false;
+			}
+		}
+
+
+
         if( Input.GetKeyDown( KeyCode.Space ) )
         {
             MessageDispatch.BroadcastMessage( "OnSwipeUp" );
@@ -90,7 +146,8 @@ public class BearInputController : MonoBehaviour {
         {
             MessageDispatch.BroadcastMessage( "OnSwipeDown" );
         }
-		if (Input.GetKeyDown( KeyCode.D ) || Input.GetKeyDown (KeyCode.Mouse0))
+
+		if (Input.GetKeyDown( KeyCode.D ) )
 		{
 			MessageDispatch.BroadcastMessage( "OnTap");
 		}

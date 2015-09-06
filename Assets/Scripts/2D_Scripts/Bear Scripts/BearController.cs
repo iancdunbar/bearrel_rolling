@@ -23,7 +23,7 @@ public class BearController : MonoBehaviour {
 	private Color HUDColor = new Color(0.957f, 1.000f, 0.221f, 1.000f);
 	private const int maxInvulnSliderAmount = 100;
 	private Slider invulnSlider;
-	private static string[] deathMessages = { "DEATH IS UPON YOU, BEAR" };	
+	private static string[] deathMessages = { "DEATH IS UPON YOU, BEAR", "DEAD TIME RAVE", "NO HAPPINESS", "THE DARK CLOSES IN" };	
 	private static int random = Random.Range(0, deathMessages.Length);
 	private static string deathMessage = deathMessages[random];
 	public Font defaultFont;                                                                                                                                                                                                                                                                                                                                                                                                                                    
