@@ -80,10 +80,10 @@ public class MessageDispatch : MonoBehaviour {
         {
             md.message_dictionary[ message ]( arg );
         }
-        else
-        {
-            Debug.LogWarning( "No listeners found for " + message );
-        }
+//        else
+//        {
+//            Debug.LogWarning( "No listeners found for " + message );
+//        }
     }
 
     //////////////////////////////////

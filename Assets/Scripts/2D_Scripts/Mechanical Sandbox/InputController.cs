@@ -42,8 +42,8 @@ public class InputController : MonoBehaviour {
 	// Update is called once per frame
 	void Update( )
 	{
-		
-		#if (UNITY_ANDROID || UNITY_IOS) && !UNITY_EDITOR
+
+#if (UNITY_ANDROID || UNITY_IOS) && !UNITY_EDITOR
 		// Process Touch Input
 		
 		if( Input.touchCount > 0 )
@@ -53,37 +53,45 @@ public class InputController : MonoBehaviour {
 			{
 				gesture_processed = false;
 				touch_begin = curr.position;
+				MessageDispatch.BroadcastMessage( "OnTouchBegin", touch_begin );
 			}
 			else if( curr.phase == TouchPhase.Moved )
 			{
-				if( !gesture_processed && curr.position.y - touch_begin.y > swipe_minimum )
+
+				if( !gesture_processed )
 				{
-					gesture_processed = true;
-					MessageDispatch.BroadcastMessage( "OnSwipeUp" );
+
+					Vector2 curr_pos = curr.position;
+					Vector2 delta = curr_pos - touch_begin;
+
+					if( delta.sqrMagnitude > sqr_swipe_minimum )
+					{
+						MessageDispatch.BroadcastMessage( "OnSwipe", delta.normalized );
+
+						gesture_processed = true;
+					}
+
 				}
-				else if( !gesture_processed && touch_begin.y - curr.position.y > swipe_minimum )
-				{
-					gesture_processed = true;
-					MessageDispatch.BroadcastMessage( "OnSwipeDown" );
-				}
+
+//				if( !gesture_processed && curr.position.y - touch_begin.y > swipe_minimum )
+//				{
+//					gesture_processed = true;
+//					MessageDispatch.BroadcastMessage( "OnSwipeUp" );
+//				}
+//				else if( !gesture_processed && touch_begin.y - curr.position.y > swipe_minimum )
+//				{
+//					gesture_processed = true;
+//					MessageDispatch.BroadcastMessage( "OnSwipeDown" );
+//				}
 				
 			}
 			else if( curr.phase == TouchPhase.Ended )
 			{
-				
+				MessageDispatch.BroadcastMessage( "OnTouchEnded", curr.position );
 			}
 		}
-//		if(Input.touchCount > 0){ //if there is any touch
-//			touchDuration += Time.deltaTime;
-//			touch = Input.GetTouch(0);
-//			
-//			if(touch.phase == TouchPhase.Ended && touchDuration < 0.3f) //making sure it only check the touch once && it was a short touch/tap and not a dragging.
-//				StartCoroutine("singleOrDouble");
-//		}
-//		else
-//			touchDuration = 0.0f;
 		
-		#else
+#else
 		
 		if( Input.GetKey( KeyCode.Mouse0 ) )
 		{
@@ -109,8 +117,9 @@ public class InputController : MonoBehaviour {
 				else
 				{
 					active_touch = true;
-					gesture_processed = false;
 					touch_begin = Input.mousePosition;
+
+					MessageDispatch.BroadcastMessage( "OnTouchBegin", touch_begin );
 				}
 			}
 			
@@ -119,20 +128,25 @@ public class InputController : MonoBehaviour {
 		{
 			if( active_touch )
 			{
+				// Get the current touch location
+				Vector2 curr_pos = Input.mousePosition;
+
 				// Check to see for a tap
 				if( !gesture_processed )
 				{
-					Vector2 curr_pos = Input.mousePosition;
+					// Calculate the delta and compare the distance against the tap allowance
 					Vector2 delta = curr_pos - touch_begin;
 					if( delta.sqrMagnitude < sqr_tap_tolerance )
 					{
 						MessageDispatch.BroadcastMessage( "OnTap" );
-					}
-					
+					}	
 				}
-				
+
+				MessageDispatch.BroadcastMessage( "OnTouchEnd", curr_pos );
+
 				// Set active touch to false
 				active_touch = false;
+				gesture_processed = false;
 			}
 		}
 		
@@ -150,24 +164,12 @@ public class InputController : MonoBehaviour {
 		
 		if (Input.GetKeyDown( KeyCode.D ) )
 		{
-			MessageDispatch.BroadcastMessage( "OnTap");
+			MessageDispatch.BroadcastMessage( "OnTap" );
 		}
 		
-		#endif
+#endif
+
 	}
-//	IEnumerator singleOrDouble(){
-//		yield return new WaitForSeconds(0.3f);
-//		if(touch.tapCount == 1)
-//			Debug.Log ("Single");
-//		else if(touch.tapCount == 2){
-//			//this coroutine has been called twice. We should stop the next one here otherwise we get two double tap
-//			StopCoroutine("singleOrDouble");
-//			Debug.Log ("Double");
-//			MessageDispatch.BroadcastMessage( "OnTap" );
-//			
-//		}
-//	}
-	
-	
+
 	/////////////////////////////////////////////
 }
