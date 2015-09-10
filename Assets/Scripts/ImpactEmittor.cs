@@ -49,6 +49,7 @@ public class ImpactEmittor : MonoBehaviour {
 	
 	void Start ()
 	{	
+		ContactEmitter.Play();
 		startTime = Time.time;
 		mCamera = GameObject.FindGameObjectWithTag("MainCamera");
 		originalOffset = mCamera.GetComponent<GameCamera>().offset;
@@ -139,13 +140,15 @@ public class ImpactEmittor : MonoBehaviour {
 		//Emit particles if the bear is touching the ground
 		if(grounded == true)
         {
-			if( ContactEmitter.isPaused )
-			    ContactEmitter.Play();
+			ContactEmitter.enableEmission = true;
+			//if( ContactEmitter.isPaused )
+			//    
 				
 		}
 		if (grounded == false)
         { 
-			ContactEmitter.Pause();	
+			ContactEmitter.enableEmission = false;
+			//ContactEmitter.Pause();	
 		}
 
 		
@@ -261,7 +264,13 @@ public class ImpactEmittor : MonoBehaviour {
 		
 	}
 	
-	
+	void OnTriggerStay2D(Collider2D other)
+	{
+		if (other.tag == "Ground")
+		{
+			grounded = true;
+		}
+	}
 	void OnCollisionEnter2D( Collision2D other )
 	{
 		

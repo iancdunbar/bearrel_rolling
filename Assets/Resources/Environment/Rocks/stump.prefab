@@ -14,7 +14,7 @@ GameObject:
   - 58: {fileID: 5855614}
   m_Layer: 12
   m_Name: stump
-  m_TagString: Untagged
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25,9 +25,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 184976}
-  m_LocalRotation: {x: -.565192997, y: .424920291, z: .565192878, w: .424919754}
-  m_LocalPosition: {x: .00316870003, y: .500919998, z: -.00132030004}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -.634789944, y: .31151545, z: .634790003, w: .311514914}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 193.390381, y: 193.39032, z: 193.39032}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
