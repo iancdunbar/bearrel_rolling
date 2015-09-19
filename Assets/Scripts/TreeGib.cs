@@ -38,6 +38,8 @@ public class TreeGib : MonoBehaviour {
 			bool local_invuln = bc.bearInvuln;
 			bool local_dash = bc.dashed;
 
+			bc.incrementScore();
+
 			if(local_dash || local_slam || local_invuln)
 			{
 				//let's make every gib shoot off in a direction + or - 65 degrees from the bear's velocity vector. 
@@ -64,9 +66,8 @@ public class TreeGib : MonoBehaviour {
 
 				}
 
-				Destroy(gameObject);
 
-				bc.incrementScore();
+				Destroy(gameObject);
 
 				if(!local_invuln){
 					bc.ChangeInvulnSliderValue(bc.invuln_bar_tree_penalty);

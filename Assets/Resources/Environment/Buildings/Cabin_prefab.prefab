@@ -315,6 +315,7 @@ GameObject:
   - 58: {fileID: 5884772}
   - 114: {fileID: 11489620}
   - 50: {fileID: 5068412}
+  - 114: {fileID: 11404070}
   m_Layer: 0
   m_Name: Cabin_prefab
   m_TagString: Cabin
@@ -2265,7 +2266,6 @@ MeshFilter:
   m_Mesh: {fileID: 4300020, guid: 3768f7986530d48f8a77aad091cc6f52, type: 3}
 --- !u!50 &5068412
 Rigidbody2D:
-  serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -2274,11 +2274,11 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
+  m_FixedAngle: 0
   m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!54 &5400558
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -3210,6 +3210,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .0900919437, y: .300097018, z: .759223044}
   m_Center: {x: 1, y: .595890522, z: -.616772532}
+--- !u!114 &11404070
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 130196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08fc97cbe046d475386cd447746a18af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gibs: []
+  explosionForce: 5
+  spawnRadius: 1
+  breakforce: 10
+  snow: {fileID: 19800000, guid: 3971ad6b74080414e9d97cb6aba0e05b, type: 2}
+  branches: {fileID: 19800000, guid: e23491b16430d49e88e6e2788903b4b8, type: 2}
 --- !u!114 &11489620
 MonoBehaviour:
   m_ObjectHideFlags: 1
