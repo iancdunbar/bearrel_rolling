@@ -1,0 +1,578 @@
+fileFormatVersion: 2
+guid: 98025be0b1cbc4d40926355bb371eccc
+timeCreated: 1442766327
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: bush
+    100002: bush 1
+    100004: bush 2
+    100006: //RootNode
+    100008: camera1
+    100010: commune
+    100012: group1
+    100014: pCone1
+    100016: pCone1 1
+    100018: pCone1 2
+    100020: pCone2
+    100022: pCone2 1
+    100024: pCone2 2
+    100026: pCone3
+    100028: pCone3 1
+    100030: pCone3 2
+    100032: pCone4
+    100034: pCone4 1
+    100036: pCone4 2
+    100038: pCube1
+    100040: pCube13
+    100042: pCube13 1
+    100044: pCube13 2
+    100046: pCube14
+    100048: pCube14 1
+    100050: pCube14 2
+    100052: polySurface134
+    100054: polySurface135
+    100056: polySurface136
+    100058: polySurface137
+    100060: polySurface138
+    100062: polySurface139
+    100064: polySurface154
+    100066: polySurface155
+    100068: polySurface156
+    100070: polySurface157
+    100072: polySurface158
+    100074: polySurface159
+    100076: polySurface160
+    100078: polySurface161
+    100080: polySurface162
+    100082: polySurface163
+    100084: polySurface164
+    100086: polySurface165
+    100088: polySurface166
+    100090: polySurface167
+    100092: polySurface168
+    100094: polySurface169
+    100096: polySurface170
+    100098: polySurface171
+    100100: polySurface172
+    100102: polySurface173
+    100104: polySurface174
+    100106: polySurface175
+    100108: polySurface176
+    100110: polySurface177
+    100112: polySurface22
+    100114: polySurface25
+    100116: polySurface26
+    100118: polySurface4
+    100120: polySurface4 1
+    100122: polySurface4 2
+    100124: polySurface43
+    100126: polySurface5
+    100128: polySurface5 1
+    100130: polySurface5 2
+    100132: polySurface50
+    100134: polySurface53
+    100136: polySurface54
+    100138: polySurface56
+    100140: polySurface57
+    100142: polySurface58
+    100144: polySurface59
+    100146: polySurface60
+    100148: polySurface61
+    100150: polySurface70
+    100152: polySurface71
+    100154: polySurface72
+    100156: polySurface75
+    100158: polySurface81
+    100160: polySurface93
+    100162: pPyramid10
+    100164: pPyramid11
+    100166: pPyramid14
+    100168: pPyramid15
+    100170: pPyramid16
+    100172: pPyramid17
+    100174: pPyramid18
+    100176: pPyramid19
+    100178: pPyramid2
+    100180: pPyramid3
+    100182: pPyramid4
+    100184: pPyramid46
+    100186: pPyramid47
+    100188: pPyramid5
+    100190: pPyramid6
+    100192: pPyramid8
+    100194: pPyramid9
+    100196: pSphere10
+    100198: pSphere8
+    100200: RollingHills1
+    100202: RollingHills2
+    100204: transform1
+    100206: transform10
+    100208: transform11
+    100210: transform12
+    100212: transform13
+    100214: transform14
+    100216: transform15
+    100218: transform16
+    100220: transform17
+    100222: transform2
+    100224: transform3
+    100226: transform4
+    100228: transform5
+    100230: transform6
+    100232: transform7
+    100234: transform8
+    100236: transform9
+    100238: tree1
+    100240: tree2
+    100242: tree3
+    100244: wood
+    100246: wood 1
+    100248: wood 2
+    100250: Cabin1
+    100252: Chapel
+    100254: groundplane
+    100256: Hill
+    100258: lamppost
+    100260: polySurface186
+    100262: polySurface189
+    100264: polySurface216
+    400000: bush
+    400002: bush 1
+    400004: bush 2
+    400006: //RootNode
+    400008: camera1
+    400010: commune
+    400012: group1
+    400014: pCone1
+    400016: pCone1 1
+    400018: pCone1 2
+    400020: pCone2
+    400022: pCone2 1
+    400024: pCone2 2
+    400026: pCone3
+    400028: pCone3 1
+    400030: pCone3 2
+    400032: pCone4
+    400034: pCone4 1
+    400036: pCone4 2
+    400038: pCube1
+    400040: pCube13
+    400042: pCube13 1
+    400044: pCube13 2
+    400046: pCube14
+    400048: pCube14 1
+    400050: pCube14 2
+    400052: polySurface134
+    400054: polySurface135
+    400056: polySurface136
+    400058: polySurface137
+    400060: polySurface138
+    400062: polySurface139
+    400064: polySurface154
+    400066: polySurface155
+    400068: polySurface156
+    400070: polySurface157
+    400072: polySurface158
+    400074: polySurface159
+    400076: polySurface160
+    400078: polySurface161
+    400080: polySurface162
+    400082: polySurface163
+    400084: polySurface164
+    400086: polySurface165
+    400088: polySurface166
+    400090: polySurface167
+    400092: polySurface168
+    400094: polySurface169
+    400096: polySurface170
+    400098: polySurface171
+    400100: polySurface172
+    400102: polySurface173
+    400104: polySurface174
+    400106: polySurface175
+    400108: polySurface176
+    400110: polySurface177
+    400112: polySurface22
+    400114: polySurface25
+    400116: polySurface26
+    400118: polySurface4
+    400120: polySurface4 1
+    400122: polySurface4 2
+    400124: polySurface43
+    400126: polySurface5
+    400128: polySurface5 1
+    400130: polySurface5 2
+    400132: polySurface50
+    400134: polySurface53
+    400136: polySurface54
+    400138: polySurface56
+    400140: polySurface57
+    400142: polySurface58
+    400144: polySurface59
+    400146: polySurface60
+    400148: polySurface61
+    400150: polySurface70
+    400152: polySurface71
+    400154: polySurface72
+    400156: polySurface75
+    400158: polySurface81
+    400160: polySurface93
+    400162: pPyramid10
+    400164: pPyramid11
+    400166: pPyramid14
+    400168: pPyramid15
+    400170: pPyramid16
+    400172: pPyramid17
+    400174: pPyramid18
+    400176: pPyramid19
+    400178: pPyramid2
+    400180: pPyramid3
+    400182: pPyramid4
+    400184: pPyramid46
+    400186: pPyramid47
+    400188: pPyramid5
+    400190: pPyramid6
+    400192: pPyramid8
+    400194: pPyramid9
+    400196: pSphere10
+    400198: pSphere8
+    400200: RollingHills1
+    400202: RollingHills2
+    400204: transform1
+    400206: transform10
+    400208: transform11
+    400210: transform12
+    400212: transform13
+    400214: transform14
+    400216: transform15
+    400218: transform16
+    400220: transform17
+    400222: transform2
+    400224: transform3
+    400226: transform4
+    400228: transform5
+    400230: transform6
+    400232: transform7
+    400234: transform8
+    400236: transform9
+    400238: tree1
+    400240: tree2
+    400242: tree3
+    400244: wood
+    400246: wood 1
+    400248: wood 2
+    400250: Cabin1
+    400252: Chapel
+    400254: groundplane
+    400256: Hill
+    400258: lamppost
+    400260: polySurface186
+    400262: polySurface189
+    400264: polySurface216
+    2300000: pCone1
+    2300002: pCone1 1
+    2300004: pCone1 2
+    2300006: pCone2
+    2300008: pCone2 1
+    2300010: pCone2 2
+    2300012: pCone3
+    2300014: pCone3 1
+    2300016: pCone3 2
+    2300018: pCone4
+    2300020: pCone4 1
+    2300022: pCone4 2
+    2300024: pCube1
+    2300026: pCube13
+    2300028: pCube13 1
+    2300030: pCube13 2
+    2300032: pCube14
+    2300034: pCube14 1
+    2300036: pCube14 2
+    2300038: polySurface134
+    2300040: polySurface135
+    2300042: polySurface136
+    2300044: polySurface137
+    2300046: polySurface138
+    2300048: polySurface139
+    2300050: polySurface154
+    2300052: polySurface155
+    2300054: polySurface156
+    2300056: polySurface157
+    2300058: polySurface158
+    2300060: polySurface159
+    2300062: polySurface160
+    2300064: polySurface161
+    2300066: polySurface162
+    2300068: polySurface163
+    2300070: polySurface165
+    2300072: polySurface176
+    2300074: polySurface177
+    2300076: polySurface4
+    2300078: polySurface4 1
+    2300080: polySurface4 2
+    2300082: polySurface43
+    2300084: polySurface5
+    2300086: polySurface5 1
+    2300088: polySurface5 2
+    2300090: polySurface50
+    2300092: polySurface53
+    2300094: polySurface54
+    2300096: polySurface56
+    2300098: polySurface57
+    2300100: polySurface58
+    2300102: polySurface59
+    2300104: polySurface60
+    2300106: polySurface61
+    2300108: polySurface70
+    2300110: polySurface71
+    2300112: polySurface72
+    2300114: polySurface75
+    2300116: polySurface81
+    2300118: polySurface93
+    2300120: pPyramid10
+    2300122: pPyramid11
+    2300124: pPyramid17
+    2300126: pPyramid18
+    2300128: pPyramid19
+    2300130: pPyramid2
+    2300132: pPyramid3
+    2300134: pPyramid4
+    2300136: pPyramid46
+    2300138: pPyramid47
+    2300140: pPyramid5
+    2300142: pPyramid6
+    2300144: pPyramid8
+    2300146: pPyramid9
+    2300148: pSphere10
+    2300150: pSphere8
+    2300152: groundplane
+    2300154: Hill
+    2300156: lamppost
+    2300158: polySurface186
+    2300160: polySurface189
+    2300162: polySurface216
+    3300000: pCone1
+    3300002: pCone1 1
+    3300004: pCone1 2
+    3300006: pCone2
+    3300008: pCone2 1
+    3300010: pCone2 2
+    3300012: pCone3
+    3300014: pCone3 1
+    3300016: pCone3 2
+    3300018: pCone4
+    3300020: pCone4 1
+    3300022: pCone4 2
+    3300024: pCube1
+    3300026: pCube13
+    3300028: pCube13 1
+    3300030: pCube13 2
+    3300032: pCube14
+    3300034: pCube14 1
+    3300036: pCube14 2
+    3300038: polySurface134
+    3300040: polySurface135
+    3300042: polySurface136
+    3300044: polySurface137
+    3300046: polySurface138
+    3300048: polySurface139
+    3300050: polySurface154
+    3300052: polySurface155
+    3300054: polySurface156
+    3300056: polySurface157
+    3300058: polySurface158
+    3300060: polySurface159
+    3300062: polySurface160
+    3300064: polySurface161
+    3300066: polySurface162
+    3300068: polySurface163
+    3300070: polySurface165
+    3300072: polySurface176
+    3300074: polySurface177
+    3300076: polySurface4
+    3300078: polySurface4 1
+    3300080: polySurface4 2
+    3300082: polySurface43
+    3300084: polySurface5
+    3300086: polySurface5 1
+    3300088: polySurface5 2
+    3300090: polySurface50
+    3300092: polySurface53
+    3300094: polySurface54
+    3300096: polySurface56
+    3300098: polySurface57
+    3300100: polySurface58
+    3300102: polySurface59
+    3300104: polySurface60
+    3300106: polySurface61
+    3300108: polySurface70
+    3300110: polySurface71
+    3300112: polySurface72
+    3300114: polySurface75
+    3300116: polySurface81
+    3300118: polySurface93
+    3300120: pPyramid10
+    3300122: pPyramid11
+    3300124: pPyramid17
+    3300126: pPyramid18
+    3300128: pPyramid19
+    3300130: pPyramid2
+    3300132: pPyramid3
+    3300134: pPyramid4
+    3300136: pPyramid46
+    3300138: pPyramid47
+    3300140: pPyramid5
+    3300142: pPyramid6
+    3300144: pPyramid8
+    3300146: pPyramid9
+    3300148: pSphere10
+    3300150: pSphere8
+    3300152: groundplane
+    3300154: Hill
+    3300156: lamppost
+    3300158: polySurface186
+    3300160: polySurface189
+    3300162: polySurface216
+    4300000: pSphere8
+    4300002: polySurface43
+    4300004: pCube1
+    4300006: polySurface50
+    4300008: polySurface53
+    4300010: polySurface54
+    4300012: polySurface56
+    4300014: polySurface57
+    4300016: polySurface58
+    4300018: polySurface59
+    4300020: polySurface60
+    4300022: polySurface61
+    4300024: polySurface70
+    4300026: polySurface71
+    4300028: polySurface72
+    4300030: polySurface75
+    4300032: pCube13
+    4300034: pCube14
+    4300036: polySurface4
+    4300038: polySurface5
+    4300040: pCone1
+    4300042: pCone2
+    4300044: pCone3
+    4300046: pCone4
+    4300048: pCube13
+    4300050: pCube14
+    4300052: polySurface4
+    4300054: polySurface5
+    4300056: pCone1
+    4300058: pCone2
+    4300060: pCone3
+    4300062: pCone4
+    4300064: pCube13
+    4300066: pCube14
+    4300068: polySurface4
+    4300070: polySurface5
+    4300072: pCone1
+    4300074: pCone2
+    4300076: pCone3
+    4300078: pCone4
+    4300080: polySurface81
+    4300082: pPyramid2
+    4300084: pPyramid3
+    4300086: pPyramid4
+    4300088: pPyramid5
+    4300090: pPyramid6
+    4300092: pSphere10
+    4300094: polySurface93
+    4300096: polySurface134
+    4300098: polySurface135
+    4300100: polySurface136
+    4300102: polySurface137
+    4300104: polySurface138
+    4300106: polySurface139
+    4300108: polySurface154
+    4300110: polySurface155
+    4300112: polySurface156
+    4300114: polySurface157
+    4300116: polySurface158
+    4300118: polySurface159
+    4300120: polySurface160
+    4300122: polySurface161
+    4300124: polySurface162
+    4300126: polySurface163
+    4300128: pPyramid47
+    4300130: pPyramid10
+    4300132: pPyramid9
+    4300134: pPyramid8
+    4300136: pPyramid11
+    4300138: pPyramid46
+    4300140: pPyramid17
+    4300142: pPyramid18
+    4300144: pPyramid19
+    4300146: polySurface177
+    4300148: polySurface165
+    4300150: polySurface176
+    4300152: groundplane
+    4300154: lamppost
+    4300156: Hill
+    4300158: polySurface189
+    4300160: polySurface186
+    4300162: polySurface216
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
