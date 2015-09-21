@@ -28,7 +28,7 @@ GameObject:
   - 23: {fileID: 2357288}
   - 95: {fileID: 9598060}
   - 114: {fileID: 11424630}
-  - 68: {fileID: 6824246}
+  - 68: {fileID: 6820720}
   m_Layer: 0
   m_Name: 3DSlope03
   m_TagString: Ground
@@ -92,7 +92,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132654}
   m_Mesh: {fileID: 4300000, guid: af9a425edf68646c0b3848486455fa56, type: 3}
---- !u!68 &6824246
+--- !u!68 &6820720
 EdgeCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -105,16 +105,15 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
   - {x: 0, y: 0}
-  - {x: 13.8720207, y: -14.1308985}
-  - {x: 21.0011024, y: -20.7734375}
+  - {x: 13.8720207, y: -4.98835516}
+  - {x: 21.4038429, y: -20.0569496}
   - {x: 24.9759922, y: -24.3058414}
   - {x: 29.2737026, y: -26.9033985}
   - {x: 32.2144814, y: -27.9976044}
   - {x: 35.1552582, y: -28.7786961}
   - {x: 63.5670891, y: -32.9780769}
   - {x: 66.2241211, y: -33.6682129}
-  - {x: 68.7386398, y: -34.9575539}
-  - {x: 87.0071106, y: -52.6468658}
+  - {x: 87.0071106, y: -41.9498558}
 --- !u!95 &9598060
 Animator:
   serializedVersion: 3
@@ -144,7 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   start_point: {x: 0, y: 0, z: 0}
-  end_point: {x: 87.0071106, y: -52.6468658, z: 0}
+  end_point: {x: 87.0071106, y: -41.9498558, z: 0}
   points_init: 1
   collisionMesh: {fileID: 3319112}
   getStartEndFromColors: 1

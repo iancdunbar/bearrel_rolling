@@ -459,15 +459,7 @@ public class BearController : MonoBehaviour {
 		if(other.tag=="Shrub")
 		{
 
-			Rigidbody2D rbdy = other.GetComponent<Rigidbody2D>();
-
-			if( rbdy )
-			{
-				rbdy.isKinematic = false;
-			}
-
-			other.gameObject.AddComponent<TimedObjectDestructor>();
-
+			//Handled in "ImpactEmitter"
 		}
 
 		if(other.tag == "tree_gib")

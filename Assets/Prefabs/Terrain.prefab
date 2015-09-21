@@ -101,10 +101,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rock_prefab: []
   terrain_piece:
-  - {fileID: 134072, guid: fec210cab61ff4f92863ed3b6363e619, type: 2}
   - {fileID: 163188, guid: a74a37c450574404d8c93ad5fbe13ce6, type: 2}
-  - {fileID: 132654, guid: c958381c0164f4e21b2e82d04e916c25, type: 2}
-  - {fileID: 170812, guid: 7f8fd9eea42ff4d089e5b4a3de7564ff, type: 2}
+  - {fileID: 163188, guid: a74a37c450574404d8c93ad5fbe13ce6, type: 2}
+  - {fileID: 163188, guid: a74a37c450574404d8c93ad5fbe13ce6, type: 2}
+  - {fileID: 163188, guid: a74a37c450574404d8c93ad5fbe13ce6, type: 2}
   end_vert: 1
   mask_prefab: {fileID: 110194, guid: 15406bc7fb5ed84438b96069728796bf, type: 2}
   gen_distance: 500

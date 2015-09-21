@@ -1322,8 +1322,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
   - {x: 0, y: 0}
-  - {x: 13.8720207, y: -14.1308985}
-  - {x: 50.4089622, y: -50.4944534}
+  - {x: 13.8720207, y: -4.94647932}
+  - {x: 51.6739655, y: -18.9049683}
 --- !u!95 &9506422
 Animator:
   serializedVersion: 3
@@ -1591,7 +1591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   start_point: {x: 0, y: 0, z: 0}
-  end_point: {x: 50.4089622, y: -50.4944534, z: 0}
+  end_point: {x: 51.6739655, y: -18.9049683, z: 0}
   points_init: 1
   collisionMesh: {fileID: 3319550}
   getStartEndFromColors: 1
