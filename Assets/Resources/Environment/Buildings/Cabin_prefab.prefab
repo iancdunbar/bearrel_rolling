@@ -181,8 +181,7 @@ GameObject:
   - 4: {fileID: 461364}
   - 33: {fileID: 3342446}
   - 23: {fileID: 2337906}
-  - 65: {fileID: 6522690}
-  - 54: {fileID: 5418310}
+  - 61: {fileID: 6189350}
   m_Layer: 0
   m_Name: CabinBoard
   m_TagString: Cabin
@@ -315,7 +314,6 @@ GameObject:
   - 58: {fileID: 5884772}
   - 114: {fileID: 11489620}
   - 50: {fileID: 5068412}
-  - 114: {fileID: 11404070}
   m_Layer: 0
   m_Name: Cabin_prefab
   m_TagString: Cabin
@@ -838,8 +836,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138172}
-  m_LocalRotation: {x: .586776912, y: -.391964078, z: -.387947738, w: -.592919528}
-  m_LocalPosition: {x: -.0390000008, y: 2.57299995, z: -1.16999996}
+  m_LocalRotation: {x: .701483667, y: -.0527726747, z: -.052264493, w: -.708804727}
+  m_LocalPosition: {x: -.0140000004, y: 2.6099999, z: -1.11500001}
   m_LocalScale: {x: .149253726, y: .149253726, z: .149253726}
   m_Children: []
   m_Father: {fileID: 419264}
@@ -2266,6 +2264,7 @@ MeshFilter:
   m_Mesh: {fileID: 4300020, guid: 3768f7986530d48f8a77aad091cc6f52, type: 3}
 --- !u!50 &5068412
 Rigidbody2D:
+  serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -2274,11 +2273,11 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
-  m_FixedAngle: 0
   m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!54 &5400558
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -2353,21 +2352,6 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!54 &5418310
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 118396}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!54 &5420058
 Rigidbody:
@@ -2802,6 +2786,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: .819999993}
   serializedVersion: 2
   m_Radius: 2.3499999
+--- !u!61 &6189350
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 118396}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: -.409306526}
+  serializedVersion: 2
+  m_Size: {x: 3.75, y: .769543111}
 --- !u!65 &6500174
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -2922,18 +2919,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .328309, y: .334583044, z: 2.02990007}
   m_Center: {x: -.849442482, y: 1.68637049, z: 0}
---- !u!65 &6522690
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 118396}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.08669591, y: .769542992, z: 2.08669591}
-  m_Center: {x: 0, y: -.409306496, z: 0}
 --- !u!65 &6525690
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -3210,23 +3195,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .0900919437, y: .300097018, z: .759223044}
   m_Center: {x: 1, y: .595890522, z: -.616772532}
---- !u!114 &11404070
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 130196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08fc97cbe046d475386cd447746a18af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gibs: []
-  explosionForce: 5
-  spawnRadius: 1
-  breakforce: 10
-  snow: {fileID: 19800000, guid: 3971ad6b74080414e9d97cb6aba0e05b, type: 2}
-  branches: {fileID: 19800000, guid: e23491b16430d49e88e6e2788903b4b8, type: 2}
 --- !u!114 &11489620
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3260,7 +3228,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: 30
+      scalar: 35.0999985
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -3293,7 +3261,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 0
     startSpeed:
-      scalar: .660000026
+      scalar: .280000001
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -3420,7 +3388,7 @@ ParticleSystem:
         rgba: 4294967295
       minMaxState: 0
     startSize:
-      scalar: 2
+      scalar: .5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -3487,13 +3455,13 @@ ParticleSystem:
       minMaxState: 0
     gravityModifier: 0
     inheritVelocity: 0
-    maxNumParticles: 1000
+    maxNumParticles: 2000
   ShapeModule:
     serializedVersion: 2
     enabled: 1
     type: 4
-    radius: .365605861
-    angle: 7.64200068
+    radius: .00999999978
+    angle: 12.3500004
     length: 5
     boxX: 1
     boxY: 1
@@ -3506,7 +3474,7 @@ ParticleSystem:
     enabled: 1
     m_Type: 0
     rate:
-      scalar: 4
+      scalar: 2
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -4320,7 +4288,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_RenderMode: 4
+  m_RenderMode: 0
   m_MaxParticleSize: .5
   m_CameraVelocityScale: 0
   m_VelocityScale: 0

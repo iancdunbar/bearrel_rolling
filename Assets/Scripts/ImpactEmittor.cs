@@ -247,6 +247,7 @@ public class ImpactEmittor : MonoBehaviour {
 			
 			
 		}
+
 		if (other.tag == "Rock")
 		{
 			Instantiate( Impact, transform.position, Quaternion.identity );

@@ -381,7 +381,7 @@ Transform:
   m_GameObject: {fileID: 100010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -58, y: 46.3800011, z: -.100000001}
-  m_LocalScale: {x: .268337637, y: .238066137, z: .268337727}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 420936}
   - {fileID: 428116}
@@ -1477,7 +1477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 788fbfed3c6a3664588169e1cd6973a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultFont: {fileID: 12800000, guid: 10f51665e8485a6488fbaf00f57dd77a, type: 3}
+  defaultFont: {fileID: 12800000, guid: 689f4cdecc01a4a90b270c4e54cf8a4c, type: 3}
   currentScore: 0
   dashed: 0
   slammed: 0
@@ -1521,7 +1521,7 @@ MonoBehaviour:
   glow: {fileID: 0}
   snow: {fileID: 19800000, guid: 35630977bb43b48eb80920ad41fd60ba, type: 2}
   Impact: {fileID: 19800000, guid: 9cb02869cbbe748cbb2afc948b28f678, type: 2}
-  ShrubGib: {fileID: 0}
+  ShrubGib: {fileID: 180938, guid: 18f09f247e54145b98d2127376fa4e15, type: 2}
   can_blood: 1
   grounded: 0
   ContactEmitter: {fileID: 0}
