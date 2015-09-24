@@ -1,0 +1,180 @@
+fileFormatVersion: 2
+guid: 85d66c9fcfde64a3e8963e33487b8d0a
+timeCreated: 1442767661
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Cabin1
+    100002: //RootNode
+    100004: camera1
+    100006: Chapel
+    100008: groundplane
+    100010: Hill
+    100012: lamppost
+    100014: polySurface165
+    100016: polySurface176
+    100018: polySurface177
+    100020: polySurface186
+    100022: polySurface189
+    100024: polySurface216
+    100026: pPyramid10
+    100028: pPyramid11
+    100030: pPyramid17
+    100032: pPyramid18
+    100034: pPyramid19
+    100036: pPyramid46
+    100038: pPyramid47
+    100040: pPyramid8
+    100042: pPyramid9
+    100044: RollingHills1
+    100046: RollingHills2
+    100048: curve1
+    100050: polySurface227
+    100052: polySurface228
+    400000: Cabin1
+    400002: //RootNode
+    400004: camera1
+    400006: Chapel
+    400008: groundplane
+    400010: Hill
+    400012: lamppost
+    400014: polySurface165
+    400016: polySurface176
+    400018: polySurface177
+    400020: polySurface186
+    400022: polySurface189
+    400024: polySurface216
+    400026: pPyramid10
+    400028: pPyramid11
+    400030: pPyramid17
+    400032: pPyramid18
+    400034: pPyramid19
+    400036: pPyramid46
+    400038: pPyramid47
+    400040: pPyramid8
+    400042: pPyramid9
+    400044: RollingHills1
+    400046: RollingHills2
+    400048: curve1
+    400050: polySurface227
+    400052: polySurface228
+    2300000: groundplane
+    2300002: Hill
+    2300004: lamppost
+    2300006: polySurface165
+    2300008: polySurface176
+    2300010: polySurface177
+    2300012: polySurface186
+    2300014: polySurface189
+    2300016: polySurface216
+    2300018: pPyramid10
+    2300020: pPyramid11
+    2300022: pPyramid17
+    2300024: pPyramid18
+    2300026: pPyramid19
+    2300028: pPyramid46
+    2300030: pPyramid47
+    2300032: pPyramid8
+    2300034: pPyramid9
+    2300036: polySurface227
+    2300038: polySurface228
+    3300000: groundplane
+    3300002: Hill
+    3300004: lamppost
+    3300006: polySurface165
+    3300008: polySurface176
+    3300010: polySurface177
+    3300012: polySurface186
+    3300014: polySurface189
+    3300016: polySurface216
+    3300018: pPyramid10
+    3300020: pPyramid11
+    3300022: pPyramid17
+    3300024: pPyramid18
+    3300026: pPyramid19
+    3300028: pPyramid46
+    3300030: pPyramid47
+    3300032: pPyramid8
+    3300034: pPyramid9
+    3300036: polySurface227
+    3300038: polySurface228
+    4300000: groundplane
+    4300002: lamppost
+    4300004: Hill
+    4300006: pPyramid47
+    4300008: pPyramid10
+    4300010: pPyramid9
+    4300012: pPyramid8
+    4300014: pPyramid11
+    4300016: pPyramid46
+    4300018: pPyramid17
+    4300020: pPyramid18
+    4300022: pPyramid19
+    4300024: polySurface177
+    4300026: polySurface165
+    4300028: polySurface176
+    4300030: polySurface189
+    4300032: polySurface186
+    4300034: polySurface216
+    4300036: polySurface227
+    4300038: polySurface228
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

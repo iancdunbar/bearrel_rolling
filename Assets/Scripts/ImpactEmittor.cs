@@ -10,6 +10,7 @@ public class ImpactEmittor : MonoBehaviour {
 	public GameObject glow;
 	public ParticleSystem snow;
 	public ParticleSystem Impact;
+	public GameObject ShrubGib;
 	public bool can_blood = true;
 	public bool grounded = false;
 	public ParticleSystem ContactEmitter;
@@ -227,7 +228,7 @@ public class ImpactEmittor : MonoBehaviour {
 	}
 
 	
-	//TREE COLLISION//
+	//*** OBJECT COLLISION ***//
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		//If colliding with object tagged Avalanche then shake the main Camera. Currently this seems to shake on collision with anything.
@@ -246,6 +247,7 @@ public class ImpactEmittor : MonoBehaviour {
 			
 			
 		}
+
 		if (other.tag == "Rock")
 		{
 			Instantiate( Impact, transform.position, Quaternion.identity );
@@ -254,7 +256,11 @@ public class ImpactEmittor : MonoBehaviour {
 		if (other.tag =="Ground"){
 			grounded = true;
 		}
-		
+		if (other.tag == "Shrub"){
+			Instantiate ( ShrubGib, transform.position, Quaternion.identity );
+			Instantiate ( Impact, transform.position, Quaternion.identity );
+			Destroy (other.gameObject);
+		}
 		can_blood = true;
 		
 		

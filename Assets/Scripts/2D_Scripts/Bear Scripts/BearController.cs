@@ -23,7 +23,7 @@ public class BearController : MonoBehaviour {
 	private Color HUDColor = new Color(0.957f, 1.000f, 0.221f, 1.000f);
 	private const int maxInvulnSliderAmount = 100;
 	private Slider invulnSlider;
-	private static string[] deathMessages = { "DEATH IS UPON YOU, BEAR", "DEAD TIME RAVE", "NO HAPPINESS", "THE DARK CLOSES IN" };	
+	private static string[] deathMessages = { "DEATH IS UPON YOU, BEAR", "DEAD TIME RAVE", "NO HAPPINESS", "THE DARK CLOSES IN", "THERE IS NO HAPPY HERE" };	
 	private static int random = Random.Range(0, deathMessages.Length);
 	private static string deathMessage = deathMessages[random];
 	public Font defaultFont;                                                                                                                                                                                                                                                                                                                                                                                                                                    
@@ -170,18 +170,10 @@ public class BearController : MonoBehaviour {
 
 		SmashDashHUDPrefab = Resources.Load<Image>("HUD/DashSmash_Container");
 
-		GameObject invulnSliderObj = GameObject.Find("Slider");
-
-		if (invulnSliderObj != null) {
-			invulnSlider = invulnSliderObj.GetComponent<Slider>();	
-
-			invulnSlider.maxValue = maxInvulnSliderAmount;
-			invulnSlider.value = 0;
-		}
-		
-		initialize_HUD( );
+		//initialize_HUD( );
 		
 		jumped = true;
+	
 	}
 
     // Use this for initialization
@@ -198,6 +190,12 @@ public class BearController : MonoBehaviour {
 		MessageDispatch.RegisterListener( "OnTap", OnTap );
 
         bsc.ChangeState( BearState.IDLE );
+
+
+		//below is temp code to end the game immediately
+		//GameCamera camera = mCamera.GetComponent<GameCamera>();
+
+		//HandleEndGame (camera);
 	}
 
     void OnCollisionEnter2D( Collision2D other )
@@ -342,13 +340,13 @@ public class BearController : MonoBehaviour {
 	}
 
 	public void ChangeInvulnSliderValue(float changeAmount){
-
+		/*
 		if (invulnSlider.value + changeAmount < 0) {
 			invulnSlider.value = 0;
 		} else {
 			invulnSlider.value += changeAmount; 
 		}
-		
+		*/
 		
 	}
 
@@ -367,15 +365,32 @@ public class BearController : MonoBehaviour {
 		GameObject town = GameObject.Find ("Town");
 		Transform townTransform = town.GetComponent(typeof(Transform)) as Transform;
 
+		GameObject townMainStrut = GameObject.Find ("MainStrut");
+		Transform townMainStrutTransform = townMainStrut.GetComponent(typeof(Transform)) as Transform;
+		float townlength = townMainStrutTransform.localScale.x;
+
 		GameObject avalanche = GameObject.Find ("Avalanche");
 
 
-		Vector3 avalancheSpawnPos = townTransform.position + new Vector3(-200,0,0);
+		Vector3 avalancheSpawnPos = townTransform.position + new Vector3(-300,100,0);
 
 		avalanche.transform.position = avalancheSpawnPos;
 
+		//change target position based on score
+		//lower scores mean a steeper angle
 
-		Vector3 avalancheTargetPos = townTransform.position + new Vector3 (1000, -100, 0);
+
+		int avalancheTargetX = (currentScore*10)/2; 
+
+
+		if (avalancheTargetX > 500) {
+			avalancheTargetX = 500;
+		} else if (avalancheTargetX < 0) {
+			avalancheTargetX = 0;
+		}
+
+
+		Vector3 avalancheTargetPos = townTransform.position + new Vector3 (avalancheTargetX - townlength, -200, 0);
 
 		gameCam.follow_target = townTransform;
 		gameCam.keepStatic = true;
@@ -389,7 +404,7 @@ public class BearController : MonoBehaviour {
 
 		gameCam.transform.position = new Vector3 (-550, -140, -130);
 		
-		StartCoroutine(waitForSecondsThenRestart(5));
+		StartCoroutine(waitForSecondsThenRestart(15));
 
 
 
@@ -416,7 +431,7 @@ public class BearController : MonoBehaviour {
 				//max_speed = collision_speed;
 				other.gameObject.transform.Rotate (0,0,-4);
 				//StartCoroutine(SpeedLimitCooldown());
-				ChangeInvulnSliderValue(-invuln_bar_tree_penalty);
+				//ChangeInvulnSliderValue(-invuln_bar_tree_penalty);
 
 				current_accelleration += tree_decell_amount;
 				if(rbody.velocity.magnitude + tree_decell_amount > 0){
@@ -431,8 +446,9 @@ public class BearController : MonoBehaviour {
 			CabinBoards = other.GetComponentsInChildren<Rigidbody>();
 
 			 foreach(Rigidbody board in CabinBoards){
-				other.gameObject.AddComponent<TimedObjectDestructor>();
 				board.isKinematic = false;
+				//other.gameObject.AddComponent<TimedObjectDestructor>();
+
 
 			}
 		}
@@ -444,15 +460,7 @@ public class BearController : MonoBehaviour {
 		if(other.tag=="Shrub")
 		{
 
-			Rigidbody2D rbdy = other.GetComponent<Rigidbody2D>();
-
-			if( rbdy )
-			{
-				rbdy.isKinematic = false;
-			}
-
-			other.gameObject.AddComponent<TimedObjectDestructor>();
-
+			//Handled in "ImpactEmitter"
 		}
 
 		if(other.tag == "tree_gib")
