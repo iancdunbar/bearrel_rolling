@@ -38,9 +38,9 @@ public class TreeGib : MonoBehaviour {
 
 
 		if (other.tag == "Bear" )
-		{
+		{ 
 
-            bool local_slam = bc.slammed;
+			bool local_slam = bc.slammed;
 			bool local_invuln = bc.bearInvuln;
 			bool local_dash = bc.dashed;
 

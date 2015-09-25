@@ -87,8 +87,8 @@ public class PolygonTerrainGenerator : MonoBehaviour {
     [SerializeField]
     private float max_angle = 90;
 
-	//[SerializeField]
-	//private SimpleColliderGenerator collider_gen;
+	[SerializeField]
+	private SimpleColliderGenerator collider_gen;
 	[SerializeField]
 	private Transform bear;
 
@@ -571,7 +571,7 @@ public class PolygonTerrainGenerator : MonoBehaviour {
         for( int i = 0; i < 10; i++ )
         {
             generate_next_piece( next_point );
-            //collider_gen.AddPoint( next_point );
+            collider_gen.AddPoint( next_point );
         }
 
 
@@ -584,7 +584,7 @@ public class PolygonTerrainGenerator : MonoBehaviour {
         //if( Vector3.Distance(bear.position, next_point) < gen_distance )
         {
             generate_next_piece( next_point );
-            //collider_gen.AddPoint( next_point );
+            collider_gen.AddPoint( next_point );
 
 			if( active_terrain_segment_containers.Count > 3 )
 			{
