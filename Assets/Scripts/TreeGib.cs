@@ -8,20 +8,26 @@ public class TreeGib : MonoBehaviour {
 	public float spawnRadius = 1.0f;
 	private GameObject gibspawn;
 	public float breakforce;
-	public ParticleSystem snow;
-	public ParticleSystem branches;
+	public GameObject particles;
 	private bool slamming = false;
 	private bool dashing = false;
 	private bool bearInvuln = false;
 	private BearStateController bsc;
 	private BearController bc;
 	private GameObject mCamera;
+	public GameObject stump;
+	private Vector3 treepos;
+	private Quaternion treerot;
 	
 	// Use this for initialization
 	void Start () 
 	{
+
+		treepos = gameObject.transform.position;
+		treerot = gameObject.transform.localRotation;
 		bc = GameObject.Find("Bear_Body").GetComponent<BearController>();
 		mCamera = GameObject.FindGameObjectWithTag("MainCamera");
+
 	}
 
 	
@@ -51,18 +57,19 @@ public class TreeGib : MonoBehaviour {
 
 				foreach (GameObject gib in gibs)
 				{
-					Instantiate( snow, transform.position, Quaternion.identity );
-					Instantiate( branches, transform.position, Quaternion.identity);
+
+					Instantiate( particles, treepos, Quaternion.identity );
+					Instantiate( stump, treepos, Quaternion.identity );
 
 					SimpleAudioController.PlayCrashEmote();
 
-					gibspawn = (GameObject)Instantiate( gib, transform.position + Random.insideUnitSphere*spawnRadius, transform.rotation * Quaternion.Euler(0,0,Random.Range(0,0)));
+					//gibspawn = (GameObject)Instantiate( gib, transform.position + Random.insideUnitSphere*spawnRadius, transform.rotation * Quaternion.Euler(0,0,Random.Range(0,0)));
 					//
-					float randomTrajectoryAngle = 0;
+					//float randomTrajectoryAngle = 0;
 					//Random.Range(0, 10);
-					Vector2 gibTrajectory = Vector2Extension.Rotate(currentBearVelocity, randomTrajectoryAngle);
+					//Vector2 gibTrajectory = Vector2Extension.Rotate(currentBearVelocity, randomTrajectoryAngle);
 
-					gibspawn.GetComponent<Rigidbody2D>().AddForce(gibTrajectory * 2);
+					//gibspawn.GetComponent<Rigidbody2D>().AddForce(gibTrajectory * 100);
 
 				}
 
@@ -75,7 +82,8 @@ public class TreeGib : MonoBehaviour {
 			}
 			else if ( !( local_dash || local_slam ) )
 			{
-				Instantiate( snow, transform.position, Quaternion.identity );
+				Instantiate( particles, treepos, Quaternion.identity );
+				Instantiate( stump, treepos, Quaternion.identity );
 				SimpleAudioController.PlayCrashEmote();
 				//tell the GameCamera script to shake the cam
 				mCamera.GetComponent<GameCamera>().Shake = true;

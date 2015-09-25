@@ -29,6 +29,7 @@ public class ImpactEmittor : MonoBehaviour {
 	public ParticleSystem slamImpact;
 	public ParticleSystem dash;
 	public ParticleSystem invulnerable;
+	public GameObject cabinFx;
 	private BearController bc;
 	private Vector2 bearpos;
 	private Vector2 bearspeed;
@@ -237,7 +238,11 @@ public class ImpactEmittor : MonoBehaviour {
 			//tell the GameCamera script to shake the cam
 			//mCamera.GetComponent<GameCamera>().Shake = true;
 		}
-		
+
+		if(other.tag == "Cabin")
+		{
+			Instantiate ( cabinFx, transform.position, Quaternion.identity);
+		}
 		
 		if ( other.tag == "tree")
 		{
