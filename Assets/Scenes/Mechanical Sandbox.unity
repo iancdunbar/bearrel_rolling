@@ -37,9 +37,6 @@ RenderSettings:
   m_ReflectionIntensity: .256000012
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
---- !u!127 &3
-LevelGameManager:
-  m_ObjectHideFlags: 0
 --- !u!157 &4
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -68,6 +65,7 @@ LightmapSettings:
     m_TextureCompression: 0
     m_FinalGather: 0
     m_FinalGatherRayCount: 1024
+    m_ReflectionCompression: 2
   m_LightmapSnapshot: {fileID: 0}
   m_RuntimeCPUUsage: 75
 --- !u!196 &5
@@ -6790,6 +6788,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: .996078432, g: 1, b: .215686277, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -11427,7 +11431,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 319165101}
   - 68: {fileID: 319165102}
-  - 114: {fileID: 319165100}
   m_Layer: 0
   m_Name: Collider
   m_TagString: Untagged
@@ -11435,23 +11438,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &319165100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11402060, guid: 3bb4384f2c7a344808d596c018e3103e,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 319165099}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd13d17ae6d7a154dbed88dbf69653d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bear: {fileID: 0}
-  target_angle: -31.7000008
-  angle_deviation: 26.3199997
-  target_length: .419999987
-  length_deviation: .300000012
 --- !u!4 &319165101
 Transform:
   m_ObjectHideFlags: 0
@@ -14068,7 +14054,7 @@ MonoBehaviour:
   m_Script: {fileID: 1997211142, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AllowActivationOnStandalone: 0
+  m_ForceModuleActive: 0
 --- !u!114 &424606908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14086,7 +14072,7 @@ MonoBehaviour:
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
   m_RepeatDelay: .5
-  m_AllowActivationOnMobileDevice: 0
+  m_ForceModuleActive: 0
 --- !u!114 &424606909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17470,7 +17456,6 @@ MonoBehaviour:
   gen_distance: 500
   min_angle: 0
   max_angle: 0
-  collider_gen: {fileID: 319165100}
   bear: {fileID: 1828695599}
   chanceOfRocks: 50
   minRocksPerSegment: 1
@@ -33147,6 +33132,7 @@ AudioSource:
   m_Pitch: 1
   Loop: 1
   Mute: 0
+  Spatialize: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -33233,6 +33219,7 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
+  Spatialize: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -33303,6 +33290,7 @@ AudioSource:
   m_Pitch: 1
   Loop: 1
   Mute: 0
+  Spatialize: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -40606,6 +40594,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: .301470578, b: .301470578, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -54723,7 +54717,6 @@ GameObject:
   - 233: {fileID: 1828695606}
   - 233: {fileID: 1828695605}
   - 58: {fileID: 1828695604}
-  - 114: {fileID: 1828695603}
   - 23: {fileID: 1828695602}
   - 33: {fileID: 1828695601}
   - 114: {fileID: 1828695600}
@@ -54794,35 +54787,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!114 &1828695603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400004, guid: c2e0f1f4b0d284a728b178a282608d83,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1828695598}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: caf1350b316de42fd947b02c39cfdf94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  glow: {fileID: 0}
-  snow: {fileID: 19800000, guid: 35630977bb43b48eb80920ad41fd60ba, type: 2}
-  Impact: {fileID: 19800000, guid: 9cb02869cbbe748cbb2afc948b28f678, type: 2}
-  can_blood: 1
-  grounded: 0
-  ContactEmitter: {fileID: 1537801863}
-  MovingFastEmitter: {fileID: 13778889}
-  movingfast: 0
-  reallyfast: 0
-  MovingFastSpeed: 5
-  ReallyFastSpeed: {x: 10, y: -10}
-  slam: {fileID: 915261833}
-  slamImpact: {fileID: 19800000, guid: 25684edf9351f434b8279ac735de9f64, type: 2}
-  dash: {fileID: 602725883}
-  invulnerable: {fileID: 2099774609}
-  anim: {fileID: 13778892}
-  resetTime: 9.99999975e-06
 --- !u!58 &1828695604
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -58067,7 +58031,6 @@ GameObject:
   - 92: {fileID: 1966554837}
   - 124: {fileID: 1966554836}
   - 81: {fileID: 1966554835}
-  - 114: {fileID: 1966554834}
   - 114: {fileID: 1966554833}
   m_Layer: 0
   m_Name: Main Camera Perspective
@@ -58115,21 +58078,6 @@ MonoBehaviour:
   AvalancheOffset: {x: 40, y: 0, z: -45}
   follow_target: {fileID: 0}
   follow_amount: {x: 1, y: 1, z: 0}
---- !u!114 &1966554834
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11429372, guid: a7d114765c0c74fe88e037ba8e5644da,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1966554831}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a48c30e5350d88438feb675817d6406, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
-  turntable_generator: {fileID: 0}
-  simple_collider: {fileID: 0}
 --- !u!81 &1966554835
 AudioListener:
   m_ObjectHideFlags: 0
