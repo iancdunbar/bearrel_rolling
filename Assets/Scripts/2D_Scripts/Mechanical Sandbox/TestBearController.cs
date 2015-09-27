@@ -96,8 +96,6 @@ public class TestBearController : MonoBehaviour {
 		{
 			Vector2 direction = (Vector2)arg;
 
-			//Debug.Log( direction );
-
 			if( active_cloud != null )
 			{
 				CollectabitData result = active_cloud.TestBits( direction, transform.position );
@@ -122,14 +120,6 @@ public class TestBearController : MonoBehaviour {
 					toggle_kinematic( false );
 				}
 			}
-
-
-//			do_vel = false;
-//
-//			Vector3 tgt = transform.position + new Vector3( direction.x, direction.y, 0 ) * saved_velocity.magnitude;
-//
-//			if( active_tween != null ) active_tween.cancel( );
-//			active_tween = LeanTween.move( this.gameObject, tgt, 0.33f ).setOnComplete( ( )=>{ do_vel = true; active_tween = null; } );
 		}
 	}
 
@@ -163,8 +153,6 @@ public class TestBearController : MonoBehaviour {
 
 		MessageDispatch.RegisterListener( "OnSwipe", OnSwipe );
 		MessageDispatch.RegisterListener( "OnTap", OnTap );
-//		MessageDispatch.RegisterListener( "OnTouchBegin", OnTouchBegin );
-//		MessageDispatch.RegisterListener( "OnTouchEnd", OnTouchEnd );
 
 		kinematic_mode = false;
 
