@@ -83,6 +83,73 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd13d17ae6d7a154dbed88dbf69653d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collider_ref: {fileID: 0}
+  ground_line:
+    m_vectorObject: {fileID: 0}
+    m_meshFilter: {fileID: 0}
+    m_mesh: {fileID: 0}
+    m_lineVertices: []
+    m_lineUVs: []
+    m_lineColors: []
+    points2: []
+    points3: []
+    m_pointsLength: 0
+    m_is2D: 0
+    m_screenPoints: []
+    m_lineWidths: []
+    m_maxWeldDistance: 0
+    m_distances: []
+    m_name: 
+    m_material: {fileID: 0}
+    m_active: 0
+    capLength: 0
+    m_depth: 0
+    smoothWidth: 0
+    m_layer: 0
+    m_continuous: 0
+    m_joins: 0
+    m_isPoints: 0
+    m_isAutoDrawing: 0
+    m_minDrawIndex: 0
+    m_maxDrawIndex: 0
+    m_drawStart: 0
+    m_drawEnd: 0
+    m_useNormals: 0
+    m_useTangents: 0
+    m_normalsCalculated: 0
+    m_tangentsCalculated: 0
+    m_triangleCount: 0
+    m_vertexCount: 0
+    m_capType: 0
+    m_endCap: 
+    m_continuousTexture: 0
+    m_1pixelLine: 0
+    m_useTransform: {fileID: 0}
+    m_viewportDraw: 0
+    m_textureScale: 0
+    m_useTextureScale: 0
+    m_textureOffset: 0
+    m_useMatrix: 0
+    m_matrix:
+      e00: 0
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 0
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 0
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 0
+    m_collider: 0
+    m_physicsMaterial: {fileID: 0}
+  spawn_x: 0
   bear: {fileID: 0}
   target_angle: -31.7000008
   angle_deviation: 26.3199997
@@ -102,15 +169,18 @@ MonoBehaviour:
   rock_prefab: []
   terrain_piece:
   - {fileID: 163188, guid: a74a37c450574404d8c93ad5fbe13ce6, type: 2}
+  - {fileID: 134072, guid: fec210cab61ff4f92863ed3b6363e619, type: 2}
   - {fileID: 163188, guid: e11a3b051a6b543509ca7efe650e69d4, type: 2}
-  - {fileID: 163188, guid: a74a37c450574404d8c93ad5fbe13ce6, type: 2}
+  - {fileID: 132654, guid: c958381c0164f4e21b2e82d04e916c25, type: 2}
+  - {fileID: 163188, guid: e11a3b051a6b543509ca7efe650e69d4, type: 2}
+  - {fileID: 163188, guid: e11a3b051a6b543509ca7efe650e69d4, type: 2}
+  - {fileID: 163188, guid: e11a3b051a6b543509ca7efe650e69d4, type: 2}
   - {fileID: 163188, guid: e11a3b051a6b543509ca7efe650e69d4, type: 2}
   end_vert: 1
   mask_prefab: {fileID: 110194, guid: 15406bc7fb5ed84438b96069728796bf, type: 2}
   gen_distance: 500
   min_angle: 0
   max_angle: 0
-  collider_gen: {fileID: 11402060}
   bear: {fileID: 0}
   chanceOfRocks: 50
   minRocksPerSegment: 1

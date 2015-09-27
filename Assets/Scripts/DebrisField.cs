@@ -32,7 +32,7 @@ public class DebrisField : MonoBehaviour {
 				timedDestructor = other.GetComponent("TimedObjectDestructor");
 				Destroy(rbody);
 				Destroy(timedDestructor);
-				Destroy (other.GetComponent<Collider2D>());
+				//Destroy (other.GetComponent<Collider2D>());
 				
 			}
 			if(other.tag == "Cabin"){
