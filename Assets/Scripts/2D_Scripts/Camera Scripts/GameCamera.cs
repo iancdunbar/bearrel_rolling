@@ -92,11 +92,6 @@ public class GameCamera : MonoBehaviour {
 		}
 		BearLight.transform.position = new Vector3 (BearLight.transform.position.x, BearLight.transform.position.y, offset.z / 2);
 
-		if(Camera.main.orthographic == true)
-		{
-			keepStatic = true;
-		}
-
 	}
 	IEnumerator ShakeCam(){
 
